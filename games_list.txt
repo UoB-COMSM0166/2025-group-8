@@ -1,0 +1,33 @@
+=========== template ============
+// (name) start
+gameName:   (name of the game)
+gameType:   (type of the game)
+mechanics:  (descriptive text of the game) 
+reference:  (link of reference)
+
+gameName:   (name of the game)
+gameType:   (type of the game)
+mechanics:  (descriptive text of the game) 
+reference:  (link of reference)
+
+......
+// (name) end
+==================================
+
+// Zewen Liang start
+gameName:   Super Mario
+gameType:   Role-playing, Adventure, 2D
+mechanics:  In the 2D games, the player character (usually Mario) jumps on platforms and enemies 
+            while avoiding their attacks and moving to the right of the scrolling screen. 
+            2D Super Mario game levels have single-exit objectives, which must be reached 
+            within a time limit and lead to the next sequential level.
+reference:  https://en.wikipedia.org/wiki/Super_Mario
+
+gameName:   Metal Slug
+gameType:   Run and gun
+mechanics:  Keep alive through a damage reduction mechanic that takes movement and covers into account.
+            The further your soldiers move, the more Dodge Points they gain, 
+            effectively reducing or even wholly canceling the damage from enemy strikes.
+reference:  https://en.wikipedia.org/wiki/Metal_Slug
+// Zewen Liang end
+
