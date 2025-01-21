@@ -36,67 +36,82 @@ reference:  https://en.wikipedia.org/wiki/Metal_Slug
 // Zhi Zhao start
 gameName:   Stardew Valley
 gameType:   Farming Simulation / RPG
-mechanics:  A pixel-art farming simulator where players manage a farm, grow crops, raise animals, fish, and interact with villagers. The game also includes mining, crafting, and combat elements. Relationships and exploration are key aspects of the experience.
+mechanics:  A pixel-art farming simulator where players manage a farm, grow crops, raise animals, fish,
+            and interact with villagers. The game also includes mining, crafting, and combat elements.
+            Relationships and exploration are key aspects of the experience.
 reference:  https://en.wikipedia.org/wiki/Stardew_Valley
 
 gameName:   This War of Mine
 gameType:   Survival / Strategy
-mechanics:  A survival game focused on civilians during wartime. Players manage a group of survivors, scavenging for supplies, crafting, and making moral decisions to survive while dealing with hunger, illness, and external threats. 
+mechanics:  A survival game focused on civilians during wartime. Players manage a group of survivors,
+            scavenging for supplies, crafting, and making moral decisions to survive while dealing with
+            hunger, illness, and external threats. 
 reference:  https://en.wikipedia.org/wiki/This_War_of_Mine
 
 gameName:   Ori and the Will of the Wisps
 gameType:   Action-Adventure / Platformer
-mechanics:  A visually stunning 2D platformer featuring exploration, puzzle-solving, and combat in a richly detailed world. Players control Ori, a guardian spirit, as they embark on an emotional journey.
+mechanics:  A visually stunning 2D platformer featuring exploration, puzzle-solving, and combat in a richly
+            detailed world. Players control Ori, a guardian spirit, as they embark on an emotional journey.
 reference:  https://en.wikipedia.org/wiki/Ori_and_the_Will_of_the_Wisps
 
 gameName:   Gorogoa
 gameType:   Puzzle
-mechanics:  A unique hand-drawn puzzle game where players rearrange and interact with tiles to solve intricate puzzles, uncovering a deeply layered story through visuals.
+mechanics:  A unique hand-drawn puzzle game where players rearrange and interact with tiles to solve intricate
+            puzzles, uncovering a deeply layered story through visuals.
 reference:  https://en.wikipedia.org/wiki/Gorogoa
 
 gameName:   Don't Starve
 gameType:   Survival / Adventure
-mechanics:  A dark, survival sandbox game where players collect resources, craft tools, and fend off dangers like starvation, weather, and monsters while exploring a procedurally generated world.
+mechanics:  A dark, survival sandbox game where players collect resources, craft tools, and fend off dangers
+            like starvation, weather, and monsters while exploring a procedurally generated world.
 reference:  https://en.wikipedia.org/wiki/Don%27t_Starve
 
 gameName:   Dead Cells
 gameType:   Rogue-like / Metroidvania
-mechanics:  A fast-paced action platformer combining procedurally generated levels with challenging combat. Features permanent death and unlockable upgrades in a non-linear exploration system.
+mechanics:  A fast-paced action platformer combining procedurally generated levels with challenging combat.
+            Features permanent death and unlockable upgrades in a non-linear exploration system.
 reference:  https://en.wikipedia.org/wiki/Dead_Cells
 
 gameName:   Brotato
 gameType:   Roguelite / Top-Down Shooter
-mechanics:  Players control a potato character equipped with up to six weapons to fend off waves of enemies in fast-paced arenas, emphasizing quick reflexes and weapon synergy.
+mechanics:  Players control a potato character equipped with up to six weapons to fend off waves of enemies
+            in fast-paced arenas, emphasizing quick reflexes and weapon synergy.
 reference:  https://en.wikipedia.org/wiki/Brotato
 
 gameName:   Terraria
 gameType:   Sandbox / Adventure
-mechanics:  A 2D sandbox game featuring exploration, crafting, and combat in a procedurally generated world. Players can build structures, battle monsters, and explore biomes.
+mechanics:  A 2D sandbox game featuring exploration, crafting, and combat in a procedurally generated world.
+            Players can build structures, battle monsters, and explore biomes.
 reference:  https://en.wikipedia.org/wiki/Terraria
 
 gameName:   Cuphead
 gameType:   Run-and-Gun / Platformer
-mechanics:  A hand-drawn 1930s cartoon-inspired game featuring challenging boss fights and platforming levels with a focus on precise movements and patterns.
+mechanics:  A hand-drawn 1930s cartoon-inspired game featuring challenging boss fights and platforming levels
+            with a focus on precise movements and patterns.
 reference:  https://en.wikipedia.org/wiki/Cuphead
 
 gameName:   Oxygen Not Included
 gameType:   Colony Management / Simulation
-mechanics:  A space-colony simulation game where players manage duplicants, resources, and oxygen supply in an underground asteroid base. The game emphasizes problem-solving and efficiency.
+mechanics:  A space-colony simulation game where players manage duplicants, resources, and oxygen supply in
+            an underground asteroid base. The game emphasizes problem-solving and efficiency.
 reference:  https://en.wikipedia.org/wiki/Oxygen_Not_Included
 
 gameName:   Dave the Diver
 gameType:   Adventure / Management
-mechanics:  A casual adventure game blending underwater exploration, fishing, and restaurant management. Players dive for exotic ingredients and run a sushi bar while solving quirky mysteries.
+mechanics:  A casual adventure game blending underwater exploration, fishing, and restaurant management.
+            Players dive for exotic ingredients and run a sushi bar while solving quirky mysteries.
 reference:  https://en.wikipedia.org/wiki/Dave_the_Diver
 
 gameName:   Batman: Arkham Series
 gameType:   Action / Adventure
-mechanics:  A series of action games where players control Batman in open-world Gotham City, utilizing stealth, combat, and detective skills to fight crime and defeat iconic villains.
+mechanics:  A series of action games where players control Batman in open-world Gotham City, utilizing stealth,
+            combat, and detective skills to fight crime and defeat iconic villains.
 reference:  https://en.wikipedia.org/wiki/Batman:_Arkham
 
 gameName:   Frostpunk
 gameType:   City-Building / Survival
-mechanics:  A survival-focused city-building game where players manage a frozen city, making tough moral decisions to ensure survival while balancing resources and citizen needs.
+mechanics:  A survival-focused city-building game where players manage a frozen city, making tough moral
+            decisions to ensure survival while balancing resources and citizen needs.
 reference:  https://en.wikipedia.org/wiki/Frostpun
 // Zhi Zhao end
 
