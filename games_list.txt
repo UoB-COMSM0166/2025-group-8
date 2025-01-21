@@ -116,3 +116,30 @@ reference:  https://en.wikipedia.org/wiki/Frostpun
 // Zhi Zhao end
 
 ==================================
+
+//Yuying Zhang start
+gameName: Celeste 
+gameType: Platformer
+mechanics: Celeste is a challenging precision platformer where players control a young woman named Madeline as she ascends the titular mountain, Celeste Mountain. The gameplay focuses on tight, responsive controls that allow players to jump, air-dash, and climb through a series of increasingly difficult obstacles designed to test reflexes and timing. The game also features a rich narrative that explores themes of mental health, perseverance, and self-discovery. 
+reference: https://store.steampowered.com/app/504230/Celeste/
+
+gameName: GRIS
+gameType: Adventure, Platformer
+mechanics: GRIS is a visually striking platformer that combines exploration with puzzle-solving elements. The game follows the journey of a young girl named Gris, who is dealing with a painful experience in her life. Her emotional journey is represented through her dress, which grants new abilities to navigate her faded reality. The gameplay is smooth and accessible, focusing on light puzzles, platforming challenges, and optional skill-based challenges as the story progresses. The game is notable for its watercolor-inspired graphics and emotional depth. reference: https://store.steampowered.com/app/683320/GRIS/
+
+gameName: Slay the Spire
+gameType: Roguelike, Deck-Building
+mechanics: Slay the Spire is an innovative roguelike deck-building game where players choose a character and attempt to climb a spire of multiple floors, each containing a series of enemies, bosses, and events. The core gameplay involves building and managing a deck of cards that represent attacks, defensive maneuvers, and other special actions. As players progress, they can add new cards to their deck, upgrade existing cards, and make crucial decisions at events that can significantly impact their journey. The game combines strategic depth with a high replay value due to its procedural generation of levels and wide variety of synergistic card combinations. 
+reference: https://store.steampowered.com/app/646570/Slay_the_Spire/
+
+gameName: Factorio gameType: Real-time strategy, Simulation mechanics: Factorio is a complex and intricate simulation game that revolves around building and maintaining factories on an alien planet. The primary objective is to automate production processes to efficiently mine resources, produce materials, and construct machinery and infrastructure. Players must also manage power production, logistics, and defense against hostile alien creatures. The game encourages problem-solving and optimization, allowing players to engineer production lines and logistics systems to maximize efficiency. The game supports extensive modding, multiplayer cooperation, and has a dedicated community creating endless scenarios and enhancements. 
+reference: https://store.steampowered.com/app/427520/Factorio/
+
+gameName: 
+仙剑奇侠传 (The Legend of Sword and Fairy) 
+gameType: Role-Playing Game (RPG) 
+mechanics: The Legend of Sword and Fairy, also known as Chinese Paladin, is a classic Chinese role-playing game that combines elements of mythology and martial arts fantasy. The game features a turn-based combat system and an engaging storyline that focuses on love, loyalty, and conflict among gods, demons, and humans. Players explore various environments, solve puzzles, and interact with a diverse cast of characters to advance the narrative. The game is highly regarded for its deep story, well-developed characters, and its cultural significance in introducing many gamers to Chinese folklore. 
+reference: https://store.steampowered.com/app/1546570/_/
+//Yuying Zhang end
+
+==================================
