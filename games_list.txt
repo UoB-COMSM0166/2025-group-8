@@ -143,3 +143,17 @@ reference: https://store.steampowered.com/app/1546570/_/
 //Yuying Zhang end
 
 ==================================
+
+// Yunhao Zhou start
+gameName:   Winter Dodge
+gameType:   Skill > One-button
+mechanics:  You ski downhill automatically. Click and hold to change directions. Ski near a tree to score bonus points. Get more close calls in a row to get an even higher bonus!
+reference:  https://www.coolmathgames.com/0-winter-dodge
+
+gameName:   Suika Watermelon Game
+gameType:   Strategy > High Score Games
+mechanics:  Drop fruits into the box and collide two of the same fruit to merge them into a bigger fruit! Click and drag your mouse to move the fruit where you want to drop it. Once you find your spot, release and watch it fall into place. Your goal is to get the highest score possible through merging. Once your box fills to the brim, it's game over! If you want to move the fruit in the box, click on one of the buttons to the left or right of the box to push them all in that direction. Try to use these abilities strategically, because you can only use them five times each!
+reference:  https://www.coolmathgames.com/0-suika-watermelon-game
+// Yunhao Zhou end
+
+==================================
