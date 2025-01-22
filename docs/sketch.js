@@ -455,12 +455,11 @@ function drawFunctionalityButtons() {
   cameraButton.style("padding", "0 0 10px 0");
   cameraButton.mousePressed(function() {
     cameraButton.style("background-color", "gray");
-    let img = get(102, 0, windowWidth-204, windowHeight)
-    // saveCanvas("myCanvas", "jpg");
-    img.save("myCanvas.jpg");
   });
   cameraButton.mouseReleased(function() {
     cameraButton.style("background-color", "white");
+    let img = get(102, 0, windowWidth-204, windowHeight)
+    img.save("myCanvas.jpg");
   });
   let clearButton = createButton("🗑️").position(basicX+35, basicY+100);
   clearButton.style("border", 0);
@@ -478,25 +477,25 @@ function drawFunctionalityButtons() {
     clear();
     setup();
   });
-  let saveButton = createButton("📘").position(basicX+35, basicY+165);
-  saveButton.style("border", 0);
-  saveButton.style("background-color", "white");
-  saveButton.style("font-size", "40px");
-  saveButton.style("border-radius", "50%");
-  saveButton.style("width", "60px");
-  saveButton.style("height", "60px");
-  saveButton.style("padding", "0 0 0 0");
-  saveButton.mousePressed(function() {
-    saveButton.style("background-color", "gray");
-    alert("Author: University of Bristol - CS 24/25 - Group 8\n"
-        + "Project: Simple Paint\n"
-        + "Version: 0.1\n"
-        + "Date: 2025-1-22\n"
-        + "Members: Zewen Liang, Yunhao Zhou, Kaijie Xu, Zhi Zhao, Yuying Zhang\n"
-    );
-  });
-  saveButton.mouseReleased(function() {
-    saveButton.style("background-color", "white");
-  });
+  let aboutButton = createButton("📘").position(basicX+35, basicY+165);
+  aboutButton.style("border", 0);
+  aboutButton.style("background-color", "white");
+  aboutButton.style("font-size", "40px");
+  aboutButton.style("border-radius", "50%");
+  aboutButton.style("width", "60px");
+  aboutButton.style("height", "60px");
+  aboutButton.style("padding", "0 0 0 0");
+  aboutButton.mousePressed(function() {
+    aboutButton.style("background-color", "gray");
 
+  });
+  aboutButton.mouseReleased(function() {
+    aboutButton.style("background-color", "white");
+    alert("Author: University of Bristol - CS 24/25 - Group 8\n"
+      + "Project: Simple Paint\n"
+      + "Version: 0.1\n"
+      + "Date: 2025-1-22\n"
+      + "Members: Zewen Liang, Yunhao Zhou, Kaijie Xu, Zhi Zhao, Yuying Zhang\n"
+  );
+  });
 }
