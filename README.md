@@ -1,7 +1,7 @@
 # 2025-group-8
 2025 COMSM0166 group 8
 
-## Your Game
+## Our Game
 
 Link to your game [PLAY HERE](https://peteinfo.github.io/COMSM0166-project-template/)
 
@@ -9,17 +9,17 @@ Your game lives in the [/docs](/docs) folder, and is published using Github page
 
 Include a demo video of your game here (you don't have to wait until the end, you can insert a work in progress video)
 
-## Your Group
+## Our Group
 
-Add a group photo here!
 ![team pic](./pictures/group_pic_new.png)
 
-- Group member 1, name, email, role
-- Group member 2, name, email, role
-- Group member 3, name, email, role
-- Group member 4, name, email, role
-- Group member 5, name, email, role
-- Group member 5, name, email, role
+| | Name | Email | Role | Github Account|
+|:---|:---|:---|:---| :---|
+| 1 | Zewen Liang | je24595@bristol.ac.uk | Developer | liangzw0126 |
+| 2 | Yunhao Zhou | bx24770@bristol.ac.uk | Visual Designer | YonasZhou |
+| 3 | Yuying Zhang | bc24261@bristol.ac.uk | Copywriter | X65060782 |
+| 4 | Zhi Zhao | ug23003@bristol.ac.uk | Developer | ZZ1975 |
+| 5 | Kaijie Xu | hb24857@bristol.ac.uk | Project Manager | kkkkkaneeeee |
 
 ## Project Report
 
