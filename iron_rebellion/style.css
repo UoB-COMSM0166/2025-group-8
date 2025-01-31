@@ -1,0 +1,20 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+button {
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
