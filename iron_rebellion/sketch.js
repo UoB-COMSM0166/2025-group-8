@@ -1,8 +1,7 @@
 
 let bgType;
-let bgSetter;
 let picturesLoader;
-let currentBg;
+// window.currentBg = ;
 let currentGameState = 0;
 let gameStates = {
   CHAPTERSELECTOR: 0,
@@ -17,28 +16,25 @@ let gameStates = {
   CHPATER4WIN: 9,
 };
 
-window.bgType = bgType;
-window.bgSetter = bgSetter;
-window.picturesLoader = picturesLoader;
-window.currentBg = currentBg;
-window.currentGameState = currentGameState;
-window.gameStates = gameStates;
 
 function preload() {
   picturesLoader = new PicturesLoader();
+  hpBar = new HpBar();
   window.bgType = picturesLoader.getBgType();
   window.currentBg = window.bgType.CHAPTERSELECTOR;
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  // bgSetter = new BgSetter();
-  // bgSetter.drawBg(window.currentBg);
+  window.bgSetter = new BgSetter();
+  window.currentGameState = currentGameState;
+  window.gameStates = gameStates;
+  window.chapterSelector = new ChapterSelector();
 }
 
 function draw() {
   if (window.currentGameState === gameStates.CHAPTERSELECTOR) {
-    chapterSeletor();
+    chapterSeletion();
   } else if (window.currentGameState === gameStates.CHAPTER1) {
     chapter1();
   } else if (window.currentGameState === gameStates.CHAPTER2) {
@@ -60,9 +56,17 @@ function draw() {
   }
 }
 
-function chapterSeletor() {
-  window.bgSetter.drawBg(window.currentBg);
-  let chapterSelector = new ChapterSelector();
-  chapterSelector.placeButtons();
+function chapterSeletion() {
+  window.currentBg = window.bgType.CHAPTERSELECTOR;
+  chapterSelector.setup();
+  // window.bgSetter.drawBg(window.currentBg);
+  // window.chapterSelector.placeThemePictures();
+  // window.chapterSelector.placeTitle();
+  }
+
+function chapter1() {
+  window.currentBg = window.bgType.CHAPTER1THEME;
+  bgSetter.drawBg(window.currentBg);
+  hpBar.placeHpBar();
 }
 
