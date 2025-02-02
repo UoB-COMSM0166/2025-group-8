@@ -10,7 +10,8 @@ class Chapter1Story {
     window.bgSetter.drawBg(window.currentBg);
     this.hpBar.placeHpBar();    
     this.robotDog.setup();
-    this.enemiesSetup()
+    this.enemiesSetup();
+    this.test();
   }
 
   enemiesGenerate() {
@@ -21,7 +22,17 @@ class Chapter1Story {
   enemiesSetup() {
     for (let enemy of this.enemies) {
       enemy.setup();
+      if (enemy.getX() < -10) {
+        this.enemies.pop(enemy);
+      }
     }
   }
   
+  test() {
+    textSize(16);
+    fill(255);
+    text("enemies: " + this.enemies.length, windowWidth - 200, 260);
+  }
+
+
 }

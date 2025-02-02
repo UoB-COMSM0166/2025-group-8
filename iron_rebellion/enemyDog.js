@@ -42,4 +42,10 @@ class EnemyDog {
       this.x -= this.speed;
     }
   }
+
+  getX() {
+    return this.x;
+  }
+ 
+
 }
