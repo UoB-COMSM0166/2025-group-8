@@ -56,7 +56,8 @@ class RobotDog {
             this.jump();
         } else if (keyIsDown(83) || keyIsDown(115)) { // S 键
             this.crouch();
-        } else {
+        } 
+        if (!keyIsDown(65) && !keyIsDown(97) && !keyIsDown(68) && !keyIsDown(100) && !keyIsDown(87) && !keyIsDown(119) && !keyIsDown(83) && !keyIsDown(115)) {
             this.stop();
             this.stand();
         }

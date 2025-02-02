@@ -2,7 +2,7 @@
 let bgType;
 let picturesLoader;
 // window.currentBg = ;
-let currentGameState = 1;
+let currentGameState = 0;
 let gameStates = {
   CHAPTERSELECTOR: 0,
   CHAPTER1: 1,
