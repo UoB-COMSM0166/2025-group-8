@@ -21,7 +21,6 @@ class ChapterSelector {
         this.pictureHeight = this.pictureWidth;
         this.pictureY = this.buttonY - this.pictureHeight - 40;
         this.calculatePositions()
-        this.setup();
     }
 
     setup() {
@@ -29,9 +28,6 @@ class ChapterSelector {
             this.buttonGenerationState = 1;
             this.placeButtons();
         }
-        // this.placeThemePictures();
-        // this.placeTitle();
-        console.log(window.bgType);
         window.bgSetter.drawBg(window.currentBg);
         this.placeThemePictures();
         this.placeTitle();

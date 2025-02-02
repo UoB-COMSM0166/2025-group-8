@@ -2,7 +2,7 @@
 let bgType;
 let picturesLoader;
 // window.currentBg = ;
-let currentGameState = 0;
+let currentGameState = 1;
 let gameStates = {
   CHAPTERSELECTOR: 0,
   CHAPTER1: 1,
@@ -19,7 +19,6 @@ let gameStates = {
 
 function preload() {
   picturesLoader = new PicturesLoader();
-  hpBar = new HpBar();
   window.bgType = picturesLoader.getBgType();
   window.currentBg = window.bgType.CHAPTERSELECTOR;
 }
@@ -30,6 +29,7 @@ function setup() {
   window.currentGameState = currentGameState;
   window.gameStates = gameStates;
   window.chapterSelector = new ChapterSelector();
+  window.chapter1Story = new Chapter1Story();
 }
 
 function draw() {
@@ -59,14 +59,10 @@ function draw() {
 function chapterSeletion() {
   window.currentBg = window.bgType.CHAPTERSELECTOR;
   chapterSelector.setup();
-  // window.bgSetter.drawBg(window.currentBg);
-  // window.chapterSelector.placeThemePictures();
-  // window.chapterSelector.placeTitle();
   }
 
 function chapter1() {
   window.currentBg = window.bgType.CHAPTER1THEME;
-  bgSetter.drawBg(window.currentBg);
-  hpBar.placeHpBar();
+  chapter1Story.setup();
 }
 
