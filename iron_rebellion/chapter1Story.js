@@ -22,7 +22,7 @@ class Chapter1Story {
   enemiesSetup() {
     for (let enemy of this.enemies) {
       enemy.setup();
-      if (enemy.getX() < -10) {
+      if (enemy.getX() < (0-enemy.getWidth()-200)) {
         this.enemies.pop(enemy);
       }
     }
@@ -33,6 +33,7 @@ class Chapter1Story {
     fill(255);
     text("enemies: " + this.enemies.length, windowWidth - 200, 260);
   }
+
 
 
 }
