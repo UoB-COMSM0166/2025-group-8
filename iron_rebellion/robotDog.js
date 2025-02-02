@@ -29,9 +29,11 @@ class RobotDog {
     display() {
         push(); // Save the current transformation state
         // translate(this.x + this.width / 2, this.y + this.height / 2); // Move to the center of the image
-        translate(this.x, this.y + this.height);
+        // translate(this.x, this.y + this.height);
+        translate(this.x, this.y + this.height/2);
         scale(this.direction, 1); // Scale the image horizontally based on direction
-        image(this.roleImage, -this.width / 2, -this.height / 2, this.width, this.height); // Draw the image centered
+        image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered
+        // image(this.roleImage, this.x, this.y, this.width, this.height);
         pop(); // Restore the previous transformation state
     }
 
@@ -44,18 +46,27 @@ class RobotDog {
         } else if (this.x + this.width > windowWidth) {
             this.x = windowWidth - this.width;
         }
+        // when role moves to the center of the screen, it should stand still and other elements should move to the left
+        if (this.x >= windowWidth / 2) {
+            this.x = windowWidth / 2;
+            // this.otherElementsMoveLeft();
+            window.mainRoleMove = false;
+        }
     }   
 
     keyboardControl() {
         if (keyIsDown(65) || keyIsDown(97)) { // A 键
             this.move(-1);
+            window.mainRoleMove = true;
         } else if (keyIsDown(68) || keyIsDown(100)) { // D 键
             this.move(1);
         }
         if (keyIsDown(87) || keyIsDown(119)) { // W 键
             this.jump();
         } else if (keyIsDown(83) || keyIsDown(115)) { // S 键
-            this.crouch();
+            if (!this.isJumping) {
+                this.crouch();
+            }
         } 
         if (!keyIsDown(65) && !keyIsDown(97) && !keyIsDown(68) && !keyIsDown(100) && !keyIsDown(87) && !keyIsDown(119) && !keyIsDown(83) && !keyIsDown(115)) {
             this.stop();
@@ -116,11 +127,15 @@ class RobotDog {
         this.height = this.originalHeight;
     }
 
+    otherElementsMoveLeft() {
+        // Move other elements to the left
+        // ...
+    }
+
+
     // update(platforms) {
     // // 水平移动
     // this.x += this.velocityX;
-
-    // // 重力
 
 
     // // 检测与平台的碰撞

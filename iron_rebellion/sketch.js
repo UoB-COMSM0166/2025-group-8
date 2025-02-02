@@ -2,7 +2,7 @@
 let bgType;
 let picturesLoader;
 // window.currentBg = ;
-let currentGameState = 0;
+let currentGameState = 1;
 let gameStates = {
   CHAPTERSELECTOR: 0,
   CHAPTER1: 1,
@@ -16,11 +16,11 @@ let gameStates = {
   CHPATER4WIN: 9,
 };
 
-
 function preload() {
   picturesLoader = new PicturesLoader();
   window.bgType = picturesLoader.getBgType();
   window.currentBg = window.bgType.CHAPTERSELECTOR;
+  window.mainRoleMove = true;
 }
 
 function setup() {
