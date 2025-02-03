@@ -21,6 +21,17 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 | 4 | Zhi Zhao | ug23003@bristol.ac.uk | Developer | ZZ1975 |
 | 5 | Kaijie Xu | hb24857@bristol.ac.uk | Project Manager | kkkkkaneeeee |
 
+
+## Our Progress
+
+Kanban Board : [kanban]
+
+## Two Prototype Ideas
+
+1.Robot vs Drone : [Robot.vs.Drone]
+
+2.Suika Watermelon Game : 
+
 ## Project Report
 
 ### Introduction
