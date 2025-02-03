@@ -24,11 +24,11 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 
 ## Our Progress
 
-Kanban Board : [kanban]
+Kanban Board : https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiMTUxYmI2MDgyOTRjNGNlZjk2Y2QzNDMyM2FmY2IxNTQiLCJwIjoiaiJ9
 
 ## Two Prototype Ideas
 
-1.Robot vs Drone : [Robot.vs.Drone]
+1.Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link
 
 2.Suika Watermelon Game : 
 
