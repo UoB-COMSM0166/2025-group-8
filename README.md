@@ -116,6 +116,20 @@ Acceptance Criteria:
 The game is available in at least three languages, including English, Spanish, and French.
 Language settings can be changed anytime from the options menu.
 
+Lecturer User Story: Teaching Game Development with P5.js
+Title: Curriculum Development for Introductory Game Design using P5.js
+
+As a lecturer in game design,
+I want to develop a course module focused on using P5.js for creating simple games,
+So that students can learn basic programming concepts and game mechanics in an accessible, hands-on manner.
+Acceptance Criteria:
+
+The course should introduce P5.js and its functionalities related to game development.
+Students will complete small projects, like creating individual game elements (platforms, characters, obstacles).
+The module includes practical coding exercises that lead to the creation of a complete small game by the end of the course.
+Course materials must provide links to online resources and communities for continued learning and support.
+These user stories are designed to focus on the core aspects of building a simple platform game using P5.js, making sure that the development process is manageable and educational for those involved, including students learning game development.
+
 ## reflection
 
 During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on epics, user stories, and acceptance criteria.
