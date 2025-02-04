@@ -28,9 +28,16 @@ Kanban Board : https://kanexu99-1738582319219.atlassian.net/jira/software/projec
 
 ## Two Prototype Ideas
 
-1.Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link
+1: Super Mario
+Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
 
-2.Suika Watermelon Game : 
+2. Merge Big Watermelon 
+Merge Big Watermelon is a casual puzzle game known for its simple and engaging mechanics. Players merge similar items on a grid to create larger ones, aiming to form the biggest watermelon. The game features a minimalistic, colorful design and is developed with technologies that ensure it works across multiple platforms. It's easy to play but offers increasing challenges
+
+
+## Final  Ideas
+
+Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link
 
 ## Project Report
 
