@@ -39,6 +39,93 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 
 Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link
 
+
+## stakeholder list
+
+- **Players:** End users who will interact with and enjoy the game.
+- **Game Developers:** Team members responsible for game design, coding, and testing.
+- **Graphic Designers:** Individuals tasked with creating the visual elements of the game.
+- **Sound Engineers:** Professionals creating and integrating sound effects and music.
+- **Marketing Team:** Personnel focused on promoting the game to increase visibility and engagement.
+- **Game Reviewers and Bloggers:** Key influencers who will help shape public perception of the game.
+
+## epics and user stories
+Epic 1: Engaging Gameplay Experience
+Purpose: To ensure the game is fun, challenging, and retains player interest over time.
+
+User Story 1: As a player, I want the game to introduce new challenges at each level, so I can enjoy continuous learning and excitement.
+
+Acceptance Criteria:
+Each level introduces a new obstacle or enemy type.
+The difficulty progressively increases from one level to the next.
+
+User Story 2: As a player, I want to earn rewards for achieving milestones, so that I feel motivated to keep playing.
+
+Acceptance Criteria:
+Rewards are given for completing each level, achieving high scores, and discovering hidden items.
+Rewards include in-game currency, new character skins, and power-ups.
+
+User Story 3: As a player, I want the ability to save my game progress, so that I can continue playing from where I left off.
+
+Acceptance Criteria:
+Players can save their game manually or automatically after completing each level.
+The game provides at least three save slots.
+
+User Story 4: As a player, I want a tutorial that teaches me basic controls and mechanics, so I can quickly learn how to play.
+
+Acceptance Criteria:
+The tutorial covers all basic controls and game mechanics.
+The tutorial can be skipped or replayed at any time.
+
+User Story 5: As a player, I want to be able to customize my character, so I can have a personal connection with the game.
+
+Acceptance Criteria:
+Players can choose from a selection of character skins and accessories.
+Customizations are unlockable through gameplay or purchasable in the game store.
+
+Epic 2: Seamless Integration and Performance
+Purpose: To ensure the game performs well on all supported platforms without technical issues.
+
+User Story 6: As a developer, I want the game to be optimized for both mobile and desktop platforms, so that players have a smooth experience regardless of their device.
+
+Acceptance Criteria:
+The game maintains at least 30 FPS on all supported devices.
+The game automatically adjusts its resolution and quality settings based on the device’s capabilities.
+
+User Story 7: As a player, I want quick load times, so that I can start playing without long waits.
+
+Acceptance Criteria:
+Level loading times do not exceed 10 seconds on any supported platform.
+The main menu and sub-menus load within 3 seconds.
+
+User Story 8: As a developer, I want to implement effective error handling, so that players do not experience crashes or data loss.
+
+Acceptance Criteria:
+The game has a built-in error reporting tool that captures and logs crashes.
+Players can report bugs through an in-game menu option.
+
+User Story 9: As a player, I want the game to provide helpful feedback during gameplay, so I understand my performance and areas for improvement.
+
+Acceptance Criteria:
+Feedback includes visual and audio cues for successful actions, mistakes, and achievements.
+The game displays end-of-level stats, such as time taken, score, and rewards earned.
+
+User Story 10: As a player, I want to play the game in my native language, so that I can fully understand and enjoy the game content.
+
+Acceptance Criteria:
+The game is available in at least three languages, including English, Spanish, and French.
+Language settings can be changed anytime from the options menu.
+
+## reflection
+
+During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on epics, user stories, and acceptance criteria.
+Epics helped us frame the major goals of our project, dividing our focus between engaging gameplay and robust technical performance. This division ensured a balanced approach to both user experience and system functionality.
+User stories enabled us to see the game through the players' eyes, driving us to prioritize features that directly enhance user engagement and satisfaction, such as customizable characters and multilingual support. Each story clearly outlined specific user needs, guiding our design and development efforts.
+Acceptance criteria were essential in defining the specific conditions for completing user stories, facilitating precise testing and quality control. This specificity helped prevent scope creep, keeping our team aligned on the definition of feature completion.
+The context of creating an accessible and enjoyable game influenced every aspect of our project, from planning to implementation, ensuring we addressed the diverse needs of our player base and optimized the game for various devices.
+This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
+
+
 ## Project Report
 
 ### Introduction
