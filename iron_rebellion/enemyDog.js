@@ -3,8 +3,8 @@ class EnemyDog {
     this.roleImage = loadImage("./assets/pictures/enemy_dog.png");
     this.x = x;
     this.y = y;
-    this.width = 60;
-    this.height = 60;
+    this.width = 150;
+    this.height = 150;
     this.velocityY = 0;
     this.gravity = 0.5;
     this.isJumping = true;
@@ -25,30 +25,22 @@ class EnemyDog {
   }
 
   display() {
-    // image(this.roleImage, this.x, this.y, this.width, this.height); // Draw the image centered
     push(); // Save the current transformation state
-    // translate(this.x + this.width / 2, this.y + this.height / 2); // Move to the center of the image
-    // translate(this.x, this.y + this.height);
-    translate(this.x, this.y + this.height/2);
+    translate(this.x, this.y);
     scale(this.moveDirection * -1, 1); // Scale the image horizontally based on direction
     image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered
-    // image(this.roleImage, this.x, this.y, this.width, this.height);
     pop(); // Restore the previous transformation state
   }
 
   gravityEffect() {
-    if (this.isJumping) {
+    if (this.onGround && !(keyIsDown(87) || keyIsDown(119)))  {
+        this.velocityY = 0;
+    }
+    if (!this.onGround) {
         this.velocityY += this.gravity;
         this.y += this.velocityY;
     }
-
-    if (this.y >= this.groundY) {
-        this.y = this.groundY;
-        this.velocityY = 0;
-        this.isJumping = false;
-        this.onGround = true; // Ensure onGround is set to true
-    }
-  }
+}
 
   relativelyMove() {
     if ((keyIsDown(68) || keyIsDown(100)) && window.mainRoleMove == false) {
@@ -73,5 +65,13 @@ class EnemyDog {
     return this.width;
   }
  
+  getY() {
+    return this.y;
+  }
+
+  getHeight() {
+    return this.height;
+  }
+
 
 }

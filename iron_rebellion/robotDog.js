@@ -1,10 +1,10 @@
 class RobotDog {
     constructor() {
-        this.roleImage = loadImage("./assets/pictures/robot_dog.png");
-        this.x = 50;
+        this.roleImage = loadImage("./assets/pictures/robot_dog.gif");
+        this.x = 150;
         this.y = 50;
-        this.originalHeight = 60;
-        this.width = 60;
+        this.originalHeight = 150;
+        this.width = 150;
         this.height = this.originalHeight;
         this.velocityX = 0;
         this.velocityY = 0;
@@ -13,9 +13,9 @@ class RobotDog {
         this.speed = 4;
         this.onGround = false; 
         this.groundY = windowHeight - 100;
-        this.isJumping = true;
-        this.jumpInitVelocity = -12;
+        this.jumpInitVelocity = -18;
         this.jumpTimes = 0;
+        this.isJumping = false;
     }
 
     setup() {
@@ -23,17 +23,14 @@ class RobotDog {
         this.gravityEffect();
         this.keyboardControl();
         this.test();
-
+        this.infiniteFallDetect();
     }
 
     display() {
         push(); // Save the current transformation state
-        // translate(this.x + this.width / 2, this.y + this.height / 2); // Move to the center of the image
-        // translate(this.x, this.y + this.height);
-        translate(this.x, this.y + this.height/2);
+        translate(this.x, this.y);
         scale(this.direction, 1); // Scale the image horizontally based on direction
         image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered
-        // image(this.roleImage, this.x, this.y, this.width, this.height);
         pop(); // Restore the previous transformation state
     }
 
@@ -49,7 +46,6 @@ class RobotDog {
         // when role moves to the center of the screen, it should stand still and other elements should move to the left
         if (this.x >= windowWidth / 2) {
             this.x = windowWidth / 2;
-            // this.otherElementsMoveLeft();
             window.mainRoleMove = false;
         }
     }   
@@ -58,13 +54,17 @@ class RobotDog {
         if (keyIsDown(65) || keyIsDown(97)) { // A 键
             this.move(-1);
             window.mainRoleMove = true;
+            this.roleImage.play();
         } else if (keyIsDown(68) || keyIsDown(100)) { // D 键
             this.move(1);
+            this.roleImage.play();
+        } else {
+            this.roleImage.reset();
         }
         if (keyIsDown(87) || keyIsDown(119)) { // W 键
             this.jump();
         } else if (keyIsDown(83) || keyIsDown(115)) { // S 键
-            if (!this.isJumping) {
+            if (this.onGround) {
                 this.crouch();
             }
         } 
@@ -82,27 +82,23 @@ class RobotDog {
         if (this.onGround) { // Only jump if on the ground
             this.jumpTimes++;
             this.velocityY = this.jumpInitVelocity;
-            this.isJumping = true;
             this.onGround = false;
+            this.isJumping = true;  
         }
     }
 
     crouch() {
         this.isCrouching = true;
-        this.height = 30;
+        // this.height = 30;
     }
 
     gravityEffect() {
-        if (this.isJumping) {
+        if (this.onGround && !(keyIsDown(87) || keyIsDown(119)))  {
+            this.velocityY = 0;
+        }
+        if (!this.onGround) {
             this.velocityY += this.gravity;
             this.y += this.velocityY;
-        }
-
-        if (this.y >= this.groundY) {
-            this.y = this.groundY;
-            this.velocityY = 0;
-            this.isJumping = false;
-            this.onGround = true; // Ensure onGround is set to true
         }
     }
 
@@ -127,48 +123,26 @@ class RobotDog {
         this.height = this.originalHeight;
     }
 
-    otherElementsMoveLeft() {
-        // Move other elements to the left
-        // ...
+    getX() {
+        return this.x;
     }
 
+    getWidth() {
+        return this.width;
+    }
 
-    // update(platforms) {
-    // // 水平移动
-    // this.x += this.velocityX;
+    getY() {
+        return this.y;
+    }
 
+    getHeight() {
+        return this.height;
+    }
 
-    // // 检测与平台的碰撞
-    // this.onGround = false; // 假设不在地面上
-    // for (let platform of platforms) {
-    //     if (this.collidesWith(platform)) {
-    //     // 如果马里奥的底部与平台顶部接触
-    //     if (this.y + this.height >= platform.y && this.velocityY >= 0) {
-    //         this.y = platform.y - this.height; // 将马里奥放在平台顶部
-    //         this.velocityY = 0; // 停止下落
-    //         this.onGround = true;
-    //         this.isJumping = false;
-    //     }
-    //     }
-    // }
-
-    // // 地面碰撞
-    // if (this.y >= height - this.height) {
-    //     this.y = height - this.height;
-    //     this.velocityY = 0;
-    //     this.onGround = true;
-    //     this.isJumping = false;
-    // }
-    // }
-
-
-
-    // collidesWith(object) {
-    // return (
-    //     this.x < object.x + object.width &&
-    //     this.x + this.width > object.x &&
-    //     this.y < object.y + object.height &&
-    //     this.y + this.height > object.y
-    // );
-    // }
+    infiniteFallDetect() {
+        if (this.y >= windowHeight - 100) {
+            this.y = 0;
+            this.velocityY = 0;
+        }
+    }
 }
