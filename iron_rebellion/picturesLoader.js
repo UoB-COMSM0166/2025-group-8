@@ -9,6 +9,8 @@ class PicturesLoader {
         this.chapter3StoryRoad = loadImage("./assets/pictures/road_3.png");
         this.rock = loadImage("./assets/pictures/rock.png");
         this.transparent = loadImage("./assets/pictures/transparent.png");
+        this.robotDog = loadImage("./assets/pictures/robot_dog-min.gif");
+        this.battery = loadImage("./assets/pictures/battery.png");
         this.bgType = {
             CHAPTERSELECTOR: this.chapterSelector,
             CHAPTER1THEME: this.chapter1ThemePicture,
@@ -19,6 +21,8 @@ class PicturesLoader {
             CHAPTER3STORYROAD: this.chapter3StoryRoad,
             ROCK: this.rock,
             TRANSPARENT: this.transparent,
+            ROBOTDOG: this.robotDog,
+            BATTERY: this.battery,
           }
     }        
     getBgType() {

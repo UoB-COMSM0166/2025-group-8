@@ -1,10 +1,13 @@
 class HpBar {
     constructor() {
-        this.hp = 80;
+        this.roleImage = window.bgType.BATTERY;
+        // this.hp = 80;
         this.x = 20;
         this.y = 20;
-        this.totalLength = 200;
-        this.textSize = 16;
+        // this.totalLength = 200;
+        this.textSize = 20;
+        this.lives = 3;
+        this.lifeIconSize = 50;
     }
 
     placeHpBar() {
@@ -12,11 +15,14 @@ class HpBar {
         textAlign(LEFT);
         textSize(this.textSize);
         fill(255);
-        text("HP:", this.x, this.textSize + this.y);
-        fill("green");
-        rect(this.x + 40, this.y, (this.hp / 100.0) * this.totalLength, 20);
-        fill("pink");
-        rect(this.x + 40 + (this.hp / 100.0) * this.totalLength, this.y, (1 - (this.hp / 100.0)) * this.totalLength, 20);
+        // text("Lives:", this.x, this.y + this.lifeIconSize / 2);
+        // fill("green");
+        // rect(this.x + 40, this.y, (this.hp / 100.0) * this.totalLength, 20);
+        // fill("pink");
+        // rect(this.x + 40 + (this.hp / 100.0) * this.totalLength, this.y, (1 - (this.hp / 100.0)) * this.totalLength, 20);
+        for (let i = 0; i < this.lives; i++) {
+            image(this.roleImage, this.x + 20 + i * this.lifeIconSize, this.y, this.lifeIconSize, this.lifeIconSize);
+        }
     }
 
     updateHp(increment) {

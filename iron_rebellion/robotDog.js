@@ -1,6 +1,6 @@
 class RobotDog {
     constructor() {
-        this.roleImage = loadImage("./assets/pictures/robot_dog.gif");
+        this.roleImage = window.bgType.ROBOTDOG;
         this.x = 150;
         this.y = 50;
         this.originalHeight = 150;

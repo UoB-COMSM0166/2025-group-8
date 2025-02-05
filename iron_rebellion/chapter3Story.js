@@ -78,7 +78,7 @@ class Chapter3Story {
     for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
       let enemyDog = this.enemyDogs[i];
       if (this.collisionCheck(this.robotDog, enemyDog)) {
-        this.robotDog.hp -= 10;
+        this.hpBar.lives -= 1;
         // 使用 splice 方法删除特定的 enemyDog 对象
         this.enemyDogs.splice(i, 1);
       }
@@ -118,7 +118,17 @@ class Chapter3Story {
         }
       }
     }
+    // 处理robotDog和battery的碰撞
+    for (let i = this.batteries.length - 1; i >= 0; i--) {
+      let battery = this.batteries[i];
+      if (this.collisionCheck(this.robotDog, battery)) {
+        this.hpBar.lives += 1;
+        // 使用 splice 方法删除特定的 battery 对象
+        this.batteries.splice(i, 1);
+      }
+    }
   }
+
 
   collisionCheck(object1, object2) {
     // 检查 object1 是否在 object2 的左侧
