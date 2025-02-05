@@ -1,6 +1,6 @@
 class Platform {
-    constructor(x, y, width, height) {
-        this.roleImage = loadImage("./assets/pictures/rock.png");
+    constructor(x, y, width, height, image) {
+        this.roleImage = image;       
         this.x = x;
         this.y = y;
         this.width = width;

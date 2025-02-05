@@ -2,20 +2,28 @@ class Chapter1Story {
   constructor() {
     this.hpBar = new HpBar();
     this.robotDog = new RobotDog();
+    this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 200, 0, 0, 5391/1714.0*windowWidth, windowHeight);
+    this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, windowHeight-200, windowWidth, 613 / 4400.0 * windowWidth);
     this.enemyDogs = [];
     this.enemyDogsGenerate();
     this.platforms = [];
     this.platformsGenerate();
+    this.batteries = [];
+    this.batteriesGenerate();
   }
 
   setup() {
-    window.bgSetter.drawBg(window.currentBg);
+    this.storyBgSetter.setup();
+
     this.hpBar.placeHpBar();    
     this.robotDog.setup();
     this.enemyDogsSetup();
     this.platformsSetup();
     this.collisionHandle();
+    this.batteriesSetup();
     this.test();
+    this.roadBgSetter.setup();
+    this.storyBgSetter.test();
   }
 
   enemyDogsGenerate() {
@@ -32,15 +40,31 @@ class Chapter1Story {
     }
   }
   
+  batteriesGenerate() {
+    this.batteries.push(new Battery(windowWidth - 300, 100));
+    this.batteries.push(new Battery(windowWidth - 500, 100));
+  }
+
+  batteriesSetup() {
+    for (let battery of this.batteries) {
+      battery.setup();
+      if (battery.x < (0-battery.width-200)) {
+        this.batteries.pop(battery);
+      }
+    }
+  }
+
   test() {
     text("enemyDogs: " + this.enemyDogs.length, windowWidth - 200, 260);
     text("platform 1: " + this.collisionCheck(this.robotDog, this.platforms[0]), windowWidth - 200, 280);
+    text("batteries: " + this.batteries.length, windowWidth - 200, 300)
   }
 
   platformsGenerate() {
-    this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30));
+    this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30, window.bgType.ROCK));
+    this.platforms.push(new Platform(0, windowHeight - 25, 10000, 50, window.bgType.CHAPTER3STORYROAD));
     // this.platforms.push(new Platform(windowWidth - 500, 400, 40, 30));
-    this.platforms.push(new Platform(0, windowHeight - 50, 10000, 120));
+    // this.platforms.push(new Platform(0, windowHeight - 50, 10000, 120, window.bgType.CHAPTER3STORYROAD));
   }
 
   platformsSetup() {
@@ -80,6 +104,17 @@ class Chapter1Story {
         let platform = this.platforms[j];
         if (this.collisionCheck(enemyDog, platform)) {
           enemyDog.onGround = true;
+        }
+      }
+    }
+    // 处理battery和platform的碰撞
+    for (let i = this.batteries.length - 1; i >= 0; i--) {
+      let battery = this.batteries[i];
+      battery.onGround = false;
+      for (let j = this.platforms.length - 1; j >= 0; j--) {
+        let platform = this.platforms[j];
+        if (this.collisionCheck(battery, platform)) {
+          battery.onGround = true;
         }
       }
     }
