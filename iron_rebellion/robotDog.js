@@ -3,8 +3,8 @@ class RobotDog {
         this.roleImage = window.bgType.ROBOTDOG;
         this.x = 150;
         this.y = 50;
-        this.originalHeight = 150;
-        this.width = 150;
+        this.originalHeight = windowHeight / 6.0;
+        this.width = this.originalHeight;
         this.height = this.originalHeight;
         this.velocityX = 0;
         this.velocityY = 0;
@@ -13,7 +13,9 @@ class RobotDog {
         this.speed = 4;
         this.onGround = false; 
         this.groundY = windowHeight - 100;
-        this.jumpInitVelocity = -18;
+        // this.jumpInitVelocity = -18;
+        // 此初速度可以保证机器狗跳跃最大高度为0.5 * windowHeight
+        this.jumpInitVelocity = -Math.sqrt(windowHeight * this.gravity);
         this.jumpTimes = 0;
         this.isJumping = false;
     }

@@ -31,13 +31,16 @@ class Chapter3Story {
   enemyDogsGenerate() {
     this.enemyDogs.push(new EnemyDog(windowWidth - 300, 100));
     this.enemyDogs.push(new EnemyDog(windowWidth - 500, 100));
+    this.enemyDogs.push(new EnemyDog(2000, 100));
   }
 
   enemyDogsSetup() {
-    for (let enemyDog of this.enemyDogs) {
+    for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
+      let enemyDog = this.enemyDogs[i];
       enemyDog.setup();
-      if (enemyDog.x < (0-enemyDog.width-200)) {
-        this.enemyDogs.pop(enemyDog);
+      if (enemyDog.isDiscarded) {
+        // 使用 splice 方法删除特定的 enemyDog 对象
+        this.enemyDogs.splice(i, 1);
       }
     }
   }
