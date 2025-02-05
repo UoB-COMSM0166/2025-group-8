@@ -1,5 +1,6 @@
 class Chapter3Story {
   constructor() {
+    this.configReader = new ConfigReader("./chapter3Config.json");
     this.hpBar = new HpBar();
     this.robotDog = new RobotDog();
     this.storyBgWidth = 5391/1714.0*windowWidth;
@@ -13,6 +14,7 @@ class Chapter3Story {
     this.platformsGenerate();
     this.batteries = [];
     this.batteriesGenerate();
+    
   }
 
   setup() {
@@ -29,9 +31,11 @@ class Chapter3Story {
   }
 
   enemyDogsGenerate() {
-    this.enemyDogs.push(new EnemyDog(windowWidth - 300, 100));
-    this.enemyDogs.push(new EnemyDog(windowWidth - 500, 100));
-    this.enemyDogs.push(new EnemyDog(2000, 100));
+    // this.enemyDogs.push(new EnemyDog(windowWidth - 300, 100));
+    // this.enemyDogs.push(new EnemyDog(windowWidth - 500, 100));
+    // this.enemyDogs.push(new EnemyDog(2000, 100));
+    this.enemyDogs = this.configReader.generateEnemyDogs();
+    // this.configReader.generateEnemyDogs();
   }
 
   enemyDogsSetup() {
@@ -46,8 +50,9 @@ class Chapter3Story {
   }
   
   batteriesGenerate() {
-    this.batteries.push(new Battery(windowWidth - 300, 100));
-    this.batteries.push(new Battery(windowWidth - 500, 100));
+    // this.batteries.push(new Battery(windowWidth - 300, 100));
+    // this.batteries.push(new Battery(windowWidth - 500, 100));
+    this.batteries = this.configReader.generateBatteries();
   }
 
   batteriesSetup() {
@@ -66,9 +71,9 @@ class Chapter3Story {
   }
 
   platformsGenerate() {
-    this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30, window.bgType.ROCK));
+    // this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30, window.bgType.ROCK));
     this.platforms.push(new Platform(0, this.roadY + 0.82 * this.roadHeight, 10000, 0.3 * this.roadHeight, window.bgType.TRANSPARENT));
-
+    // this.configReader.generatePlatforms();
     // this.platforms.push(new Platform(windowWidth - 500, 400, 40, 30));
     // this.platforms.push(new Platform(0, windowHeight - 50, 10000, 120, window.bgType.CHAPTER3STORYROAD));
   }

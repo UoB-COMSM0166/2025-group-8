@@ -19,6 +19,7 @@ function preload() {
   picturesLoader = new PicturesLoader();
   window.bgType = picturesLoader.getBgType();
   window.mainRoleMove = true;
+  window.story1Config = loadJSON("./chapter3Config.json");
 }
 
 function setup() {
