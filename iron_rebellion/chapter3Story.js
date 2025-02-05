@@ -2,8 +2,11 @@ class Chapter3Story {
   constructor() {
     this.hpBar = new HpBar();
     this.robotDog = new RobotDog();
-    this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 200, 0, 0, 5391/1714.0*windowWidth, windowHeight);
-    this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, windowHeight-200, windowWidth, 613 / 4400.0 * windowWidth);
+    this.storyBgWidth = 5391/1714.0*windowWidth;
+    this.roadY = windowHeight-(613 / 4400.0 * windowWidth);
+    this.roadHeight = 613 / 4400.0 * windowWidth;
+    this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 255, 0, 0, this.storyBgWidth, windowHeight);
+    this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, this.roadY, windowWidth, this.roadHeight);
     this.enemyDogs = [];
     this.enemyDogsGenerate();
     this.platforms = [];
@@ -14,7 +17,6 @@ class Chapter3Story {
 
   setup() {
     this.storyBgSetter.setup();
-
     this.hpBar.placeHpBar();    
     this.robotDog.setup();
     this.enemyDogsSetup();
@@ -34,7 +36,7 @@ class Chapter3Story {
   enemyDogsSetup() {
     for (let enemyDog of this.enemyDogs) {
       enemyDog.setup();
-      if (enemyDog.getX() < (0-enemyDog.getWidth()-200)) {
+      if (enemyDog.x < (0-enemyDog.width-200)) {
         this.enemyDogs.pop(enemyDog);
       }
     }
@@ -62,7 +64,8 @@ class Chapter3Story {
 
   platformsGenerate() {
     this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30, window.bgType.ROCK));
-    this.platforms.push(new Platform(0, windowHeight - 25, 10000, 50, window.bgType.CHAPTER3STORYROAD));
+    this.platforms.push(new Platform(0, this.roadY + 0.82 * this.roadHeight, 10000, 0.3 * this.roadHeight, window.bgType.TRANSPARENT));
+
     // this.platforms.push(new Platform(windowWidth - 500, 400, 40, 30));
     // this.platforms.push(new Platform(0, windowHeight - 50, 10000, 120, window.bgType.CHAPTER3STORYROAD));
   }
@@ -71,6 +74,7 @@ class Chapter3Story {
     for (let platform of this.platforms) {
       platform.setup();
     }
+    // circle(0, this.roadY + 0.5 * this.roadHeight, 20);
   }
 
   collisionHandle() {

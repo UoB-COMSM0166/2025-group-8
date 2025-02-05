@@ -10,6 +10,7 @@ class ChapterSelector {
     thirdPictureX;
     fourthPictureX;
     constructor() {
+        this.bgSetter = new BgSetter(window.bgType.CHAPTERSELECTOR, 0, 80, 0, 0, windowWidth, windowHeight);
         this.rows = 1;
         this.columns = 4;
         this.chapterCount = 4;
@@ -28,7 +29,7 @@ class ChapterSelector {
             this.buttonGenerationState = 1;
             this.placeButtons();
         }
-        window.bgSetter.drawBg(window.currentBg);
+        this.bgSetter.setup();
         this.placeThemePictures();
         this.placeTitle();
     }

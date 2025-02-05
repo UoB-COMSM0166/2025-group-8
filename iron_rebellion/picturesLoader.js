@@ -11,6 +11,7 @@ class PicturesLoader {
         this.transparent = loadImage("./assets/pictures/transparent.png");
         this.robotDog = loadImage("./assets/pictures/robot_dog-min.gif");
         this.battery = loadImage("./assets/pictures/battery.png");
+        this.enemyDog = loadImage("./assets/pictures/enemy_dog.png");
         this.bgType = {
             CHAPTERSELECTOR: this.chapterSelector,
             CHAPTER1THEME: this.chapter1ThemePicture,
@@ -23,6 +24,7 @@ class PicturesLoader {
             TRANSPARENT: this.transparent,
             ROBOTDOG: this.robotDog,
             BATTERY: this.battery,
+            ENEMYDOG: this.enemyDog,
           }
     }        
     getBgType() {

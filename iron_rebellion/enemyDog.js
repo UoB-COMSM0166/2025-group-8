@@ -1,6 +1,6 @@
 class EnemyDog {
   constructor(x, y) {
-    this.roleImage = loadImage("./assets/pictures/enemy_dog.png");
+    this.roleImage = window.bgType.ENEMYDOG;
     this.x = x;
     this.y = y;
     this.width = 150;
@@ -9,7 +9,6 @@ class EnemyDog {
     this.gravity = 0.5;
     this.isJumping = true;
     this.onGround = false;
-    this.groundY = windowHeight - 100;
     this.relativeSpeed = 4;
     this.speed = 1;
     this.moveDistance = 400;
@@ -56,22 +55,5 @@ class EnemyDog {
       this.moveDirection *= -1;
     }
   }
-
-  getX() {
-    return this.x;
-  }
-
-  getWidth() {
-    return this.width;
-  }
- 
-  getY() {
-    return this.y;
-  }
-
-  getHeight() {
-    return this.height;
-  }
-
 
 }

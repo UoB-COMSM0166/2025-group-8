@@ -34,7 +34,7 @@ class Chapter1Story {
   enemyDogsSetup() {
     for (let enemyDog of this.enemyDogs) {
       enemyDog.setup();
-      if (enemyDog.getX() < (0-enemyDog.getWidth()-200)) {
+      if (enemyDog.x < (0-enemyDog.width-200)) {
         this.enemyDogs.pop(enemyDog);
       }
     }

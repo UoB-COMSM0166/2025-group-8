@@ -123,24 +123,8 @@ class RobotDog {
         this.height = this.originalHeight;
     }
 
-    getX() {
-        return this.x;
-    }
-
-    getWidth() {
-        return this.width;
-    }
-
-    getY() {
-        return this.y;
-    }
-
-    getHeight() {
-        return this.height;
-    }
-
     infiniteFallDetect() {
-        if (this.y >= windowHeight - 100) {
+        if (this.y >= windowHeight + 100) {
             this.y = 0;
             this.velocityY = 0;
         }

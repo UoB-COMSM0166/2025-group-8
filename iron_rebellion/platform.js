@@ -18,22 +18,8 @@ class Platform {
         translate(this.x, this.y);
         image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered
         pop(); // Restore the previous transformation state
-    }
-
-    getX() {
-        return this.x;
-    }
-
-    getWidth() {
-        return this.width;
-    }
-
-    getY() {
-        return this.y;
-    }
-
-    getHeight() {
-        return this.height;
+        // image(this.roleImage, this.x, this.y, this.width, this.height);
+        // circle(this.x, this.y, 10);
     }
 
     relativelyMove() {

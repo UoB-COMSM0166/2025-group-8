@@ -17,7 +17,6 @@ class BgSetter {
 
     draw() {
         tint(this.tintValue);
-        console.log(this.width);
         image(this.bgImage, this.x, this.y, this.width, this.height);
         // if (this.x + this.width <= windowWidth + 50) {
         if (this.x <= -(this.width - windowWidth) + 50) {
