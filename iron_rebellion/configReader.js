@@ -35,4 +35,14 @@ class ConfigReader {
     }
     return platforms;
   }
+
+  generateDrones() {
+    let drones = [];
+    for (let i = 0; i < this.config.drones.length; i++) {
+      let newY = this.config.platforms[i].y * 1.0 / 1000 * windowHeight;
+      let drone = new Drone(this.config.drones[i].x, newY);
+      drones.push(drone);
+    }
+    return drones;
+  }
 }

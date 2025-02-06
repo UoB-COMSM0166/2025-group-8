@@ -14,7 +14,8 @@ class Chapter3Story {
     this.platformsGenerate();
     this.batteries = [];
     this.batteriesGenerate();
-    
+    this.drones = []
+    this.dronesGenerate();
   }
 
   setup() {
@@ -25,6 +26,7 @@ class Chapter3Story {
     this.platformsSetup();
     this.collisionHandle();
     this.batteriesSetup();
+    this.dronesSetup();
     // this.test();
     this.roadBgSetter.setup();
     this.storyBgSetter.test();
@@ -63,9 +65,6 @@ class Chapter3Story {
   }
 
   test() {
-    // text("enemyDogs: " + this.enemyDogs.length, windowWidth - 200, 260);
-    // text("platform 1: " + this.collisionCheck(this.robotDog, this.platforms[0]), windowWidth - 200, 280);
-    // text("batteries: " + this.batteries.length, windowWidth - 200, 300);
     text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
     text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
     text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
@@ -89,6 +88,21 @@ class Chapter3Story {
     }
   }
 
+  dronesGenerate() {
+    this.drones = this.configReader.generateDrones();
+  }
+
+  dronesSetup() { 
+    for (let i = this.drones.length - 1; i >= 0; i--) {
+      let drone = this.drones[i];
+      drone.setup();
+      if (drone.isDiscarded) {
+        // 使用 splice 方法删除特定的 enemyDog 对象
+        this.drones.splice(i, 1);
+      }
+    }
+  }
+
   collisionHandle() {
     // 处理robotDog和enemyDog的碰撞
     for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
@@ -97,8 +111,21 @@ class Chapter3Story {
         this.hud.removeLife();
         // 使用 splice 方法删除特定的 enemyDog 对象
         this.enemyDogs.splice(i, 1);
+        this.robotDog.x = 50;
+        this.robotDog.y = 50;
       }
     }
+
+    // 处理robotDog和drone的碰撞
+    for (let i = this.drones.length - 1; i >= 0; i--) {
+      let drone = this.drones[i];
+      if (this.collisionCheck(this.robotDog, drone)) {
+        this.hud.removeLife();
+        // 使用 splice 方法删除特定的 drone 对象
+        this.drones.splice(i, 1);
+      }
+    }
+
     // 处理robotDog和platform的碰撞
     this.robotDog.onGround = false;
     for (let i = this.platforms.length - 1; i >= 0; i--) {
