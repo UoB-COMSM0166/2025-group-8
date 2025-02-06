@@ -15,6 +15,12 @@ class Battery {
     this.moveDistance = 400;
     this.moveDistanceRecord = 0;
     this.moveDirection = 1;
+    if ((this.x - this.width / 2) >= windowWidth + 200) {
+      this.isDisplay = false;
+    } else {
+      this.isDisplay = true;
+    }
+    this.isDiscarded = false;
   }
 
   setup() {
@@ -47,4 +53,15 @@ class Battery {
     }
   }
 
+  discardCheck() {
+    if ((this.x + this.width/2) < -200) {
+        this.isDiscarded = true;
+    }
+  }
+
+  displayCheck() {
+      if ((this.x - this.width / 2) < windowWidth + 200) {
+          this.isDisplay = true;
+      } 
+  }
 }

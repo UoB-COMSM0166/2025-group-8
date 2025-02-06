@@ -15,7 +15,7 @@ class EnemyDog {
     this.moveDistanceRecord = 0;
     this.moveDirection = 1;
     this.maxSpeed = 2.5;
-    if (this.x >= windowWidth + 200) {
+    if ((this.x - this.width / 2) >= windowWidth + 200) {
       this.isDisplay = false;
     } else {
       this.isDisplay = true;
@@ -62,17 +62,16 @@ class EnemyDog {
 
   // 当超过左边屏幕边缘200像素时，消失
   discardCheck() {
-    if (this.x < -200) {
-      this.isDiscarded = true;
+    if ((this.x + this.width/2) < -200) {
+        this.isDiscarded = true;
     }
-  }
+}
 
   displayCheck() {
-    if (this.x < windowWidth + 200) {
-      this.isDisplay = true;
-    } 
+      if ((this.x - this.width / 2) < windowWidth + 200) {
+          this.isDisplay = true;
+      } 
   }
-
   aiMove() {
     // 随机改变方向
     if (Math.random() < 0.005) { // 每帧有0.5%的概率改变方向

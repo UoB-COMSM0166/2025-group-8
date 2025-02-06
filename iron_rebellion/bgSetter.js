@@ -7,8 +7,6 @@ class BgSetter {
         this.tintValue = tintValue;
         this.width = width;
         this.height = height;
-        console.log(this.width);
-        console.log(this.height);
     }
 
     setup() {

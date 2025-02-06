@@ -6,13 +6,38 @@ class Platform {
         this.width = width;
         this.height = height;
         this.relativeSpeed = 4;
+        if ((this.x - this.width / 2) >= windowWidth + 200) {
+            this.isDisplay = false;
+        } else {
+            this.isDisplay = true;
+        }
+        this.isDiscarded = false;
     }
 
     setup() {
-        this.display();
-        this.relativelyMove();
+        if (this.isDisplay) {
+          this.display();
+        }
+        if (!this.isDiscarded) {
+          this.relativelyMove();
+          this.discardCheck();
+          this.displayCheck();
+        }
+      }
+
+    discardCheck() {
+        if ((this.x + this.width/2) < -200) {
+            this.isDiscarded = true;
+        }
     }
 
+    displayCheck() {
+        if ((this.x - this.width / 2) < windowWidth + 200) {
+            this.isDisplay = true;
+        } 
+    }
+    
+    
     display() {
         push(); // Save the current transformation state
         translate(this.x, this.y);
@@ -26,5 +51,5 @@ class Platform {
         if ((keyIsDown(68) || keyIsDown(100)) && window.mainRoleMove == false) {
           this.x -= this.relativeSpeed;
         }
-      }
+    }
 }

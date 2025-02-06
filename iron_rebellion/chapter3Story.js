@@ -1,7 +1,7 @@
 class Chapter3Story {
   constructor() {
-    this.configReader = new ConfigReader("./chapter3Config.json");
-    this.hpBar = new HpBar();
+    this.configReader = new ConfigReader(window.story1Config);
+    this.hud = new Hud(this.configReader.config.roadLength);
     this.robotDog = new RobotDog();
     this.storyBgWidth = 5391/1714.0*windowWidth;
     this.roadY = windowHeight-(613 / 4400.0 * windowWidth);
@@ -19,23 +19,19 @@ class Chapter3Story {
 
   setup() {
     this.storyBgSetter.setup();
-    this.hpBar.placeHpBar();    
+    this.hud.setup();    
     this.robotDog.setup();
     this.enemyDogsSetup();
     this.platformsSetup();
     this.collisionHandle();
     this.batteriesSetup();
-    this.test();
+    // this.test();
     this.roadBgSetter.setup();
     this.storyBgSetter.test();
   }
 
   enemyDogsGenerate() {
-    // this.enemyDogs.push(new EnemyDog(windowWidth - 300, 100));
-    // this.enemyDogs.push(new EnemyDog(windowWidth - 500, 100));
-    // this.enemyDogs.push(new EnemyDog(2000, 100));
     this.enemyDogs = this.configReader.generateEnemyDogs();
-    // this.configReader.generateEnemyDogs();
   }
 
   enemyDogsSetup() {
@@ -50,39 +46,47 @@ class Chapter3Story {
   }
   
   batteriesGenerate() {
-    // this.batteries.push(new Battery(windowWidth - 300, 100));
-    // this.batteries.push(new Battery(windowWidth - 500, 100));
     this.batteries = this.configReader.generateBatteries();
   }
 
   batteriesSetup() {
-    for (let battery of this.batteries) {
+    for (let i = this.batteries.length - 1; i >= 0; i--) {
+      let battery = this.batteries[i];
       battery.setup();
       if (battery.x < (0-battery.width-200)) {
-        this.batteries.pop(battery);
+        if (battery.isDiscarded) {
+          // 使用 splice 方法删除特定的 enemyDog 对象
+          this.batteries.splice(i, 1);
+        }
       }
     }
   }
 
   test() {
-    text("enemyDogs: " + this.enemyDogs.length, windowWidth - 200, 260);
-    text("platform 1: " + this.collisionCheck(this.robotDog, this.platforms[0]), windowWidth - 200, 280);
-    text("batteries: " + this.batteries.length, windowWidth - 200, 300)
+    // text("enemyDogs: " + this.enemyDogs.length, windowWidth - 200, 260);
+    // text("platform 1: " + this.collisionCheck(this.robotDog, this.platforms[0]), windowWidth - 200, 280);
+    // text("batteries: " + this.batteries.length, windowWidth - 200, 300);
+    text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
+    text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
+    text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
+    text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
   }
 
   platformsGenerate() {
-    // this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30, window.bgType.ROCK));
-    this.platforms.push(new Platform(0, this.roadY + 0.82 * this.roadHeight, 10000, 0.3 * this.roadHeight, window.bgType.TRANSPARENT));
-    // this.configReader.generatePlatforms();
-    // this.platforms.push(new Platform(windowWidth - 500, 400, 40, 30));
-    // this.platforms.push(new Platform(0, windowHeight - 50, 10000, 120, window.bgType.CHAPTER3STORYROAD));
+    this.bottomPlatform = new Platform(this.configReader.config.roadLength/2.0, this.roadY + 0.82 * this.roadHeight, this.configReader.config.roadLength, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
+    this.platforms = this.configReader.generatePlatforms();
+    this.platforms.push(this.bottomPlatform);
   }
 
   platformsSetup() {
-    for (let platform of this.platforms) {
+    for (let i = this.platforms.length - 1; i >= 0; i--) {
+      let platform = this.platforms[i];
       platform.setup();
+      if (platform.isDiscarded) {
+        // 使用 splice 方法删除特定的 enemyDog 对象
+        this.platforms.splice(i, 1);
+      }
     }
-    // circle(0, this.roadY + 0.5 * this.roadHeight, 20);
   }
 
   collisionHandle() {
@@ -90,7 +94,7 @@ class Chapter3Story {
     for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
       let enemyDog = this.enemyDogs[i];
       if (this.collisionCheck(this.robotDog, enemyDog)) {
-        this.hpBar.lives -= 1;
+        this.hud.removeLife();
         // 使用 splice 方法删除特定的 enemyDog 对象
         this.enemyDogs.splice(i, 1);
       }
@@ -134,7 +138,7 @@ class Chapter3Story {
     for (let i = this.batteries.length - 1; i >= 0; i--) {
       let battery = this.batteries[i];
       if (this.collisionCheck(this.robotDog, battery)) {
-        this.hpBar.lives += 1;
+        this.hud.addLife();
         // 使用 splice 方法删除特定的 battery 对象
         this.batteries.splice(i, 1);
       }
