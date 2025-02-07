@@ -8,14 +8,7 @@ class Chapter3Story {
     this.roadHeight = 613 / 4400.0 * windowWidth;
     this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 255, 0, 0, this.storyBgWidth, windowHeight);
     this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, this.roadY, windowWidth, this.roadHeight);
-    this.enemyDogs = [];
-    this.enemyDogsGenerate();
-    this.platforms = [];
-    this.platformsGenerate();
-    this.batteries = [];
-    this.batteriesGenerate();
-    this.drones = []
-    this.dronesGenerate();
+    this.elementsGenerate();
   }
 
   setup() {
@@ -27,13 +20,16 @@ class Chapter3Story {
     this.collisionHandle();
     this.batteriesSetup();
     this.dronesSetup();
-    // this.test();
     this.roadBgSetter.setup();
-    // this.storyBgSetter.test();
   }
 
-  enemyDogsGenerate() {
+  elementsGenerate() {
     this.enemyDogs = this.configReader.generateEnemyDogs();
+    this.batteries = this.configReader.generateBatteries();
+    this.bottomPlatform = new Platform(this.configReader.config.roadLength/2.0, this.roadY + 0.82 * this.roadHeight, this.configReader.config.roadLength, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
+    this.platforms = this.configReader.generatePlatforms();
+    this.platforms.push(this.bottomPlatform);
+    this.drones = this.configReader.generateDrones();
   }
 
   enemyDogsSetup() {
@@ -47,10 +43,6 @@ class Chapter3Story {
     }
   }
   
-  batteriesGenerate() {
-    this.batteries = this.configReader.generateBatteries();
-  }
-
   batteriesSetup() {
     for (let i = this.batteries.length - 1; i >= 0; i--) {
       let battery = this.batteries[i];
@@ -64,19 +56,6 @@ class Chapter3Story {
     }
   }
 
-  test() {
-    // text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
-    // text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
-    // text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
-    // text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
-  }
-
-  platformsGenerate() {
-    this.bottomPlatform = new Platform(this.configReader.config.roadLength/2.0, this.roadY + 0.82 * this.roadHeight, this.configReader.config.roadLength, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
-    this.platforms = this.configReader.generatePlatforms();
-    this.platforms.push(this.bottomPlatform);
-  }
-
   platformsSetup() {
     for (let i = this.platforms.length - 1; i >= 0; i--) {
       let platform = this.platforms[i];
@@ -86,10 +65,6 @@ class Chapter3Story {
         this.platforms.splice(i, 1);
       }
     }
-  }
-
-  dronesGenerate() {
-    this.drones = this.configReader.generateDrones();
   }
 
   dronesSetup() { 
@@ -109,8 +84,21 @@ class Chapter3Story {
     for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
       let enemyDog = this.enemyDogs[i];
       if (this.collisionCheck(this.robotDog, enemyDog)) {
-        this.hud.lives -= 1;
+        this.hud.removeLife();
         this.enemyDogs.splice(i, 1);
+        this.robotDog.x = 50;
+        this.robotDog.y = 50;
+      }
+    }
+
+    // Handle collisions between robotDog and drones
+    for (let i = this.drones.length - 1; i >= 0; i--) {
+      let drone = this.drones[i];
+      if (this.collisionCheck(this.robotDog, drone)) {
+        this.hud.removeLife();
+        this.drones.splice(i, 1);
+        this.robotDog.x = 50;
+        this.robotDog.y = 50;
       }
     }
 

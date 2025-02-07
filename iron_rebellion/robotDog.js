@@ -13,7 +13,6 @@ class RobotDog {
         this.speed = 4;
         this.onGround = false; 
         this.groundY = windowHeight - 100;
-        // this.jumpInitVelocity = -18;
         // 此初速度可以保证机器狗跳跃最大高度为0.5 * windowHeight
         this.jumpInitVelocity = -Math.sqrt(windowHeight * this.gravity);
         this.jumpTimes = 0;
@@ -21,14 +20,13 @@ class RobotDog {
     }
 
     setup() {
-        this.display();
+        this.draw();
         this.gravityEffect();
         this.keyboardControl();
-        // this.test();
         this.infiniteFallDetect();
     }
 
-    display() {
+    draw() {
         push(); // Save the current transformation state
         translate(this.x, this.y);
         scale(this.direction, 1); // Scale the image horizontally based on direction
@@ -49,6 +47,8 @@ class RobotDog {
         if (this.x >= windowWidth / 2) {
             this.x = windowWidth / 2;
             window.mainRoleMove = false;
+        } else {
+            window.mainRoleMove = true;
         }
     }   
 
