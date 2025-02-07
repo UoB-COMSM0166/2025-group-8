@@ -25,9 +25,9 @@ class Chapter4Story {
     this.platformsSetup();
     this.collisionHandle();
     this.batteriesSetup();
-    this.test();
+    // this.test();
     this.roadBgSetter.setup();
-    this.storyBgSetter.test();
+    // this.storyBgSetter.test();
   }
 
   enemyDogsGenerate() {
@@ -66,10 +66,10 @@ class Chapter4Story {
     // text("enemyDogs: " + this.enemyDogs.length, windowWidth - 200, 260);
     // text("platform 1: " + this.collisionCheck(this.robotDog, this.platforms[0]), windowWidth - 200, 280);
     // text("batteries: " + this.batteries.length, windowWidth - 200, 300);
-    text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
-    text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
-    text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
-    text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
+    // text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
+    // text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
+    // text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
+    // text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
   }
 
   platformsGenerate() {

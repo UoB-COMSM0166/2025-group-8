@@ -32,6 +32,7 @@ class Hud {
     }
 
     progressBar() {
+        textSize(16);
         fill(255);
         let walkedDistance = this.relativelyMoveDistance;
         let walkedPercentage = (walkedDistance / (this.roadLength - 0.5 * windowWidth)) * 100;

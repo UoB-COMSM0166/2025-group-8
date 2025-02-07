@@ -29,7 +29,7 @@ class Chapter3Story {
     this.dronesSetup();
     // this.test();
     this.roadBgSetter.setup();
-    this.storyBgSetter.test();
+    // this.storyBgSetter.test();
   }
 
   enemyDogsGenerate() {
@@ -65,10 +65,10 @@ class Chapter3Story {
   }
 
   test() {
-    text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
-    text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
-    text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
-    text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
+    // text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
+    // text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
+    // text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
+    // text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
   }
 
   platformsGenerate() {

@@ -8,16 +8,11 @@ class Chapter1Story {
     this.roadHeight = 613 / 4400.0 * windowWidth;
     this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 255, 0, 0, this.storyBgWidth, windowHeight);
     this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, this.roadY, windowWidth, this.roadHeight);
-    this.enemyDogs = [];
-    this.enemyDogsGenerate();
-    this.platforms = [];
-    this.platformsGenerate();
-    this.batteries = [];
-    this.batteriesGenerate();
-    
+    this.elementsGenerate();
   }
 
   setup() {
+    this.elementsGenerate();
     this.storyBgSetter.setup();
     this.hud.setup();    
     this.robotDog.setup();
@@ -25,13 +20,17 @@ class Chapter1Story {
     this.platformsSetup();
     this.collisionHandle();
     this.batteriesSetup();
-    this.test();
+    // this.test();
     this.roadBgSetter.setup();
-    this.storyBgSetter.test();
+    // this.storyBgSetter.test();
   }
 
-  enemyDogsGenerate() {
+  elementsGenerate() {
     this.enemyDogs = this.configReader.generateEnemyDogs();
+    this.batteries = this.configReader.generateBatteries();
+    this.platforms = this.configReader.generatePlatforms();
+    this.bottomPlatform = new Platform(0, this.roadY + 0.82 * this.roadHeight, 10000, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
+    this.platforms.push(this.bottomPlatform);
   }
 
   enemyDogsSetup() {
@@ -43,10 +42,6 @@ class Chapter1Story {
         this.enemyDogs.splice(i, 1);
       }
     }
-  }
-  
-  batteriesGenerate() {
-    this.batteries = this.configReader.generateBatteries();
   }
 
   batteriesSetup() {
@@ -66,19 +61,10 @@ class Chapter1Story {
     // text("enemyDogs: " + this.enemyDogs.length, windowWidth - 200, 260);
     // text("platform 1: " + this.collisionCheck(this.robotDog, this.platforms[0]), windowWidth - 200, 280);
     // text("batteries: " + this.batteries.length, windowWidth - 200, 300);
-    text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
-    text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
-    text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
-    text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
-  }
-
-  platformsGenerate() {
-    // this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30, window.bgType.ROCK));
-    this.bottomPlatform = new Platform(0, this.roadY + 0.82 * this.roadHeight, 10000, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
-    this.platforms = this.configReader.generatePlatforms();
-    this.platforms.push(this.bottomPlatform);
-    // this.platforms.push(new Platform(windowWidth - 500, 400, 40, 30));
-    // this.platforms.push(new Platform(0, windowHeight - 50, 10000, 120, window.bgType.CHAPTER3STORYROAD));
+    // text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
+    // text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
+    // text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
+    // text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
   }
 
   platformsSetup() {

@@ -24,7 +24,7 @@ class RobotDog {
         this.display();
         this.gravityEffect();
         this.keyboardControl();
-        this.test();
+        // this.test();
         this.infiniteFallDetect();
     }
 
