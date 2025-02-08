@@ -42,7 +42,7 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link
 
 
-## stakeholder list
+## Stakeholder list
 
 - **Players:** End users who will interact with and enjoy the game.
 - **Game Developers:** Team members responsible for game design, coding, and testing.
@@ -51,86 +51,20 @@ Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaM
 - **Marketing Team:** Personnel focused on promoting the game to increase visibility and engagement.
 - **Game Reviewers and Bloggers:** Key influencers who will help shape public perception of the game.
 
-## epics and user stories
-Epic 1: Engaging Gameplay Experience
-Purpose: To ensure the game is fun, challenging, and retains player interest over time.
+## Epics & User Stories
+| Stakeholder        | User Story Title                  | User Story Description                                                                                   | Acceptance Criteria                                                                                                                                                             |
+|--------------------|----------------------------------|---------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Players**        | Enhanced Gameplay Experience     | As a player, I want the game to have multiple difficulty levels, so that I can enjoy the game at a pace suitable for my skill level. | 1. The game should offer at least three difficulty settings: Easy, Medium, and Hard.<br>2. Difficulty settings affect the speed of gameplay and the density of obstacles.       |
+| **Players**        | Achievement System               | As a player, I want the game to have a system of achievements and rewards, so that I feel recognized for my accomplishments and stay engaged with the game. | 1. Achievements for various milestones like completing levels without failing, collecting all items, or achieving high scores should be implemented.<br>2. Rewards can include unlockable content such as new character skins or special abilities. |
+| **Game Developers**| Efficient Development Tools      | As a game developer, I want to use efficient and robust development tools and libraries, so that I can implement features quickly and with fewer bugs. | 1. The chosen game development platform must allow integration with popular version control systems.<br>2. The platform should support automated testing tools to reduce bugs.  |
+| **Game Developers**| Real-Time Collaboration          | As a game developer, I want tools that support real-time collaboration, so that the team can work together seamlessly regardless of location. | 1. Development tools must support multiple users editing the same files simultaneously without conflicts.<br>2. Changes made by one developer should be visible to others in real-time. |
+| **Graphic Designers**| Creative Asset Library         | As a graphic designer, I want access to a comprehensive library of creative assets, so that I can design unique and appealing game visuals efficiently. | 1. The asset library should contain a wide range of pre-made graphics suitable for platform games.<br>2. Assets should be customizable in terms of color and size.              |
+| **Graphic Designers**| High-Resolution Support        | As a graphic designer, I want the game engine to support high-resolution graphics, so that the game looks crisp and engaging on all devices. | 1. The game engine must support graphics at resolutions up to 4K without performance degradation.<br>2. All game assets must be scalable without loss of detail.               |
+| **Sound Engineers** | Dynamic Sound System             | As a sound engineer, I want a dynamic sound system that adjusts sounds based on player actions and game events, so that the audio is immersive and enhances the game experience. | 1. Sound effects should change in pitch or volume based on the game's speed and player movements.<br>2. Background music should dynamically adjust to match the intensity of the gameplay. |
+| **Sound Engineers** | Audio Asset Management           | As a sound engineer, I want an efficient way to manage and test sound assets, so that I can ensure the audio quality is consistent throughout the game. | 1. The development environment must include tools for editing and testing audio clips directly within the game.<br>2. The system should allow for tagging and categorizing sound files for easy retrieval. |
+| **Marketing Team**  | Targeted Marketing Campaigns     | As a marketing team member, I want to conduct targeted marketing campaigns based on player data, so that we can efficiently reach the right audience and maximize engagement. | 1. The game should have the capability to collect anonymous data on player demographics and preferences.<br>2. Marketing tools must be able to segment audiences based on this data for targeted promotions. |
+| **Marketing Team**  | Social Media Integration         | As a marketing team member, I want the game to have social media integration, so that players can easily share their achievements and gameplay, increasing organic reach. | 1. Players should be able to connect their social media accounts and share milestones directly from the game.<br>2. Shares must include a link back to the game’s download page to drive traffic and downloads. |
 
-User Story 1: As a player, I want the game to introduce new challenges at each level, so I can enjoy continuous learning and excitement.
-
-Acceptance Criteria:
-Each level introduces a new obstacle or enemy type.
-The difficulty progressively increases from one level to the next.
-
-User Story 2: As a player, I want to earn rewards for achieving milestones, so that I feel motivated to keep playing.
-
-Acceptance Criteria:
-Rewards are given for completing each level, achieving high scores, and discovering hidden items.
-Rewards include in-game currency, new character skins, and power-ups.
-
-User Story 3: As a player, I want the ability to save my game progress, so that I can continue playing from where I left off.
-
-Acceptance Criteria:
-Players can save their game manually or automatically after completing each level.
-The game provides at least three save slots.
-
-User Story 4: As a player, I want a tutorial that teaches me basic controls and mechanics, so I can quickly learn how to play.
-
-Acceptance Criteria:
-The tutorial covers all basic controls and game mechanics.
-The tutorial can be skipped or replayed at any time.
-
-User Story 5: As a player, I want to be able to customize my character, so I can have a personal connection with the game.
-
-Acceptance Criteria:
-Players can choose from a selection of character skins and accessories.
-Customizations are unlockable through gameplay or purchasable in the game store.
-
-Epic 2: Seamless Integration and Performance
-Purpose: To ensure the game performs well on all supported platforms without technical issues.
-
-User Story 6: As a developer, I want the game to be optimized for both mobile and desktop platforms, so that players have a smooth experience regardless of their device.
-
-Acceptance Criteria:
-The game maintains at least 30 FPS on all supported devices.
-The game automatically adjusts its resolution and quality settings based on the device’s capabilities.
-
-User Story 7: As a player, I want quick load times, so that I can start playing without long waits.
-
-Acceptance Criteria:
-Level loading times do not exceed 10 seconds on any supported platform.
-The main menu and sub-menus load within 3 seconds.
-
-User Story 8: As a developer, I want to implement effective error handling, so that players do not experience crashes or data loss.
-
-Acceptance Criteria:
-The game has a built-in error reporting tool that captures and logs crashes.
-Players can report bugs through an in-game menu option.
-
-User Story 9: As a player, I want the game to provide helpful feedback during gameplay, so I understand my performance and areas for improvement.
-
-Acceptance Criteria:
-Feedback includes visual and audio cues for successful actions, mistakes, and achievements.
-The game displays end-of-level stats, such as time taken, score, and rewards earned.
-
-User Story 10: As a player, I want to play the game in my native language, so that I can fully understand and enjoy the game content.
-
-Acceptance Criteria:
-The game is available in at least three languages, including English, Spanish, and French.
-Language settings can be changed anytime from the options menu.
-
-Lecturer User Story: Teaching Game Development with P5.js
-Title: Curriculum Development for Introductory Game Design using P5.js
-
-As a lecturer in game design,
-I want to develop a course module focused on using P5.js for creating simple games,
-So that students can learn basic programming concepts and game mechanics in an accessible, hands-on manner.
-Acceptance Criteria:
-
-The course should introduce P5.js and its functionalities related to game development.
-Students will complete small projects, like creating individual game elements (platforms, characters, obstacles).
-The module includes practical coding exercises that lead to the creation of a complete small game by the end of the course.
-Course materials must provide links to online resources and communities for continued learning and support.
-These user stories are designed to focus on the core aspects of building a simple platform game using P5.js, making sure that the development process is manageable and educational for those involved, including students learning game development.
 
 ## reflection
 
