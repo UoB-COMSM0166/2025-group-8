@@ -70,7 +70,7 @@ Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaM
 
 
 
-## reflection
+## Reflection
 
 During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on epics, user stories, and acceptance criteria.
 Epics helped us frame the major goals of our project, dividing our focus between engaging gameplay and robust technical performance. This division ensured a balanced approach to both user experience and system functionality.
@@ -79,13 +79,6 @@ Acceptance criteria were essential in defining the specific conditions for compl
 The context of creating an accessible and enjoyable game influenced every aspect of our project, from planning to implementation, ensuring we addressed the diverse needs of our player base and optimized the game for various devices.
 This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
 
-
-
-
-| Stakeholder | Epic                 | User Story                                                                 | Acceptance Criteria                                                                 |
-|--------------|----------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Gamer        | Improve user experience | As a game player, I want to be able to control the game progress ,so that I can pause the game in special situations without affecting my game performance. | Assuming that during gameplay, when I have something to attend to, I can press the pause button to pause the game and resume it when I am ready to continue. |
-| Gamer        | Improve user experience | As a user, I want to be able to choose the object I control ,so that I can have more interaction with the game and enhance my experience. | When the user enters the game screen, they can freely choose the shape, color, and other attributes of the object they control. Once the user has selected their customized object, it will remain as their character throughout the game, responding to their actions accordingly. |
 
 
 ## Project Report
