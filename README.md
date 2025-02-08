@@ -144,8 +144,8 @@ This experience not only improved our product's alignment with user expectations
 
 | Stakeholder | Epic                 | User Story                                                                 | Acceptance Criteria                                                                 |
 |--------------|----------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Gamer        | Improve user experience | As a game player, I want to be able to control the game progress so that I can pause the game in special situations without affecting my game performance. | Assuming that during gameplay, when I have something to attend to, I can press the pause button to pause the game and resume it when I am ready to continue. |
-| Gamer        | Improve user experience | As a user, I want to be able to choose the object I control so that I can have more interaction with the game and enhance my experience. | When the user enters the game screen, they can freely choose the shape, color, and other attributes of the object they control. Once the user has selected their customized object, it will remain as their character throughout the game, responding to their actions accordingly. |
+| Gamer        | Improve user experience | As a game player, I want to be able to control the game progress ,so that I can pause the game in special situations without affecting my game performance. | Assuming that during gameplay, when I have something to attend to, I can press the pause button to pause the game and resume it when I am ready to continue. |
+| Gamer        | Improve user experience | As a user, I want to be able to choose the object I control ,so that I can have more interaction with the game and enhance my experience. | When the user enters the game screen, they can freely choose the shape, color, and other attributes of the object they control. Once the user has selected their customized object, it will remain as their character throughout the game, responding to their actions accordingly. |
 
 
 ## Project Report
