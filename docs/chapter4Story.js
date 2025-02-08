@@ -1,20 +1,14 @@
 class Chapter4Story {
   constructor() {
     this.configReader = new ConfigReader(window.story1Config);
-    this.hud = new Hud();
+    this.hud = new Hud(this.configReader.config.roadLength);
     this.robotDog = new RobotDog();
     this.storyBgWidth = 5391/1714.0*windowWidth;
     this.roadY = windowHeight-(613 / 4400.0 * windowWidth);
     this.roadHeight = 613 / 4400.0 * windowWidth;
     this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 255, 0, 0, this.storyBgWidth, windowHeight);
     this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, this.roadY, windowWidth, this.roadHeight);
-    this.enemyDogs = [];
-    this.enemyDogsGenerate();
-    this.platforms = [];
-    this.platformsGenerate();
-    this.batteries = [];
-    this.batteriesGenerate();
-    
+    this.elementsGenerate();
   }
 
   setup() {
@@ -25,13 +19,17 @@ class Chapter4Story {
     this.platformsSetup();
     this.collisionHandle();
     this.batteriesSetup();
-    this.test();
+    this.dronesSetup();
     this.roadBgSetter.setup();
-    this.storyBgSetter.test();
   }
 
-  enemyDogsGenerate() {
+  elementsGenerate() {
     this.enemyDogs = this.configReader.generateEnemyDogs();
+    this.batteries = this.configReader.generateBatteries();
+    this.bottomPlatform = new Platform(this.configReader.config.roadLength/2.0, this.roadY + 0.82 * this.roadHeight, this.configReader.config.roadLength, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
+    this.platforms = this.configReader.generatePlatforms();
+    this.platforms.push(this.bottomPlatform);
+    this.drones = this.configReader.generateDrones();
   }
 
   enemyDogsSetup() {
@@ -45,10 +43,6 @@ class Chapter4Story {
     }
   }
   
-  batteriesGenerate() {
-    this.batteries = this.configReader.generateBatteries();
-  }
-
   batteriesSetup() {
     for (let i = this.batteries.length - 1; i >= 0; i--) {
       let battery = this.batteries[i];
@@ -62,25 +56,6 @@ class Chapter4Story {
     }
   }
 
-  test() {
-    // text("enemyDogs: " + this.enemyDogs.length, windowWidth - 200, 260);
-    // text("platform 1: " + this.collisionCheck(this.robotDog, this.platforms[0]), windowWidth - 200, 280);
-    // text("batteries: " + this.batteries.length, windowWidth - 200, 300);
-    text("bottomPlatform x: " + this.bottomPlatform.x, windowWidth - 400, 360);
-    text("bottomPlatform y: " + this.bottomPlatform.y, windowWidth - 400, 380);
-    text("bottomPlatform discarded: " + this.bottomPlatform.isDiscarded, windowWidth - 400, 400);
-    text("bottomPlatform display: " + this.bottomPlatform.isDisplay, windowWidth - 400, 420);
-  }
-
-  platformsGenerate() {
-    // this.platforms.push(new Platform(windowWidth - 300, 450, 200, 30, window.bgType.ROCK));
-    this.bottomPlatform = new Platform(0, this.roadY + 0.82 * this.roadHeight, 10000, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
-    this.platforms = this.configReader.generatePlatforms();
-    this.platforms.push(this.bottomPlatform);
-    // this.platforms.push(new Platform(windowWidth - 500, 400, 40, 30));
-    // this.platforms.push(new Platform(0, windowHeight - 50, 10000, 120, window.bgType.CHAPTER3STORYROAD));
-  }
-
   platformsSetup() {
     for (let i = this.platforms.length - 1; i >= 0; i--) {
       let platform = this.platforms[i];
@@ -92,81 +67,111 @@ class Chapter4Story {
     }
   }
 
+  dronesSetup() { 
+    for (let i = this.drones.length - 1; i >= 0; i--) {
+      let drone = this.drones[i];
+      drone.setup();
+      if (drone.isDiscarded) {
+        // 使用 splice 方法删除特定的 enemyDog 对象
+        this.drones.splice(i, 1);
+      }
+    }
+  }
+
+  // New version about collisions(Zhi Zhao)
   collisionHandle() {
-    // 处理robotDog和enemyDog的碰撞
+    // Handle collisions between robotDog and enemyDogs
     for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
       let enemyDog = this.enemyDogs[i];
       if (this.collisionCheck(this.robotDog, enemyDog)) {
-        this.hud.lives -= 1;
-        // 使用 splice 方法删除特定的 enemyDog 对象
+        this.hud.removeLife();
         this.enemyDogs.splice(i, 1);
+        this.robotDog.x = 50;
+        this.robotDog.y = 50;
       }
     }
-    // 处理robotDog和platform的碰撞
-    this.robotDog.onGround = false;
-    for (let i = this.platforms.length - 1; i >= 0; i--) {
-      let platform = this.platforms[i];
-      if (this.collisionCheck(this.robotDog, platform) &&
-        !(keyIsDown(87) || keyIsDown(119))) {
-        this.robotDog.onGround = true;
-      } else if (this.robotDog.velocityY > 0 && this.collisionCheck(this.robotDog, platform)) {
-        // 正在下落且碰撞到平台则说明已经onGround
-        this.robotDog.isJumping = false;
-        this.robotDog.onGround = true;
-      } 
+
+    // Handle collisions between robotDog and drones
+    for (let i = this.drones.length - 1; i >= 0; i--) {
+      let drone = this.drones[i];
+      if (this.collisionCheck(this.robotDog, drone)) {
+        this.hud.removeLife();
+        this.drones.splice(i, 1);
+        this.robotDog.x = 50;
+        this.robotDog.y = 50;
+      }
     }
-    // 处理enemyDog和platform的碰撞
-    for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
-      let enemyDog = this.enemyDogs[i];
+
+    // Handle collisions between robotDog and platforms
+    this.robotDog.onGround = false;
+    for (let platform of this.platforms) {
+      if (!this.collisionCheck(this.robotDog, platform)) continue;
+
+      let prevX = this.robotDog.x - this.robotDog.velocityX;
+      let prevY = this.robotDog.y - this.robotDog.velocityY;
+      let wasAbove = prevY + this.robotDog.height / 2 <= platform.y - platform.height / 2;
+      let wasBelow = prevY - this.robotDog.height / 2 >= platform.y + platform.height / 2;
+      let wasLeft = prevX + this.robotDog.width / 2 <= platform.x - platform.width / 2;
+      let wasRight = prevX - this.robotDog.width / 2 >= platform.x + platform.width / 2;
+
+      if (wasAbove && this.robotDog.velocityY > 0) {
+        this.robotDog.y = platform.y - platform.height / 2 - this.robotDog.height / 2;
+        this.robotDog.velocityY = 0;
+        this.robotDog.onGround = true;
+      } else if (wasBelow && this.robotDog.velocityY < 0) {
+        this.robotDog.y = platform.y + platform.height / 2 + this.robotDog.height / 2;
+        this.robotDog.velocityY = 0;
+      }
+
+      if (wasLeft && this.robotDog.velocityX > 0) {
+        this.robotDog.x = platform.x - platform.width / 2 - this.robotDog.width / 2;
+        this.robotDog.velocityX = 0;
+      } else if (wasRight && this.robotDog.velocityX < 0) {
+        this.robotDog.x = platform.x + platform.width / 2 + this.robotDog.width / 2;
+        this.robotDog.velocityX = 0;
+      }
+    }
+
+    // Handle collisions between enemyDogs and platforms
+    for (let enemyDog of this.enemyDogs) {
       enemyDog.onGround = false;
-      for (let j = this.platforms.length - 1; j >= 0; j--) {
-        let platform = this.platforms[j];
-        if (this.collisionCheck(enemyDog, platform)) {
+      for (let platform of this.platforms) {
+        if (this.collisionCheck(enemyDog, platform) && enemyDog.velocityY >= 0) {
           enemyDog.onGround = true;
+          enemyDog.velocityY = 0;
+          enemyDog.y = platform.y - platform.height / 2 - enemyDog.height / 2;
+          break;
         }
       }
     }
-    // 处理battery和platform的碰撞
-    for (let i = this.batteries.length - 1; i >= 0; i--) {
-      let battery = this.batteries[i];
+
+    // Handle collisions between batteries and platforms
+    for (let battery of this.batteries) {
       battery.onGround = false;
-      for (let j = this.platforms.length - 1; j >= 0; j--) {
-        let platform = this.platforms[j];
+      for (let platform of this.platforms) {
         if (this.collisionCheck(battery, platform)) {
           battery.onGround = true;
+          break;
         }
       }
     }
-    // 处理robotDog和battery的碰撞
+
+    // Handle collisions between robotDog and batteries
     for (let i = this.batteries.length - 1; i >= 0; i--) {
       let battery = this.batteries[i];
       if (this.collisionCheck(this.robotDog, battery)) {
         this.hud.lives += 1;
-        // 使用 splice 方法删除特定的 battery 对象
         this.batteries.splice(i, 1);
       }
     }
   }
 
-
-  collisionCheck(object1, object2) {
-    // 检查 object1 是否在 object2 的左侧
-    if (object1.x + object1.width/2.0 < object2.x - object2.width/2.0) {
-      return false;
-    }
-    // 检查 object1 是否在 object2 的右侧
-    if (object1.x - object1.width/2.0 > object2.x + object2.width/2.0) {
-      return false;
-    }
-    // 检查 object1 是否在 object2 的上方
-    if (object1.y + object1.height/2.0 < object2.y - object2.height/2.0) {
-      return false;
-    }
-    // 检查 object1 是否在 object2 的下方
-    if (object1.y - object1.height/2.0 > object2.y + object2.height/2.0) {
-      return false;
-    }
-    return true;
+  collisionCheck(a, b) {
+    return !(
+      a.x + a.width / 2 <= b.x - b.width / 2 ||
+      a.x - a.width / 2 >= b.x + b.width / 2 ||
+      a.y + a.height / 2 <= b.y - b.height / 2 ||
+      a.y - a.height / 2 >= b.y + b.height / 2
+    );
   }
-
 }

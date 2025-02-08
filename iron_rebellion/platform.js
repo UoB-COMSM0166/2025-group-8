@@ -16,7 +16,7 @@ class Platform {
 
     setup() {
         if (this.isDisplay) {
-          this.display();
+          this.draw();
         }
         if (!this.isDiscarded) {
           this.relativelyMove();
@@ -38,7 +38,7 @@ class Platform {
     }
     
     
-    display() {
+    draw() {
         push(); // Save the current transformation state
         translate(this.x, this.y);
         image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered

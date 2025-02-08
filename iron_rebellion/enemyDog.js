@@ -25,7 +25,7 @@ class EnemyDog {
 
   setup() {
     if (this.isDisplay) {
-      this.display();
+      this.draw();
       this.aiMove();
       this.gravityEffect();
     }
@@ -36,7 +36,7 @@ class EnemyDog {
     }
   }
 
-  display() {
+  draw() {
     push(); // Save the current transformation state
     translate(this.x, this.y);
     scale(this.moveDirection * -1, 1); // Scale the image horizontally based on direction

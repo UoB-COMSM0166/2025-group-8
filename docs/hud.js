@@ -32,11 +32,12 @@ class Hud {
     }
 
     progressBar() {
+        textSize(25);
+        strokeWeight(2);
         fill(255);
         let walkedDistance = this.relativelyMoveDistance;
         let walkedPercentage = (walkedDistance / (this.roadLength - 0.5 * windowWidth)) * 100;
-        text(Math.round(walkedPercentage) + "%", windowWidth - this.x - this.lifeIconSize, this.y + this.lifeIconSize / 2);
-        // text("relative Distance: " + Math.round(this.relativelyMoveDistance) + "m", windowWidth - 200, this.y + this.lifeIconSize / 2)
+        text(Math.round(walkedPercentage) + "%", windowWidth - this.x - this.lifeIconSize, this.y + this.lifeIconSize / 2.0);
     }
 
     relativelyMoveRecord() {
