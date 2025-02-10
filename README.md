@@ -28,12 +28,18 @@ Kanban Board : https://kanexu99-1738582319219.atlassian.net/jira/software/projec
 
 ## Two Prototype Ideas
 
-1: Super Mario
+- **Super Mario:** 
+
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
 
+<<<<<<< HEAD
 [![Super Mario](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/ad0b8ad5130f1242c89f56301ca04ff055c8c7e1/Screenshot%202025-02-10%20at%2000.48.00.png)]（https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link）
 
 2. Merge Big Watermelon 
+=======
+- **Merge Big Watermelon:** 
+
+>>>>>>> ec9d74c8d59d7ba105cd0514ca85966021cf4c2c
 Merge Big Watermelon is a casual puzzle game known for its simple and engaging mechanics. Players merge similar items on a grid to create larger ones, aiming to form the biggest watermelon. The game features a minimalistic, colorful design and is developed with technologies that ensure it works across multiple platforms. It's easy to play but offers increasing challenges
 
 
@@ -42,7 +48,7 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link
 
 
-## stakeholder list
+## Stakeholder list
 
 - **Players:** End users who will interact with and enjoy the game.
 - **Game Developers:** Team members responsible for game design, coding, and testing.
@@ -51,88 +57,26 @@ Robot vs Drone : https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaM
 - **Marketing Team:** Personnel focused on promoting the game to increase visibility and engagement.
 - **Game Reviewers and Bloggers:** Key influencers who will help shape public perception of the game.
 
-## epics and user stories
-Epic 1: Engaging Gameplay Experience
-Purpose: To ensure the game is fun, challenging, and retains player interest over time.
+## Epics & User Stories
+| Stakeholder            | Epic                                        | User Story                                  | Acceptance Criteria                                                                                                                                                                        |
+|------------------------|---------------------------------------------|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Players**            | **Player Experience Enhancement**           | Enhanced Gameplay Experience                | 1. The game should offer at least three difficulty settings: Easy, Medium, and Hard.<br>2. Difficulty settings affect the speed of gameplay and the density of obstacles.                 |
+| **Players**            | **Player Experience Enhancement**           | Achievement System                          | 1. Achievements for completing levels without failing, collecting all items, or achieving high scores should be implemented.<br>2. Rewards can include unlockable content such as new character skins or special abilities. |
+| **Game Developers**    | **Developer Efficiency and Collaboration**  | Efficient Development Tools                 | 1. The chosen game development platform must allow integration with popular version control systems.<br>2. The platform should support automated testing tools to reduce bugs.               |
+| **Game Developers**    | **Developer Efficiency and Collaboration**  | Real-Time Collaboration                     | 1. Development tools must support multiple users editing the same files simultaneously without conflicts.<br>2. Changes made by one developer should be visible to others in real-time.    |
+| **Graphic Designers**  | **Visual and Audio Immersion**              | Creative Asset Library                      | 1. The asset library should contain a wide range of pre-made graphics suitable for platform games.<br>2. Assets should be customizable in terms of color and size.                          |
+| **Graphic Designers**  | **Visual and Audio Immersion**              | High-Resolution Support                     | 1. The game engine must support graphics at resolutions up to 4K without performance degradation.<br>2. All game assets must be scalable without loss of detail.                            |
+| **Sound Engineers**    | **Visual and Audio Immersion**              | Dynamic Sound System                        | 1. Sound effects should change in pitch or volume based on the game's speed and player movements.<br>2. Background music should dynamically adjust to match the intensity of the gameplay. |
+| **Sound Engineers**    | **Visual and Audio Immersion**              | Audio Asset Management                      | 1. The development environment must include tools for editing and testing audio clips directly within the game.<br>2. The system should allow for tagging and categorizing sound files for easy retrieval. |
+| **Marketing Team**     | **Effective Player Engagement and Marketing** | Targeted Marketing Campaigns               | 1. The game should have the capability to collect anonymous data on player demographics and preferences.<br>2. Marketing tools must be able to segment audiences based on this data for targeted promotions. |
+| **Marketing Team**     | **Effective Player Engagement and Marketing** | Social Media Integration                   | 1. Players should be able to connect their social media accounts and share milestones directly from the game.<br>2. Shares must include a link back to the game’s download page to drive traffic and downloads. |
+| **Game Reviewers and Bloggers** | **Enhancing Game Visibility and Credibility** | Early Access to Game Builds             | 1. Game builds are made available to verified reviewers and bloggers at least one month before the official launch.<br>2. Access includes not only the game itself but also detailed release notes and any known issues to set expectations correctly.<br>3. A feedback mechanism is provided for reviewers to communicate their thoughts and findings directly to the development team. |
+| **Game Reviewers and Bloggers** | **Enhancing Game Visibility and Credibility** | Exclusive Interviews and Behind-the-Scenes Content | 1. Arrangements for interviews with key team members are facilitated quarterly and upon major milestones in the game's development.<br>2. Behind-the-scenes content such as development diaries, art sketches, and coding sessions is shared regularly with this group to enable detailed reporting.<br>3. The content should be easily shareable and formatted in a way that can be directly embedded or linked in online articles or posts. |
 
-User Story 1: As a player, I want the game to introduce new challenges at each level, so I can enjoy continuous learning and excitement.
 
-Acceptance Criteria:
-Each level introduces a new obstacle or enemy type.
-The difficulty progressively increases from one level to the next.
 
-User Story 2: As a player, I want to earn rewards for achieving milestones, so that I feel motivated to keep playing.
 
-Acceptance Criteria:
-Rewards are given for completing each level, achieving high scores, and discovering hidden items.
-Rewards include in-game currency, new character skins, and power-ups.
-
-User Story 3: As a player, I want the ability to save my game progress, so that I can continue playing from where I left off.
-
-Acceptance Criteria:
-Players can save their game manually or automatically after completing each level.
-The game provides at least three save slots.
-
-User Story 4: As a player, I want a tutorial that teaches me basic controls and mechanics, so I can quickly learn how to play.
-
-Acceptance Criteria:
-The tutorial covers all basic controls and game mechanics.
-The tutorial can be skipped or replayed at any time.
-
-User Story 5: As a player, I want to be able to customize my character, so I can have a personal connection with the game.
-
-Acceptance Criteria:
-Players can choose from a selection of character skins and accessories.
-Customizations are unlockable through gameplay or purchasable in the game store.
-
-Epic 2: Seamless Integration and Performance
-Purpose: To ensure the game performs well on all supported platforms without technical issues.
-
-User Story 6: As a developer, I want the game to be optimized for both mobile and desktop platforms, so that players have a smooth experience regardless of their device.
-
-Acceptance Criteria:
-The game maintains at least 30 FPS on all supported devices.
-The game automatically adjusts its resolution and quality settings based on the device’s capabilities.
-
-User Story 7: As a player, I want quick load times, so that I can start playing without long waits.
-
-Acceptance Criteria:
-Level loading times do not exceed 10 seconds on any supported platform.
-The main menu and sub-menus load within 3 seconds.
-
-User Story 8: As a developer, I want to implement effective error handling, so that players do not experience crashes or data loss.
-
-Acceptance Criteria:
-The game has a built-in error reporting tool that captures and logs crashes.
-Players can report bugs through an in-game menu option.
-
-User Story 9: As a player, I want the game to provide helpful feedback during gameplay, so I understand my performance and areas for improvement.
-
-Acceptance Criteria:
-Feedback includes visual and audio cues for successful actions, mistakes, and achievements.
-The game displays end-of-level stats, such as time taken, score, and rewards earned.
-
-User Story 10: As a player, I want to play the game in my native language, so that I can fully understand and enjoy the game content.
-
-Acceptance Criteria:
-The game is available in at least three languages, including English, Spanish, and French.
-Language settings can be changed anytime from the options menu.
-
-Lecturer User Story: Teaching Game Development with P5.js
-Title: Curriculum Development for Introductory Game Design using P5.js
-
-As a lecturer in game design,
-I want to develop a course module focused on using P5.js for creating simple games,
-So that students can learn basic programming concepts and game mechanics in an accessible, hands-on manner.
-Acceptance Criteria:
-
-The course should introduce P5.js and its functionalities related to game development.
-Students will complete small projects, like creating individual game elements (platforms, characters, obstacles).
-The module includes practical coding exercises that lead to the creation of a complete small game by the end of the course.
-Course materials must provide links to online resources and communities for continued learning and support.
-These user stories are designed to focus on the core aspects of building a simple platform game using P5.js, making sure that the development process is manageable and educational for those involved, including students learning game development.
-
-## reflection
+## Reflection
 
 During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on epics, user stories, and acceptance criteria.
 Epics helped us frame the major goals of our project, dividing our focus between engaging gameplay and robust technical performance. This division ensured a balanced approach to both user experience and system functionality.
@@ -141,13 +85,6 @@ Acceptance criteria were essential in defining the specific conditions for compl
 The context of creating an accessible and enjoyable game influenced every aspect of our project, from planning to implementation, ensuring we addressed the diverse needs of our player base and optimized the game for various devices.
 This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
 
-
-
-
-| Stakeholder | Epic                 | User Story                                                                 | Acceptance Criteria                                                                 |
-|--------------|----------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
-| Gamer        | Improve user experience | As a game player, I want to be able to control the game progress ,so that I can pause the game in special situations without affecting my game performance. | Assuming that during gameplay, when I have something to attend to, I can press the pause button to pause the game and resume it when I am ready to continue. |
-| Gamer        | Improve user experience | As a user, I want to be able to choose the object I control ,so that I can have more interaction with the game and enhance my experience. | When the user enters the game screen, they can freely choose the shape, color, and other attributes of the object they control. Once the user has selected their customized object, it will remain as their character throughout the game, responding to their actions accordingly. |
 
 
 ## Project Report
