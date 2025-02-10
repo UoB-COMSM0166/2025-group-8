@@ -32,12 +32,15 @@ Kanban Board : https://kanexu99-1738582319219.atlassian.net/jira/software/projec
 
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
 
-<<<<<<< HEAD
+
 [![Super Mario](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/ad0b8ad5130f1242c89f56301ca04ff055c8c7e1/Screenshot%202025-02-10%20at%2000.48.00.png)]（https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link）
 
 2. Merge Big Watermelon 
-=======
 - **Merge Big Watermelon:** 
+
+<<<<<<< HEAD
+
+=======
 
 >>>>>>> ec9d74c8d59d7ba105cd0514ca85966021cf4c2c
 Merge Big Watermelon is a casual puzzle game known for its simple and engaging mechanics. Players merge similar items on a grid to create larger ones, aiming to form the biggest watermelon. The game features a minimalistic, colorful design and is developed with technologies that ensure it works across multiple platforms. It's easy to play but offers increasing challenges
