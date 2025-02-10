@@ -13,6 +13,7 @@ class PicturesLoader {
         this.battery = loadImage("./assets/pictures/battery.png");
         this.enemyDog = loadImage("./assets/pictures/enemy_dog.png");
         this.drone = loadImage("./assets/pictures/drone.png");
+        this.bullet = loadImage("./assets/pictures/bullet.png");
         this.bgType = {
             CHAPTERSELECTOR: this.chapterSelector,
             CHAPTER1THEME: this.chapter1ThemePicture,
@@ -27,6 +28,7 @@ class PicturesLoader {
             BATTERY: this.battery,
             ENEMYDOG: this.enemyDog,
             DRONE: this.drone,
+            BULLET: this.bullet,
           }
     }        
     getBgType() {

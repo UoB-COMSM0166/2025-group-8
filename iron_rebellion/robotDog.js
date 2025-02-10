@@ -17,6 +17,10 @@ class RobotDog {
         this.jumpInitVelocity = -Math.sqrt(windowHeight * this.gravity);
         this.jumpTimes = 0;
         this.isJumping = false;
+        this.direction = 1; // 1 for right, -1 for left
+        this.bullets = [];
+        this.lastShootTime = 0;  // 记录上次发射子弹的时间
+        this.shootCooldown = 500;  // 射击冷却时间，单位：毫秒
     }
 
     setup() {
@@ -24,6 +28,7 @@ class RobotDog {
         this.gravityEffect();
         this.keyboardControl();
         this.infiniteFallDetect();
+        this.drawBullets();
     }
 
     draw() {
@@ -32,6 +37,12 @@ class RobotDog {
         scale(this.direction, 1); // Scale the image horizontally based on direction
         image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered
         pop(); // Restore the previous transformation state
+    }
+
+    drawBullets() {
+        for (let i = 0; i < this.bullets.length; i++) {
+            this.bullets[i].setup();
+        }
     }
 
     move(direction) {
@@ -53,6 +64,7 @@ class RobotDog {
     }   
 
     keyboardControl() {
+        // left and right
         if (keyIsDown(65) || keyIsDown(97)) { // A 键
             this.move(-1);
             window.mainRoleMove = true;
@@ -63,13 +75,27 @@ class RobotDog {
         } else {
             this.roleImage.reset();
         }
-        if (keyIsDown(87) || keyIsDown(119)) { // W 键
+        // up and down
+        if (keyIsDown(32)) { // Space 键
             this.jump();
         } else if (keyIsDown(83) || keyIsDown(115)) { // S 键
             if (this.onGround) {
                 this.crouch();
             }
-        } 
+        }
+        // attack
+        let directionStr;
+        if (keyIsDown(74) || keyIsDown(106)) { // J 键
+            if (keyIsDown(87) || keyIsDown(119)) { // W 键
+                directionStr = "up";
+            } else if (keyIsDown(83) || keyIsDown(115)) { // S 键
+                directionStr = "down";
+            } else {
+                directionStr = this.direction == 1 ? "right" : "left";
+            }
+            this.attack(directionStr);
+        }
+        // stop
         if (!keyIsDown(65) && !keyIsDown(97) && !keyIsDown(68) && !keyIsDown(100) && !keyIsDown(87) && !keyIsDown(119) && !keyIsDown(83) && !keyIsDown(115)) {
             this.stop();
             this.stand();
@@ -117,9 +143,6 @@ class RobotDog {
         text("jumpTimes: " + this.jumpTimes, windowWidth - 200, 220);
     }
 
-
-
-
     stand() {
         this.isCrouching = false;
         this.height = this.originalHeight;
@@ -131,4 +154,35 @@ class RobotDog {
             this.velocityY = 0;
         }
     }
+
+    attack(directionStr) {
+        let currentTime = millis(); 
+        if (currentTime - this.lastShootTime < this.shootCooldown) {
+            return;
+        }
+        this.lastShootTime = currentTime;  // 更新上次发射时间
+        let bulletX;
+        let bulletY;
+        let rotation;
+        if (directionStr == "left") {
+            bulletX = this.x - this.width / 2.0;
+            bulletY = this.y;
+            rotation = PI;
+        } else if (directionStr == "right") {
+            bulletX = this.x + this.width / 2.0;
+            bulletY = this.y;
+            rotation = 0;
+        } else if (directionStr == "up") {
+            bulletX = this.x;
+            bulletY = this.y - this.height / 2.0;
+            rotation = PI / 2.0;
+        } else if (directionStr == "down") {
+            bulletX = this.x;
+            bulletY = this.y + this.height / 2.0;
+            rotation = -PI / 2.0;
+        }
+        let bullet = new Bullet(bulletX, bulletY, rotation);
+        this.bullets.push(bullet);
+    }
+
 }
