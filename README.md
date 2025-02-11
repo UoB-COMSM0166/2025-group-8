@@ -41,8 +41,8 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 
 
 ## Final  Ideas
-![alt text](image.png)
-Robot vs Drone : https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing
+[![alt text](image.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
+
 
 
 ## Stakeholder list
