@@ -39,6 +39,10 @@ Super Mario is a hallmark in platform game design, featuring meticulously crafte
 - **Merge Big Watermelon:** 
 Merge Big Watermelon is a casual puzzle game known for its simple and engaging mechanics. Players merge similar items on a grid to create larger ones, aiming to form the biggest watermelon. The game features a minimalistic, colorful design and is developed with technologies that ensure it works across multiple platforms. It's easy to play but offers increasing challenges
 
+![](videos/Merge Big Watermelon.mp4)
+
+
+
 
 ## Final  Ideas
 [![alt text](image.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
