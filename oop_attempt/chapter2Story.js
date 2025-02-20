@@ -1,177 +1,116 @@
 class Chapter2Story {
   constructor() {
     this.configReader = new ConfigReader(window.story1Config);
-    this.hud = new Hud(this.configReader.config.roadLength);
     this.robotDog = new RobotDog();
-    this.storyBgWidth = 5391/1714.0*windowWidth;
-    this.roadY = windowHeight-(613 / 4400.0 * windowWidth);
-    this.roadHeight = 613 / 4400.0 * windowWidth;
-    this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 255, 0, 0, this.storyBgWidth, windowHeight);
-    this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, this.roadY, windowWidth, this.roadHeight);
+    this.hud = new Hud(this.configReader.config.roadLength, this.robotDog);
+    this.roadHeight = windowHeight / 6;
+    this.roadY = windowHeight - this.roadHeight;
+    this.fgHeight = windowHeight / 5;
+    this.fgY = windowHeight - this.fgHeight;
+    this.farBgSetter = new BgSetter(window.bgType.CHAPTER2FARBG, 1, 0, 0, 0, windowHeight);
+    this.closeBgSetter = new BgSetter(window.bgType.CHAPTER2CLOSEBG, 2, 0, 0, 0, windowHeight);
+    this.roadSetter = new BgSetter(window.bgType.CHAPTER2RD, 4, 0, this.roadY, windowWidth, this.roadHeight);
+    this.foregroundSetter = new BgSetter(window.bgType.CHAPTER2FG, 10, 0, this.fgY, 0, this.fgHeight);
     this.elementsGenerate();
   }
 
-  setup() {
-    this.storyBgSetter.setup();
-    this.hud.setup();    
-    this.robotDog.setup();
-    this.enemyDogsSetup();
-    this.platformsSetup();
-    this.collisionHandle();
-    this.batteriesSetup();
-    this.dronesSetup();
-    this.roadBgSetter.setup();
+  draw() {
+    this.farBgSetter.draw();
+    this.closeBgSetter.draw();
+    this.hud.draw();
+    this.roadSetter.draw();
+    this.robotDog.draw();
+    this.drawElements(["enemyDogs", "batteries", "platforms", "drones", "guns"]);
+    this.handleCollision();
+    // this.foregroundSetter.draw();
+    // this.test();
   }
+
+  test() {
+    fill("white");
+    textSize(20);
+    text("this.dog.x:" + this.robotDog.x, 100, 100);
+    text("this.dog.y:" + this.robotDog.y, 100, 120);
+    text("this.dog.width:" + this.robotDog.width, 100, 140);
+    text("this.dog.height:" + this.robotDog.height, 100, 180);
+    text("this.dog.checkCollision:" + this.robotDog.checkCollision(this.platforms[0]), 100, 160);
+    text("platform[0].x:" + this.platforms[0].x, 100, 200);
+    text("platform[0].y:" + this.platforms[0].y, 100, 220);
+    text("platform[0].width:" + this.platforms[0].width, 100, 240);
+    text("platform[0].height:" + this.platforms[0].height, 100, 260);
+    let isCollided = 
+      Math.abs(this.robotDog.x - this.platforms[0].x) < (this.robotDog.width / 2 + this.platforms[0].width / 2) &&
+      Math.abs(this.robotDog.y - this.platforms[0].y) < (this.robotDog.height / 2 + this.platforms[0].height / 2);
+    text("isCollided:" + isCollided, 100, 280);
+    text("this.dog.velocityX:" + this.robotDog.velocityX, 100, 300);
+    text("this.dog.velocityY:" + this.robotDog.velocityY, 100, 320);
+    text("this.dog.onGround:" + this.robotDog.onGround, 100, 340);
+  } 
 
   elementsGenerate() {
     this.enemyDogs = this.configReader.generateEnemyDogs();
     this.batteries = this.configReader.generateBatteries();
-    this.bottomPlatform = new Platform(this.configReader.config.roadLength/2.0, this.roadY + 0.82 * this.roadHeight, this.configReader.config.roadLength, 0.3 * this.roadHeight, window.bgType.TRANSPARENT);
     this.platforms = this.configReader.generatePlatforms();
-    this.platforms.push(this.bottomPlatform);
     this.drones = this.configReader.generateDrones();
+    this.guns = this.configReader.generateGuns();
+    this.platforms.push(new Platform(this.configReader.config.roadLength / 2.0, this.roadY + 0.82 * this.roadHeight, this.configReader.config.roadLength, 0.3 * this.roadHeight, window.bgType.TRANSPARENT));
+    window.testPlatform = this.platforms[0];
   }
 
-  enemyDogsSetup() {
-    for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
-      let enemyDog = this.enemyDogs[i];
-      enemyDog.setup();
-      if (enemyDog.isDiscarded) {
-        // 使用 splice 方法删除特定的 enemyDog 对象
-        this.enemyDogs.splice(i, 1);
-      }
+  drawElements(elements) {
+    for (let element of elements) {
+      this[element] = this[element].filter(obj => {
+        obj.draw();
+        return !obj.isDiscarded;
+      });
     }
   }
+
+  handleCollision() {
+    for (let entity of [this.robotDog, ...this.enemyDogs, ...this.batteries, ...this.guns]) {
+      // this.checkCollisionWithPlatforms(entity);
+      for (let platform of this.platforms) {
+        if (!platform.isDiscarded && platform.isDisplay && entity.checkCollision(platform)) {
+          entity.resolveCollisionWithPlatform(platform);
+          break; // 只处理一次碰撞
+        } else {
+          entity.onGround = false;
+        }
+      }
+    }
   
-  batteriesSetup() {
-    for (let i = this.batteries.length - 1; i >= 0; i--) {
-      let battery = this.batteries[i];
-      battery.setup();
-      if (battery.x < (0-battery.width-200)) {
-        if (battery.isDiscarded) {
-          // 使用 splice 方法删除特定的 enemyDog 对象
-          this.batteries.splice(i, 1);
-        }
-      }
-    }
-  }
-
-  platformsSetup() {
-    for (let i = this.platforms.length - 1; i >= 0; i--) {
-      let platform = this.platforms[i];
-      platform.setup();
-      if (platform.isDiscarded) {
-        // 使用 splice 方法删除特定的 enemyDog 对象
-        this.platforms.splice(i, 1);
-      }
-    }
-  }
-
-  dronesSetup() { 
-    for (let i = this.drones.length - 1; i >= 0; i--) {
-      let drone = this.drones[i];
-      drone.setup();
-      if (drone.isDiscarded) {
-        // 使用 splice 方法删除特定的 enemyDog 对象
-        this.drones.splice(i, 1);
-      }
-    }
-  }
-
-  // New version about collisions(Zhi Zhao)
-  collisionHandle() {
-    // Handle collisions between robotDog and enemyDogs
-    for (let i = this.enemyDogs.length - 1; i >= 0; i--) {
-      let enemyDog = this.enemyDogs[i];
-      if (this.collisionCheck(this.robotDog, enemyDog)) {
-        this.hud.removeLife();
-        this.enemyDogs.splice(i, 1);
-        this.robotDog.x = 50;
-        this.robotDog.y = 50;
-      }
-    }
-
-    // Handle collisions between robotDog and drones
-    for (let i = this.drones.length - 1; i >= 0; i--) {
-      let drone = this.drones[i];
-      if (this.collisionCheck(this.robotDog, drone)) {
-        this.hud.removeLife();
-        this.drones.splice(i, 1);
-        this.robotDog.x = 50;
-        this.robotDog.y = 50;
-      }
-    }
-
-    // Handle collisions between robotDog and platforms
-    this.robotDog.onGround = false;
-    for (let platform of this.platforms) {
-      if (!this.collisionCheck(this.robotDog, platform)) continue;
-
-      let prevX = this.robotDog.x - this.robotDog.velocityX;
-      let prevY = this.robotDog.y - this.robotDog.velocityY;
-      let wasAbove = prevY + this.robotDog.height / 2 <= platform.y - platform.height / 2;
-      let wasBelow = prevY - this.robotDog.height / 2 >= platform.y + platform.height / 2;
-      let wasLeft = prevX + this.robotDog.width / 2 <= platform.x - platform.width / 2;
-      let wasRight = prevX - this.robotDog.width / 2 >= platform.x + platform.width / 2;
-
-      if (wasAbove && this.robotDog.velocityY > 0) {
-        this.robotDog.y = platform.y - platform.height / 2 - this.robotDog.height / 2;
-        this.robotDog.velocityY = 0;
-        this.robotDog.onGround = true;
-      } else if (wasBelow && this.robotDog.velocityY < 0) {
-        this.robotDog.y = platform.y + platform.height / 2 + this.robotDog.height / 2;
-        this.robotDog.velocityY = 0;
-      }
-
-      if (wasLeft && this.robotDog.velocityX > 0) {
-        this.robotDog.x = platform.x - platform.width / 2 - this.robotDog.width / 2;
-        this.robotDog.velocityX = 0;
-      } else if (wasRight && this.robotDog.velocityX < 0) {
-        this.robotDog.x = platform.x + platform.width / 2 + this.robotDog.width / 2;
-        this.robotDog.velocityX = 0;
-      }
-    }
-
-    // Handle collisions between enemyDogs and platforms
-    for (let enemyDog of this.enemyDogs) {
-      enemyDog.onGround = false;
+    // 子弹射中platform时子弹消失
+    for (let bullet of this.robotDog.bullets) {
       for (let platform of this.platforms) {
-        if (this.collisionCheck(enemyDog, platform) && enemyDog.velocityY >= 0) {
-          enemyDog.onGround = true;
-          enemyDog.velocityY = 0;
-          enemyDog.y = platform.y - platform.height / 2 - enemyDog.height / 2;
-          break;
+        if (!platform.isDiscarded && platform.isDisplay && bullet.checkCollision(platform)) {
+          bullet.isDiscarded = true;
+          break; // 只处理一次碰撞
         }
       }
     }
 
-    // Handle collisions between batteries and platforms
-    for (let battery of this.batteries) {
-      battery.onGround = false;
-      for (let platform of this.platforms) {
-        if (this.collisionCheck(battery, platform)) {
-          battery.onGround = true;
-          break;
+    // 子弹射中enemy时触发攻击效果
+    for (let bullet of this.robotDog.bullets) {
+      for (let enemy of [...this.enemyDogs, ...this.drones]) {
+        if (!enemy.isDiscarded && enemy.isDisplay && bullet.checkCollision(enemy)) {
+          bullet.pickEffect(enemy);
         }
       }
     }
-
-    // Handle collisions between robotDog and batteries
-    for (let i = this.batteries.length - 1; i >= 0; i--) {
-      let battery = this.batteries[i];
-      if (this.collisionCheck(this.robotDog, battery)) {
-        this.hud.lives += 1;
-        this.batteries.splice(i, 1);
+    // robotDog拾取电池和武器效果
+    for (let pickable of [...this.batteries, ...this.guns]) {
+      if (!pickable.isDiscarded && pickable.isDisplay && this.robotDog.checkCollision(pickable)) {
+        pickable.pickEffect(this.robotDog);
+      }
+    }
+    // robotDog和enemy碰撞
+    for (let enemy of [...this.enemyDogs, ...this.drones]) {
+      if (!enemy.isDiscarded && enemy.isDisplay && this.robotDog.checkCollision(enemy)) {
+          this.robotDog.die();
+          enemy.isDiscarded = true;
       }
     }
   }
 
-  collisionCheck(a, b) {
-    return !(
-      a.x + a.width / 2 <= b.x - b.width / 2 ||
-      a.x - a.width / 2 >= b.x + b.width / 2 ||
-      a.y + a.height / 2 <= b.y - b.height / 2 ||
-      a.y - a.height / 2 >= b.y + b.height / 2
-    );
-  }
+
 }

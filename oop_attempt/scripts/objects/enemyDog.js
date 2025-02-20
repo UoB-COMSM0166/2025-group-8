@@ -2,8 +2,8 @@ class EnemyDog extends Enemy{
   constructor(x, y) {
     super(x, y);
     this.roleImage = window.bgType.ENEMYDOG;
-    this.width = windowHeight / 6.0;
-    this.height = windowHeight / 6.0;
+    this.width = windowHeight / 5.0;
+    this.height = windowHeight / 5.0;
     this.speed = -1;
     this.moveDistance = windowWidth / 2.0;
     this.moveDistanceRecord = 0;

@@ -1,24 +1,29 @@
 class Chapter3Story {
   constructor() {
     this.configReader = new ConfigReader(window.story1Config);
-    this.hud = new Hud(this.configReader.config.roadLength);
     this.robotDog = new RobotDog();
-    this.storyBgWidth = (5391 / 1714.0) * windowWidth;
-    this.roadY = windowHeight - (613 / 4400.0 * windowWidth);
-    this.roadHeight = 613 / 4400.0 * windowWidth;
-    this.storyBgSetter = new BgSetter(window.bgType.CHAPTER3STORYBACKGROUND, 2, 255, 0, 0, this.storyBgWidth, windowHeight);
-    this.roadBgSetter = new BgSetter(window.bgType.CHAPTER3STORYROAD, 4, 255, 0, this.roadY, windowWidth, this.roadHeight);
+    this.hud = new Hud(this.configReader.config.roadLength, this.robotDog);
+    this.roadHeight = windowHeight / 6;
+    this.roadY = windowHeight - this.roadHeight;
+    this.fgHeight = windowHeight / 5;
+    this.fgY = windowHeight - this.fgHeight;
+    // this.farBgSetter = new BgSetter(window.bgType.CHAPTER2FARBG, 1, 0, 0, 0, windowHeight);
+    this.closeBgSetter = new BgSetter(window.bgType.CHAPTER3CLOSEBG, 2, 0, 0, 0, windowHeight);
+    this.roadSetter = new BgSetter(window.bgType.CHAPTER3RD, 4, 0, this.roadY, windowWidth, this.roadHeight);
+    // this.foregroundSetter = new BgSetter(window.bgType.CHAPTER2FG, 10, 0, this.fgY, 0, this.fgHeight);
     this.elementsGenerate();
   }
 
   draw() {
-    this.storyBgSetter.draw();
+    // this.farBgSetter.draw();
+    this.closeBgSetter.draw();
     this.hud.draw();
+    this.roadSetter.draw();
     this.robotDog.draw();
-    this.roadBgSetter.draw();
     this.drawElements(["enemyDogs", "batteries", "platforms", "drones", "guns"]);
     this.handleCollision();
-    this.test();
+    // this.foregroundSetter.draw();
+    // this.test();
   }
 
   test() {
@@ -92,9 +97,19 @@ class Chapter3Story {
         }
       }
     }
-
-    
-
+    // robotDog拾取电池和武器效果
+    for (let pickable of [...this.batteries, ...this.guns]) {
+      if (!pickable.isDiscarded && pickable.isDisplay && this.robotDog.checkCollision(pickable)) {
+        pickable.pickEffect(this.robotDog);
+      }
+    }
+    // robotDog和enemy碰撞
+    for (let enemy of [...this.enemyDogs, ...this.drones]) {
+      if (!enemy.isDiscarded && enemy.isDisplay && this.robotDog.checkCollision(enemy)) {
+          this.robotDog.die();
+          enemy.isDiscarded = true;
+      }
+    }
   }
 
 

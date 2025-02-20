@@ -2,10 +2,10 @@ class Bullet extends PickableObject {
   constructor(x, y, rotation) {
     super(x, y);
     this.roleImage = window.bgType.BULLET;
-    this.width = 50;
+    this.width = windowHeight / 10;
     this.height = this.width * 152 / 513.0;
     this.gravity = 0;
-    this.speed = 8;
+    this.speed = 12;
     this.rotation = rotation;
     this.damage = 50;
   }
@@ -29,6 +29,7 @@ class Bullet extends PickableObject {
     super.pickEffect();
     item.health -= this.damage;
     item.x += cos(this.rotation) * random(20,40);
+    item.y -= sin(this.rotation) * random(20,40);
   }
 }
    

@@ -2,14 +2,14 @@ class RobotDog extends Character {
     constructor() {
         super(150, 50);
         this.roleImage = window.bgType.ROBOTDOG;
-        this.width = windowHeight / 6.0;
-        this.height = windowHeight / 6.0;
-        this.speed = 4;
+        this.width = windowHeight / 5.0;
+        this.height = windowHeight / 5.0;
+        this.speed = 5;
         this.bullets = [];
         this.lastShootTime = 0;  // 记录上次发射子弹的时间
         this.shootCooldown = 500;  // 射击冷却时间，单位：毫秒
-        // this.y = 400;
-        // this.gravity = 0;
+        this.allowWeapon = false;
+        this.lives = 3;
     }
 
     draw() {
@@ -84,6 +84,7 @@ class RobotDog extends Character {
     }
 
     shoot(directionStr) {
+        if (!this.allowWeapon) return;
         let currentTime = millis(); 
         if (currentTime - this.lastShootTime < this.shootCooldown) {
             return;
@@ -111,6 +112,17 @@ class RobotDog extends Character {
         }
         let bullet = new Bullet(bulletX, bulletY, rotation);
         this.bullets.push(bullet);
+    }
+
+    die() {
+        this.lives--;
+        if (this.lives < 0) {
+        }
+        this.x = 150;
+        this.y = 50;
+        this.velocityX = 0;
+        this.velocityY = 0;
+        this.onGround = false;
     }
 
 }

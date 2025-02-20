@@ -10,7 +10,7 @@ class ChapterSelector {
     thirdPictureX;
     fourthPictureX;
     constructor() {
-        this.bgSetter = new BgSetter(window.bgType.CHAPTERSELECTOR, 0, 80, 0, 0, windowWidth, windowHeight);
+        this.bgSetter = new BgSetter(window.bgType.CHAPTERSELECTOR, 0, 0, 0, windowWidth, windowHeight);
         this.rows = 1;
         this.columns = 4;
         this.chapterCount = 4;
@@ -24,12 +24,12 @@ class ChapterSelector {
         this.calculatePositions()
     }
 
-    setup() {
+    draw() {
         if (this.buttonGenerationState == 0) {
             this.buttonGenerationState = 1;
             this.placeButtons();
         }
-        this.bgSetter.setup();
+        this.bgSetter.draw();
         this.placeThemePictures();
         this.placeTitle();
     }

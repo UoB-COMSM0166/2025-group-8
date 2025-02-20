@@ -9,7 +9,7 @@ class GameObject {
         this.velocityY = 0;
         this.gravity = 0.5;
         this.speed = 0;
-        this.relativeMoveSpeed = -4;
+        this.relativeMoveSpeed = -5;
         this.onGround = false; 
         // This initial velocity ensures the maximum jump height of the robot dog is 0.5 * windowHeight
         this.jumpInitVelocity = -Math.sqrt(windowHeight * this.gravity);

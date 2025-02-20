@@ -1,7 +1,7 @@
 
 let bgType;
 let picturesLoader;
-let currentGameState = 3;
+let currentGameState = 0;
 let gameStates = {
   CHAPTERSELECTOR: 0,
   CHAPTER1: 1,
@@ -19,7 +19,7 @@ function preload() {
   picturesLoader = new PicturesLoader();
   window.bgType = picturesLoader.getBgType();
   window.mainRoleMove = true;
-  window.story1Config = loadJSON("./chapter3Config.json");
+  window.story1Config = loadJSON("./chapter1Config.json");
 }
 
 function setup() {
@@ -58,15 +58,15 @@ function draw() {
 }
 
 function chapterSeletion() {
-  chapterSelector.setup();
+  chapterSelector.draw();
   }
 
 function chapter1() {
-  chapter1Story.setup();
+  chapter1Story.draw();
 }
 
 function chapter2() {
-  chapter2Story.setup();
+  chapter2Story.draw();
 }
 
 function chapter3() {
