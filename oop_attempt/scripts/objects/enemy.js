@@ -7,6 +7,7 @@ class Enemy extends Character {
     checkDestroy() {
         if (this.health <= 0) {
             this.isDiscarded = true;
+            this.destroyEffect();
         }
     }
 
@@ -26,6 +27,10 @@ class Enemy extends Character {
             this.discardCheck();
             this.displayCheck();
         }
+    }
+
+    destroyEffect() {
+        // to be done
     }
 
 }

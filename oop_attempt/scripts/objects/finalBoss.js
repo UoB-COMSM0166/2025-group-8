@@ -10,9 +10,18 @@ class FinalBoss extends Enemy{
       this.moveDirection = -1;
       this.maxSpeed = 0.2;
       this.imageDirection = -1;
-      this.health = 1000;
+      this.health = 250;
     }
   
+
+    draw() {
+            this.render();
+            this.applyGravity();
+            this.relativelyMove();
+            this.infiniteFallDetect();
+            this.aiMove();
+    }
+
     aiMove() {
       // 随机改变方向
       if (Math.random() < 0.005) { // 每帧有0.5%的概率改变方向

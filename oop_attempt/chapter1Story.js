@@ -91,7 +91,7 @@ class Chapter1Story {
 
     // 子弹射中enemy时触发攻击效果
     for (let bullet of this.robotDog.bullets) {
-      for (let enemy of [...this.enemyDogs, ...this.drones]) {
+      for (let enemy of [...this.enemyDogs, ...this.drones, ...this.finalBosses]) {
         if (!enemy.isDiscarded && enemy.isDisplay && bullet.checkCollision(enemy)) {
           bullet.pickEffect(enemy);
         }
