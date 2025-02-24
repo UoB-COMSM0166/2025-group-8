@@ -18,6 +18,12 @@ class Bullet extends PickableObject {
     this.speed += this.accelerate;
   }
 
+  discardCheck() {
+      if ((this.x + this.width/2) < -200 || (this.x - this.width/2) > windowWidth+200) {
+          this.isDiscarded = true;
+      }
+  }
+
   render() {
     this.update();
     push(); // Save the current transformation state

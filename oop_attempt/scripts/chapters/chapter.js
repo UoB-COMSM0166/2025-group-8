@@ -74,7 +74,7 @@ class Chapter {
             // this.checkCollisionWithPlatforms(entity);
             let is_collided = false;
             for (let platform of this.platforms) {
-                if (!platform.isDiscarded && platform.isDisplay && entity.checkCollision(platform)) {
+                if (!platform.isDiscarded && platform.isDisplay && entity.isDisplay && entity.checkCollision(platform)) {
                     entity.resolveCollisionWithPlatform(platform);
                     is_collided = true;
                     break; // 只处理一次碰撞
