@@ -20,7 +20,7 @@ class Chapter {
     draw() {
         [this.farBgSetter, this.closeBgSetter, this.roadSetter].forEach(bg => bg?.draw());
         this.hud.draw();
-        this.drawElements(["instructions", "enemyDogs", "batteries", "platforms", "drones", "guns", "flames", "finalBosses", "passGates"]);
+        this.drawElements(["passGates", "instructions", "enemyDogs", "batteries", "platforms", "drones", "guns", "flames", "finalBosses", ]);
         this.robotDog.draw();
         this.handleCollision();
         this.foregroundSetter?.draw();
@@ -74,7 +74,7 @@ class Chapter {
             // this.checkCollisionWithPlatforms(entity);
             let is_collided = false;
             for (let platform of this.platforms) {
-                if (!platform.isDiscarded && platform.isDisplay && entity.checkCollision(platform)) {
+                if (!platform.isDiscarded && platform.isDisplay && entity.isDisplay && entity.checkCollision(platform)) {
                     entity.resolveCollisionWithPlatform(platform);
                     is_collided = true;
                     break; // 只处理一次碰撞

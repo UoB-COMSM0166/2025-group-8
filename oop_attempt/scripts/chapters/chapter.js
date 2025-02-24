@@ -20,7 +20,7 @@ class Chapter {
     draw() {
         [this.farBgSetter, this.closeBgSetter, this.roadSetter].forEach(bg => bg?.draw());
         this.hud.draw();
-        this.drawElements(["instructions", "enemyDogs", "batteries", "platforms", "drones", "guns", "flames", "finalBosses", "passGates"]);
+        this.drawElements(["passGates", "instructions", "enemyDogs", "batteries", "platforms", "drones", "guns", "flames", "finalBosses", ]);
         this.robotDog.draw();
         this.handleCollision();
         this.foregroundSetter?.draw();

@@ -34,6 +34,7 @@ function setup() {
   window.chapter2Story = new Chapter2Story();
   window.chapter3Story = new Chapter3Story();
   window.chapter4Story = new Chapter4Story();
+  frameRate(60);
 }
 
 function draw() {

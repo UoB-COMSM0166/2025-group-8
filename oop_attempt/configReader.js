@@ -28,7 +28,9 @@ class ConfigReader {
     let platforms = [];
     for (let i = 0; i < this.config.platforms.length; i++) {
       let newY = this.config.platforms[i].y * 1.0 / 1000 * windowHeight;
-      let platform = new Platform(this.config.platforms[i].x, newY, 200, 30, window.bgType.ROCK);
+      let platformWidth = windowHeight / 4;
+      let platformHeight = windowHeight / 20;
+      let platform = new Platform(this.config.platforms[i].x, newY, platformWidth, platformHeight, window.bgType.ROCK);
       platforms.push(platform);
     }
     return platforms;
