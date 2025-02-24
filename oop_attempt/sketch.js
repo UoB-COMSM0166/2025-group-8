@@ -19,7 +19,10 @@ function preload() {
   picturesLoader = new PicturesLoader();
   window.bgType = picturesLoader.getBgType();
   window.mainRoleMove = true;
-  window.story1Config = loadJSON("./chapter1Config.json");
+  window.story1Config = loadJSON("./configs/chapter1Config.json");
+  window.story2Config = loadJSON("./configs/chapter2Config.json");
+  window.story3Config = loadJSON("./configs/chapter3Config.json");
+  window.story4Config = loadJSON("./configs/chapter4Config.json");
 }
 
 function setup() {
@@ -74,6 +77,6 @@ function chapter3() {
 }
 
 function chapter4() {
-  chapter4Story.setup();
+  chapter4Story.draw();
 }
 

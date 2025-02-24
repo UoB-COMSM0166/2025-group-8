@@ -1,5 +1,5 @@
 class Hud {
-    constructor(roadLength) {
+    constructor(roadLength, target) {
         this.roleImage = window.bgType.BATTERY;
         this.roadLength = roadLength;
         this.x = 20;
@@ -8,23 +8,20 @@ class Hud {
         this.lives = 3;
         this.lifeIconSize = 50;
         this.relativelyMoveDistance = 0;
-        this.relativeSpeed = 4;
+        this.relativeSpeed = target.speed;
+        this.target = target;
     }
 
-    setup() {   
+    draw() {   
         this.livesDisplay();
         this.progressBar();
         this.relativelyMoveRecord();
     }
 
     livesDisplay() {
-        for (let i = 0; i < this.lives; i++) {
+        for (let i = 0; i < this.target.lives; i++) {
             image(this.roleImage, this.x + 20 + i * this.lifeIconSize, this.y, this.lifeIconSize, this.lifeIconSize);
         }
-    }
-
-    addLife() {
-        this.lives++;
     }
 
     removeLife() {
@@ -36,7 +33,10 @@ class Hud {
         strokeWeight(2);
         fill(255);
         let walkedDistance = this.relativelyMoveDistance;
-        let walkedPercentage = (walkedDistance / (this.roadLength - 0.5 * windowWidth)) * 100;
+        let walkedPercentage = (walkedDistance / (this.roadLength - windowWidth)) * 100;
+        if (walkedPercentage >= 100) {
+            window.isStoryEnded = true;
+        }
         text(Math.round(walkedPercentage) + "%", windowWidth - this.x - this.lifeIconSize, this.y + this.lifeIconSize / 2.0);
     }
 

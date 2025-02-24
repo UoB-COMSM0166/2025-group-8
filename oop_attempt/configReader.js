@@ -1,7 +1,5 @@
 class ConfigReader {
-//   constructor(configFile) {
-//     this.config = loadJSON(configFile);
-//   }
+
     constructor(config) {
         this.config = config;
     }
@@ -64,6 +62,13 @@ class ConfigReader {
       flames.push(flame);
     }
     return flames;
+  }
+
+  generatePassGates() {    
+    let passGates = [];
+    let passGate = new PassGate(this.config.roadLength - windowWidth / 2, windowHeight / 2);
+    passGates.push(passGate);
+    return passGates;
   }
 
   generateInstructions() {

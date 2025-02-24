@@ -10,7 +10,7 @@ class ChapterSelector {
     thirdPictureX;
     fourthPictureX;
     constructor() {
-        this.bgSetter = new BgSetter(window.bgType.CHAPTERSELECTOR, 0, 80, 0, 0, windowWidth, windowHeight);
+        this.bgSetter = new BgSetter(window.bgType.CHAPTERSELECTOR, 0, 0, 0, windowWidth, windowHeight);
         this.rows = 1;
         this.columns = 4;
         this.chapterCount = 4;
@@ -24,12 +24,12 @@ class ChapterSelector {
         this.calculatePositions()
     }
 
-    setup() {
+    draw() {
         if (this.buttonGenerationState == 0) {
             this.buttonGenerationState = 1;
             this.placeButtons();
         }
-        this.bgSetter.setup();
+        this.bgSetter.draw();
         this.placeThemePictures();
         this.placeTitle();
     }
@@ -55,26 +55,26 @@ class ChapterSelector {
         let firstButton = createButton("Chapter 1<br>The Awakening of Iron Fang\n");
         firstButton.position(this.firstButtonX, this.buttonY);
         firstButton.mousePressed(() => {
-            window.currentGameState = window.gameStates.CHAPTER1; 
             this.removeButtons()
+            window.currentGameState = window.gameStates.CHAPTER1; 
             });
         let secondButton = createButton("Chapter 2<br>Betrayal and Rebellion");
         secondButton.position(this.secondButtonX, this.buttonY);
         secondButton.mousePressed(() => {
-            window.currentGameState = window.gameStates.CHAPTER2;
             this.removeButtons()
+            window.currentGameState = window.gameStates.CHAPTER2;
             });
         let thirdButton = createButton("Chapter 3<br>Air and Ground Showdown");
         thirdButton.position(this.thirdButtonX, this.buttonY);
         thirdButton.mousePressed(() => {
-            window.currentGameState = window.gameStates.CHAPTER3;
             this.removeButtons()
+            window.currentGameState = window.gameStates.CHAPTER3;
             });
         let fourthButton = createButton("Chapter 4<br>Uncovering the Truth");
         fourthButton.position(this.fourthButtonX, this.buttonY);
         fourthButton.mousePressed(() => {
-            window.currentGameState = window.gameStates.CHAPTER4;
             this.removeButtons()
+            window.currentGameState = window.gameStates.CHAPTER4;
             });
         this.buttonList = [firstButton, secondButton, thirdButton, fourthButton];
     }
@@ -94,5 +94,6 @@ class ChapterSelector {
 
     removeButtons() {
         this.buttonList.forEach(button => button.remove());
+        this.buttonGenerationState = 0;
     }
 }

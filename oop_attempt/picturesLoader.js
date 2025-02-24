@@ -15,6 +15,8 @@ class PicturesLoader {
         this.gun = loadImage("./assets/pictures/gun.png");
         this.flame = loadImage("./assets/pictures/flame.gif");
         this.finalBoss = loadImage("./assets/pictures/final_boss.png");
+        this.passGate = loadImage("./assets/pictures/pass_gate.png");
+
         // chapter 1 pictures
         this.chapter1FarBg = loadImage("./assets/pictures/chapter_1_far_bg.jpg");
         this.chapter1Rd = loadImage("./assets/pictures/chapter_1_rd.png");
@@ -50,6 +52,7 @@ class PicturesLoader {
             GUN: this.gun,
             FLAME: this.flame,
             FINALBOSS: this.finalBoss,
+            PASSGATE: this.passGate,
 
             CHAPTER1FARBG: this.chapter1FarBg,
             CHAPTER1RD: this.chapter1Rd,

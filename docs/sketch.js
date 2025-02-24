@@ -19,7 +19,10 @@ function preload() {
   picturesLoader = new PicturesLoader();
   window.bgType = picturesLoader.getBgType();
   window.mainRoleMove = true;
-  window.story1Config = loadJSON("./chapter3Config.json");
+  window.story1Config = loadJSON("./configs/chapter1Config.json");
+  window.story2Config = loadJSON("./configs/chapter2Config.json");
+  window.story3Config = loadJSON("./configs/chapter3Config.json");
+  window.story4Config = loadJSON("./configs/chapter4Config.json");
 }
 
 function setup() {
@@ -58,22 +61,22 @@ function draw() {
 }
 
 function chapterSeletion() {
-  chapterSelector.setup();
+  chapterSelector.draw();
   }
 
 function chapter1() {
-  chapter1Story.setup();
+  chapter1Story.draw();
 }
 
 function chapter2() {
-  chapter2Story.setup();
+  chapter2Story.draw();
 }
 
 function chapter3() {
-  chapter3Story.setup();
+  chapter3Story.draw();
 }
 
 function chapter4() {
-  chapter4Story.setup();
+  chapter4Story.draw();
 }
 
