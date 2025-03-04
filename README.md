@@ -86,6 +86,76 @@ Acceptance criteria were essential in defining the specific conditions for compl
 The context of creating an accessible and enjoyable game influenced every aspect of our project, from planning to implementation, ensuring we addressed the diverse needs of our player base and optimized the game for various devices.
 This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
 
+## Think-Aloud Usability Test Report
+Game: MechDog vs. Drone Platformer
+Participant: 1 student (adjacent group)
+Tasks:
+Complete Level 1 from the main menu.
+Attempt to return to the main menu mid-level.
+Key Observations
+Collision Detection Issues
+Participant encountered "invisible walls" near platforms, causing confusion and frustration ("Why am I bouncing off nothing here?").
+Missing Return Functionality
+No option to exit mid-level; participant tried ESC/UI buttons unsuccessfully ("Do I have to close the game?").
+Oversized Obstacles
+Large obstacles trapped the player ("This rock is way too big—I’m stuck!"), forcing respawns.
+Repetitive Level Design
+Levels 1 and 2 felt identical except for backgrounds ("Where’s the challenge?"), with no mechanical or enemy variation.
+Unlimited Respawns
+Infinite retries reduced stakes ("No stakes—boring!"); no game-over system observed.
+Predictable Enemy AI
+Drones followed simple, easily avoidable paths ("Too easy to dodge").
+Critical Issues
+Urgent Fixes: Broken collision detection and lack of pause/return menu disrupt core usability.
+Design Weaknesses: Repetitive levels, oversized obstacles, and trivial enemy behavior lower engagement.
+Missing Systems: No difficulty scaling or fail states harm replayability.
+Recommendations
+Priority Fixes:
+Repair collision detection.
+Add a pause/return menu.
+Gameplay Enhancements:
+Resize obstacles; add dynamic elements (e.g., moving platforms).
+Introduce tiered difficulty and unique enemy behaviors (e.g., ambushes, patrol patterns).
+Progression Systems:
+Implement a game-over state and limited lives.
+Differentiate levels with new mechanics (e.g., environmental hazards, boss fights).
+Next Steps: Address collision/UI issues first, then expand level complexity and enemy AI.
+
+## Heuristic Evaluation Report: MechDog vs. Drone Platformer
+
+Summary
+A heuristic evaluation was conducted by an external observer to identify usability issues in the MechDog vs. Drone platformer game. Key findings include critical violations of Nielsen’s usability heuristics, particularly in collision detection, navigation controls, and level design consistency. Below is the prioritized list of issues and recommendations.
+
+Evaluation Table
+| Interface          | Issue                                                                 | Heuristic(s)                                | Frequency (0-4) | Impact (0-4) | Persistence (0-4) | Severity (F+I-P)/3 |
+|--------------------|-----------------------------------------------------------------------|---------------------------------------------|------------------|---------------|--------------------|--------------------|
+| **Gameplay**       | Broken collision detection ("invisible walls" near platforms).        | Visibility of System Status                 | 4                | 4             | 4                  | 1.33               |
+| **UI Navigation**  | No return button to exit levels; players cannot return to main menu.  | User Control and Freedom                    | 3                | 4             | 3                  | 1.33               |
+| **Obstacle Design**| Oversized obstacles trap players, forcing respawns.                   | Aesthetic and Minimalist Design             | 3                | 3             | 3                  | 1.00               |
+| **Level Design**   | Identical mechanics across 4 levels; only background differences.     | Consistency and Standards                   | 4                | 3             | 4                  | 1.00               |
+| **Enemy AI**       | Predictable drone behavior; no difficulty progression.                | Flexibility and Efficiency of Use           | 3                | 3             | 3                  | 1.00               |
+| **Game Progression**| No game-over state; unlimited respawns reduce challenge.              | User Control and Freedom, Error Prevention  | 3                | 2             | 4                  | 0.33               |
+
+Key Findings
+Critical Issues (Severity ≥ 1.33):
+Collision detection failures disrupt core gameplay.
+Missing return functionality frustrates navigation.
+High-Impact Design Flaws (Severity ~1.00):
+Oversized obstacles and repetitive level design lower engagement.
+Simplistic enemy AI lacks challenge.
+Moderate Issues (Severity ≤ 0.33):
+Unlimited respawns reduce stakes but are less urgent.
+Recommendations
+Priority Fixes:
+Fix collision detection to eliminate "invisible walls."
+Add a pause/return menu for mid-level navigation.
+Design Improvements:
+Resize obstacles; introduce dynamic elements (e.g., moving platforms).
+Differentiate levels with unique mechanics (e.g., traps, boss fights).
+Long-Term Enhancements:
+Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).
+Add a game-over system with limited lives.
+Next Steps: Address collision and UI issues first, then iterate on level complexity and enemy behavior.
 
 
 ## Project Report
