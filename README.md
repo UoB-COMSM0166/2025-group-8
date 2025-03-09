@@ -3,8 +3,8 @@
 
 ## Our Game
 
-PLAY HERE([![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/02855757797dce04842faa59d380cf0.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
-)
+PLAY HERE[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/02855757797dce04842faa59d380cf0.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
+
 
 Your game lives in the [/docs](/docs) folder, and is published using Github pages to the link above.
 
