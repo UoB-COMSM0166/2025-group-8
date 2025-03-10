@@ -159,11 +159,17 @@ Add a game-over system with limited lives.
 Next Steps: Address collision and UI issues first, then iterate on level complexity and enemy behavior.
 
 ## Comprehensive User Evaluation Report: Game Difficulty and Usability Assessment Objective
+
 This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing our game at two different difficulty levels: L1 (easier) and L2 (harder). We utilized the NASA Task Load Index (TLX) to measure workload facets and the System Usability Scale (SUS) to evaluate system usability. This dual approach provides a holistic view of how different difficulty levels affect player interaction and satisfaction.
 
 Methodology
 The evaluations were conducted in a controlled setting with ten users. To mitigate learning effects, we employed a counterbalanced design where half of the users first played at difficulty level L1 and then L2, while the other half experienced the levels in reverse order. After playing each level, users completed the NASA TLX and SUS questionnaires. This method allowed us to capture both subjective workload and usability perceptions accurately.
 
+Statistical Analysis
+To determine the significance of the differences observed between the two difficulty levels, we conducted a Wilcoxon signed-rank test. This non-parametric test is suited for paired samples and was chosen due to its effectiveness in handling small sample sizes and non-normal data distributions.
+
+Test Statistic: The Wilcoxon W value calculated was 9.
+Comparison Threshold: With a sample size of 10 and an alpha value of 0.05, the critical value from statistical tables for the Wilcoxon test is 8.
 NASA TLX Results
 The NASA TLX scores highlighted significant differences in perceived workload:
 
@@ -177,8 +183,13 @@ Level L2 (Harder) recorded a lower average SUS score of 59.4, suggesting usabili
 Discussion
 The combined data from the NASA TLX and SUS indicate that while Level L1 offers an optimal balance of challenge and usability, Level L2, despite its appeal to more skilled players, may benefit from usability enhancements. The increased cognitive and physical demands at Level L2 appear to negatively impact both workload perceptions and usability ratings.
 
+Statistical Conclusion
+Since the Wilcoxon signed-rank test resulted in a W value of 9, which exceeds the critical value of 8, we cannot reject the null hypothesis. This implies there is no statistically significant difference in the SUS scores between the two difficulty levels at the 0.05 alpha level. This result suggests that while perceived differences in workload are noted, the overall impact on usability may not be statistically significant.
+
 Conclusion
-This evaluation underscores the need for careful calibration of game mechanics and user interfaces to ensure that both novice and experienced players find the game engaging yet manageable. Level L2, in particular, requires adjustments to reduce frustration and improve performance without compromising the intended challenge. Future development will focus on refining these aspects to enhance overall user experience and maintain high usability standards across all difficulty levels.
+This evaluation underscores the need for careful calibration of game mechanics and user interfaces to ensure that both novice and experienced players find the game engaging yet manageable. Future development will focus on refining these aspects to enhance overall user experience and maintain high usability standards across all difficulty levels.
+
+
 
 ## Three New challenges
 Technical Challenge 1: Advanced Collision Detection System
