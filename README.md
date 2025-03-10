@@ -158,6 +158,49 @@ Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).
 Add a game-over system with limited lives.
 Next Steps: Address collision and UI issues first, then iterate on level complexity and enemy behavior.
 
+## Comprehensive User Evaluation Report: Game Difficulty and Usability Assessment Objective
+This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing our game at two different difficulty levels: L1 (easier) and L2 (harder). We utilized the NASA Task Load Index (TLX) to measure workload facets and the System Usability Scale (SUS) to evaluate system usability. This dual approach provides a holistic view of how different difficulty levels affect player interaction and satisfaction.
+
+Methodology
+The evaluations were conducted in a controlled setting with ten users. To mitigate learning effects, we employed a counterbalanced design where half of the users first played at difficulty level L1 and then L2, while the other half experienced the levels in reverse order. After playing each level, users completed the NASA TLX and SUS questionnaires. This method allowed us to capture both subjective workload and usability perceptions accurately.
+
+NASA TLX Results
+The NASA TLX scores highlighted significant differences in perceived workload:
+
+Level L1 (Easier): Users reported lower workload scores with an average Mental Demand of 4.0, Physical Demand of 2.4, Temporal Demand of 4.0, Performance of 7.0, Effort of 5.9, and Frustration of 2.9.
+Level L2 (Harder): This level showed a higher workload with averages of Mental Demand at 7.0, Physical Demand at 4.5, Temporal Demand at 6.9, Performance at 3.3, Effort at 8.9, and Frustration at 6.8.
+SUS Results
+The SUS scores also demonstrated variability in usability between the two difficulty levels:
+
+Level L1 (Easier) had a favorable average SUS score of 68.8, indicating good usability aligned with user expectations.
+Level L2 (Harder) recorded a lower average SUS score of 59.4, suggesting usability challenges, particularly in terms of system complexity and user confidence.
+Discussion
+The combined data from the NASA TLX and SUS indicate that while Level L1 offers an optimal balance of challenge and usability, Level L2, despite its appeal to more skilled players, may benefit from usability enhancements. The increased cognitive and physical demands at Level L2 appear to negatively impact both workload perceptions and usability ratings.
+
+Conclusion
+This evaluation underscores the need for careful calibration of game mechanics and user interfaces to ensure that both novice and experienced players find the game engaging yet manageable. Level L2, in particular, requires adjustments to reduce frustration and improve performance without compromising the intended challenge. Future development will focus on refining these aspects to enhance overall user experience and maintain high usability standards across all difficulty levels.
+
+## Three New challenges
+Technical Challenge 1: Advanced Collision Detection System
+Description: Our game has encountered several issues with collision detection, where players face "invisible walls" or unexpected interactions with the environment, particularly near platforms. This not only disrupts gameplay but also detracts from the user experience.
+
+Solution: Implement a more robust and precise collision detection system. This could involve using more refined physics engines or custom algorithms that better handle the dynamics of MechDog's movements and the drone interactions. Ensuring that collision responses are both visually and mechanically consistent will be crucial.
+
+Impact: Enhancing collision detection will directly improve gameplay smoothness and player satisfaction, addressing one of the critical flaws identified in usability testing.
+
+Technical Challenge 2: Dynamic Difficulty Adjustment (DDA)
+Description: Feedback indicates a need for varying difficulty levels to cater to different player skills. The current static difficulty setting does not accommodate all users, as evidenced by varying SUS and NASA TLX scores between difficulty levels.
+
+Solution: Develop a dynamic difficulty adjustment system that responds to player performance in real-time. This system would analyze player success rates, adjust the frequency and speed of drones, and modify obstacle complexity based on ongoing gameplay performance.
+
+Impact: DDA will help tailor the gameplay experience to individual players, potentially increasing retention and satisfaction across a broader range of skill levels. It also addresses the need for better challenge scaling in game levels.
+
+Technical Challenge 3: Enhanced Level Design and Enemy AI
+Description: Players have noted that the level design lacks variety and the enemy drones are too predictable, which quickly leads to a stale gaming experience.
+
+Solution: Overhaul level designs to introduce more variability and complexity, including interactive elements like moving platforms and environmental hazards. For enemy AI, develop more sophisticated behavior patterns, such as random movement, tracking, and adaptive responses to player actions.
+
+Impact: Revamping the level design and enhancing drone AI complexity will enrich the gameplay, making each level feel unique and challenging. This addresses feedback about repetitive design and predictable challenges, thereby improving overall game engagement and replayability.
 
 ## Project Report
 
