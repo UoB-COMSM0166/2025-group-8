@@ -17,6 +17,7 @@ class Chapter {
         // this.foregroundSetter = new BgSetter(window.bgType.CHAPTER1FG, 10, 0, this.foregroundY, 0, this.foregroundHeight);
 
         this.elementsGenerate();
+        this.winInstruction = new Instruction(windowWidth / 2, windowHeight / 2, 0, windowHeight / 4, window.bgType.WININS);
     }
 
     draw() {
@@ -26,6 +27,9 @@ class Chapter {
         this.robotDog.draw();
         this.handleCollision();
         this.foregroundSetter?.draw();
+        if (this.passGates.length == 0 && this.finalBosses.length == 0) {
+            this.winInstruction.draw();
+        }
     }
 
     elementsGenerate() {

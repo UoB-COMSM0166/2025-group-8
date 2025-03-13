@@ -1,5 +1,6 @@
 class ChapterSelector {
     buttonGenerationState = 0;
+    escapeButtonGenState = 0;
     firstButtonX;
     secondButtonX;
     thirdButtonX;
@@ -33,13 +34,6 @@ class ChapterSelector {
         this.bgSetter.draw();
     }
 
-    placeTitle() {
-        // fill(255);
-        // textSize(32);
-        // textAlign(CENTER);
-        // text("Chapter Selection", windowWidth / 2, windowHeight / 4.0);
-    }
-
     placeThemePictures() {
         stroke("white");
         strokeWeight(2);
@@ -50,6 +44,19 @@ class ChapterSelector {
         strokeWeight(0);
     }
 
+    placeEscape() {
+        this.escapeButton = createButton("🏠︎ BACK");
+        this.escapeButton.class("escape");
+        this.escapeButton.position(windowWidth *90/100, 25);
+        // escapeButton.size(this.minorButtonWidth, this.minorButtonHeight);
+        this.escapeButton.mousePressed(() => {
+            this.escapeButton.remove();
+            window.currentGameState = window.gameStates.CHAPTERSELECTOR;
+            window.mainRoleMove = false;
+        });
+
+    }
+
     placeButtons() {
         // let firstButton = createButton("Chapter 1<br>The Awakening of Iron Fang\n");
         let firstButton = createButton("");
@@ -57,7 +64,8 @@ class ChapterSelector {
         firstButton.position(this.firstButtonX, this.buttonY);
         firstButton.size(this.buttonWidth, this.buttonHeight);
         firstButton.mousePressed(() => {
-            this.removeButtons()
+            this.removeButtons();
+            this.placeEscape();
             window.currentGameState = window.gameStates.CHAPTER1; 
             });
         // let secondButton = createButton("Chapter 2<br>Betrayal and Rebellion");
@@ -65,7 +73,8 @@ class ChapterSelector {
         secondButton.position(this.secondButtonX, this.buttonY);
         secondButton.size(this.buttonWidth, this.buttonHeight);
         secondButton.mousePressed(() => {
-            this.removeButtons()
+            this.removeButtons();
+            this.placeEscape();
             window.currentGameState = window.gameStates.CHAPTER2;
             });
         // let thirdButton = createButton("Chapter 3<br>Air and Ground Showdown");
@@ -73,7 +82,8 @@ class ChapterSelector {
         thirdButton.position(this.thirdButtonX, this.buttonY);
         thirdButton.size(this.buttonWidth, this.buttonHeight);
         thirdButton.mousePressed(() => {
-            this.removeButtons()
+            this.removeButtons();
+            this.placeEscape();
             window.currentGameState = window.gameStates.CHAPTER3;
             });
         // let fourthButton = createButton("Chapter 4<br>Uncovering the Truth");
@@ -81,23 +91,37 @@ class ChapterSelector {
         fourthButton.position(this.fourthButtonX, this.buttonY);
         fourthButton.size(this.buttonWidth, this.buttonHeight);
         fourthButton.mousePressed(() => {
-            this.removeButtons()
+            this.removeButtons();
+            this.placeEscape();
             window.currentGameState = window.gameStates.CHAPTER4;
             });
         let developersButton = createButton("Developers");
         developersButton.position(this.developersButtonX, this.developersButtonY);
         developersButton.size(this.minorButtonWidth, this.minorButtonHeight);
         developersButton.class("minor");
-
+        developersButton.mousePressed(() => {
+            alert("Game Name: Iron Rebellion\n" +
+                "Development Team: Group 8\n" + 
+                "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu")
+            });
+        
         let helpButton = createButton("Help");
         helpButton.position(this.helpButtonX, this.helpButtonY);
         helpButton.size(this.minorButtonWidth, this.minorButtonHeight);
         helpButton.class("minor");
+        helpButton.mousePressed(() => {
+            alert("Move: A(Left) D(Right)\n" +
+                "Shoot: W/S/A/D + J\n") + 
+                "Win the four chapters, and defeat the boss!"
+            });
 
         let docsButton = createButton("Document");
         docsButton.position(this.docsButtonX, this.docsButtonY);
         docsButton.size(this.minorButtonWidth, this.minorButtonHeight);
         docsButton.class("minor");
+        docsButton.mousePressed(() => {
+            window.open("https://github.com/UoB-COMSM0166/2025-group-8/blob/main/README.md", "_blank"); 
+            });
 
         this.buttonList = [firstButton, secondButton, thirdButton, fourthButton
             ,developersButton, helpButton, docsButton];

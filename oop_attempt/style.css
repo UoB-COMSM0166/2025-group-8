@@ -33,3 +33,16 @@ button.minor:hover {
   font-weight: bold;
   border: 0px solid rgb(115, 244, 244);
 }
+
+button.escape {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  font-weight: bold;
+}
+
+button.escape:hover {
+  background-color: rgba(160, 159, 159, 0.5);
+  font-weight: bold;
+  border: 1px solid rgb(115, 244, 244);
+}

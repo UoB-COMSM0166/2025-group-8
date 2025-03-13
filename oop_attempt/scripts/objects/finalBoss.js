@@ -54,6 +54,7 @@ class FinalBoss extends Enemy{
     destroyEffect() {
         window.currentGameState = 0;
         window.mainRoleMove = false;
+        window.chapterSelector.escapeButton.remove();
     }
   
   }

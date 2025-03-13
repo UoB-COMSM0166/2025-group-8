@@ -42,6 +42,7 @@ class PicturesLoader {
         this.attackInstruction = loadImage("./assets/pictures/attack_instruction.png");
         this.moveInstruction = loadImage("./assets/pictures/move_instruction.png");
         this.pickUpInstruction = loadImage("./assets/pictures/pick_up_instruction.png");
+        this.winInstruction = loadImage("./assets/pictures/mission_completed.png");
 
         this.bgType = {
             CHAPTERSELECTOR: this.chapterSelector,
@@ -81,6 +82,7 @@ class PicturesLoader {
             ATTACKINS: this.attackInstruction,
             MOVEINS: this.moveInstruction,
             PICKUPINS: this.pickUpInstruction,
+            WININS: this.winInstruction,
           }
     }        
     getBgType() {
