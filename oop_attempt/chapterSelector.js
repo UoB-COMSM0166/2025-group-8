@@ -111,8 +111,8 @@ class ChapterSelector {
         helpButton.class("minor");
         helpButton.mousePressed(() => {
             alert("Move: A(Left) D(Right)\n" +
-                "Shoot: W/S/A/D + J\n") + 
-                "Win the four chapters, and defeat the boss!"
+                "Shoot: W/S/A/D + J\n" +
+                "Win the four chapters, and defeat the boss!")
             });
 
         let docsButton = createButton("Document");
