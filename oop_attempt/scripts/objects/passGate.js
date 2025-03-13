@@ -9,6 +9,7 @@ class PassGate extends PickableObject {
     pickEffect() {
         super.pickEffect();
         window.currentGameState = 0;
+        window.mainRoleMove = false;
     }
   }
   

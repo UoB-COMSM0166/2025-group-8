@@ -7,10 +7,10 @@ class Chapter {
         this.roadHeight = windowHeight / 6;
         this.roadY = windowHeight - this.roadHeight;
         this.foregroundHeight = windowHeight / 5;
-        this.foregroundY = windowHeight - this.foregroundHeight; // Fixed spelling mistake
+        this.foregroundY = windowHeight - this.foregroundHeight;
 
         this.farBgSetter = new BgSetter(window.bgType.CHAPTER1FARBG, 1, 0, 0, 0, windowHeight);
-        this.closeBgSetter = null; // Explicitly assigned to avoid undefined errors
+        this.closeBgSetter = null;
         this.roadSetter = new BgSetter(window.bgType.CHAPTER1RD, 4, 0, this.roadY, windowWidth, this.roadHeight);
         this.foregroundSetter = new BgSetter(window.bgType.CHAPTER1FG, 10, 0, this.foregroundY, 0, this.foregroundHeight);
 
@@ -77,7 +77,8 @@ class Chapter {
                 if (!platform.isDiscarded && platform.isDisplay && entity.isDisplay && entity.checkCollision(platform)) {
                     entity.resolveCollisionWithPlatform(platform);
                     is_collided = true;
-                    break; // 只处理一次碰撞
+                    // only check collision 1 time
+                    break;
                 }
             }
             if (!is_collided) {

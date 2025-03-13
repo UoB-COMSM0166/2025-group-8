@@ -51,15 +51,23 @@ class GameObject {
     }
 
     render() {
-        push(); // Save the current transformation state
+        // change picture placing method from top-left to center
+        // this makes collision dectection eaiser
+
+        // Save the current transformation state
+        push(); 
         translate(this.x, this.y);
         this.movingDirectionChange();
-        scale(this.movingDirection * this.imageDirection, 1); // Scale the image horizontally based on direction
-        image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered
-        pop(); // Restore the previous transformation state
-
-        this.x += this.velocityX; // Move the object based on its velocity in the x-axis
-        this.y += this.velocityY; // Move the object based on its velocity in the y-axis
+        // Scale the image horizontally based on direction
+        scale(this.movingDirection * this.imageDirection, 1); 
+        // Draw the image centered
+        image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); 
+        // Restore the previous transformation state
+        pop(); 
+        // Move the object based on its velocity in the x-axis
+        this.x += this.velocityX;
+        // Move the object based on its velocity in the y-axis
+        this.y += this.velocityY; 
     }
 
     stopMoving() {
@@ -75,7 +83,8 @@ class GameObject {
     }
 
     jump() {
-        if (this.onGround) { // Only jump if on the ground
+        // Only jump if on the ground
+        if (this.onGround) { 
             this.velocityY = this.jumpInitVelocity;
             this.onGround = false;
             this.isJumping = true;  

@@ -17,10 +17,10 @@ class ChapterSelector {
         this.buttonGap = 200;
         this.buttonWidth = windowWidth / 9;
         this.buttonHeight = 20;
-        this.buttonY = windowHeight * (13.0/18);
+        this.buttonY = windowHeight * (16.0/18); //(13.0/18)
         this.pictureWidth = windowWidth / 6;
-        this.pictureHeight = this.pictureWidth;
-        this.pictureY = this.buttonY - this.pictureHeight - 40;
+        this.pictureHeight = this.pictureWidth; 
+        this.pictureY = this.buttonY - this.pictureHeight;  //-40
         this.calculatePositions()
     }
 
@@ -30,8 +30,8 @@ class ChapterSelector {
             this.placeButtons();
         }
         this.bgSetter.draw();
-        this.placeThemePictures();
-        this.placeTitle();
+        // this.placeThemePictures();
+        // this.placeTitle();
     }
 
     placeTitle() {
@@ -52,25 +52,30 @@ class ChapterSelector {
     }
 
     placeButtons() {
-        let firstButton = createButton("Chapter 1<br>The Awakening of Iron Fang\n");
+        // let firstButton = createButton("Chapter 1<br>The Awakening of Iron Fang\n");
+        let firstButton = createButton("Start");
+
         firstButton.position(this.firstButtonX, this.buttonY);
         firstButton.mousePressed(() => {
             this.removeButtons()
             window.currentGameState = window.gameStates.CHAPTER1; 
             });
-        let secondButton = createButton("Chapter 2<br>Betrayal and Rebellion");
+        // let secondButton = createButton("Chapter 2<br>Betrayal and Rebellion");
+        let secondButton = createButton("Start");
         secondButton.position(this.secondButtonX, this.buttonY);
         secondButton.mousePressed(() => {
             this.removeButtons()
             window.currentGameState = window.gameStates.CHAPTER2;
             });
-        let thirdButton = createButton("Chapter 3<br>Air and Ground Showdown");
+        // let thirdButton = createButton("Chapter 3<br>Air and Ground Showdown");
+        let thirdButton = createButton("Start");
         thirdButton.position(this.thirdButtonX, this.buttonY);
         thirdButton.mousePressed(() => {
             this.removeButtons()
             window.currentGameState = window.gameStates.CHAPTER3;
             });
-        let fourthButton = createButton("Chapter 4<br>Uncovering the Truth");
+        // let fourthButton = createButton("Chapter 4<br>Uncovering the Truth");
+        let fourthButton = createButton("Start");
         fourthButton.position(this.fourthButtonX, this.buttonY);
         fourthButton.mousePressed(() => {
             this.removeButtons()

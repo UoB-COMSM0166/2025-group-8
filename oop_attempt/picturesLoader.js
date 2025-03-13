@@ -18,17 +18,25 @@ class PicturesLoader {
         this.passGate = loadImage("./assets/pictures/pass_gate.png");
 
         // chapter 1 pictures
-        this.chapter1FarBg = loadImage("./assets/pictures/chapter_1_far_bg.jpg");
-        this.chapter1Rd = loadImage("./assets/pictures/chapter_1_rd.png");
-        this.chapter1Fg = loadImage("./assets/pictures/chapter_1_fg.png");
+        this.chapter1FarBg = loadImage("./assets/pictures/chapter_1_far_bg.png");
+        // this.chapter1Rd = loadImage("./assets/pictures/chapter_1_rd.png");
+        // this.chapter1Fg = loadImage("./assets/pictures/chapter_1_fg.png");
         // chapter 2 pictures
         this.chapter2FarBg = loadImage("./assets/pictures/chapter_2_far_bg.jpg");
         this.chapter2CloseBg = loadImage("./assets/pictures/chapter_2_close_bg.png");
         this.chapter2Rd = loadImage("./assets/pictures/chapter_2_rd.png");
         this.chapter2Fg = loadImage("./assets/pictures/chapter_2_fg.png");
         // chapter 3 pictures
-        this.chapter3CloseBg = loadImage("./assets/pictures/chapter_3_close_bg.jpg");
-        this.chapter3Rd = loadImage("./assets/pictures/chapter_3_rd.png");
+        this.chapter3FarBg = loadImage("./assets/pictures/chapter_3_far_bg.png");
+        this.chapter3CloseBg = loadImage("./assets/pictures/chapter_3_close_bg.png");
+        // this.chapter3Rd = loadImage("./assets/pictures/chapter_3_rd.png");
+        this.chapter3Fg = loadImage("./assets/pictures/chapter_3_fg.png");
+        // chapter 4 pictures
+        this.chapter4FarBg = loadImage("./assets/pictures/chapter_4_far_bg.jpg");
+        this.chapter4CloseBg = loadImage("./assets/pictures/chapter_4_close_bg.png");
+        this.chapter4Rd = loadImage("./assets/pictures/chapter_4_rd.png");
+
+
 
         // instructions
         this.attackInstruction = loadImage("./assets/pictures/attack_instruction.png");
@@ -61,8 +69,14 @@ class PicturesLoader {
             CHAPTER2CLOSEBG: this.chapter2CloseBg,
             CHAPTER2RD: this.chapter2Rd,
             CHAPTER2FG: this.chapter2Fg,
+            CHAPTER3FARBG: this.chapter3FarBg,
             CHAPTER3CLOSEBG: this.chapter3CloseBg,
-            CHAPTER3RD: this.chapter3Rd,
+            // CHAPTER3RD: this.chapter3Rd,
+            CHAPTER3FG : this.chapter3Fg,
+            CHAPTER4FARBG: this.chapter4FarBg,
+            CHAPTER4CLOSEBG: this.chapter4CloseBg,
+            CHAPTER4RD: this.chapter4Rd,
+
 
             ATTACKINS: this.attackInstruction,
             MOVEINS: this.moveInstruction,

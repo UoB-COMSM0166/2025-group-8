@@ -6,11 +6,15 @@ class RobotDog extends Character {
         this.height = windowHeight / 5.0;
         this.speed = 5;
         this.bullets = [];
-        this.lastShootTime = 0;  // 记录上次发射子弹的时间
-        this.shootCooldown = 500;  // 射击冷却时间，单位：毫秒
+        // record last shooting time
+        this.lastShootTime = 0; 
+        // shooting cool down interval in ms
+        this.shootCooldown = 500;
         this.allowWeapon = false;
         this.lives = 3;
+        // record last death time
         this.lastDeathTime = millis(); 
+        // invincible interval after death in ms
         this.deathCooldown = 3000;
     }
 
@@ -56,11 +60,11 @@ class RobotDog extends Character {
 
     keyboardControl() {
         // left and right
-        if (keyIsDown(65) || keyIsDown(97)) { // A 键
+        if (keyIsDown(65) || keyIsDown(97)) { // a & A
             this.move(-1);
             window.mainRoleMove = true;
             this.roleImage.play();
-        } else if (keyIsDown(68) || keyIsDown(100)) { // D 键
+        } else if (keyIsDown(68) || keyIsDown(100)) { // d & D
             this.move(1);
             this.roleImage.play();
         } else {
@@ -68,15 +72,15 @@ class RobotDog extends Character {
             this.roleImage.reset();
         }
         // up and down
-        if (keyIsDown(32)) { // Space 键
+        if (keyIsDown(32)) { // Space
             this.jump();
         } 
         // attack
         let directionStr;
-        if (keyIsDown(74) || keyIsDown(106)) { // J 键
-            if (keyIsDown(87) || keyIsDown(119)) { // W 键
+        if (keyIsDown(74) || keyIsDown(106)) { // J & j
+            if (keyIsDown(87) || keyIsDown(119)) { // W & w
                 directionStr = "up";
-            } else if (keyIsDown(83) || keyIsDown(115)) { // S 键
+            } else if (keyIsDown(83) || keyIsDown(115)) { // S & s
                 directionStr = "down";
             } else {
                 directionStr = this.movingDirection == 1 ? "right" : "left";
@@ -91,7 +95,8 @@ class RobotDog extends Character {
         if (currentTime - this.lastShootTime < this.shootCooldown) {
             return;
         }
-        this.lastShootTime = currentTime;  // 更新上次发射时间
+        // update last shooting time
+        this.lastShootTime = currentTime;
         let bulletX;
         let bulletY;
         let rotation;
@@ -121,7 +126,8 @@ class RobotDog extends Character {
         if (currentTime - this.lastDeathTime < this.deathCooldown) {
             return;
         }
-        this.lastDeathTime = currentTime;  // 更新上次死亡时间
+        // update last death time
+        this.lastDeathTime = currentTime;
         this.lives--;
         if (this.lives < 0) {
         }

@@ -26,11 +26,13 @@ class Bullet extends PickableObject {
 
   render() {
     this.update();
-    push(); // Save the current transformation state
+    // change picture placing method from top-left to center
+    // this makes collision dectection eaiser
+    push();
     translate(this.x, this.y);
     rotate(this.rotation);
-    image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); // Draw the image centered
-    pop(); // Restore the previous transformation state
+    image(this.roleImage, -this.width / 2.0, -this.height / 2.0, this.width, this.height); 
+    pop(); 
   }
 
   pickEffect(item) {
