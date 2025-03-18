@@ -22,7 +22,7 @@ Control the robotic dog RD-7 to navigate through four dangerous levels, collect 
 
 ### RD-7 Robotic Dog
 
-![Robotic Dog](/Users/kane/Desktop/2025-group-8/iron_rebellion/assets/pictures/robot_dog-min.gif)
+![Robotic Dog](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/iron_rebellion/assets/pictures/robot_dog-min.gif)
 
 - **Background**: A military reconnaissance robot and the only machine life form not controlled by Argos
 - **Abilities**: Agile jumping, fast movement, and the ability to equip weapon systems
@@ -40,39 +40,39 @@ Control the robotic dog RD-7 to navigate through four dangerous levels, collect 
 ## 5. Game Elements
 
 ### Platforms
-![Platform](/Users/kane/Desktop/2025-group-8/iron_rebellion/assets/pictures/road_3.png)
+![Platform](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/iron_rebellion/assets/pictures/road_3.png)
 
 RD-7 can walk and jump on platforms, using them to navigate through hazardous areas.
 
 ### Energy Batteries
-![Battery](/Users/kane/Desktop/2025-group-8/iron_rebellion/assets/pictures/battery.png)
+![Battery](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/iron_rebellion/assets/pictures/battery.png)
 
 Collecting these scattered energy batteries in the levels restores RD-7's health. Each battery increases one health bar.
 
 ### Weapon System
-![Weapon](/Users/kane/Desktop/2025-group-8/iron_rebellion/assets/pictures/bullet.png)
+![Weapon](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/docs/assets/pictures/gun.png)
 
 Hidden throughout the levels, the weapon system allows RD-7 to attack enemies. Once collected, use the J key to fire energy shots.
 
 ### Enemies
 
 #### Enemy Robotic Dog
-![Enemy Robotic Dog](/Users/kane/Desktop/2025-group-8/iron_rebellion/assets/pictures/enemy_dog.png)
+![Enemy Robotic Dog](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/docs/assets/pictures/enemy_dog.png)
 
 Military robotic dogs controlled by Argos patrol the ground and attack RD-7 on sight.
 
 #### Drone
-![Drone](/Users/kane/Desktop/2025-group-8/iron_rebellion/assets/pictures/drone.png)
+![Drone](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/docs/assets/pictures/drone.png)
 
 Aerial surveillance units that launch attacks from above. They must be destroyed by jumping or using weapons.
 
 #### Final Boss
-![Argos Core](/Users/kane/Desktop/2025-group-8/docs/assets/pictures/final_boss.pngg)
+![Argos Core](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/docs/assets/pictures/final_boss.png)
 
 The ultimate boss in the final level, the Argos Core has a powerful defense system and formidable attack capabilities.
 
 ### Level Gate
-![Level Gate](/Users/kane/Desktop/2025-group-8/docs/assets/pictures/pass_gate.png)
+![Level Gate](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/docs/assets/pictures/pass_gate.png)
 
 Reaching the level gate allows progression to the next area.
 
