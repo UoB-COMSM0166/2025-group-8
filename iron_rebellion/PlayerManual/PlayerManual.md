@@ -1,6 +1,6 @@
 # Iron Rebellion Player Manual
 
-![Iron Rebellion](/Users/kane/Desktop/2025-group-8/pictures/02855757797dce04842faa59d380cf0.png)
+![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/iron_rebellion/assets/pictures/bg_1.png)
 
 ## 1. Story Background
 
