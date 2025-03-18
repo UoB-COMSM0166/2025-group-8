@@ -108,7 +108,6 @@ Reaching the level gate allows progression to the next area.
 
 ## 8. HUD Explanation
 
-![HUD Interface](assets/hud.png)
 
 1. **Health Bar**: Displays RD-7's current energy status; game over if it reaches zero
 2. **Progress Bar**: Shows progression within the current level
