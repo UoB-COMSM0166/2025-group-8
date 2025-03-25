@@ -30,8 +30,10 @@ class ChapterSelector {
 
     placeEscapeAndKeyboard() {
         this.createEscapeButton();
-        if (!navigator.userAgent.toString().includes("Windows") &&
-            !navigator.userAgent.toString().includes("Linux")) {
+        let userAgentString = navigator.userAgent.toLowerCase();
+        if (!(userAgentString.includes("android") ||
+            userAgentString.includes("iphone") || 
+            userAgentString.includes("ipad"))) {
             this.createKeyboardButton('A', 10, 70, 0, 0);
             this.createKeyboardButton('D', 10, 70, 1.5, 0);
             this.createKeyboardButton('J', 85, 65, 0, 0);
