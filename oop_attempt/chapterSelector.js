@@ -30,7 +30,8 @@ class ChapterSelector {
 
     placeEscapeAndKeyboard() {
         this.createEscapeButton();
-        if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)) {
+        if (!navigator.userAgent.toString().includes("Windows") &&
+            !navigator.userAgent.toString().includes("Linux")) {
             this.createKeyboardButton('A', 10, 70, 0, 0);
             this.createKeyboardButton('D', 10, 70, 1.5, 0);
             this.createKeyboardButton('J', 85, 65, 0, 0);
@@ -140,9 +141,10 @@ class ChapterSelector {
     }
 
     showDevelopersInfo() {
-        alert("Game Name: Iron Rebellion\n" +
-            "Development Team: Group 8\n" +
-            "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu");
+        alert(navigator.userAgent);
+        // alert("Game Name: Iron Rebellion\n" +
+        //     "Development Team: Group 8\n" +
+        //     "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu");
     }
 
     showHelp() {
