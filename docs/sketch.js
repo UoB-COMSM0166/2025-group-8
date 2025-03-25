@@ -38,26 +38,39 @@ function setup() {
 }
 
 function draw() {
-  if (window.currentGameState === gameStates.CHAPTERSELECTOR) {
-    chapterSeletion();
-  } else if (window.currentGameState === gameStates.CHAPTER1) {
-    chapter1();
-  } else if (window.currentGameState === gameStates.CHAPTER2) {
-    chapter2();
-  } else if (window.currentGameState === gameStates.CHAPTER3) {
-    chapter3();
-  } else if (window.currentGameState === gameStates.CHAPTER4) {
-    chapter4();
-  } else if (window.currentGameState === gameStates.CHPATER1WIN) {
-    chapter1Win();
-  } else if (window.currentGameState === gameStates.CHPATER2WIN) {
-    chapter2Win();
-  } else if (window.currentGameState === gameStates.CHPATER3WIN) {
-    chapter3Win();
-  } else if (window.currentGameState === gameStates.CHPATER4WIN) {
-    chapter4Win();
-  } else if (window.currentGameState === gameStates.GAMEOVER) {
-    gameOver();
+  switch (window.currentGameState) {
+    case gameStates.CHAPTERSELECTOR:
+      chapterSeletion();
+      break;
+    case gameStates.CHAPTER1:
+      chapter1();
+      break;
+    case gameStates.CHAPTER2:
+      chapter2();
+      break;
+    case gameStates.CHAPTER3:
+      chapter3();
+      break;
+    case gameStates.CHAPTER4:
+      chapter4();
+      break;
+    case gameStates.CHPATER1WIN:
+      chapter1Win();
+      break;
+    case gameStates.CHPATER2WIN:
+      chapter2Win();
+      break;
+    case gameStates.CHPATER3WIN:
+      chapter3Win();
+      break;
+    case gameStates.CHPATER4WIN:
+      chapter4Win();
+      break;
+    case gameStates.GAMEOVER:
+      gameOver();
+      break;
+    default:
+      console.warn("Unknown game state:", window.currentGameState);
   }
 }
 

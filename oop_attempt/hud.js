@@ -37,7 +37,7 @@ class Hud {
         if (walkedPercentage >= 100) {
             window.isStoryEnded = true;
         }
-        text(Math.round(walkedPercentage) + "%", windowWidth - this.x - this.lifeIconSize, this.y + this.lifeIconSize / 2.0);
+        text(Math.round(walkedPercentage) + "%", windowWidth - this.x - 5* this.lifeIconSize, this.y + this.lifeIconSize / 2.0);
     }
 
     relativelyMoveRecord() {

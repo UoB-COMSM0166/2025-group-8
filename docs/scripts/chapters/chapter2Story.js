@@ -8,7 +8,7 @@ class Chapter2Story extends Chapter{
       this.roadHeight = windowHeight / 6;
       this.roadY = windowHeight - this.roadHeight;
       this.foregroundHeight = windowHeight / 5;
-      this.foregroundY = windowHeight - this.foregroundHeight; // Fixed spelling mistake
+      this.foregroundY = windowHeight - this.foregroundHeight;
 
       this.farBgSetter = new BgSetter(window.bgType.CHAPTER2FARBG, 1, 0, 0, 0, windowHeight);
       this.closeBgSetter = new BgSetter(window.bgType.CHAPTER2CLOSEBG, 2, 0, 0, 0, windowHeight);

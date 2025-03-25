@@ -3,7 +3,7 @@
 
 ## Our Game
 
-PLAY HERE[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/02855757797dce04842faa59d380cf0.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
+CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/02855757797dce04842faa59d380cf0.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
 
 
 Your game lives in the [/docs](/docs) folder, and is published using Github pages to the link above.
@@ -25,7 +25,7 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 
 ## Our Progress
 
-Kanban Board : https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiMTUxYmI2MDgyOTRjNGNlZjk2Y2QzNDMyM2FmY2IxNTQiLCJwIjoiaiJ9
+Kanban Board : [![KANBAN](pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
 ## Two Prototype Ideas
 
