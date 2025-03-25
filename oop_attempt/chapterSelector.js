@@ -1,29 +1,19 @@
 class ChapterSelector {
     buttonGenerationState = 0;
     escapeButtonGenState = 0;
-    firstButtonX;
-    secondButtonX;
-    thirdButtonX;
-    fourthButtonX;
-    buttonList;
-    firstPictureX;
-    secondPictureX;
-    thirdPictureX;
-    fourthPictureX;
+    chapterSelectionButtonList = [];
+    escapeAndKeyboardButtonList = [];
+    isKeyPressed = {'A': false, 'D': false, 'J': false, ' ': false};
+    buttonGap = windowWidth * 0.99 / 100;
+    buttonY = windowHeight * 1 / 18;
+    buttonHeight = windowHeight * 82.5 / 100;
+    buttonWidth = windowWidth * 23.5 / 100;
+    minorButtonHeight = windowHeight * 3 / 100;
+    minorButtonWidth = windowWidth * 7 / 100;
+
     constructor() {
         this.bgSetter = new BgSetter(window.bgType.CHAPTERSELECTOR, 0, 0, 0, windowWidth, windowHeight);
-
-        this.buttonGap = windowWidth * 0.99 / 100;
-        this.buttonY = windowHeight * 1 /18;
-        this.buttonHeight = windowHeight * 82.5 / 100;
-        this.buttonWidth = windowWidth * 23.5 / 100;
-        this.firstButtonX = windowWidth * 1.5 / 100;
-
-        this.minorButtonHeight = windowHeight * 3 / 100;
-        this.minorButtonWidth = windowWidth * 7 / 100;
-
         this.calculatePositions();
-
     }
 
     draw() {
@@ -34,101 +24,135 @@ class ChapterSelector {
         this.bgSetter.draw();
     }
 
-    placeThemePictures() {
-        stroke("white");
-        strokeWeight(2);
-        image(window.bgType.CHAPTER1THEME, this.firstPictureX, this.pictureY, this.pictureWidth, this.pictureHeight);
-        image(window.bgType.CHAPTER2THEME, this.secondPictureX, this.pictureY, this.pictureWidth, this.pictureHeight);
-        image(window.bgType.CHAPTER3THEME, this.thirdPictureX, this.pictureY, this.pictureWidth, this.pictureHeight);
-        image(window.bgType.CHAPTER4THEME, this.fourthPictureX, this.pictureY, this.pictureWidth, this.pictureHeight);
-        strokeWeight(0);
+    displayImage(imageType, xPos) {
+        image(imageType, xPos, this.pictureY, this.pictureWidth, this.pictureHeight);
     }
 
-    placeEscape() {
-        this.escapeButton = createButton("🏠︎ BACK");
-        this.escapeButton.class("escape");
-        this.escapeButton.position(windowWidth *90/100, 25);
-        // escapeButton.size(this.minorButtonWidth, this.minorButtonHeight);
-        this.escapeButton.mousePressed(() => {
-            this.escapeButton.remove();
+    placeEscapeAndKeyboard() {
+        this.createEscapeButton();
+        if (/Mobi|Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent)) {
+            this.createKeyboardButton('A', 10, 70, 0, 0);
+            this.createKeyboardButton('D', 10, 70, 1.5, 0);
+            this.createKeyboardButton('J', 85, 65, 0, 0);
+            this.createKeyboardButton(' ', 85, 65, -0.5, 1.5, 2);
+        }
+    }
+
+    createEscapeButton() {
+        let escapeButton = createButton("🏠︎ BACK");
+        escapeButton.class("escape");
+        escapeButton.position(windowWidth * 90 / 100, windowHeight * 5 / 100);
+        escapeButton.mousePressed(() => {
+            for (let button of this.escapeAndKeyboardButtonList) {
+                button.remove();
+            }
             window.currentGameState = window.gameStates.CHAPTERSELECTOR;
             window.mainRoleMove = false;
         });
+        this.escapeAndKeyboardButtonList.push(escapeButton);
+    }
 
+    createKeyboardButton(keyChar, posX, posY, offsetX, offsetY, sizeMultiplier = 1) {
+        let keyString;
+        if (keyChar == ' ') {
+            keyString = "Space";
+        } else {
+            keyString = keyChar;
+        }
+        let keyboardButtonSize = windowHeight / 15;
+        let button = createButton(keyString);
+        button.class("keyboard");
+        button.position(windowWidth * posX / 100 + offsetX * keyboardButtonSize, windowHeight * posY / 100 + offsetY * keyboardButtonSize);
+        button.size(keyboardButtonSize * sizeMultiplier, keyboardButtonSize);
+        button.mousePressed(() => this.simulateKeyPress(keyChar));
+        button.mouseReleased(() => this.simulateKeyRelease(keyChar));
+        this.escapeAndKeyboardButtonList.push(button);
+    }
+
+    simulateKeyPress(keyChar) {
+        let keyCode = this.getKeyCode(keyChar);
+        if (!keyCode) return; // If invalid key, return
+
+        this.triggerKeyEvent('keydown', keyChar, keyCode);
+        this.isKeyPressed[keyChar] = true;
+    }
+
+    simulateKeyRelease(keyChar) {
+        if (!this.isKeyPressed[keyChar]) return;
+
+        let keyCode = this.getKeyCode(keyChar);
+        if (!keyCode) return; // If invalid key, return
+
+        this.triggerKeyEvent('keyup', keyChar, keyCode);
+        this.isKeyPressed[keyChar] = false;
+    }
+
+    getKeyCode(keyChar) {
+        const keyCodes = {
+            'A': 65,
+            'D': 68,
+            'J': 74,
+            ' ': 32
+        };
+        return keyCodes[keyChar];
+    }
+
+    triggerKeyEvent(eventType, keyChar, keyCode) {
+        let keyEvent = new KeyboardEvent(eventType, {
+            key: keyChar,
+            code: `Key${keyChar}`,
+            keyCode: keyCode,
+            which: keyCode,
+            bubbles: true
+        });
+        document.dispatchEvent(keyEvent);
     }
 
     placeButtons() {
-        // let firstButton = createButton("Chapter 1<br>The Awakening of Iron Fang\n");
-        let firstButton = createButton("");
+        this.createChapterButton(1, this.firstButtonX);
+        this.createChapterButton(2, this.secondButtonX);
+        this.createChapterButton(3, this.thirdButtonX);
+        this.createChapterButton(4, this.fourthButtonX);
+        this.createMinorButton("Developers", this.developersButtonX, this.developersButtonY, () => this.showDevelopersInfo());
+        this.createMinorButton("Help", this.helpButtonX, this.helpButtonY, () => this.showHelp());
+        this.createMinorButton("Document", this.docsButtonX, this.docsButtonY, () => window.open("https://github.com/UoB-COMSM0166/2025-group-8/blob/main/README.md", "_blank"));
+    }
 
-        firstButton.position(this.firstButtonX, this.buttonY);
-        firstButton.size(this.buttonWidth, this.buttonHeight);
-        firstButton.mousePressed(() => {
+    createChapterButton(chapterNumber, xPos) {
+        let button = createButton("");
+        button.position(xPos, this.buttonY);
+        button.size(this.buttonWidth, this.buttonHeight);
+        button.mousePressed(() => {
             this.removeButtons();
-            this.placeEscape();
-            window.currentGameState = window.gameStates.CHAPTER1; 
-            });
-        // let secondButton = createButton("Chapter 2<br>Betrayal and Rebellion");
-        let secondButton = createButton("");
-        secondButton.position(this.secondButtonX, this.buttonY);
-        secondButton.size(this.buttonWidth, this.buttonHeight);
-        secondButton.mousePressed(() => {
-            this.removeButtons();
-            this.placeEscape();
-            window.currentGameState = window.gameStates.CHAPTER2;
-            });
-        // let thirdButton = createButton("Chapter 3<br>Air and Ground Showdown");
-        let thirdButton = createButton("");
-        thirdButton.position(this.thirdButtonX, this.buttonY);
-        thirdButton.size(this.buttonWidth, this.buttonHeight);
-        thirdButton.mousePressed(() => {
-            this.removeButtons();
-            this.placeEscape();
-            window.currentGameState = window.gameStates.CHAPTER3;
-            });
-        // let fourthButton = createButton("Chapter 4<br>Uncovering the Truth");
-        let fourthButton = createButton("");
-        fourthButton.position(this.fourthButtonX, this.buttonY);
-        fourthButton.size(this.buttonWidth, this.buttonHeight);
-        fourthButton.mousePressed(() => {
-            this.removeButtons();
-            this.placeEscape();
-            window.currentGameState = window.gameStates.CHAPTER4;
-            });
-        let developersButton = createButton("Developers");
-        developersButton.position(this.developersButtonX, this.developersButtonY);
-        developersButton.size(this.minorButtonWidth, this.minorButtonHeight);
-        developersButton.class("minor");
-        developersButton.mousePressed(() => {
-            alert("Game Name: Iron Rebellion\n" +
-                "Development Team: Group 8\n" + 
-                "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu")
-            });
-        
-        let helpButton = createButton("Help");
-        helpButton.position(this.helpButtonX, this.helpButtonY);
-        helpButton.size(this.minorButtonWidth, this.minorButtonHeight);
-        helpButton.class("minor");
-        helpButton.mousePressed(() => {
-            alert("Move: A(Left) D(Right)\n" +
-                "Shoot: W/S/A/D + J\n" +
-                "Win the four chapters, and defeat the boss!")
-            });
+            this.placeEscapeAndKeyboard();
+            window.currentGameState = window.gameStates[`CHAPTER${chapterNumber}`];
+        });
+        this.chapterSelectionButtonList.push(button);
+    }
 
-        let docsButton = createButton("Document");
-        docsButton.position(this.docsButtonX, this.docsButtonY);
-        docsButton.size(this.minorButtonWidth, this.minorButtonHeight);
-        docsButton.class("minor");
-        docsButton.mousePressed(() => {
-            window.open("https://github.com/UoB-COMSM0166/2025-group-8/blob/main/README.md", "_blank"); 
-            });
+    createMinorButton(label, xPos, yPos, action) {
+        let button = createButton(label);
+        button.position(xPos, yPos);
+        button.size(this.minorButtonWidth, this.minorButtonHeight);
+        button.class("minor");
+        button.mousePressed(action);
+        this.chapterSelectionButtonList.push(button);
+    }
 
-        this.buttonList = [firstButton, secondButton, thirdButton, fourthButton
-            ,developersButton, helpButton, docsButton];
+    showDevelopersInfo() {
+        alert("Game Name: Iron Rebellion\n" +
+            "Development Team: Group 8\n" +
+            "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu");
+    }
+
+    showHelp() {
+        alert("Move: A(Left) D(Right)\n" +
+            "Shoot: W/S/A/D + J\n" +
+            "Win the four chapters, and defeat the boss!");
     }
 
     calculatePositions() {
-        
+        this.firstButtonX = windowWidth * 1.5 / 100;
         this.secondButtonX = this.firstButtonX + this.buttonGap + this.buttonWidth;
         this.thirdButtonX = this.secondButtonX + this.buttonGap + this.buttonWidth;
         this.fourthButtonX = this.thirdButtonX + this.buttonGap + this.buttonWidth;
@@ -141,7 +165,10 @@ class ChapterSelector {
     }
 
     removeButtons() {
-        this.buttonList.forEach(button => button.remove());
+        if (this.chapterSelectionButtonList) {
+            this.chapterSelectionButtonList.forEach(button => button.remove());
+        }
         this.buttonGenerationState = 0;
     }
+    
 }

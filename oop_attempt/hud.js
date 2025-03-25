@@ -2,11 +2,11 @@ class Hud {
     constructor(roadLength, target) {
         this.roleImage = window.bgType.BATTERY;
         this.roadLength = roadLength;
-        this.x = 20;
-        this.y = 20;
-        this.textSize = 20;
+        this.x = windowHeight / 50;
+        this.y = windowHeight / 50;
+        this.textSize = windowHeight / 20;
         this.lives = 3;
-        this.lifeIconSize = 50;
+        this.lifeIconSize = windowHeight / 15;
         this.relativelyMoveDistance = 0;
         this.relativeSpeed = target.speed;
         this.target = target;
@@ -20,7 +20,7 @@ class Hud {
 
     livesDisplay() {
         for (let i = 0; i < this.target.lives; i++) {
-            image(this.roleImage, this.x + 20 + i * this.lifeIconSize, this.y, this.lifeIconSize, this.lifeIconSize);
+            image(this.roleImage, this.x + i * this.lifeIconSize, this.y, this.lifeIconSize, this.lifeIconSize);
         }
     }
 
