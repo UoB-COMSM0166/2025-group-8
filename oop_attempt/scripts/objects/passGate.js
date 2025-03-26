@@ -10,7 +10,7 @@ class PassGate extends PickableObject {
         super.pickEffect();
         window.currentGameState = 0;
         window.mainRoleMove = false;
-        window.chapterSelector.escapeButton.remove();
+        window.chapterSelector.escapeToHome();
     }
   }
   

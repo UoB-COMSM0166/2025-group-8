@@ -45,14 +45,16 @@ class ChapterSelector {
         let escapeButton = createButton("🏠︎ BACK");
         escapeButton.class("escape");
         escapeButton.position(windowWidth * 90 / 100, windowHeight * 5 / 100);
-        escapeButton.mousePressed(() => {
-            for (let button of this.escapeAndKeyboardButtonList) {
-                button.remove();
-            }
-            window.currentGameState = window.gameStates.CHAPTERSELECTOR;
-            window.mainRoleMove = false;
-        });
+        escapeButton.mousePressed(() => this.escapeToHome());
         this.escapeAndKeyboardButtonList.push(escapeButton);
+    }
+
+    escapeToHome() {
+        for (let button of this.escapeAndKeyboardButtonList) {
+            button.remove();
+        }
+        window.currentGameState = window.gameStates.CHAPTERSELECTOR;
+        window.mainRoleMove = false;
     }
 
     createKeyboardButton(keyChar, posX, posY, offsetX, offsetY, sizeMultiplier = 1) {
