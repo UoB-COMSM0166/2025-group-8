@@ -46,3 +46,16 @@ button.escape:hover {
   font-weight: bold;
   border: 1px solid rgb(115, 244, 244);
 }
+
+button.keyboard {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid white;
+  font-weight: bold;
+}
+
+button.keyboard:hover {
+  background-color: rgba(160, 159, 159, 0.5);
+  font-weight: bold;
+  border: 1px solid rgb(115, 244, 244);
+}
