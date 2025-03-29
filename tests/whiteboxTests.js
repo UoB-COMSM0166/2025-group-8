@@ -91,5 +91,129 @@ describe('GameObject Basic Tests', () => {
     gameObject.jump();
     
     expect(gameObject.velocityY).toBe(5); // Should remain unchanged
+
+    test('GameObject.resolveCollisionWithPlatform correctly handles collision', () => {
+      const gameObject = new GameObject(100, 100);
+      gameObject.width = 50;
+      gameObject.height = 50;
+      gameObject.velocityY = 5;
+      
+      const platform = new GameObject(100, 150);
+      platform.width = 100;
+      platform.height = 20;
+      
+      // Simulate collision from above the platform
+      gameObject.velocityX = 0;
+      gameObject.velocityY = 5;
+      gameObject.y = 100;
+      gameObject.resolveCollisionWithPlatform(platform);
+      
+      expect(gameObject.velocityY).toBe(0);
+      expect(gameObject.onGround).toBe(true);
+    });
+  });
+  
+  // RobotDog class tests
+  describe('RobotDog character tests', () => {
+    beforeEach(() => {
+      // Reset environment and mock images
+      global.windowWidth = 1280;
+      global.windowHeight = 720;
+      global.window = {
+        bgType: {
+          ROBOTDOG: {
+            play: jest.fn(),
+            reset: jest.fn()
+          }
+        },
+        mainRoleMove: true,
+        isStoryEnded: false
+      };
+    });
+  
+    test('RobotDog constructor initializes correctly', () => {
+      const dog = new RobotDog();
+      
+      expect(dog.x).toBe(150);
+      expect(dog.y).toBe(50);
+      expect(dog.width).toBe(windowHeight / 5.0);
+      expect(dog.height).toBe(windowHeight / 5.0);
+      expect(dog.lives).toBe(3);
+      expect(dog.allowWeapon).toBe(false);
+      expect(dog.bullets).toEqual([]);
+    });
+  
+    test('RobotDog.move correctly moves the character', () => {
+      const dog = new RobotDog();
+      dog.x = 100;
+      
+      // Move to the right
+      dog.move(1);
+      
+      expect(dog.velocityX).toBe(5);
+      expect(dog.movingDirection).toBe(1);
+      expect(window.mainRoleMove).toBe(true);
+  
+      // Stop moving when reaching the center of the screen
+      dog.x = windowWidth / 2;
+      dog.move(1);
+      
+      expect(dog.x).toBe(windowWidth / 2);
+      expect(window.mainRoleMove).toBe(false);
+  
+      // Allow movement after the story ends
+      window.isStoryEnded = true;
+      dog.move(1);
+      
+      expect(window.mainRoleMove).toBe(true);
+    });
+  
+    test('RobotDog.shoot correctly creates bullets', () => {
+      const dog = new RobotDog();
+      dog.allowWeapon = true;
+      dog.x = 100;
+      dog.y = 100;
+      dog.width = 50;
+      dog.height = 50;
+      
+      expect(dog.bullets.length).toBe(0);
+      
+      // Simulate shooting to the right
+      dog.shoot("right");
+      
+      expect(dog.bullets.length).toBe(1);
+      expect(dog.bullets[0].x).toBe(125); // 100 + 50/2
+      expect(dog.bullets[0].y).toBe(100);
+      
+      // Test shooting cooldown
+      dog.shoot("right");
+      
+      expect(dog.bullets.length).toBe(1); // Should not increase bullets
+    });
+  
+    test('RobotDog.die correctly handles death', () => {
+      const dog = new RobotDog();
+      dog.lives = 3;
+      dog.x = 300;
+      dog.y = 300;
+      
+      // Update last death time to a long time ago
+      dog.lastDeathTime = 0;
+      
+      dog.die();
+      
+      expect(dog.lives).toBe(2);
+      expect(dog.x).toBe(150); // Reset to initial position
+      expect(dog.y).toBe(50);
+      expect(dog.velocityX).toBe(0);
+      expect(dog.velocityY).toBe(0);
+      
+      // Test death cooldown
+      const currentTime = millis();
+      dog.lastDeathTime = currentTime;
+      dog.die();
+      
+      expect(dog.lives).toBe(2); // Lives should not decrease
+    });
   });
 });
