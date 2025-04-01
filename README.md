@@ -273,3 +273,9 @@ You can delete this section in your own repo, it's just here for information. in
 
   - Is your repo clearly organised? 
   - Is code well commented throughout?
+
+
+
+待办：
+1.将测试部分链接到report
+2.kanban：不同knaban的尝试，为什么选择了现在的kanban
