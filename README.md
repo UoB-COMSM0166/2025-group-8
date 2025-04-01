@@ -3,7 +3,7 @@
 
 ## Our Game
 
-CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/02855757797dce04842faa59d380cf0.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
+CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
 
 
 Your game lives in the [/docs](/docs) folder, and is published using Github pages to the link above.
@@ -25,7 +25,7 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 
 ## Our Progress
 
-Kanban Board : [![KANBAN](pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
+Kanban Board : [![KANBAN](./pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
 ## Two Prototype Ideas
 
@@ -40,12 +40,12 @@ Super Mario is a hallmark in platform game design, featuring meticulously crafte
 - **Merge Big Watermelon:** 
 Merge Big Watermelon is a casual puzzle game known for its simple and engaging mechanics. Players merge similar items on a grid to create larger ones, aiming to form the biggest watermelon. The game features a minimalistic, colorful design and is developed with technologies that ensure it works across multiple platforms. It's easy to play but offers increasing challenges
 
-[![Merge Big Watermelon](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/images/Merge%20Big%20Watermelon.png)](https://drive.google.com/file/d/10CyhntnRV76U0o-qCPSqY2Diu1KsxhMl/view?usp=drive_link)
+[![Merge Big Watermelon](./pictures/Merge%20Big%20Watermelon.png)](https://drive.google.com/file/d/10CyhntnRV76U0o-qCPSqY2Diu1KsxhMl/view?usp=drive_link)
 
 
 
 ## Final  Ideas
-[![alt text](image.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
+[![alt text](pictures/final_idea_main_characters.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
 
 
 
