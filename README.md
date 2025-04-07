@@ -214,21 +214,21 @@ Solution: Overhaul level designs to introduce more variability and complexity, i
 Impact: Revamping the level design and enhancing drone AI complexity will enrich the gameplay, making each level feel unique and challenging. This addresses feedback about repetitive design and predictable challenges, thereby improving overall game engagement and replayability.
 
 
-## Sustainability Impact Assessment Report
+## Sustainability Impact Assessment 
 Project Name: Iron Rebellion
 Framework Used: Sustainability Awareness Framework (SusAF)
 
-1. Project Overview
+### Project Overview
 Iron Rebellion is a 2D platform-jumping game designed to provide an engaging and straightforward gaming experience. It operates primarily as a single-player game, with levels structured to challenge the player’s reflexes and problem-solving skills. This game does not feature multiplayer capabilities, community interactions, or in-game purchases.
 
-2. Vision and Known Effects
+### Vision and Known Effects
 Vision: To offer a classic gaming experience that challenges players through progressively difficult levels, combining retro aesthetics with modern gameplay mechanics. Known Sustainability Effects:
 
 Positive: Minimal resource use due to digital-only distribution, reducing physical waste associated with packaging and hardware.
 
 Negative: Potential energy consumption from extended play sessions, although less significant than more resource-intensive games.
 
-3. Detailed Sustainability Effects
+### Detailed Sustainability Effects
 Environmental Dimension:
 
 Materials and Resources: Primarily digital distribution minimizes the use of physical materials and reduces waste.
@@ -253,7 +253,7 @@ Maintainability and Scalability: Requires less frequent updates and maintenance 
 
 Development Efficiency: Utilizes established game development frameworks and tools, ensuring efficient production cycles and lower technical overhead.
 
-4. Synthesis: Threats, Opportunities, and Actions
+### Synthesis: Threats, Opportunities, and Actions
 Threats:
 
 Environmental Impact: Continuous energy use during gameplay, although minor, is still relevant.
@@ -272,7 +272,7 @@ Promoting Energy Efficiency: Encourage players to use energy-efficient gaming de
 
 Encouraging Active Breaks: Implement reminders for players to take breaks and engage in physical activities during extended sessions.
 
-5. Conclusion
+### Conclusion
 This sustainability impact assessment for Iron Rebellion identifies critical areas of impact with a focus on environmental and individual dimensions. The assessment guides the integration of sustainable practices into both game design and operational procedures. Moving forward, these insights will be used to enhance the game’s design and help mitigate any negative impacts associated with its use. This report will be included in the project documentation to inform stakeholders and guide future development decisions.
 
 
