@@ -336,7 +336,7 @@ In the final phase of requirements planning, we used these stories to define the
 
 In summary, the requirements phase for Iron Rebellion was iterative, collaborative, and grounded in practical tools such as user stories, use case diagrams, and paper prototypes. This process helped us define a game that is both achievable and engaging, laying a strong foundation for the design and implementation stages that followed. By grounding every feature in user needs and team feasibility, we ensured that the final product would be coherent, polished, and enjoyable to play.
 
-### Design
+### Design （需要修改）
 The design of Iron Rebellion focused on building a modular and maintainable architecture that could support responsive gameplay, varied levels, and future expansion. We adopted a structure inspired by the Model-View-Controller (MVC) pattern, which helped us separate concerns and organize code around data, control, and display layers. Although not implemented as a strict MVC, this approach guided how we structured classes and managed responsibilities.
 
 At the core of our system is the GameObject superclass, which defines shared properties like position, velocity, and size. This class is extended by all interactive elements in the game, including the Player, EnemyDrone, MovingPlatform, and TriggerButton. Each subclass overrides specific behavior for drawing, updating movement, and handling collisions. This hierarchy allowed us to reuse logic and minimize redundant code while keeping object behaviors modular.
@@ -359,7 +359,7 @@ Our design work followed an agile process, so diagrams were updated frequently b
 
 In summary, the design of Iron Rebellion prioritized modularity, maintainability, and flexibility. Class diagrams helped structure our systems, while behavioural diagrams made interactions clearer. This foundation supported efficient implementation, smoother debugging, and the ability to adapt quickly to changes throughout development.
 
-### Implementation
+### Implementation （需要修改）
 The implementation of Iron Rebellion followed an iterative, feature-first approach where we began by building a basic working prototype and then layered complexity onto it. Our initial steps focused on constructing the platforming foundation—handling user input, applying gravity, detecting collisions, and creating a player object that could interact with a tile-based level. From there, we implemented levels, enemy behaviors, and visual effects. Each feature introduced new challenges that pushed us to refine our initial architecture.
 
 Our GameObject class served as the base for all interactive items in the game—such as the player, enemies, buttons, and moving platforms. Each subclass extended basic update and draw methods, giving us the flexibility to implement specific behaviors while maintaining a clean, modular structure. We used a MapController to parse external level files and instantiate the correct objects into the scene based on predefined characters. This allowed us to edit and test levels without modifying the core codebase.
@@ -380,7 +380,7 @@ We chose not to implement procedural generation to retain control over puzzle de
 
 In summary, the implementation of Iron Rebellion focused on building a solid foundation and then solving three major technical challenges: robust collision detection, scalable difficulty through flexible level design, and intelligent but efficient enemy AI. Addressing these challenges improved the game’s stability, performance, and overall player experience—ensuring it felt responsive, balanced, and fun to play.
 
-### Evaluation（需要修改）
+### Evaluation
 To ensure Iron Rebellion delivered a fun and accessible gameplay experience, we used both qualitative and quantitative evaluation methods. Our goal was to understand how players perceived the game, identify usability problems, and verify whether the difficulty scaled in a satisfying and fair way. We conducted a think-aloud study during early development and complemented it with a NASA Task Load Index (TLX) analysis to evaluate cognitive workload across different difficulty levels. Alongside this, we also established a consistent approach to testing the game’s functionality and stability.
 
 Qualitative Evaluation: Think-Aloud Usability Testing
@@ -411,7 +411,7 @@ Visual elements were tested using manual inspection, focusing on sprite alignmen
 
 In summary, our evaluation process was designed to gather both subjective player impressions and measurable performance data. The think-aloud study highlighted several interface and mechanical issues early on, allowing us to fix major bugs before broader testing. The NASA TLX confirmed that our difficulty scaling was effective and informed decisions on pacing and level design. Regular testing ensured that the game remained stable, consistent, and enjoyable throughout development.
 
-### Process（需要修改）
+### Process
 The development of Iron Rebellion was a collaborative effort built on structured teamwork, clear roles, and continuous iteration. From the beginning, we adopted an agile-inspired approach, which gave us the flexibility to evolve ideas and respond to feedback efficiently. Our team consisted of five members, each with different strengths, and we assigned roles accordingly: two developers (Zewen and Zhi), one visual designer (Yunhao), one copywriter (Yuying), and one project manager (Kaijie).
 
 During our first meetings, we focused on building rapport and aligning our vision. We discussed games we had enjoyed growing up and identified common interests in classic platformers and science fiction. These early conversations helped us converge on a shared direction and choose the theme and mechanics for Iron Rebellion. Our initial concepts were documented through Miro for brainstorming and GitHub repositories for file sharing, where we stored sketches, diagrams, and initial drafts.
