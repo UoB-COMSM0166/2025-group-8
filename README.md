@@ -432,6 +432,54 @@ One area where we improved significantly over time was task estimation. In early
 
 In retrospect, our agile process was effective because it allowed structure without being rigid. Weekly sprints kept us accountable, while open communication helped resolve blockers quickly. Using tools like Jira, GitHub, Teams, and WhatsApp gave us a solid workflow, and our shared enthusiasm made the project both productive and enjoyable. Although we encountered obstacles, our teamwork and willingness to learn from each other were essential to delivering a complete and functional game by the deadline.
 
+### Sustainability, Ethics, and Accessibility
+The development of Iron Rebellion not only aimed to deliver an engaging gameplay experience but also considered the broader implications of game development on the environment, individuals, and society. This section outlines our game’s impact across three critical dimensions: environmental, social, and individual.
+
+#### Environmental Impact
+We prioritized environmental sustainability in both our design and deployment choices. Unlike traditional physical games that involve plastic cartridges, discs, or printed manuals, Iron Rebellion is distributed entirely through digital means via GitHub Pages, which minimizes material waste and eliminates carbon emissions related to manufacturing and transportation.
+
+In development, we adopted several green software practices inspired by the Green Software Foundation’s recommendations:
+
+Lazy loading of off-screen assets ensures only necessary resources are loaded, reducing memory usage and processor cycles.
+
+Optimized image sizes and removal of unused code reduced file size and energy required during gameplay and page loading.
+
+We intentionally avoided using high-resolution assets beyond what is visually necessary for a 2D pixel-art platformer, leading to lower GPU usage and power consumption.
+
+While Iron Rebellion is relatively lightweight compared to 3D games, we acknowledge that prolonged play sessions still lead to cumulative energy use on end-user devices. To mitigate this, we propose adding eco-friendly messages during loading screens (e.g., “Take breaks to rest your eyes and reduce energy use”), which could raise awareness without disrupting gameplay.
+
+#### Social Impact
+While Iron Rebellion is primarily a single-player experience, our development choices reflect ethical consideration toward broader social inclusiveness.
+
+Firstly, we avoided exploitative microtransaction models often seen in modern games. There are no in-app purchases, loot boxes, or predatory ads, ensuring that players of all financial backgrounds can enjoy the game equally and without manipulation. This aligns with ethical game design principles that prioritize fair access and avoid psychological exploitation (e.g., dark patterns).
+
+Secondly, we adopted open and inclusive design principles in our gameplay. Although we did not fully implement accessibility tools like screen readers or remappable controls due to project constraints, we laid a foundation by ensuring the visual interface is clean, with high-contrast colors and intuitive HUD elements.
+
+Moreover, our story and characters were designed to be universal and non-stereotypical, avoiding harmful cultural tropes or gender biases. Our robot protagonist and enemies are abstract enough to remain neutral, allowing players from diverse backgrounds to project themselves into the game without friction.
+
+In future iterations, we aim to expand localization, add color-blind friendly modes, and enable keyboard remapping to reach a wider audience, particularly gamers with disabilities.
+
+#### Individual Impact
+From an individual player’s perspective, Iron Rebellion was crafted with cognitive and emotional well-being in mind. During development, we conducted NASA TLX workload testing and SUS usability evaluations to ensure the game was mentally stimulating without causing undue frustration or fatigue.
+
+Key design features that support healthy individual gameplay include:
+
+Difficulty settings (Easy, Medium, Hard) allowing players to tailor the challenge to their own comfort.
+
+Checkpoints that enable progress saving, reducing stress from failure.
+
+Finite levels and the absence of “infinite grind” mechanics, promoting focused, short sessions rather than endless, compulsive play.
+
+Visual and auditory feedback that rewards skill and improvement, helping players experience a healthy sense of progress and achievement.
+
+In terms of physical well-being, we plan to implement regular reminder prompts to encourage breaks, inspired by the Pomodoro Technique. This helps combat sedentary gaming habits, a common concern in modern digital entertainment.
+
+Additionally, the game’s simple control scheme reduces the cognitive barrier for entry, making it accessible to younger players and older users unfamiliar with complex control systems.
+
+#### Conclusion
+By integrating sustainable design choices, ethical monetization strategies, and accessibility-oriented gameplay, Iron Rebellion exemplifies how small-scale digital games can have a positive footprint across environmental, social, and individual dimensions. While our current implementation is modest, the foundational decisions we've made open the door to further enhance our game’s ethical and sustainable impact in future updates. These practices also reflect our commitment as developers to responsible digital creation in a world increasingly shaped by interactive technologies.
+
+
 ### Conclusion
 The development of Iron Rebellion was a challenging yet deeply rewarding journey that pushed our technical, creative, and collaborative skills. As our first full team-based game development project, it served as both a testing ground and learning experience in managing complexity, dividing responsibilities, and producing a complete software product within a limited timeframe.
 At its core, Iron Rebellion aimed to deliver a nostalgic platforming experience with a modern twist—tight controls, thoughtful level design, and scalable difficulty. Through playtesting and iteration, we learned how even small changes in platform positions or enemy behavior could significantly impact gameplay quality. This taught us the importance of player feedback and playability testing early and often. We also learned to strike a balance between ambition and scope, making critical decisions to prioritize a polished core experience over unfinished or unnecessary features.
