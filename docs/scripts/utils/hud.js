@@ -22,10 +22,24 @@ class Hud {
         for (let i = 0; i < this.target.lives; i++) {
             image(this.roleImage, this.x + i * this.lifeIconSize, this.y, this.lifeIconSize, this.lifeIconSize);
         }
-    }
-
-    removeLife() {
-        this.lives--;   
+        if (this.target.lives == 0) {
+            window.currentGameState = window.gameStates.CHAPTERSELECTOR;
+            switch (window.currentGameState) {
+                case window.gameStates.CHAPTER1:
+                    window.chapter1Story = new Chapter1Story();
+                    break;
+                  case window.gameStates.CHAPTER2:
+                    window.chapter2Story = new Chapter2Story();
+                    break;
+                  case window.gameStates.CHAPTER3:
+                    window.chapter3Story = new Chapter3Story();
+                    break;
+                  case window.gameStates.CHAPTER4:
+                    window.chapter4Story = new Chapter4Story();                    break;
+                    break; 
+            }
+            this.target.lives = 3;
+        } 
     }
 
     progressBar() {

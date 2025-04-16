@@ -8,15 +8,15 @@ class FinalBoss extends Enemy{
       this.moveDistance = windowWidth / 5.0;
       this.moveDistanceRecord = 0;
       this.moveDirection = -1;
-      this.maxSpeed = 0.2;
+      this.maxSpeed = 0.8;
       this.imageDirection = -1;
       this.health = 250;
     }
   
     aiMove() {
         let centerX = windowWidth / 2;
-        let leftBound = centerX - (windowWidth * 2 / 3);
-        let rightBound = centerX + (windowWidth * 2 / 3);
+        let leftBound = this.x - (windowWidth * 2 / 3);
+        let rightBound = this.x + (windowWidth * 2 / 3);
     
         // If the enemy moves out of the screen, force it to move towards the center
         if (this.x < -this.width || this.x > windowWidth + this.width) {
@@ -24,6 +24,8 @@ class FinalBoss extends Enemy{
             this.speed = this.maxSpeed; // Set speed to max
         } else if (Math.random() < 0.005) { 
             this.moveDirection *= -1; // 0.5% chance to change direction randomly
+        } else if (this.x >= rightBound || this.x <= leftBound) {
+            this.moveDirection *= -1;
         }
     
         // Acceleration and deceleration logic
