@@ -1,6 +1,33 @@
 # 2025-group-8
 2025 COMSM0166 group 8
 
+## Table of Contents
+- [Our Game](#our-game)
+- [Our Group](#our-group)
+- [Our Progress](#our-progress)
+- [Two Prototype Ideas](#two-prototype-ideas)
+- [Final Ideas](#final-ideas)
+- [Stakeholder List](#stakeholder-list)
+- [Epics & User Stories](#epics--user-stories)
+- [Reflection](#reflection)
+- [Think-Aloud Usability Test Report](#think-aloud-usability-test-report)
+- [Heuristic Evaluation Report](#heuristic-evaluation-report)
+- [Quantitative Analysis Report](#quantitative-analysis-report)
+- [Three New Challenges](#three-new-challenges)
+- [Sustainability Impact Assessment](#sustainability-impact-assessment)
+- [Green Foundation Implementation Patterns Analysis](#green-foundation-implementation-patterns-analysis)
+- [Project Report](#project-report)
+  - [Introduction](#introduction)
+  - [Requirements](#requirements)
+  - [Design](#design)
+  - [Implementation](#implementation)
+  - [Evaluation](#evaluation)
+  - [Process](#process)
+  - [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
+  - [Conclusion](#conclusion)
+  - [Contribution Statement](#contribution-statement)
+
+
 ## Our Game
 
 CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
@@ -57,6 +84,7 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 - **Sound Engineers:** Professionals creating and integrating sound effects and music.
 - **Marketing Team:** Personnel focused on promoting the game to increase visibility and engagement.
 - **Game Reviewers and Bloggers:** Key influencers who will help shape public perception of the game.
+- **Lecturers and TAs:** Academic supervisors and teaching assistants who provide guidance, monitor project progress, and ensure the game development aligns with academic standards and learning outcomes.
 
 ## Epics & User Stories
 | Stakeholder            | Epic                                        | User Story                                  | Acceptance Criteria |
@@ -67,8 +95,8 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 | **Game Developers**    | **Developer Efficiency and Collaboration**  | As a game developer, I want tools that support real-time collaboration, allowing multiple users to edit the same files without conflicts, so that the team can work together seamlessly regardless of location. | Given a collaborative coding session, when multiple developers make changes, then all changes should be visible in real-time without conflicts. |
 | **Graphic Designers**  | **Visual and Audio Immersion**              | As a graphic designer, I want access to a comprehensive library of creative assets that are suitable for platform games and customizable in terms of color and size, so that I can design unique and appealing game visuals efficiently. | Given the design phase, when I access the asset library, then I should find a wide range of pre-made and customizable graphics. |
 | **Graphic Designers**  | **Visual and Audio Immersion**              | As a graphic designer, I want the game engine to support high-resolution graphics up to 4K without performance degradation, so that the game looks crisp and engaging on all devices. | Given any supported device, when the game is played, then it should display high-resolution graphics scalable without loss of detail. |
-| **Sound Engineers**    | **Visual and Audio Immersion**              | As a sound engineer, I want a dynamic sound system that adjusts sounds based on the game's speed and player movements, so that the audio is immersive and enhances the game experience. | Given any gameplay session, when the player's speed or actions change, then sound effects and background music should dynamically adjust in pitch or volume. |
-| **Sound Engineers**    | **Visual and Audio Immersion**              | As a sound engineer, I want an efficient system for managing and testing audio clips within the game, including tools for editing and tagging, so that I can ensure the audio quality is consistent throughout the game. | Given the sound editing tools, when I modify audio clips, then the changes should be easily testable and categorizable within the development environment. |
+| **Lecturers and TAs** | **Ensuring Academic and Technical Standards** | As a lecturer or TA, I want access to project updates and documentation so that I can provide timely feedback and ensure the game development process meets academic standards and learning objectives. | Given regular project updates, when I review the documentation and prototype builds, then I should be able to assess alignment with course goals and provide constructive advice.
+| **Lecturers and TAs** | **Supporting Student Learning and Development** | As a lecturer or TA, I want students to demonstrate iterative improvements based on feedback, so that I can assess their ability to adapt, reflect, and apply good software engineering practices. | Given feedback sessions, when I observe successive project iterations, then I should see visible improvements and proper incorporation of suggested changes.
 | **Marketing Team**     | **Effective Player Engagement and Marketing** | As a marketing team member, I want to conduct targeted marketing campaigns using player data to segment audiences effectively, so that we can reach the right audience and maximize engagement. | Given player demographic and preference data, when I segment this data for a campaign, then the marketing tools should allow for targeted promotions. |
 | **Marketing Team**     | **Effective Player Engagement and Marketing** | As a marketing team member, I want the game to have social media integration, allowing players to connect their accounts and share achievements, so that gameplay achievements can organically drive traffic and downloads. | Given the social media feature, when a player achieves a milestone and chooses to share it, then the share should include a link to the game’s download page. |
 | **Game Reviewers and Bloggers** | **Enhancing Game Visibility and Credibility** | As a game reviewer or blogger, I want early access to game builds and detailed release notes at least one month before the official launch, so that I can review and provide informed feedback, helping to build anticipation and inform potential players. | Given early access, when I review the game and communicate feedback, then it should be considered for improvements before launch. |
@@ -88,39 +116,87 @@ The context of creating an accessible and enjoyable game influenced every aspect
 This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
 
 ## Think-Aloud Usability Test Report
-Game: MechDog vs. Drone Platformer
-Participant: 1 student (adjacent group)
-Tasks:
-Complete Level 1 from the main menu.
-Attempt to return to the main menu mid-level.
-Key Observations
-Collision Detection Issues
-Participant encountered "invisible walls" near platforms, causing confusion and frustration ("Why am I bouncing off nothing here?").
-Missing Return Functionality
-No option to exit mid-level; participant tried ESC/UI buttons unsuccessfully ("Do I have to close the game?").
-Oversized Obstacles
-Large obstacles trapped the player ("This rock is way too big—I’m stuck!"), forcing respawns.
-Repetitive Level Design
-Levels 1 and 2 felt identical except for backgrounds ("Where’s the challenge?"), with no mechanical or enemy variation.
-Unlimited Respawns
-Infinite retries reduced stakes ("No stakes—boring!"); no game-over system observed.
-Predictable Enemy AI
-Drones followed simple, easily avoidable paths ("Too easy to dodge").
-Critical Issues
-Urgent Fixes: Broken collision detection and lack of pause/return menu disrupt core usability.
-Design Weaknesses: Repetitive levels, oversized obstacles, and trivial enemy behavior lower engagement.
-Missing Systems: No difficulty scaling or fail states harm replayability.
-Recommendations
-Priority Fixes:
-Repair collision detection.
-Add a pause/return menu.
-Gameplay Enhancements:
-Resize obstacles; add dynamic elements (e.g., moving platforms).
-Introduce tiered difficulty and unique enemy behaviors (e.g., ambushes, patrol patterns).
-Progression Systems:
-Implement a game-over state and limited lives.
-Differentiate levels with new mechanics (e.g., environmental hazards, boss fights).
-Next Steps: Address collision/UI issues first, then expand level complexity and enemy AI.
+
+**Game:** *MechDog vs. Drone Platformer*  
+**Participant:** 1 student (adjacent group)
+
+### Tasks
+- Complete Level 1 from the main menu.
+- Attempt to return to the main menu mid-level.
+
+---
+
+### Key Observations
+
+- **Collision Detection Issues:**  
+  Participant encountered "invisible walls" near platforms, causing confusion and frustration.  
+  > "Why am I bouncing off nothing here?"
+
+- **Missing Return Functionality:**  
+  No option to exit mid-level; participant tried ESC/UI buttons unsuccessfully.  
+  > "Do I have to close the game?"
+
+- **Oversized Obstacles:**  
+  Large obstacles trapped the player, forcing respawns.  
+  > "This rock is way too big—I'm stuck!"
+
+- **Repetitive Level Design:**  
+  Levels 1 and 2 felt identical except for backgrounds, with no mechanical or enemy variation.  
+  > "Where's the challenge?"
+
+- **Unlimited Respawns:**  
+  Infinite retries reduced stakes; no game-over system observed.  
+  > "No stakes—boring!"
+
+- **Predictable Enemy AI:**  
+  Drones followed simple, easily avoidable paths.  
+  > "Too easy to dodge."
+
+---
+
+### Critical Issues
+
+- **Urgent Fixes:**
+  - Broken collision detection.
+  - Lack of pause/return menu disrupts core usability.
+
+- **Design Weaknesses:**
+  - Repetitive levels.
+  - Oversized obstacles.
+  - Trivial enemy behavior lowers engagement.
+
+- **Missing Systems:**
+  - No difficulty scaling.
+  - No fail states, harming replayability.
+
+---
+
+### Recommendations
+
+**Priority Fixes:**
+- Repair collision detection.
+- Add a pause/return menu for mid-level navigation.
+
+**Gameplay Enhancements:**
+- Resize obstacles to improve movement.
+- Add dynamic elements (e.g., moving platforms).
+
+**Enemy and Difficulty Improvements:**
+- Introduce tiered difficulty settings.
+- Develop unique enemy behaviors (e.g., ambushes, patrol patterns).
+
+**Progression Systems:**
+- Implement a game-over state and limited lives.
+- Differentiate levels with new mechanics (e.g., environmental hazards, boss fights).
+
+---
+
+### Next Steps
+
+- Address collision and UI issues as the highest priority.
+- Expand level complexity and improve enemy AI behavior based on user feedback.
+
+---
 
 ## Heuristic Evaluation Report: MechDog vs. Drone Platformer
 
@@ -158,7 +234,7 @@ Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).
 Add a game-over system with limited lives.
 Next Steps: Address collision and UI issues first, then iterate on level complexity and enemy behavior.
 
-## Comprehensive User Evaluation Report: Game Difficulty and Usability Assessment Objective
+## Quantitative analysis Report: Game Difficulty and Usability Assessment Objective
 
 This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing our game at two different difficulty levels: L1 (easier) and L2 (harder). We utilized the NASA Task Load Index (TLX) to measure workload facets and the System Usability Scale (SUS) to evaluate system usability. This dual approach provides a holistic view of how different difficulty levels affect player interaction and satisfaction.
 
@@ -191,27 +267,48 @@ This evaluation underscores the need for careful calibration of game mechanics a
 
 
 
-## Three New challenges
-Technical Challenge 1: Advanced Collision Detection System
-Description: Our game has encountered several issues with collision detection, where players face "invisible walls" or unexpected interactions with the environment, particularly near platforms. This not only disrupts gameplay but also detracts from the user experience.
+## Three New Challenges
 
-Solution: Implement a more robust and precise collision detection system. This could involve using more refined physics engines or custom algorithms that better handle the dynamics of MechDog's movements and the drone interactions. Ensuring that collision responses are both visually and mechanically consistent will be crucial.
+### Technical Challenge 1: Advanced Collision Detection System
 
-Impact: Enhancing collision detection will directly improve gameplay smoothness and player satisfaction, addressing one of the critical flaws identified in usability testing.
+**Description:**  
+Our game has encountered several issues with collision detection, where players face "invisible walls" or unexpected interactions with the environment, particularly near platforms. This not only disrupts gameplay but also detracts from the user experience.
 
-Technical Challenge 2: Dynamic Difficulty Adjustment (DDA)
-Description: Feedback indicates a need for varying difficulty levels to cater to different player skills. The current static difficulty setting does not accommodate all users, as evidenced by varying SUS and NASA TLX scores between difficulty levels.
+**Solution:**  
+Implement a more robust and precise collision detection system. This could involve using more refined physics engines or custom algorithms that better handle the dynamics of MechDog's movements and the drone interactions. Ensuring that collision responses are both visually and mechanically consistent will be crucial.
 
-Solution: Develop a dynamic difficulty adjustment system that responds to player performance in real-time. This system would analyze player success rates, adjust the frequency and speed of drones, and modify obstacle complexity based on ongoing gameplay performance.
+**Impact:**  
+Enhancing collision detection will directly improve gameplay smoothness and player satisfaction, addressing one of the critical flaws identified in usability testing.
 
-Impact: DDA will help tailor the gameplay experience to individual players, potentially increasing retention and satisfaction across a broader range of skill levels. It also addresses the need for better challenge scaling in game levels.
+---
 
-Technical Challenge 3: Enhanced Level Design and Enemy AI
-Description: Players have noted that the level design lacks variety and the enemy drones are too predictable, which quickly leads to a stale gaming experience.
+### Technical Challenge 2: Dynamic Difficulty Adjustment (DDA)
 
-Solution: Overhaul level designs to introduce more variability and complexity, including interactive elements like moving platforms and environmental hazards. For enemy AI, develop more sophisticated behavior patterns, such as random movement, tracking, and adaptive responses to player actions.
+**Description:**  
+Feedback indicates a need for varying difficulty levels to cater to different player skills. The current static difficulty setting does not accommodate all users, as evidenced by varying SUS and NASA TLX scores between difficulty levels.
 
-Impact: Revamping the level design and enhancing drone AI complexity will enrich the gameplay, making each level feel unique and challenging. This addresses feedback about repetitive design and predictable challenges, thereby improving overall game engagement and replayability.
+**Solution:**  
+Develop a dynamic difficulty adjustment system that responds to player performance in real-time. This system would analyze player success rates, adjust the frequency and speed of drones, and modify obstacle complexity based on ongoing gameplay performance.
+
+**Impact:**  
+DDA will help tailor the gameplay experience to individual players, potentially increasing retention and satisfaction across a broader range of skill levels. It also addresses the need for better challenge scaling in game levels.
+
+---
+
+
+### Technical Challenge 3: Cross-Platform Device Compatibility
+
+**Description:**  
+Ensuring that *Iron Rebellion* could run smoothly across different types of devices—including desktops, iPads, and smartphones—presented a significant technical challenge. Variations in screen sizes, input methods (keyboard vs. touchscreen), and processing power meant that the game needed to dynamically adapt its rendering, control schemes, and performance optimizations without compromising the user experience.
+
+**Solution:**  
+We designed a responsive system that automatically adjusts the game's layout and scaling based on device type and screen resolution. Input handling was abstracted to support both keyboard and touch interactions, ensuring that players could enjoy fluid controls regardless of platform. Additionally, we optimized asset loading and memory usage to maintain stable frame rates even on lower-end mobile devices.
+
+**Impact:**  
+Successfully implementing cross-platform compatibility made *Iron Rebellion* accessible to a broader audience, increasing its reach and usability. Players can now seamlessly enjoy the game whether they are using a computer, tablet, or smartphone, enhancing the inclusivity and flexibility of the gaming experience.
+
+---
+
 
 
 ## Sustainability Impact Assessment 
