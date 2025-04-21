@@ -5,7 +5,7 @@ class PicturesLoader {
         this.transparent = loadImage("./assets/pictures/transparent.png");
         this.robotDog = loadImage("./assets/pictures/robot_dog.gif");
         this.battery = loadImage("./assets/pictures/battery.png");
-        this.enemyDog = loadImage("./assets/pictures/enemy_dog.png");
+        this.enemyDog = loadImage("./assets/pictures/enemy_dog.gif");
         this.drone = loadImage("./assets/pictures/drone.png");
         this.bullet = loadImage("./assets/pictures/bullet.png");
         this.gun = loadImage("./assets/pictures/gun.png");

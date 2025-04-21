@@ -3,7 +3,7 @@ class PassGate extends PickableObject {
     super(x, y);
     this.roleImage = window.bgType.PASSGATE;
     this.width = windowHeight / 6;
-    this.height = windowHeight / 3;
+    this.height = this.width / 428 * 680;
   }
 
   pickEffect() {
