@@ -594,7 +594,7 @@ One area where we improved significantly over time was task estimation. In early
 
 In retrospect, our agile process was effective because it allowed structure without being rigid. Weekly sprints kept us accountable, while open communication helped resolve blockers quickly. Using tools like Jira, GitHub, Teams, and WhatsApp gave us a solid workflow, and our shared enthusiasm made the project both productive and enjoyable. Although we encountered obstacles, our teamwork and willingness to learn from each other were essential to delivering a complete and functional game by the deadline.
 
-### Sustainability, Ethics, and Accessibility
+#### Sustainability, Ethics, and Accessibility
 The development of Iron Rebellion not only aimed to deliver an engaging gameplay experience but also considered the broader implications of game development on the environment, individuals, and society. This section outlines our game’s impact across three critical dimensions: environmental, social, and individual.
 
 #### Environmental Impact
