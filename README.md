@@ -2,6 +2,7 @@
 2025 COMSM0166 group 8
 
 ## Table of Contents
+
 - [Our Game](#our-game)
 - [Our Group](#our-group)
 - [Our Progress](#our-progress)
@@ -12,21 +13,24 @@
 - [Epics & User Stories](#epics--user-stories)
 - [Reflection](#reflection)
 - [Think-Aloud Usability Test Report](#think-aloud-usability-test-report)
-- [Heuristic Evaluation Report](#heuristic-evaluation-report)
-- [Quantitative Analysis Report](#quantitative-analysis-report)
+- [Heuristic Evaluation Report: MechDog vs. Drone Platformer](#heuristic-evaluation-report-mechdog-vs-drone-platformer)
+- [Quantitative analysis Report: Game Difficulty and Usability Assessment Objective](#quantitative-analysis-report-game-difficulty-and-usability-assessment-objective)
 - [Three New Challenges](#three-new-challenges)
+  
 - [Sustainability Impact Assessment](#sustainability-impact-assessment)
 - [Green Foundation Implementation Patterns Analysis](#green-foundation-implementation-patterns-analysis)
-- [Project Report](#project-report)
+- [Project Report: *Iron Rebellion*](#project-report-iron-rebellion)
   - [Introduction](#introduction)
   - [Requirements](#requirements)
   - [Design](#design)
-  - [Implementation](#implementation-需要修改)
+  - [Implementation](#implementation)
   - [Evaluation](#evaluation)
+    
   - [Process](#process)
   - [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
   - [Conclusion](#conclusion)
 - [Contribution](#contribution)
+
 
 ---
 
