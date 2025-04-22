@@ -620,12 +620,14 @@ In reflection, Iron Rebellion provided us with a comprehensive understanding of 
 Table 
 Table to demonstrate team contributions for Iron Rebellion Game Project.
 
-Contributor	Contribution
-Zewen Liang	1.00
-Yunhao Zhou	1.00
-Yuying Zhang	1.00
-Zhi Zhao	1.00
-Kaijie Xu	1.00
+| Contributor | Contribution |
+|:------------|:-------------|
+| Zewen Liang | 1.00 |
+| Yunhao Zhou | 1.00 |
+| Yuying Zhang | 1.00 |
+| Zhi Zhao | 1.00 |
+| Kaijie Xu | 1.00 |
+
 
 ## Project Report
 
