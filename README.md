@@ -5,6 +5,7 @@
 - [Our Game](#our-game)
 - [Our Group](#our-group)
 - [Our Progress](#our-progress)
+- [Inspiration Mining](#inspiration-mining)
 - [Two Prototype Ideas](#two-prototype-ideas)
 - [Final Ideas](#final-ideas)
 - [Stakeholder List](#stakeholder-list)
@@ -20,12 +21,15 @@
   - [Introduction](#introduction)
   - [Requirements](#requirements)
   - [Design](#design)
-  - [Implementation](#implementation)
+  - [Implementation](#implementation-需要修改)
   - [Evaluation](#evaluation)
   - [Process](#process)
   - [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
   - [Conclusion](#conclusion)
-  - [Contribution Statement](#contribution-statement)
+- [Contribution](#contribution)
+
+---
+
 
 
 ## Our Game
