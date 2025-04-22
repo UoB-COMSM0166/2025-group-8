@@ -54,6 +54,55 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 | 4 | Zhi Zhao | ug23003@bristol.ac.uk | Developer | ZZ1975 |
 | 5 | Kaijie Xu | hb24857@bristol.ac.uk | Project Manager | kkkkkaneeeee |
 
+<table style="width:100%;">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Github Account</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Zewen Liang</td>
+      <td>je24595@bristol.ac.uk</td>
+      <td>Developer</td>
+      <td>liangzw0126</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Yunhao Zhou</td>
+      <td>bx24770@bristol.ac.uk</td>
+      <td>Visual Designer</td>
+      <td>YonasZhou</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Yuying Zhang</td>
+      <td>bc24261@bristol.ac.uk</td>
+      <td>Copywriter</td>
+      <td>X65060782</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Zhi Zhao</td>
+      <td>ug23003@bristol.ac.uk</td>
+      <td>Developer</td>
+      <td>ZZ1975</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Kaijie Xu</td>
+      <td>hb24857@bristol.ac.uk</td>
+      <td>Project Manager</td>
+      <td>kkkkkaneeeee</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Our Progress
 
