@@ -57,7 +57,7 @@ Include a demo video of your game here (you don't have to wait until the end, yo
 
 ## Our Progress
 
-Kanban Board : [![KANBAN](./pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
+Kanban Board : [![KANBAN](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2013.45.02.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
 ## Inspiration Mining
 
