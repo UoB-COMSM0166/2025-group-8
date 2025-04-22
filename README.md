@@ -464,28 +464,48 @@ In the final phase of requirements planning, we used these stories to define the
 
 In summary, the requirements phase for Iron Rebellion was iterative, collaborative, and grounded in practical tools such as user stories, use case diagrams, and paper prototypes. This process helped us define a game that is both achievable and engaging, laying a strong foundation for the design and implementation stages that followed. By grounding every feature in user needs and team feasibility, we ensured that the final product would be coherent, polished, and enjoyable to play.
 
-### Design （需要修改）
-The design of Iron Rebellion focused on building a modular and maintainable architecture that could support responsive gameplay, varied levels, and future expansion. We adopted a structure inspired by the Model-View-Controller (MVC) pattern, which helped us separate concerns and organize code around data, control, and display layers. Although not implemented as a strict MVC, this approach guided how we structured classes and managed responsibilities.
+### Design
 
-At the core of our system is the GameObject superclass, which defines shared properties like position, velocity, and size. This class is extended by all interactive elements in the game, including the Player, EnemyDrone, MovingPlatform, and TriggerButton. Each subclass overrides specific behavior for drawing, updating movement, and handling collisions. This hierarchy allowed us to reuse logic and minimize redundant code while keeping object behaviors modular.
+The design of *Iron Rebellion* focused on building a modular and maintainable architecture that could support responsive gameplay, varied levels, and future expansion. We adopted a structure inspired by the Model-View-Controller (MVC) pattern, which helped us separate concerns and organize code around data, control, and display layers. Although not implemented as a strict MVC, this approach guided how we structured classes and managed responsibilities.
 
-The PlayerController class is responsible for reading inputs and applying player movement, jumps, and physics interactions. It communicates closely with the MapController, which manages the level layout by reading from external text files. This setup allowed us to rapidly test different level configurations without changing the codebase. The MapController also stores references to all game objects and handles collision resolution, which we initially placed in the player logic but later refactored for performance and clarity.
+At the core of our system is the **GameObject** superclass, which defines shared properties like position, velocity, and size. This class is extended by all interactive elements in the game, including the Player, EnemyDrone, MovingPlatform, and TriggerButton. Each subclass overrides specific behavior for drawing, updating movement, and handling collisions. This hierarchy allowed us to reuse logic and minimize redundant code while keeping object behaviors modular.
 
-To coordinate the overall game flow, we implemented a GameStateManager that switches between different game modes: menu, gameplay, pause, and game over. This component handles which parts of the game loop are active and what should be rendered. It also manages background music and HUD elements like lives and score. This modularity made it easier to add features like difficulty selection and transition animations later in the project.
+The **PlayerController** class is responsible for reading inputs and applying player movement, jumps, and physics interactions. It communicates closely with the **MapController**, which manages the level layout by reading from external text files. This setup allowed us to rapidly test different level configurations without changing the codebase. The MapController also stores references to all game objects and handles collision resolution, which we initially placed in the player logic but later refactored for performance and clarity.
 
-Our early class diagram reflected this system with key classes like MainGame, Player, Enemy, Map, and UIManager. The MainGame class runs the loop and delegates updates and rendering to other modules. This clear hierarchy helped us keep the game logic organized as we added new content.
+To coordinate the overall game flow, we implemented a **GameStateManager** that switches between different game modes: menu, gameplay, pause, and game over. This component handles which parts of the game loop are active and what should be rendered. It also manages background music and HUD elements like lives and score. This modularity made it easier to add features like difficulty selection and transition animations later in the project.
 
-As the project evolved, we updated our diagrams to reflect design changes. One example was the addition of an InteractionHandler, which manages interactions between objects such as buttons and doors. Initially, this logic was embedded in the Player class, but we separated it to improve flexibility and avoid tight coupling.
+Our early class diagram reflected this system with key classes like **MainGame**, **Player**, **Enemy**, **Map**, and **UIManager**. The MainGame class runs the loop and delegates updates and rendering to other modules. This clear hierarchy helped us keep the game logic organized as we added new content.
 
-We also used behavioural diagrams to track game logic and player state transitions. Our Player State Diagram included states like Idle, Jumping, Falling, and Dead. Transitions between states depended on physics conditions and inputs. This helped us fix bugs such as double-jumping or getting stuck mid-air by clarifying the allowed transitions.
+---
 
-A Sequence Diagram was also created to track interactions when a player steps on a button, triggering a door to open. This showed the flow from PlayerController to InteractionHandler, then to MapController, and finally updating the game state via GameStateManager. These diagrams helped ensure each class had a clear role and that their communication was predictable.
+#### Sequence Diagram: Chapter Level Logic
+
+![Sequence Diagram Chapter](./pictures/sequence_diagram_chapter.png)
+
+---
+
+As the project evolved, we updated our diagrams to reflect design changes. One example was the addition of an **InteractionHandler**, which manages interactions between objects such as buttons and doors. Initially, this logic was embedded in the Player class, but we separated it to improve flexibility and avoid tight coupling.
+
+We also used behavioural diagrams to track game logic and player state transitions. Our **Player State Diagram** included states like Idle, Jumping, Falling, and Dead. Transitions between states depended on physics conditions and inputs. This helped us fix bugs such as double-jumping or getting stuck mid-air by clarifying the allowed transitions.
+
+---
+
+#### Sequence Diagram: Early Sketch
+
+![Sequence Diagram Sketch](./pictures/sequence_diagram_sketch.png)
+
+---
+
+A **Sequence Diagram** was also created to track interactions when a player steps on a button, triggering a door to open. This showed the flow from **PlayerController** to **InteractionHandler**, then to **MapController**, and finally updating the game state via **GameStateManager**. These diagrams helped ensure each class had a clear role and that their communication was predictable.
 
 During testing, we encountered performance issues with collision checks as levels grew. Our original method looped through all objects for collision detection, which caused lag. After reviewing our design, we introduced spatial partitioning logic in MapController, grouping objects by grid zones. This optimization improved performance without rewriting major parts of the code.
 
 Our design work followed an agile process, so diagrams were updated frequently based on testing feedback and new requirements. Adding features like adaptive enemy behavior or environmental hazards required updates to our EnemyDrone class and MapController logic. Keeping our diagrams current allowed us to communicate design changes across the team and avoid misunderstandings during development.
 
-In summary, the design of Iron Rebellion prioritized modularity, maintainability, and flexibility. Class diagrams helped structure our systems, while behavioural diagrams made interactions clearer. This foundation supported efficient implementation, smoother debugging, and the ability to adapt quickly to changes throughout development.
+---
+
+In summary, the design of *Iron Rebellion* prioritized modularity, maintainability, and flexibility. Class diagrams helped structure our systems, while behavioural diagrams made interactions clearer. This foundation supported efficient implementation, smoother debugging, and the ability to adapt quickly to changes throughout development.
+
 
 ### Implementation （需要修改）
 The implementation of Iron Rebellion followed an iterative, feature-first approach where we began by building a basic working prototype and then layered complexity onto it. Our initial steps focused on constructing the platforming foundation—handling user input, applying gravity, detecting collisions, and creating a player object that could interact with a tile-based level. From there, we implemented levels, enemy behaviors, and visual effects. Each feature introduced new challenges that pushed us to refine our initial architecture.
@@ -509,11 +529,14 @@ We chose not to implement procedural generation to retain control over puzzle de
 In summary, the implementation of Iron Rebellion focused on building a solid foundation and then solving three major technical challenges: robust collision detection, scalable difficulty through flexible level design, and intelligent but efficient enemy AI. Addressing these challenges improved the game’s stability, performance, and overall player experience—ensuring it felt responsive, balanced, and fun to play.
 
 ### Evaluation
-To ensure Iron Rebellion delivered a fun and accessible gameplay experience, we used both qualitative and quantitative evaluation methods. Our goal was to understand how players perceived the game, identify usability problems, and verify whether the difficulty scaled in a satisfying and fair way. We conducted a think-aloud study during early development and complemented it with a NASA Task Load Index (TLX) analysis to evaluate cognitive workload across different difficulty levels. Alongside this, we also established a consistent approach to testing the game’s functionality and stability.
 
-Qualitative Evaluation: Think-Aloud Usability Testing
+To ensure *Iron Rebellion* delivered a fun and accessible gameplay experience, we used both qualitative and quantitative evaluation methods. Our goal was to understand how players perceived the game, identify usability problems, and verify whether the difficulty scaled in a satisfying and fair way. We conducted a think-aloud study during early development and complemented it with a NASA Task Load Index (TLX) analysis to evaluate cognitive workload across different difficulty levels. Alongside this, we also established a consistent approach to testing the game’s functionality and stability.
 
-For our qualitative assessment, we selected the Think-Aloud Protocol, where participants verbalised their thoughts while playing. This method helped us uncover pain points in real-time and better understand players’ mental models. We recruited eight players of varying gaming experience, each of whom played the first two levels of Iron Rebellion.
+---
+
+#### Qualitative Evaluation: Think-Aloud Usability Testing
+
+For our qualitative assessment, we selected the Think-Aloud Protocol, where participants verbalised their thoughts while playing. This method helped us uncover pain points in real-time and better understand players’ mental models. We recruited eight players of varying gaming experience, each of whom played the first two levels of *Iron Rebellion*.
 
 Several consistent themes emerged during this process. First, many users expressed confusion about how to restart a level or exit to the main menu. Our UI lacked a pause or return function, leading players to manually refresh the browser or quit the window. This feedback prompted us to introduce a pause menu and a reset button in subsequent builds.
 
@@ -521,7 +544,9 @@ Another frequent comment involved collision detection. Phrases like “Why did I
 
 A more positive theme emerged around the visual clarity of level layouts and the satisfying feedback when completing a stage. Participants enjoyed the checkpoint system and enemy behaviors once the early bugs were resolved. Importantly, several testers noted that the game felt “rewarding” when they succeeded, which aligned with our goal of creating a skill-based, learnable experience.
 
-Quantitative Evaluation: NASA TLX Workload Assessment
+---
+
+#### Quantitative Evaluation: NASA TLX Workload Assessment
 
 To complement our qualitative findings, we conducted a NASA Task Load Index (TLX) assessment to evaluate cognitive workload across difficulty levels. We asked ten participants to play three versions of Level 1: Easy, Medium, and Hard. After each session, they completed a TLX questionnaire rating their mental demand, effort, performance, frustration, and physical demand.
 
@@ -529,15 +554,20 @@ The results showed a clear upward trend in workload as difficulty increased. Ave
 
 A Wilcoxon Signed-Rank test confirmed statistically significant differences in effort and frustration between Easy and Hard modes (p < 0.01). This validated our level design strategy, where harder modes were intended to challenge reflexes and timing, but not create insurmountable difficulty spikes. Importantly, participants rated the Medium mode as having the most “satisfying” balance between challenge and success—insight that influenced how we structured the rest of the levels.
 
-Code Testing and Quality Assurance
+---
 
-To maintain code quality and ensure functionality across features, we used a combination of white-box and black-box testing. Internally, we created a Test class with assertion-based tests to verify core mechanics such as object spawning, collision outcomes, and physics calculations. For example, we tested whether the player could jump only when grounded, and whether drones correctly transitioned between patrol and chase states.
+#### Code Testing and Quality Assurance
+
+To maintain code quality and ensure functionality across features, we used a combination of white-box and black-box testing. Internally, we created a [**white-box test suite**](./tests/whiteboxTests.js) with assertion-based tests to verify core mechanics such as object spawning, collision outcomes, and physics calculations. For example, we tested whether the player could jump only when grounded, and whether drones correctly transitioned between patrol and chase states.
 
 Much of our testing also relied on continuous playtesting by team members and external users. After every major feature merge, at least one developer would play through all existing levels to verify that mechanics were still functioning correctly. We documented common testing paths, such as “test button-door interaction,” “test drone collision with player,” and “test level reset behavior,” and these were followed before every demo.
 
 Visual elements were tested using manual inspection, focusing on sprite alignment, animation timing, and asset loading performance. Since the game was deployed via GitHub Pages, we also tested compatibility across different browsers and operating systems, identifying and resolving minor UI scaling issues along the way.
 
+---
+
 In summary, our evaluation process was designed to gather both subjective player impressions and measurable performance data. The think-aloud study highlighted several interface and mechanical issues early on, allowing us to fix major bugs before broader testing. The NASA TLX confirmed that our difficulty scaling was effective and informed decisions on pacing and level design. Regular testing ensured that the game remained stable, consistent, and enjoyable throughout development.
+
 
 ### Process
 The development of Iron Rebellion was a collaborative effort built on structured teamwork, clear roles, and continuous iteration. From the beginning, we adopted an agile-inspired approach, which gave us the flexibility to evolve ideas and respond to feedback efficiently. Our team consisted of five members, each with different strengths, and we assigned roles accordingly: two developers (Zewen and Zhi), one visual designer (Yunhao), one copywriter (Yuying), and one project manager (Kaijie).
@@ -620,6 +650,8 @@ In reflection, Iron Rebellion provided us with a comprehensive understanding of 
 Table 
 Table to demonstrate team contributions for Iron Rebellion Game Project.
 
+### Contribution
+
 | Contributor | Contribution |
 |:------------|:-------------|
 | Zewen Liang | 1.00 |
@@ -627,71 +659,3 @@ Table to demonstrate team contributions for Iron Rebellion Game Project.
 | Yuying Zhang | 1.00 |
 | Zhi Zhao | 1.00 |
 | Kaijie Xu | 1.00 |
-
-
-## Project Report
-
-### Introduction
-
-- 5% ~250 words 
-- Describe your game, what is based on, what makes it novel? 
-
-### Requirements 
-
-- 15% ~750 words
-- Use case diagrams, user stories. Early stages design. Ideation process. How did you decide as a team what to develop? 
-
-### Design
-
-- 15% ~750 words 
-- System architecture. Class diagrams, behavioural diagrams. 
-
-### Implementation
-
-- 15% ~750 words
-
-- Describe implementation of your game, in particular highlighting the three areas of challenge in developing your game. 
-
-### Evaluation
-
-- 15% ~750 words
-
-- One qualitative evaluation (your choice) 
-
-- One quantitative evaluation (of your choice) 
-
-- Description of how code was tested. 
-
-### Process 
-
-- 15% ~750 words
-
-- Teamwork. How did you work together, what tools did you use. Did you have team roles? Reflection on how you worked together. 
-
-### Conclusion
-
-- 10% ~500 words
-
-- Reflect on project as a whole. Lessons learned. Reflect on challenges. Future work. 
-
-### Contribution Statement
-
-- Provide a table of everyone's contribution, which may be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Let us know as soon as possible if there are any issues with teamwork as soon as they are apparent. 
-
-### Additional Marks
-
-You can delete this section in your own repo, it's just here for information. in addition to the marks above, we will be marking you on the following two points:
-
-- **Quality** of report writing, presentation, use of figures and visual material (5%) 
-  - Please write in a clear concise manner suitable for an interested layperson. Write as if this repo was publicly available.
-
-- **Documentation** of code (5%)
-
-  - Is your repo clearly organised? 
-  - Is code well commented throughout?
-
-
-
-待办：
-1.将测试部分链接到report
-2.kanban：不同knaban的尝试，为什么选择了现在的kanban
