@@ -37,13 +37,10 @@
 
 
 ## Our Game
+Iron Rebellion is a 2D pixel-art platformer that blends classic arcade gameplay with modern design principles. Players control a robotic protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
 
 CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
 
-
-Your game lives in the [/docs](/docs) folder, and is published using Github pages to the link above.
-
-Include a demo video of your game here (you don't have to wait until the end, you can insert a work in progress video)
 
 
 <a href="https://drive.google.com/file/d/14OzUzU3QxR_EjTLvqBnGxJBfApoTYgf7/view?usp=sharing">
