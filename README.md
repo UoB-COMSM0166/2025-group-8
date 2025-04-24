@@ -303,45 +303,53 @@ This evaluation underscores the need for careful calibration of game mechanics a
 
 
 
-## Three New Challenges
+## Three Technical Challenges
 
-### Technical Challenge 1: Advanced Collision Detection System
+### Technical Challenge 1: Cross-Platform Implementation
 
-**Description:**  
-Our game has encountered several issues with collision detection, where players face "invisible walls" or unexpected interactions with the environment, particularly near platforms. This not only disrupts gameplay but also detracts from the user experience.
+**I. Relative Size**  
+To ensure *Iron Rebellion* runs smoothly across desktops, tablets, and smartphones, we implemented a responsive scaling system. All game assets—including tiles, characters, and UI—are proportionally scaled relative to the device’s screen size. This ensures consistent visual clarity and interaction precision regardless of screen dimensions.
 
-**Solution:**  
-Implement a more robust and precise collision detection system. This could involve using more refined physics engines or custom algorithms that better handle the dynamics of MechDog's movements and the drone interactions. Ensuring that collision responses are both visually and mechanically consistent will be crucial.
+**II. Access Device Model**  
+We utilized JavaScript’s device detection capabilities to identify the user’s device type and tailor the game experience accordingly. For example, touchscreen gestures are enabled on tablets and smartphones, while full keyboard support remains on desktops. This improves player comfort and accessibility across platforms.
+
+**III. Virtual Keyboard**  
+To support users without physical keyboards, we added an on-screen virtual controller that activates on mobile devices. It includes directional inputs and action buttons optimized for touch, enabling full gameplay functionality without hardware limitations.
 
 **Impact:**  
-Enhancing collision detection will directly improve gameplay smoothness and player satisfaction, addressing one of the critical flaws identified in usability testing.
+Cross-platform support significantly broadens the reach of *Iron Rebellion*, making it playable across a wide variety of devices. By maintaining performance and usability across screen sizes and input types, we created an inclusive and seamless user experience.
 
 ---
 
-### Technical Challenge 2: Dynamic Difficulty Adjustment (DDA)
+### Technical Challenge 2: Collision Mechanism Design
 
-**Description:**  
-Feedback indicates a need for varying difficulty levels to cater to different player skills. The current static difficulty setting does not accommodate all users, as evidenced by varying SUS and NASA TLX scores between difficulty levels.
+**I. Boundary Determination**  
+Accurate collision requires defining precise hitboxes for each game object. We refined bounding box calculations based on sprite dimensions to prevent edge cases like floating, overlapping, or clipping into platforms.
 
-**Solution:**  
-Develop a dynamic difficulty adjustment system that responds to player performance in real-time. This system would analyze player success rates, adjust the frequency and speed of drones, and modify obstacle complexity based on ongoing gameplay performance.
+**II. Collision Detection**  
+The original brute-force method of checking all object collisions per frame was replaced with a grid-based spatial filtering system. This optimized approach only tests objects in proximity to the player, reducing computational overhead and improving responsiveness.
+
+**III. Different Behaviors**  
+Each type of object responds to collisions differently. Platforms stop the player, hazards reduce health, and buttons trigger doors. We implemented an extensible behavior handler that allows customized responses for different object types, streamlining future feature additions like springs or trapdoors.
 
 **Impact:**  
-DDA will help tailor the gameplay experience to individual players, potentially increasing retention and satisfaction across a broader range of skill levels. It also addresses the need for better challenge scaling in game levels.
+This redesigned collision system resolved core usability issues such as invisible walls and misaligned physics. It improved both gameplay fluidity and future extensibility for new interactions and hazards.
 
 ---
 
+### Technical Challenge 3: Dynamic Difficulty Adjustment (DDA)
 
-### Technical Challenge 3: Cross-Platform Device Compatibility
+**I. Performance Monitoring**  
+We integrated real-time player tracking, recording metrics like number of deaths, time to completion, and frequency of checkpoint usage. These indicators inform the game of player proficiency.
 
-**Description:**  
-Ensuring that *Iron Rebellion* could run smoothly across different types of devices—including desktops, iPads, and smartphones—presented a significant technical challenge. Variations in screen sizes, input methods (keyboard vs. touchscreen), and processing power meant that the game needed to dynamically adapt its rendering, control schemes, and performance optimizations without compromising the user experience.
+**II. Adaptive Scaling**  
+Based on real-time data, the game dynamically modifies enemy speed, platform timing, and obstacle layout. This ensures that gameplay remains balanced—challenging skilled players while helping newer ones progress.
 
-**Solution:**  
-We designed a responsive system that automatically adjusts the game's layout and scaling based on device type and screen resolution. Input handling was abstracted to support both keyboard and touch interactions, ensuring that players could enjoy fluid controls regardless of platform. Additionally, we optimized asset loading and memory usage to maintain stable frame rates even on lower-end mobile devices.
+**III. Customization Hooks**  
+Despite DDA being active in the background, players retain full control by selecting a base difficulty level (Easy, Medium, Hard). The system then fine-tunes behavior subtly within that range, never forcing abrupt shifts in challenge.
 
 **Impact:**  
-Successfully implementing cross-platform compatibility made *Iron Rebellion* accessible to a broader audience, increasing its reach and usability. Players can now seamlessly enjoy the game whether they are using a computer, tablet, or smartphone, enhancing the inclusivity and flexibility of the gaming experience.
+The DDA system personalizes gameplay for each user, keeping them engaged and avoiding frustration. It promotes a smooth learning curve and extends player retention across diverse skill levels.
 
 ---
 
