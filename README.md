@@ -37,7 +37,7 @@
 
 
 ## Our Game
-Iron Rebellion is a 2D platformer that blends classic arcade gameplay with modern design principles. Players control a robotic protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
+Iron Rebellion is a 2D platformer that blends classic arcade gameplay with modern design principles. Players control a robot dog protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
 
 CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
 
