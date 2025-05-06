@@ -374,7 +374,7 @@ We conducted think-aloud tests with eight players, revealing UI and collision is
 
 ---
 
-### Heuristic Evaluation Report: Iron Rebellion
+### Qualitative: Heuristic Evaluation Report: Iron Rebellion
 
 Summary
 A heuristic evaluation was conducted by an external observer to identify usability issues in the Iron Rebellion game. Key findings include critical violations of Nielsen’s usability heuristics, particularly in collision detection, navigation controls, and level design consistency. Below is the prioritized list of issues and recommendations.
@@ -432,7 +432,7 @@ Ten players rated difficulty variants of Level 1 using NASA TLX. Workload scores
 
 A Wilcoxon Signed-Rank test (p < 0.01) validated significant differences, confirming successful difficulty scaling.
 
-### Quantitative Analysis Report: Game Difficulty and Usability Assessment
+### Quantitative: Game Difficulty and Usability Assessment
 
 #### Objective  
 This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing the first two chapters of our game. While the game does not offer traditional difficulty modes (e.g., Easy, Medium, Hard), it consists of four sequential chapters, each with its own level of challenge. For this study, **Chapter 1** and **Chapter 2** were selected to represent different levels of in-game difficulty.
@@ -455,7 +455,7 @@ To evaluate whether the observed differences between Chapter 1 and Chapter 2 wer
 
 Since W > 8, the result is **not statistically significant**.
 
-### NASA TLX Results  
+#### NASA TLX Results  
 The following scores represent average user responses on a scale of 0–10:
 
 | Dimension       | Chapter 1 | Chapter 2 |
@@ -467,7 +467,7 @@ The following scores represent average user responses on a scale of 0–10:
 | Effort         | 5.9       | 8.9       |
 | Frustration    | 2.9       | 6.8       |
 
-### SUS Results  
+#### SUS Results  
 
 | Chapter    | SUS Score |
 |------------|-----------|
@@ -477,7 +477,7 @@ The following scores represent average user responses on a scale of 0–10:
 - **Chapter 1** achieved generally good usability.
 - **Chapter 2** showed increased usability challenges, particularly related to complexity and confidence.
 
-### Discussion  
+#### Discussion  
 The combined results suggest:
 
 - **Chapter 1** offers a balanced gameplay experience, with manageable workload and strong usability.
@@ -485,10 +485,10 @@ The combined results suggest:
 
 The increase in perceived workload in Chapter 2 did not lead to a **statistically significant** difference in usability ratings.
 
-### Statistical Conclusion  
+#### Statistical Conclusion  
 As the **Wilcoxon signed-rank test** yielded a **W value of 9** (above the critical threshold of 8), we **cannot reject the null hypothesis**. This indicates **no significant difference** in SUS scores between Chapter 1 and Chapter 2 at the 0.05 significance level.
 
-### Conclusion  
+#### Conclusion  
 This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences. 
 
 ### Code Testing
@@ -612,13 +612,13 @@ This sustainability impact assessment for *Iron Rebellion* identifies critical a
 
 Our game code integrates several key sustainable coding practices aligned with **Green Foundation Implementation** patterns:
 
-### Lazy Loading of Offscreen Images  
+#### Lazy Loading of Offscreen Images  
 We have implemented a lazy-loading mechanism to defer the loading of images not immediately visible on the screen. This reduces unnecessary resource usage and improves page load performance, contributing to lower energy consumption.
 
-### Optimized Image Sizes  
+#### Optimized Image Sizes  
 All game images have been resized and optimized to the appropriate dimensions. By compressing images without sacrificing quality, we ensure faster load times and reduced bandwidth usage, which minimizes the overall carbon footprint.
 
-### Removal of Unused CSS Definitions  
+#### Removal of Unused CSS Definitions  
 We streamlined our codebase by removing unused CSS rules. This not only simplifies maintenance but also speeds up rendering times, leading to improved performance and reduced processing energy.
 
 ---
