@@ -1,7 +1,7 @@
 # 2025-group-8
 2025 COMSM0166 group 8
 
-## Table of Contents
+# Table of Contents
 
 - [Our Game](#our-game)
 - [Our Group](#our-group)
@@ -13,10 +13,12 @@
 - [Epics & User Stories](#epics--user-stories)
 - [Reflection](#reflection)
 - [Think-Aloud Usability Test Report](#think-aloud-usability-test-report)
-- [Heuristic Evaluation Report: MechDog vs. Drone Platformer](#heuristic-evaluation-report-mechdog-vs-drone-platformer)
-- [Quantitative analysis Report: Game Difficulty and Usability Assessment Objective](#quantitative-analysis-report-game-difficulty-and-usability-assessment-objective)
-- [Three New Challenges](#three-new-challenges)
-  
+- [Heuristic Evaluation Report: Iron Rebellion](#heuristic-evaluation-report-iron-rebellion)
+- [Quantitative Analysis Report: Game Difficulty and Usability Assessment](#quantitative-analysis-report-game-difficulty-and-usability-assessment)
+- [Three Technical Challenges](#three-technical-challenges)
+  - [Technical Challenge 1: Cross-Platform Implementation](#technical-challenge-1-cross-platform-implementation)
+  - [Technical Challenge 2: Collision Mechanism Design](#technical-challenge-2-collision-mechanism-design)
+  - [Technical Challenge 3: Progressive Level Design](#technical-challenge-3-progressive-level-design)
 - [Sustainability Impact Assessment](#sustainability-impact-assessment)
 - [Green Foundation Implementation Patterns Analysis](#green-foundation-implementation-patterns-analysis)
 - [Project Report: *Iron Rebellion*](#project-report-iron-rebellion)
@@ -25,19 +27,17 @@
   - [Design](#design)
   - [Implementation](#implementation)
   - [Evaluation](#evaluation)
-    
   - [Process](#process)
   - [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
   - [Conclusion](#conclusion)
 - [Contribution](#contribution)
-
 
 ---
 
 
 
 ## Our Game
-Iron Rebellion is a 2D pixel-art platformer that blends classic arcade gameplay with modern design principles. Players control a robotic protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
+Iron Rebellion is a 2D platformer that blends classic arcade gameplay with modern design principles. Players control a robotic protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
 
 CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
 
@@ -153,7 +153,7 @@ This experience not only improved our product's alignment with user expectations
 
 ## Think-Aloud Usability Test Report
 
-**Game:** *MechDog vs. Drone Platformer*  
+**Game:** *Iron Rebellion*  
 **Participant:** 1 student (adjacent group)
 
 ### Tasks
@@ -234,10 +234,10 @@ This experience not only improved our product's alignment with user expectations
 
 ---
 
-## Heuristic Evaluation Report: MechDog vs. Drone Platformer
+## Heuristic Evaluation Report: Iron Rebellion
 
 Summary
-A heuristic evaluation was conducted by an external observer to identify usability issues in the MechDog vs. Drone platformer game. Key findings include critical violations of Nielsen’s usability heuristics, particularly in collision detection, navigation controls, and level design consistency. Below is the prioritized list of issues and recommendations.
+A heuristic evaluation was conducted by an external observer to identify usability issues in the Iron Rebellion game. Key findings include critical violations of Nielsen’s usability heuristics, particularly in collision detection, navigation controls, and level design consistency. Below is the prioritized list of issues and recommendations.
 
 Evaluation Table
 | Interface          | Issue                                                                 | Heuristic(s)                                | Frequency (0-4) | Impact (0-4) | Persistence (0-4) | Severity (F+I-P)/3 |
@@ -249,26 +249,41 @@ Evaluation Table
 | **Enemy AI**       | Predictable drone behavior; no difficulty progression.                | Flexibility and Efficiency of Use           | 3                | 3             | 3                  | 1.00               |
 | **Game Progression**| No game-over state; unlimited respawns reduce challenge.              | User Control and Freedom, Error Prevention  | 3                | 2             | 4                  | 0.33               |
 
-Key Findings
-Critical Issues (Severity ≥ 1.33):
-Collision detection failures disrupt core gameplay.
-Missing return functionality frustrates navigation.
-High-Impact Design Flaws (Severity ~1.00):
-Oversized obstacles and repetitive level design lower engagement.
-Simplistic enemy AI lacks challenge.
-Moderate Issues (Severity ≤ 0.33):
-Unlimited respawns reduce stakes but are less urgent.
-Recommendations
-Priority Fixes:
-Fix collision detection to eliminate "invisible walls."
-Add a pause/return menu for mid-level navigation.
-Design Improvements:
-Resize obstacles; introduce dynamic elements (e.g., moving platforms).
-Differentiate levels with unique mechanics (e.g., traps, boss fights).
-Long-Term Enhancements:
-Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).
-Add a game-over system with limited lives.
-Next Steps: Address collision and UI issues first, then iterate on level complexity and enemy behavior.
+## Key Findings  
+
+### Critical Issues (Severity ≥ 1.33)  
+- Collision detection failures disrupt core gameplay.  
+- Missing return functionality frustrates navigation.  
+
+### High-Impact Design Flaws (Severity ~1.00)  
+- Oversized obstacles and repetitive level design lower engagement.  
+- Simplistic enemy AI lacks challenge.  
+
+### Moderate Issues (Severity ≤ 0.33)  
+- Unlimited respawns reduce stakes but are less urgent.  
+
+---
+
+## Recommendations  
+
+### Priority Fixes  
+- Fix collision detection to eliminate "invisible walls."  
+- Add a pause/return menu for mid-level navigation.  
+
+### Design Improvements  
+- Resize obstacles; introduce dynamic elements (e.g., moving platforms).  
+- Differentiate levels with unique mechanics (e.g., traps, boss fights).  
+
+### Long-Term Enhancements  
+- Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).  
+- Add a game-over system with limited lives.  
+
+---
+
+## Next Steps  
+- Address collision and UI issues first.  
+- Then iterate on level complexity and enemy behavior.
+
 
 # Quantitative Analysis Report: Game Difficulty and Usability Assessment
 
