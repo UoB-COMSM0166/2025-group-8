@@ -238,7 +238,7 @@ The **chapterSelector** dynamically generated levels using character-mapped text
 
 ### Three Technical Challenges
 
-### Technical Challenge 1: Cross-Platform Implementation
+#### Technical Challenge 1: Cross-Platform Implementation
 
 **I. Relative Size**  
 To ensure *Iron Rebellion* runs smoothly across desktops, tablets, and smartphones, we implemented a responsive scaling system. All game assets—including tiles, characters, and UI—are proportionally scaled relative to the device’s screen size. This ensures consistent visual clarity and interaction precision regardless of screen dimensions.
@@ -254,7 +254,7 @@ Cross-platform support significantly broadens the reach of *Iron Rebellion*, mak
 
 ---
 
-### Technical Challenge 2: Collision Mechanism Design
+#### Technical Challenge 2: Collision Mechanism Design
 
 **I. Boundary Determination**  
 Accurate collision requires defining precise hitboxes for each game object. We refined bounding box calculations based on sprite dimensions to prevent edge cases like floating, overlapping, or clipping into platforms.
@@ -270,18 +270,18 @@ This redesigned collision system resolved core usability issues such as invisibl
 
 ---
 
-### Technical Challenge 3: Progressive Level Design
+#### Technical Challenge 3: Progressive Level Design
 
-#### I. Incremental Difficulty  
+**I. Incremental Difficulty**  
 Our game features four levels with a steadily increasing difficulty curve. In the first three levels, difficulty is raised by introducing more enemies—such as mechanical dogs and drones—and by placing more environmental obstacles. Instead of changing platform shapes or adding moving platforms, we focused on the number and arrangement of static platforms to increase challenge through tighter jumps and more intense combat scenarios.
 
-#### II. Scene Variation and Atmosphere  
+**II. Scene Variation and Atmosphere**  
 To enhance player engagement and maintain visual interest, each of the four levels features a unique scene design and art style. These include variations in background, tile sets, color schemes, and thematic elements that reflect the tone and difficulty of the level. This not only enriches the visual experience but also helps players intuitively sense progression and prepare for new challenges.
 
-#### III. Boss Integration  
+**III. Boss Integration**  
 The final level introduces a single-phase boss fight that acts as the game's climax. While the boss does not evolve through phases, it provides a consistent and elevated challenge through strong attacks and limited maneuvering space. The encounter demands accurate jumping and shooting, testing the player’s mastery of the core mechanics under sustained pressure.
 
-#### Impact  
+**Impact**  
 With limited player abilities, we relied on thoughtful level layout, increasing enemy density, and a climactic boss battle to create a compelling difficulty progression. The addition of varied scene designs further deepened the player’s sense of progression and immersion. This approach kept the gameplay accessible while ensuring a rewarding and increasingly challenging experience.
 
 ## Evaluation
@@ -293,14 +293,10 @@ We conducted think-aloud tests with eight players, revealing UI and collision is
 
 ### Think-Aloud Usability Test Report
 
-**Game:** *Iron Rebellion*  
-**Participant:** 1 student (adjacent group)
-
 #### Tasks
 - Complete Level 1 from the main menu.
 - Attempt to return to the main menu mid-level.
 
----
 
 #### Key Observations
 
@@ -328,7 +324,6 @@ We conducted think-aloud tests with eight players, revealing UI and collision is
   Drones followed simple, easily avoidable paths.  
   > "Too easy to dodge."
 
----
 
 #### Critical Issues
 
@@ -345,41 +340,41 @@ We conducted think-aloud tests with eight players, revealing UI and collision is
   - No difficulty scaling.
   - No fail states, harming replayability.
 
----
 
 #### Recommendations
 
-**Priority Fixes:**
-- Repair collision detection.
-- Add a pause/return menu for mid-level navigation.
+- **Priority Fixes:**
+  - Repair collision detection.
+  - Add a pause/return menu for mid-level navigation.
 
-**Gameplay Enhancements:**
-- Resize obstacles to improve movement.
-- Add dynamic elements (e.g., moving platforms).
+- **Gameplay Enhancements:**
+  - Resize obstacles to improve movement.
+  - Add dynamic elements (e.g., moving platforms).
 
-**Enemy and Difficulty Improvements:**
-- Introduce tiered difficulty settings.
-- Develop unique enemy behaviors (e.g., ambushes, patrol patterns).
+- **Enemy and Difficulty Improvements:**
+  - Introduce tiered difficulty settings.
+  - Develop unique enemy behaviors (e.g., ambushes, patrol patterns).
 
-**Progression Systems:**
-- Implement a game-over state and limited lives.
-- Differentiate levels with new mechanics (e.g., environmental hazards, boss fights).
+- **Progression Systems:**
+  - Implement a game-over state and limited lives.
+  - Differentiate levels with new mechanics (e.g., environmental hazards, boss fights).
 
----
+
 
 #### Next Steps
 
-- Address collision and UI issues as the highest priority.
-- Expand level complexity and improve enemy AI behavior based on user feedback.
+  - Address collision and UI issues as the highest priority.
+  - Expand level complexity and improve enemy AI behavior based on user feedback.
 
----
+
 
 ### Qualitative: Heuristic Evaluation Report: Iron Rebellion
 
-Summary
+#### Summary
 A heuristic evaluation was conducted by an external observer to identify usability issues in the Iron Rebellion game. Key findings include critical violations of Nielsen’s usability heuristics, particularly in collision detection, navigation controls, and level design consistency. Below is the prioritized list of issues and recommendations.
 
-Evaluation Table
+#### Evaluation Table
+
 | Interface          | Issue                                                                 | Heuristic(s)                                | Frequency (0-4) | Impact (0-4) | Persistence (0-4) | Severity (F+I-P)/3 |
 |--------------------|-----------------------------------------------------------------------|---------------------------------------------|------------------|---------------|--------------------|--------------------|
 | **Gameplay**       | Broken collision detection ("invisible walls" near platforms).        | Visibility of System Status                 | 4                | 4             | 4                  | 1.33               |
@@ -402,23 +397,23 @@ Evaluation Table
 #### Moderate Issues (Severity ≤ 0.33)  
 - Unlimited respawns reduce stakes but are less urgent.  
 
----
+
 
 #### Recommendations  
 
-#### Priority Fixes  
+**Priority Fixes**  
 - Fix collision detection to eliminate "invisible walls."  
 - Add a pause/return menu for mid-level navigation.  
 
-#### Design Improvements  
+**Design Improvements**  
 - Resize obstacles; introduce dynamic elements (e.g., moving platforms).  
 - Differentiate levels with unique mechanics (e.g., traps, boss fights).  
 
-#### Long-Term Enhancements  
+**Long-Term Enhancements**  
 - Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).  
 - Add a game-over system with limited lives.  
 
----
+
 
 #### Next Steps  
 - Address collision and UI issues first.  
