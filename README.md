@@ -1,6 +1,8 @@
 # 2025-group-8
 2025 COMSM0166 group 8
 
+[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
+
 # Project Report: Iron Rebellion
 
 ## Introduction
@@ -13,10 +15,6 @@ What sets *Iron Rebellion* apart is its seamless integration of narrative, chall
 
 ### Our Game
 Iron Rebellion is a 2D platformer that blends classic arcade gameplay with modern design principles. Players control a robot dog protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
-
-CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
-
-
 
 <a href="https://drive.google.com/file/d/14OzUzU3QxR_EjTLvqBnGxJBfApoTYgf7/view?usp=sharing">
   <img src="https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2008.43.06.png" alt="Watch the video" width="100%" />
