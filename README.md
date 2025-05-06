@@ -481,7 +481,7 @@ As the **Wilcoxon signed-rank test** yielded a **W value of 9** (above the criti
 This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences. 
 
 ### Code Testing
-We used both black-box playtesting and a dedicated [**white-box test suite**](./tests/whiteboxTests.js). Key systems tested included:
+We used both [**black-box playtesting**](./tests/blackboxTests.js) and a dedicated [**white-box test suite**](./tests/whiteboxTests.js). Key systems tested included:
 
 - Object collisions
 - Spawn logic
@@ -610,7 +610,6 @@ All game images have been resized and optimized to the appropriate dimensions. B
 #### Removal of Unused CSS Definitions  
 We streamlined our codebase by removing unused CSS rules. This not only simplifies maintenance but also speeds up rendering times, leading to improved performance and reduced processing energy.
 
----
 
 These implementations not only enhance user experience through improved performance but also contribute to sustainable development by lowering resource consumption and optimizing energy efficiency within our game.
 
