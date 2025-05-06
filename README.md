@@ -141,11 +141,7 @@ This experience not only improved our product's alignment with user expectations
 
 
 
-<<<<<<< HEAD
-## Design (待修改)
-=======
 ### Design
->>>>>>> 57d07000409a6e44736fac4408369f3fd16dcaa4
 
 To support modularity and future expansion, *Iron Rebellion* followed a loosely inspired Model-View-Controller (MVC) architecture. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
 
@@ -157,7 +153,17 @@ This architecture made the game easy to iterate and test. Visual aids, including
 
 ---
 
-### Sequence Diagram: Chapter Level Logic
+#### Class Diagram
+
+![Class Diagram](./pictures/class_diagram.png)
+
+---
+
+Class diagram shows the structure of the project, and it is designed with drawio.
+
+---
+
+#### Sequence Diagram: Chapter Level Logic
 
 ![Sequence Diagram Chapter](./pictures/sequence_diagram_chapter.png)
 
@@ -175,11 +181,7 @@ We improved performance by introducing spatial partitioning in collision detecti
 
 Overall, the evolving design documentation served as a living reference, keeping team members aligned during agile development sprints.
 
-<<<<<<< HEAD
-## Implementation (待修改)
-=======
 ### Implementation
->>>>>>> 57d07000409a6e44736fac4408369f3fd16dcaa4
 
 We implemented *Iron Rebellion* in layers, starting with a playable prototype. The **gameObject** base class unified behavior across interactive elements, with subclasses overriding specific logic.
 
