@@ -1,6 +1,8 @@
 # 2025-group-8
 2025 COMSM0166 group 8
 
+[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
+
 # Project Report: Iron Rebellion
 
 ## Introduction
@@ -13,10 +15,6 @@ What sets *Iron Rebellion* apart is its seamless integration of narrative, chall
 
 ### Our Game
 Iron Rebellion is a 2D platformer that blends classic arcade gameplay with modern design principles. Players control a robot dog protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
-
-CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
-
-
 
 <a href="https://drive.google.com/file/d/14OzUzU3QxR_EjTLvqBnGxJBfApoTYgf7/view?usp=sharing">
   <img src="https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2008.43.06.png" alt="Watch the video" width="100%" />
@@ -63,7 +61,7 @@ CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/bl
 
 ---
 
-### Prototype Video of Two Ideas
+### Prototype Videos of Two Ideas
 
 - **Super Mario:** 
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
@@ -86,16 +84,16 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 
 The foundation of *Iron Rebellion* was shaped through structured requirements engineering to prevent issues like feature creep and undefined scopes. We used collaborative tools like Miro and Google Docs to brainstorm and prioritize features that mattered most to players.
 
-Two early concepts emerged: a fantasy puzzle platformer and a sci-fi adventure with mechanical hazards. The team voted for the sci-fi idea, which later became *Iron Rebellion*, offering room for creative design and modular gameplay.
+Two early concepts emerged: a fantasy puzzle platformer and a adventure with mechanical hazards. The team voted for the idea, which later became *Iron Rebellion*, offering room for creative design and modular gameplay.
 
-We used user stories and use case diagrams to formalize player interactions—from starting the game and navigating menus to triggering switches and completing levels. For instance:
+We used user stories and use case diagrams to formalize player interactions from starting the game and navigating menus to triggering switches and completing levels. For instance:
 
 - "As a casual gamer, I want an easy mode so I can enjoy the game without frustration."
 - "As a player, I want the game to auto-save my progress so I don’t lose my place."
 
-Acceptance criteria ensured clarity in implementation. We also created paper prototypes and technical mini-demos to validate feasibility. Level design was tested with tile-based systems, and stakeholders—including lecturers and TAs—helped refine user-centric stories.
+Acceptance criteria ensured clarity in implementation. We also created paper prototypes and technical mini demos to validate feasibility. Level design was tested with tile-based systems, and stakeholders, including lecturers and TAhelped refine user-centric stories.
 
-Our MVP included handcrafted levels, three difficulty settings, and basic AI—all designed with adaptability in mind.
+Our MVP included handcrafted levels, three difficulty settings and the basic design.
 
 ### Stakeholder list
 
@@ -159,7 +157,6 @@ This architecture made the game easy to iterate and test. Visual aids, including
 
 ![Class Diagram](./pictures/class_diagram.png)
 
----
 
 Class diagram shows the structure of the project, and it is designed with drawio.
 
@@ -169,7 +166,6 @@ Class diagram shows the structure of the project, and it is designed with drawio
 
 ![Sequence Diagram Chapter](./pictures/sequence_diagram_chapter.png)
 
----
 
 We improved performance by introducing spatial partitioning in collision detection. Behavioral diagrams like the Player State Diagram ensured accurate transitions and reduced bugs like double jumps.
 
@@ -179,7 +175,6 @@ We improved performance by introducing spatial partitioning in collision detecti
 
 ![Sequence Diagram Sketch](./pictures/sequence_diagram_sketch.png)
 
----
 
 Overall, the evolving design documentation served as a living reference, keeping team members aligned during agile development sprints.
 
