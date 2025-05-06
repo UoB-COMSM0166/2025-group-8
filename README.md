@@ -7,7 +7,7 @@
 
 Iron Rebellion is a 2D platform jumping game that revives the nostalgic appeal of classic platformers while introducing modern design principles to enhance gameplay experience. Designed as a narrative-driven adventure, the game blends quick reflex-based mechanics with puzzle-solving elements to engage players of all skill levels.
 
-The visual design adopts a minimalist pixel-art style, maintaining simplicity while delivering deep gameplay. This approach ensures the game is accessible to both seasoned gamers and newcomers, capturing the spirit of retro gaming while offering modern features like adjustable difficulty and intelligent enemy AI.
+The visual design adopts a painterly oil painting style, blending classical art aesthetics with modern gameplay. This artistic approach creates a rich and immersive atmosphere, appealing to both seasoned gamers and newcomers. While embracing the elegance of traditional visuals, the game also features modern enhancements like adjustable difficulty and intelligent enemy AI, delivering depth without sacrificing accessibility.
 
 What sets *Iron Rebellion* apart is its seamless integration of narrative, challenges, and progressive complexity across handcrafted levels. Players are not just jumping platforms—they are unraveling a story. This fusion enriches the game’s depth and makes each level a meaningful experience.
 
