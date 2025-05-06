@@ -244,23 +244,6 @@ Our evaluation used a combination of qualitative and quantitative techniques to 
 ### Qualitative: Think-Aloud Usability Testing
 We conducted think-aloud tests with eight players, revealing UI and collision issues. Fixes included adding pause/reset options and refining platform boundaries. Testers appreciated level clarity and responsive checkpoints.
 
-### Quantitative: NASA TLX Workload Analysis
-Ten players rated difficulty variants of Level 1 using NASA TLX. Workload scores increased with difficulty as expected:
-
-- Easy: Lower mental demand and frustration.
-- Hard: Higher effort and time pressure, but manageable performance scores.
-
-A Wilcoxon Signed-Rank test (p < 0.01) validated significant differences, confirming successful difficulty scaling.
-
-### Code Testing
-We used both black-box playtesting and a dedicated [**white-box test suite**](./tests/whiteboxTests.js). Key systems tested included:
-
-- Object collisions
-- Spawn logic
-- Enemy state transitions
-
-Visual QA was handled through manual sprite checks and browser compatibility testing. Every major change was tested on GitHub Pages before deployment.
-
 ### Think-Aloud Usability Test Report
 
 **Game:** *Iron Rebellion*  
@@ -394,15 +377,22 @@ Evaluation Table
 - Address collision and UI issues first.  
 - Then iterate on level complexity and enemy behavior.
 
+### Quantitative: NASA TLX Workload Analysis
+Ten players rated difficulty variants of Level 1 using NASA TLX. Workload scores increased with difficulty as expected:
 
-# Quantitative Analysis Report: Game Difficulty and Usability Assessment
+- Easy: Lower mental demand and frustration.
+- Hard: Higher effort and time pressure, but manageable performance scores.
 
-### Objective  
+A Wilcoxon Signed-Rank test (p < 0.01) validated significant differences, confirming successful difficulty scaling.
+
+### Quantitative Analysis Report: Game Difficulty and Usability Assessment
+
+#### Objective  
 This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing the first two chapters of our game. While the game does not offer traditional difficulty modes (e.g., Easy, Medium, Hard), it consists of four sequential chapters, each with its own level of challenge. For this study, **Chapter 1** and **Chapter 2** were selected to represent different levels of in-game difficulty.
 
 We utilized the **NASA Task Load Index (TLX)** to measure workload dimensions and the **System Usability Scale (SUS)** to assess overall usability. This dual approach offers a holistic view of how the design and challenge of different chapters impact player experience and satisfaction.
 
-### Methodology  
+#### Methodology  
 The evaluations were conducted in a controlled environment with **ten users**. To minimize learning bias, we employed a **counterbalanced design**:
 
 - Half of the participants played **Chapter 1 first**, followed by Chapter 2.
@@ -410,7 +400,7 @@ The evaluations were conducted in a controlled environment with **ten users**. T
 
 After completing each chapter, participants filled out both the NASA TLX and SUS questionnaires. This approach allowed us to accurately capture subjective perceptions of workload and usability after each gameplay session.
 
-### Statistical Analysis  
+#### Statistical Analysis  
 To evaluate whether the observed differences between Chapter 1 and Chapter 2 were statistically significant, we conducted a **Wilcoxon signed-rank test**, which is suitable for small sample sizes and non-normal distributions.
 
 - **Test Statistic:** Wilcoxon W = 9  
@@ -452,10 +442,18 @@ The increase in perceived workload in Chapter 2 did not lead to a **statisticall
 As the **Wilcoxon signed-rank test** yielded a **W value of 9** (above the critical threshold of 8), we **cannot reject the null hypothesis**. This indicates **no significant difference** in SUS scores between Chapter 1 and Chapter 2 at the 0.05 significance level.
 
 ### Conclusion  
-This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences.
+This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences. 
 
+### Code Testing
+We used both black-box playtesting and a dedicated [**white-box test suite**](./tests/whiteboxTests.js). Key systems tested included:
 
-### Process
+- Object collisions
+- Spawn logic
+- Enemy state transitions
+
+Visual QA was handled through manual sprite checks and browser compatibility testing. Every major change was tested on GitHub Pages before deployment.
+
+## Process
 
 Agile workflows defined our production cycle. Roles were assigned based on strengths:
 
@@ -482,23 +480,23 @@ We learned to refine task estimates using story points and improved planning acr
 
 Kanban Board : [![KANBAN](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2013.45.02.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
-### Sustainability, Ethics, and Accessibility
+## Sustainability, Ethics, and Accessibility
 
-#### Environmental
+### Environmental
 We minimized carbon impact through digital distribution and asset optimization:
 
 - Lazy-loading
 - Image compression
 - Elimination of unused code
 
-#### Social
+### Social
 We followed ethical game design:
 
 - No microtransactions or ads
 - High-contrast UI
 - Neutral characters with no cultural bias
 
-#### Individual Well-being
+### Individual Well-being
 
 - Adjustable difficulty
 - Checkpoints and finite levels
