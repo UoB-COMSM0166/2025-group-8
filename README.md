@@ -1,7 +1,59 @@
 # 2025-group-8
-2025 COMSM0166 group 8
 
 [![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
+
+
+# Content
+
+- [Introduction](#introduction)
+  - [Our Game](#our-game)
+  - [Our Group](#our-group)
+  - [Inspiration Mining](#inspiration-mining)
+  - [Prototype Videos of Two Ideas](#prototype-videos-of-two-ideas)
+  - [Prototype Video of Final Idea](#prototype-video-of-final-idea)
+
+- [Requirements](#requirements)
+  - [Stakeholder list](#stakeholder-list)
+  - [Epics & User Stories](#epics--user-stories)
+  - [Reflection](#reflection)
+
+- [Design](#design)
+  - [Class Diagram](#class-diagram)
+  - [Sequence Diagram: Chapter Level Logic](#sequence-diagram-chapter-level-logic)
+  - [Sequence Diagram: Early Sketch](#sequence-diagram-early-sketch)
+
+- [Implementation](#implementation)
+  - [Technical Challenge 1: Cross-Platform Implementation](#technical-challenge-1-cross-platform-implementation)
+  - [Technical Challenge 2: Collision Mechanism Design](#technical-challenge-2-collision-mechanism-design)
+  - [Technical Challenge 3: Progressive Level Design](#technical-challenge-3-progressive-level-design)
+
+- [Evaluation](#evaluation)
+  - [Qualitative: Think-Aloud Usability Testing](#qualitative-think-aloud-usability-testing)
+  - [Heuristic Evaluation Report: Iron Rebellion](#heuristic-evaluation-report-iron-rebellion)
+  - [Quantitative: NASA TLX Workload Analysis](#quantitative-nasa-tlx-workload-analysis)
+  - [Quantitative Analysis Report: Game Difficulty and Usability Assessment](#quantitative-analysis-report-game-difficulty-and-usability-assessment)
+  - [Code Testing](#code-testing)
+
+- [Process](#process)
+  - [Our Progress](#our-progress)
+
+- [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
+  - [Environmental](#environmental)
+  - [Social](#social)
+  - [Individual Well-being](#individual-well-being)
+  - [Sustainability Impact Assessment](#sustainability-impact-assessment)
+  - [Green Foundation Implementation Patterns Analysis](#green-foundation-implementation-patterns-analysis)
+
+- [Conclusion](#conclusion)
+
+- [Contribution](#contribution)
+
+
+
+
+
+
+
 
 # Project Report: Iron Rebellion
 
