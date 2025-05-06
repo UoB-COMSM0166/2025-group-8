@@ -144,12 +144,23 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 
 ## Reflection
 
-During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on epics, user stories, and acceptance criteria.
+During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on **epics**, **user stories**, and **acceptance criteria**.
+
+### Epics  
 Epics helped us frame the major goals of our project, dividing our focus between engaging gameplay and robust technical performance. This division ensured a balanced approach to both user experience and system functionality.
+
+### User Stories  
 User stories enabled us to see the game through the players' eyes, driving us to prioritize features that directly enhance user engagement and satisfaction, such as customizable characters and multilingual support. Each story clearly outlined specific user needs, guiding our design and development efforts.
+
+### Acceptance Criteria  
 Acceptance criteria were essential in defining the specific conditions for completing user stories, facilitating precise testing and quality control. This specificity helped prevent scope creep, keeping our team aligned on the definition of feature completion.
+
+### Project Impact  
 The context of creating an accessible and enjoyable game influenced every aspect of our project, from planning to implementation, ensuring we addressed the diverse needs of our player base and optimized the game for various devices.
+
+### Conclusion  
 This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
+
 
 ## Think-Aloud Usability Test Report
 
@@ -451,15 +462,22 @@ This sustainability impact assessment for *Iron Rebellion* identifies critical a
 
 
 ## Green Foundation Implementation Patterns Analysis
-Our game code integrates several key sustainable coding practices aligned with Green Foundation Implementation patterns:
 
-Lazy Loading of Offscreen Images: We have implemented a lazy-loading mechanism to defer the loading of images not immediately visible on the screen. This reduces unnecessary resource usage and improves page load performance, contributing to lower energy consumption.
+Our game code integrates several key sustainable coding practices aligned with **Green Foundation Implementation** patterns:
 
-Optimized Image Sizes: All game images have been resized and optimized to the appropriate dimensions. By compressing images without sacrificing quality, we ensure faster load times and reduced bandwidth usage, which minimizes the overall carbon footprint.
+### Lazy Loading of Offscreen Images  
+We have implemented a lazy-loading mechanism to defer the loading of images not immediately visible on the screen. This reduces unnecessary resource usage and improves page load performance, contributing to lower energy consumption.
 
-Removal of Unused CSS Definitions: We streamlined our codebase by removing unused CSS rules. This not only simplifies maintenance but also speeds up rendering times, leading to improved performance and reduced processing energy.
+### Optimized Image Sizes  
+All game images have been resized and optimized to the appropriate dimensions. By compressing images without sacrificing quality, we ensure faster load times and reduced bandwidth usage, which minimizes the overall carbon footprint.
+
+### Removal of Unused CSS Definitions  
+We streamlined our codebase by removing unused CSS rules. This not only simplifies maintenance but also speeds up rendering times, leading to improved performance and reduced processing energy.
+
+---
 
 These implementations not only enhance user experience through improved performance but also contribute to sustainable development by lowering resource consumption and optimizing energy efficiency within our game.
+
 
 
 
@@ -472,7 +490,7 @@ These implementations not only enhance user experience through improved performa
 
 ### Introduction
 
-*Iron Rebellion* is a 2D platform-jumping game that revives the nostalgic appeal of classic platformers while introducing modern design principles to enhance gameplay experience. Designed as a narrative-driven adventure, the game blends quick reflex-based mechanics with puzzle-solving elements to engage players of all skill levels.
+*Iron Rebellion* is a 2D platform jumping game that revives the nostalgic appeal of classic platformers while introducing modern design principles to enhance gameplay experience. Designed as a narrative-driven adventure, the game blends quick reflex-based mechanics with puzzle-solving elements to engage players of all skill levels.
 
 The visual design adopts a minimalist pixel-art style, maintaining simplicity while delivering deep gameplay. This approach ensures the game is accessible to both seasoned gamers and newcomers, capturing the spirit of retro gaming while offering modern features like adjustable difficulty and intelligent enemy AI.
 
