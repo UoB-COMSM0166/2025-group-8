@@ -4,7 +4,7 @@
 
 
 
-# Content
+# Table of Contents
 
 - [Introduction](#introduction)
   - [Our Game](#our-game)
@@ -32,7 +32,7 @@
   - [Qualitative: Think-Aloud Usability Testing](#qualitative-think-aloud-usability-testing)
   - [Heuristic Evaluation Report: Iron Rebellion](#heuristic-evaluation-report-iron-rebellion)
   - [Quantitative: NASA TLX Workload Analysis](#quantitative-nasa-tlx-workload-analysis)
-  - [Quantitative Analysis Report: Game Difficulty and Usability Assessment](#quantitative-analysis-report-game-difficulty-and-usability-assessment)
+  - [Quantitative: Game Difficulty and Usability Assessment](#quantitative-game-difficulty-and-usability-assessment)
   - [Code Testing](#code-testing)
 
 - [Process](#process)
@@ -48,6 +48,7 @@
 - [Conclusion](#conclusion)
 
 - [Contribution](#contribution)
+
 
 
 
