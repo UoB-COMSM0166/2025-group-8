@@ -270,36 +270,64 @@ Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).
 Add a game-over system with limited lives.
 Next Steps: Address collision and UI issues first, then iterate on level complexity and enemy behavior.
 
-## Quantitative analysis Report: Game Difficulty and Usability Assessment Objective
+# Quantitative Analysis Report: Game Difficulty and Usability Assessment
 
-This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing our game at two different difficulty levels: L1 (easier) and L2 (harder). We utilized the NASA Task Load Index (TLX) to measure workload facets and the System Usability Scale (SUS) to evaluate system usability. This dual approach provides a holistic view of how different difficulty levels affect player interaction and satisfaction.
+## Objective  
+This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing the first two chapters of our game. While the game does not offer traditional difficulty modes (e.g., Easy, Medium, Hard), it consists of four sequential chapters, each with its own level of challenge. For this study, **Chapter 1** and **Chapter 2** were selected to represent different levels of in-game difficulty.
 
-Methodology
-The evaluations were conducted in a controlled setting with ten users. To mitigate learning effects, we employed a counterbalanced design where half of the users first played at difficulty level L1 and then L2, while the other half experienced the levels in reverse order. After playing each level, users completed the NASA TLX and SUS questionnaires. This method allowed us to capture both subjective workload and usability perceptions accurately.
+We utilized the **NASA Task Load Index (TLX)** to measure workload dimensions and the **System Usability Scale (SUS)** to assess overall usability. This dual approach offers a holistic view of how the design and challenge of different chapters impact player experience and satisfaction.
 
-Statistical Analysis
-To determine the significance of the differences observed between the two difficulty levels, we conducted a Wilcoxon signed-rank test. This non-parametric test is suited for paired samples and was chosen due to its effectiveness in handling small sample sizes and non-normal data distributions.
+## Methodology  
+The evaluations were conducted in a controlled environment with **ten users**. To minimize learning bias, we employed a **counterbalanced design**:
 
-Test Statistic: The Wilcoxon W value calculated was 9.
-Comparison Threshold: With a sample size of 10 and an alpha value of 0.05, the critical value from statistical tables for the Wilcoxon test is 8.
-NASA TLX Results
-The NASA TLX scores highlighted significant differences in perceived workload:
+- Half of the participants played **Chapter 1 first**, followed by Chapter 2.
+- The other half played **Chapter 2 first**, then Chapter 1.
 
-Level L1 (Easier): Users reported lower workload scores with an average Mental Demand of 4.0, Physical Demand of 2.4, Temporal Demand of 4.0, Performance of 7.0, Effort of 5.9, and Frustration of 2.9.
-Level L2 (Harder): This level showed a higher workload with averages of Mental Demand at 7.0, Physical Demand at 4.5, Temporal Demand at 6.9, Performance at 3.3, Effort at 8.9, and Frustration at 6.8.
-SUS Results
-The SUS scores also demonstrated variability in usability between the two difficulty levels:
+After completing each chapter, participants filled out both the NASA TLX and SUS questionnaires. This approach allowed us to accurately capture subjective perceptions of workload and usability after each gameplay session.
 
-Level L1 (Easier) had a favorable average SUS score of 68.8, indicating good usability aligned with user expectations.
-Level L2 (Harder) recorded a lower average SUS score of 59.4, suggesting usability challenges, particularly in terms of system complexity and user confidence.
-Discussion
-The combined data from the NASA TLX and SUS indicate that while Level L1 offers an optimal balance of challenge and usability, Level L2, despite its appeal to more skilled players, may benefit from usability enhancements. The increased cognitive and physical demands at Level L2 appear to negatively impact both workload perceptions and usability ratings.
+## Statistical Analysis  
+To evaluate whether the observed differences between Chapter 1 and Chapter 2 were statistically significant, we conducted a **Wilcoxon signed-rank test**, which is suitable for small sample sizes and non-normal distributions.
 
-Statistical Conclusion
-Since the Wilcoxon signed-rank test resulted in a W value of 9, which exceeds the critical value of 8, we cannot reject the null hypothesis. This implies there is no statistically significant difference in the SUS scores between the two difficulty levels at the 0.05 alpha level. This result suggests that while perceived differences in workload are noted, the overall impact on usability may not be statistically significant.
+- **Test Statistic:** Wilcoxon W = 9  
+- **Critical Value (n=10, α=0.05):** 8
 
-Conclusion
-This evaluation underscores the need for careful calibration of game mechanics and user interfaces to ensure that both novice and experienced players find the game engaging yet manageable. Future development will focus on refining these aspects to enhance overall user experience and maintain high usability standards across all difficulty levels.
+Since W > 8, the result is **not statistically significant**.
+
+## NASA TLX Results  
+The following scores represent average user responses on a scale of 0–10:
+
+| Dimension       | Chapter 1 | Chapter 2 |
+|----------------|-----------|-----------|
+| Mental Demand  | 4.0       | 7.0       |
+| Physical Demand| 2.4       | 4.5       |
+| Temporal Demand| 4.0       | 6.9       |
+| Performance    | 7.0       | 3.3       |
+| Effort         | 5.9       | 8.9       |
+| Frustration    | 2.9       | 6.8       |
+
+## SUS Results  
+
+| Chapter    | SUS Score |
+|------------|-----------|
+| Chapter 1  | 68.8      |
+| Chapter 2  | 59.4      |
+
+- **Chapter 1** achieved generally good usability.
+- **Chapter 2** showed increased usability challenges, particularly related to complexity and confidence.
+
+## Discussion  
+The combined results suggest:
+
+- **Chapter 1** offers a balanced gameplay experience, with manageable workload and strong usability.
+- **Chapter 2**, although more challenging, may benefit from improved design or user interface refinements to reduce cognitive and physical strain.
+
+The increase in perceived workload in Chapter 2 did not lead to a **statistically significant** difference in usability ratings.
+
+## Statistical Conclusion  
+As the **Wilcoxon signed-rank test** yielded a **W value of 9** (above the critical threshold of 8), we **cannot reject the null hypothesis**. This indicates **no significant difference** in SUS scores between Chapter 1 and Chapter 2 at the 0.05 significance level.
+
+## Conclusion  
+This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences.
 
 
 
@@ -337,84 +365,74 @@ This redesigned collision system resolved core usability issues such as invisibl
 
 ---
 
-### Technical Challenge 3: Dynamic Difficulty Adjustment (DDA)
+### Technical Challenge 3: Progressive Level Design
 
-**I. Performance Monitoring**  
-We integrated real-time player tracking, recording metrics like number of deaths, time to completion, and frequency of checkpoint usage. These indicators inform the game of player proficiency.
+#### I. Incremental Difficulty  
+Our game features four levels with a steadily increasing difficulty curve. In the first three levels, difficulty is raised by introducing more enemies—such as mechanical dogs and drones—and by placing more environmental obstacles. Instead of changing platform shapes or adding moving platforms, we focused on the number and arrangement of static platforms to increase challenge through tighter jumps and more intense combat scenarios.
 
-**II. Adaptive Scaling**  
-Based on real-time data, the game dynamically modifies enemy speed, platform timing, and obstacle layout. This ensures that gameplay remains balanced—challenging skilled players while helping newer ones progress.
+#### II. Scene Variation and Atmosphere  
+To enhance player engagement and maintain visual interest, each of the four levels features a unique scene design and art style. These include variations in background, tile sets, color schemes, and thematic elements that reflect the tone and difficulty of the level. This not only enriches the visual experience but also helps players intuitively sense progression and prepare for new challenges.
 
-**III. Customization Hooks**  
-Despite DDA being active in the background, players retain full control by selecting a base difficulty level (Easy, Medium, Hard). The system then fine-tunes behavior subtly within that range, never forcing abrupt shifts in challenge.
+#### III. Boss Integration  
+The final level introduces a single-phase boss fight that acts as the game's climax. While the boss does not evolve through phases, it provides a consistent and elevated challenge through strong attacks and limited maneuvering space. The encounter demands accurate jumping and shooting, testing the player’s mastery of the core mechanics under sustained pressure.
 
-**Impact:**  
-The DDA system personalizes gameplay for each user, keeping them engaged and avoiding frustration. It promotes a smooth learning curve and extends player retention across diverse skill levels.
-
----
+#### Impact  
+With limited player abilities, we relied on thoughtful level layout, increasing enemy density, and a climactic boss battle to create a compelling difficulty progression. The addition of varied scene designs further deepened the player’s sense of progression and immersion. This approach kept the gameplay accessible while ensuring a rewarding and increasingly challenging experience.
 
 
 
-## Sustainability Impact Assessment 
-Project Name: Iron Rebellion
-Framework Used: Sustainability Awareness Framework (SusAF)
 
-### Project Overview
+
+
+## Sustainability Impact Assessment  
+**Project Name:** Iron Rebellion  
+**Framework Used:** Sustainability Awareness Framework (SusAF)  
+
+### Project Overview  
 Iron Rebellion is a 2D platform-jumping game designed to provide an engaging and straightforward gaming experience. It operates primarily as a single-player game, with levels structured to challenge the player’s reflexes and problem-solving skills. This game does not feature multiplayer capabilities, community interactions, or in-game purchases.
 
-### Vision and Known Effects
-Vision: To offer a classic gaming experience that challenges players through progressively difficult levels, combining retro aesthetics with modern gameplay mechanics. Known Sustainability Effects:
+### Vision and Known Effects  
+**Vision:** To offer a classic gaming experience that challenges players through progressively difficult levels, combining retro aesthetics with modern gameplay mechanics.
 
-Positive: Minimal resource use due to digital-only distribution, reducing physical waste associated with packaging and hardware.
+**Known Sustainability Effects:**  
+**Positive:** Minimal resource use due to digital-only distribution, reducing physical waste associated with packaging and hardware.  
+**Negative:** Potential energy consumption from extended play sessions, although less significant than more resource-intensive games.
 
-Negative: Potential energy consumption from extended play sessions, although less significant than more resource-intensive games.
+### Detailed Sustainability Effects  
 
-### Detailed Sustainability Effects
-Environmental Dimension:
+#### Environmental Dimension  
+- **Materials and Resources:** Primarily digital distribution minimizes the use of physical materials and reduces waste.  
+- **Energy Consumption:** Relatively low compared to more graphically intensive games; however, prolonged use can still contribute to energy use through player devices.
 
-Materials and Resources: Primarily digital distribution minimizes the use of physical materials and reduces waste.
+#### Social Dimension  
+- **Social Interaction:** Lacks built-in social features or community platforms, focusing solely on individual gameplay.  
+- **Health Impacts:** Could potentially contribute to sedentary behavior if played excessively without breaks.
 
-Energy Consumption: Relatively low compared to more graphically intensive games; however, prolonged use can still contribute to energy use through player devices.
+#### Economic Dimension  
+- **Market Value:** Provides economic value in its market segment by appealing to enthusiasts of retro and platform games.  
+- **Business Operations:** Operates with a straightforward business model without recurrent revenue from the game post-purchase.
 
-Social Dimension:
+#### Technical Dimension  
+- **Maintainability and Scalability:** Requires less frequent updates and maintenance compared to complex multiplayer games, simplifying long-term technical support.  
+- **Development Efficiency:** Utilizes established game development frameworks and tools, ensuring efficient production cycles and lower technical overhead.
 
-Social Interaction: Lacks built-in social features or community platforms, focusing solely on individual gameplay.
+### Synthesis: Threats, Opportunities, and Actions  
 
-Health Impacts: Could potentially contribute to sedentary behavior if played excessively without breaks.
+#### Threats  
+- **Environmental Impact:** Continuous energy use during gameplay, although minor, is still relevant.  
+- **Health Concerns:** Risk of promoting prolonged sedentary periods among players.
 
-Economic Dimension:
+#### Opportunities  
+- **Sustainable Practices:** Opportunity to promote energy conservation tips within the game or on loading screens.  
+- **Health and Well-being:** Can include features such as regular reminders to take breaks or promote physical activity.
 
-Market Value: Provides economic value in its market segment by appealing to enthusiasts of retro and platform games.
+#### Actions  
+- **Promoting Energy Efficiency:** Encourage players to use energy-efficient gaming devices or settings.  
+- **Encouraging Active Breaks:** Implement reminders for players to take breaks and engage in physical activities during extended sessions.
 
-Business Operations: Operates with a straightforward business model without recurrent revenue from the game post-purchase.
+### Conclusion  
+This sustainability impact assessment for *Iron Rebellion* identifies critical areas of impact with a focus on environmental and individual dimensions. The assessment guides the integration of sustainable practices into both game design and operational procedures. Moving forward, these insights will be used to enhance the game’s design and help mitigate any negative impacts associated with its use. This report will be included in the project documentation to inform stakeholders and guide future development decisions.
 
-Technical Dimension:
-
-Maintainability and Scalability: Requires less frequent updates and maintenance compared to complex multiplayer games, simplifying long-term technical support.
-
-Development Efficiency: Utilizes established game development frameworks and tools, ensuring efficient production cycles and lower technical overhead.
-
-### Synthesis: Threats, Opportunities, and Actions
-Threats:
-
-Environmental Impact: Continuous energy use during gameplay, although minor, is still relevant.
-
-Health Concerns: Risk of promoting prolonged sedentary periods among players.
-
-Opportunities:
-
-Sustainable Practices: Opportunity to promote energy conservation tips within the game or on loading screens.
-
-Health and Well-being: Can include features such as regular reminders to take breaks or promote physical activity.
-
-Actions:
-
-Promoting Energy Efficiency: Encourage players to use energy-efficient gaming devices or settings.
-
-Encouraging Active Breaks: Implement reminders for players to take breaks and engage in physical activities during extended sessions.
-
-### Conclusion
-This sustainability impact assessment for Iron Rebellion identifies critical areas of impact with a focus on environmental and individual dimensions. The assessment guides the integration of sustainable practices into both game design and operational procedures. Moving forward, these insights will be used to enhance the game’s design and help mitigate any negative impacts associated with its use. This report will be included in the project documentation to inform stakeholders and guide future development decisions.
 
 
 ## Green Foundation Implementation Patterns Analysis
