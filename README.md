@@ -98,7 +98,7 @@ Kanban Board : [![KANBAN](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main
 
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
 
-[![Super Mario](https://raw.githubusercontent.com/kkkkkaneeeee/kkkkkaneeeee/ad0b8ad5130f1242c89f56301ca04ff055c8c7e1/Screenshot%202025-02-10%20at%2000.48.00.png)](https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link)
+[![Super Mario](/Users/kane/Desktop/2025-group-8/pictures/cover.png)](https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link)
 
 
 
