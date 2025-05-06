@@ -144,13 +144,13 @@ This experience not only improved our product's alignment with user expectations
 
 ### Design (待修改)
 
-To support modularity and future expansion, *Iron Rebellion* followed a loosely inspired Model-View-Controller (MVC) architecture. The **GameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **Player**, **EnemyDrone**, and **MovingPlatform**.
+To support modularity and future expansion, *Iron Rebellion* followed a loosely inspired Model-View-Controller (MVC) architecture. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
 
-- **PlayerController** handles input and physics.
-- **MapController** loads levels from text files and manages collision resolution.
-- **GameStateManager** coordinates game modes, UI elements, and audio.
+- **robotDog** handles input and physics.
+- **chapterSelector** loads levels from text files and manages collision resolution.
+- **picturesLoader** coordinates game modes, UI elements, and audio.
 
-This architecture made the game easy to iterate and test. Visual aids, including sequence and state diagrams, helped clarify object interactions. Notable additions like **InteractionHandler** abstracted door-button logic for better reusability.
+This architecture made the game easy to iterate and test. Visual aids, including sequence and state diagrams, helped clarify object interactions. 
 
 ---
 
