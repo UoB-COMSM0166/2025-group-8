@@ -92,10 +92,9 @@ Kanban Board : [![KANBAN](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main
 | Winter Dodge              | Skill > One-button                 | Auto-skiing game, change direction, get close to trees for score bonuses.                                                                                                                                                    | [Link](https://www.coolmathgames.com/0-winter-dodge) |
 | Suika Watermelon Game     | Strategy > High Score Games        | Merge fruits for higher scores, limited pushes, avoid box overflow.                                                                                                                                                          | [Link](https://en.wikipedia.org/wiki/Suika_Game) |
 
-## Two Prototype Ideas
+## Prototype Video of Two Ideas
 
 - **Super Mario:** 
-
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
 
 [![Super Mario](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/cover.png)](https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link)
@@ -109,7 +108,7 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 
 
 
-## Final  Ideas
+## Prototype Video of Final Idea
 [![alt text](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/cover-final.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
 
 
