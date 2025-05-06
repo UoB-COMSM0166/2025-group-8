@@ -115,7 +115,7 @@ Iron Rebellion is a 2D platformer that blends classic arcade gameplay with moder
 
 ---
 
-### Prototype Videos of Two Ideas
+### Prototype Videos of Two Initial Ideas
 
 - **Super Mario:** 
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
@@ -519,79 +519,78 @@ Kanban Board : [![KANBAN](./pictures/KANBAN.png)](https://kanexu99-1738582319219
 
 ## Sustainability, Ethics, and Accessibility
 
-### Environmental
+### Key Design Principles
+
+#### Environmental
 We minimized carbon impact through digital distribution and asset optimization:
 
-- Lazy-loading
-- Image compression
-- Elimination of unused code
+- Lazy-loading  
+- Image compression  
+- Elimination of unused code  
 
-### Social
+#### Social
 We followed ethical game design:
 
-- No microtransactions or ads
-- High-contrast UI
-- Neutral characters with no cultural bias
+- No microtransactions or ads  
+- High-contrast UI  
+- Neutral characters with no cultural bias  
 
-### Individual Well-being
-
-- Adjustable difficulty
-- Checkpoints and finite levels
-- Prompt reminders for breaks (planned feature)
+#### Individual Well-being
+- Adjustable difficulty  
+- Checkpoints and finite levels  
+- Prompt reminders for breaks (planned feature)  
 
 These principles guided responsible development and will be expanded in future updates.
 
-### Sustainability Impact Assessment  
-**Project Name:** Iron Rebellion  
-**Framework Used:** Sustainability Awareness Framework (SusAF)  
+---
 
-### Project Overview  
-Iron Rebellion is a 2D platform-jumping game designed to provide an engaging and straightforward gaming experience. It operates primarily as a single-player game, with levels structured to challenge the player’s reflexes and problem-solving skills. This game does not feature multiplayer capabilities, community interactions, or in-game purchases.
+### Sustainability Impact Assessment
 
-### Vision and Known Effects  
-**Vision:** To offer a classic gaming experience that challenges players through progressively difficult levels, combining retro aesthetics with modern gameplay mechanics.
+#### Project Overview
+Iron Rebellion is a 2D platform-jumping game designed to provide an engaging and straightforward gaming experience...
 
-**Known Sustainability Effects:**  
-**Positive:** Minimal resource use due to digital-only distribution, reducing physical waste associated with packaging and hardware.  
-**Negative:** Potential energy consumption from extended play sessions, although less significant than more resource-intensive games.
+#### Vision and Known Effects
 
-### Detailed Sustainability Effects  
+**Vision:** To offer a classic gaming experience...  
+**Positive:** Minimal resource use...  
+**Negative:** Potential energy consumption...
 
-#### Individual Dimension  
-- **Accessibility:** The game's simplicity and low hardware requirements make it accessible to a wider audience, including users with less powerful devices.  
-- **User Autonomy:** As a single-player game with no in-game purchases or external dependencies, players have full control over their experience without external pressures.  
+#### Detailed Sustainability Effects
 
-#### Environmental Dimension  
-- **Materials and Resources:** Primarily digital distribution minimizes the use of physical materials and reduces waste.  
-- **Energy Consumption:** Relatively low compared to more graphically intensive games; however, prolonged use can still contribute to energy use through player devices.
+##### Individual Dimension
+- Accessibility  
+- User Autonomy  
 
-#### Social Dimension  
-- **Social Interaction:** Lacks built-in social features or community platforms, focusing solely on individual gameplay.  
-- **Health Impacts:** Could potentially contribute to sedentary behavior if played excessively without breaks.
+##### Environmental Dimension
+- Materials and Resources  
+- Energy Consumption  
 
-#### Economic Dimension  
-- **Market Value:** Provides economic value in its market segment by appealing to enthusiasts of retro and platform games.  
-- **Business Operations:** Operates with a straightforward business model without recurrent revenue from the game post-purchase.
+##### Social Dimension
+- Social Interaction  
+- Health Impacts  
 
-#### Technical Dimension  
-- **Maintainability and Scalability:** Requires less frequent updates and maintenance compared to complex multiplayer games, simplifying long-term technical support.  
-- **Development Efficiency:** Utilizes established game development frameworks and tools, ensuring efficient production cycles and lower technical overhead.
+##### Economic Dimension
+- Market Value  
+- Business Operations  
 
-![alt text](QQ20250506-124010.png)
+##### Technical Dimension
+- Maintainability and Scalability  
+- Development Efficiency  
 
-### Synthesis: Threats, Opportunities, and Actions  
+#### Synthesis: Threats, Opportunities, and Actions
 
-#### Threats  
-- **Environmental Impact:** Continuous energy use during gameplay, although minor, is still relevant.  
-- **Health Concerns:** Risk of promoting prolonged sedentary periods among players.
+##### Threats
+- Environmental Impact  
+- Health Concerns  
 
-#### Opportunities  
-- **Sustainable Practices:** Opportunity to promote energy conservation tips within the game or on loading screens.  
-- **Health and Well-being:** Can include features such as regular reminders to take breaks or promote physical activity.
+##### Opportunities
+- Sustainable Practices  
+- Health and Well-being  
 
-#### Actions  
-- **Promoting Energy Efficiency:** Encourage players to use energy-efficient gaming devices or settings.  
-- **Encouraging Active Breaks:** Implement reminders for players to take breaks and engage in physical activities during extended sessions.
+##### Actions
+- Promoting Energy Efficiency  
+- Encouraging Active Breaks
+
 
 ### Conclusion  
 This sustainability impact assessment for *Iron Rebellion* identifies critical areas of impact with a focus on environmental and individual dimensions. The assessment guides the integration of sustainable practices into both game design and operational procedures. Moving forward, these insights will be used to enhance the game’s design and help mitigate any negative impacts associated with its use. This report will be included in the project documentation to inform stakeholders and guide future development decisions.
