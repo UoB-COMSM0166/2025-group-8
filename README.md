@@ -238,51 +238,39 @@ The **chapterSelector** dynamically generated levels using character-mapped text
 
 ### Three Technical Challenges
 
-#### Technical Challenge 1: Cross-Platform Implementation
+### Technical Challenge 1: Cross-Platform Implementation
 
-**I. Relative Size**  
-To ensure *Iron Rebellion* runs smoothly across desktops, tablets, and smartphones, we implemented a responsive scaling system. All game assets—including tiles, characters, and UI—are proportionally scaled relative to the device’s screen size. This ensures consistent visual clarity and interaction precision regardless of screen dimensions.
+| Section              | Description |
+|----------------------|-------------|
+| **I. Relative Size** | To ensure *Iron Rebellion* runs smoothly across desktops, tablets, and smartphones, we implemented a responsive scaling system. All game assets—including tiles, characters, and UI—are proportionally scaled relative to the device’s screen size. This ensures consistent visual clarity and interaction precision regardless of screen dimensions. |
+| **II. Access Device Model** | We utilized JavaScript’s device detection capabilities to identify the user’s device type and tailor the game experience accordingly. For example, touchscreen gestures are enabled on tablets and smartphones, while full keyboard support remains on desktops. This improves player comfort and accessibility across platforms. |
+| **III. Virtual Keyboard** | To support users without physical keyboards, we added an on-screen virtual controller that activates on mobile devices. It includes directional inputs and action buttons optimized for touch, enabling full gameplay functionality without hardware limitations. |
+| **Impact** | Cross-platform support significantly broadens the reach of *Iron Rebellion*, making it playable across a wide variety of devices. By maintaining performance and usability across screen sizes and input types, we created an inclusive and seamless user experience. |
 
-**II. Access Device Model**  
-We utilized JavaScript’s device detection capabilities to identify the user’s device type and tailor the game experience accordingly. For example, touchscreen gestures are enabled on tablets and smartphones, while full keyboard support remains on desktops. This improves player comfort and accessibility across platforms.
-
-**III. Virtual Keyboard**  
-To support users without physical keyboards, we added an on-screen virtual controller that activates on mobile devices. It includes directional inputs and action buttons optimized for touch, enabling full gameplay functionality without hardware limitations.
-
-**Impact:**  
-Cross-platform support significantly broadens the reach of *Iron Rebellion*, making it playable across a wide variety of devices. By maintaining performance and usability across screen sizes and input types, we created an inclusive and seamless user experience.
 
 ---
 
-#### Technical Challenge 2: Collision Mechanism Design
+### Technical Challenge 2: Collision Mechanism Design
 
-**I. Boundary Determination**  
-Accurate collision requires defining precise hitboxes for each game object. We refined bounding box calculations based on sprite dimensions to prevent edge cases like floating, overlapping, or clipping into platforms.
-
-**II. Collision Detection**  
-The original brute-force method of checking all object collisions per frame was replaced with a grid-based spatial filtering system. This optimized approach only tests objects in proximity to the player, reducing computational overhead and improving responsiveness.
-
-**III. Different Behaviors**  
-Each type of object responds to collisions differently. Platforms stop the player, hazards reduce health, and buttons trigger doors. We implemented an extensible behavior handler that allows customized responses for different object types, streamlining future feature additions like springs or trapdoors.
-
-**Impact:**  
-This redesigned collision system resolved core usability issues such as invisible walls and misaligned physics. It improved both gameplay fluidity and future extensibility for new interactions and hazards.
+| Section               | Description |
+|------------------------|-------------|
+| **I. Boundary Determination** | Accurate collision requires defining precise hitboxes for each game object. We refined bounding box calculations based on sprite dimensions to prevent edge cases like floating, overlapping, or clipping into platforms. |
+| **II. Collision Detection** | The original brute-force method of checking all object collisions per frame was replaced with a grid-based spatial filtering system. This optimized approach only tests objects in proximity to the player, reducing computational overhead and improving responsiveness. |
+| **III. Different Behaviors** | Each type of object responds to collisions differently. Platforms stop the player, hazards reduce health, and buttons trigger doors. We implemented an extensible behavior handler that allows customized responses for different object types, streamlining future feature additions like springs or trapdoors. |
+| **Impact** | This redesigned collision system resolved core usability issues such as invisible walls and misaligned physics. It improved both gameplay fluidity and future extensibility for new interactions and hazards. |
 
 ---
 
-#### Technical Challenge 3: Progressive Level Design
 
-**I. Incremental Difficulty**  
-Our game features four levels with a steadily increasing difficulty curve. In the first three levels, difficulty is raised by introducing more enemies—such as mechanical dogs and drones—and by placing more environmental obstacles. Instead of changing platform shapes or adding moving platforms, we focused on the number and arrangement of static platforms to increase challenge through tighter jumps and more intense combat scenarios.
+### Technical Challenge 3: Progressive Level Design
 
-**II. Scene Variation and Atmosphere**  
-To enhance player engagement and maintain visual interest, each of the four levels features a unique scene design and art style. These include variations in background, tile sets, color schemes, and thematic elements that reflect the tone and difficulty of the level. This not only enriches the visual experience but also helps players intuitively sense progression and prepare for new challenges.
+| Section                     | Description |
+|-----------------------------|-------------|
+| **I. Incremental Difficulty** | Our game features four levels with a steadily increasing difficulty curve. In the first three levels, difficulty is raised by introducing more enemies—such as mechanical dogs and drones—and by placing more environmental obstacles. Instead of changing platform shapes or adding moving platforms, we focused on the number and arrangement of static platforms to increase challenge through tighter jumps and more intense combat scenarios. |
+| **II. Scene Variation and Atmosphere** | To enhance player engagement and maintain visual interest, each of the four levels features a unique scene design and art style. These include variations in background, tile sets, color schemes, and thematic elements that reflect the tone and difficulty of the level. This not only enriches the visual experience but also helps players intuitively sense progression and prepare for new challenges. |
+| **III. Boss Integration** | The final level introduces a single-phase boss fight that acts as the game's climax. While the boss does not evolve through phases, it provides a consistent and elevated challenge through strong attacks and limited maneuvering space. The encounter demands accurate jumping and shooting, testing the player’s mastery of the core mechanics under sustained pressure. |
+| **Impact** | With limited player abilities, we relied on thoughtful level layout, increasing enemy density, and a climactic boss battle to create a compelling difficulty progression. The addition of varied scene designs further deepened the player’s sense of progression and immersion. This approach kept the gameplay accessible while ensuring a rewarding and increasingly challenging experience. |
 
-**III. Boss Integration**  
-The final level introduces a single-phase boss fight that acts as the game's climax. While the boss does not evolve through phases, it provides a consistent and elevated challenge through strong attacks and limited maneuvering space. The encounter demands accurate jumping and shooting, testing the player’s mastery of the core mechanics under sustained pressure.
-
-**Impact**  
-With limited player abilities, we relied on thoughtful level layout, increasing enemy density, and a climactic boss battle to create a compelling difficulty progression. The addition of varied scene designs further deepened the player’s sense of progression and immersion. This approach kept the gameplay accessible while ensuring a rewarding and increasingly challenging experience.
 
 ## Evaluation
 
