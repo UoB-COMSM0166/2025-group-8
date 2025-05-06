@@ -426,6 +426,10 @@ Iron Rebellion is a 2D platform-jumping game designed to provide an engaging and
 
 ### Detailed Sustainability Effects  
 
+#### Individual Dimension  
+- **Accessibility:** The game's simplicity and low hardware requirements make it accessible to a wider audience, including users with less powerful devices.  
+- **User Autonomy:** As a single-player game with no in-game purchases or external dependencies, players have full control over their experience without external pressures.  
+
 #### Environmental Dimension  
 - **Materials and Resources:** Primarily digital distribution minimizes the use of physical materials and reduces waste.  
 - **Energy Consumption:** Relatively low compared to more graphically intensive games; however, prolonged use can still contribute to energy use through player devices.
@@ -441,6 +445,8 @@ Iron Rebellion is a 2D platform-jumping game designed to provide an engaging and
 #### Technical Dimension  
 - **Maintainability and Scalability:** Requires less frequent updates and maintenance compared to complex multiplayer games, simplifying long-term technical support.  
 - **Development Efficiency:** Utilizes established game development frameworks and tools, ensuring efficient production cycles and lower technical overhead.
+
+![alt text](QQ20250506-124010.png)
 
 ### Synthesis: Threats, Opportunities, and Actions  
 
