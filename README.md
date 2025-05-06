@@ -1,10 +1,9 @@
 # 2025-group-8
 2025 COMSM0166 group 8
 
+# Project Report: Iron Rebellion
 
-## Project Report: Iron Rebellion
-
-### Introduction
+## Introduction
 
 Iron Rebellion is a 2D platform jumping game that revives the nostalgic appeal of classic platformers while introducing modern design principles to enhance gameplay experience. Designed as a narrative-driven adventure, the game blends quick reflex-based mechanics with puzzle-solving elements to engage players of all skill levels.
 
@@ -12,7 +11,7 @@ The visual design adopts a minimalist pixel-art style, maintaining simplicity wh
 
 What sets *Iron Rebellion* apart is its seamless integration of narrative, challenges, and progressive complexity across handcrafted levels. Players are not just jumping platforms—they are unraveling a story. This fusion enriches the game’s depth and makes each level a meaningful experience.
 
-## Our Game
+### Our Game
 Iron Rebellion is a 2D platformer that blends classic arcade gameplay with modern design principles. Players control a robot dog protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
 
 CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
@@ -23,7 +22,7 @@ CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/bl
   <img src="https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2008.43.06.png" alt="Watch the video" width="100%" />
 </a>
 
-## Our Group
+### Our Group
 
 ![team pic](./pictures/group_pic_new.png)
 
@@ -35,7 +34,7 @@ CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/bl
 | 4 | Zhi Zhao | ug23003@bristol.ac.uk | Developer | ZZ1975 |
 | 5 | Kaijie Xu | hb24857@bristol.ac.uk | Project Manager | kkkkkaneeeee |
 
-## Inspiration Mining
+### Inspiration Mining
 
 | Game Name                  | Game Type                          | Mechanics                                                                                                                                                                                                                     | Reference |
 |---------------------------|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
@@ -62,7 +61,7 @@ CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/bl
 | Winter Dodge              | Skill > One-button                 | Auto-skiing game, change direction, get close to trees for score bonuses.                                                                                                                                                    | [Link](https://www.coolmathgames.com/0-winter-dodge) |
 | Suika Watermelon Game     | Strategy > High Score Games        | Merge fruits for higher scores, limited pushes, avoid box overflow.                                                                                                                                                          | [Link](https://en.wikipedia.org/wiki/Suika_Game) |
 
-## Prototype Video of Two Ideas
+### Prototype Video of Two Ideas
 
 - **Super Mario:** 
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
@@ -78,10 +77,10 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 
 
 
-## Prototype Video of Final Idea
+### Prototype Video of Final Idea
 [![alt text](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/cover-final.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
 
-### Requirements
+## Requirements
 
 The foundation of *Iron Rebellion* was shaped through structured requirements engineering to prevent issues like feature creep and undefined scopes. We used collaborative tools like Miro and Google Docs to brainstorm and prioritize features that mattered most to players.
 
@@ -96,7 +95,7 @@ Acceptance criteria ensured clarity in implementation. We also created paper pro
 
 Our MVP included handcrafted levels, three difficulty settings, and basic AI—all designed with adaptability in mind.
 
-## Stakeholder list
+### Stakeholder list
 
 - **Players:** End users who will interact with and enjoy the game.
 - **Game Developers:** Team members responsible for game design, coding, and testing.
@@ -106,7 +105,7 @@ Our MVP included handcrafted levels, three difficulty settings, and basic AI—a
 - **Game Reviewers and Bloggers:** Key influencers who will help shape public perception of the game.
 - **Lecturers and TAs:** Academic supervisors and teaching assistants who provide guidance, monitor project progress, and ensure the game development aligns with academic standards and learning outcomes.
 
-## Epics & User Stories
+### Epics & User Stories
 | Stakeholder            | Epic                                        | User Story                                  | Acceptance Criteria |
 |------------------------|---------------------------------------------|---------------------------------------------|---------------------|
 | **Players**            | **Player Experience Enhancement**           | As a player, I want the game to offer at least three difficulty settings: Easy, Medium, and Hard, so that I can enjoy the game at a pace suitable for my skill level. | Given the game's settings menu, when I select a difficulty setting, then the game's speed and obstacle density should adjust accordingly. |
@@ -120,7 +119,7 @@ Our MVP included handcrafted levels, three difficulty settings, and basic AI—a
 | **Game Reviewers and Bloggers** | **Enhancing Game Visibility and Credibility** | As a game reviewer or blogger, I want early access to game builds and detailed release notes at least one month before the official launch, so that I can review and provide informed feedback, helping to build anticipation and inform potential players. | Given early access, when I review the game and communicate feedback, then it should be considered for improvements before launch. |
 | **Game Reviewers and Bloggers** | **Enhancing Game Visibility and Credibility** | As a game reviewer or blogger, I want exclusive access to interviews with the development team and behind-the-scenes content, so that I can create engaging content that provides deeper insights into the game development process. | Given access to the development team, when I conduct interviews or receive content, then it should be detailed and suitable for direct embedding in posts. |
 
-## Reflection
+### Reflection
 
 During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on **epics**, **user stories**, and **acceptance criteria**.
 
@@ -142,7 +141,7 @@ This experience not only improved our product's alignment with user expectations
 
 
 
-### Design (待修改)
+## Design (待修改)
 
 To support modularity and future expansion, *Iron Rebellion* followed a loosely inspired Model-View-Controller (MVC) architecture. The **GameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **Player**, **EnemyDrone**, and **MovingPlatform**.
 
@@ -154,7 +153,7 @@ This architecture made the game easy to iterate and test. Visual aids, including
 
 ---
 
-#### Sequence Diagram: Chapter Level Logic
+### Sequence Diagram: Chapter Level Logic
 
 ![Sequence Diagram Chapter](./pictures/sequence_diagram_chapter.png)
 
@@ -164,7 +163,7 @@ We improved performance by introducing spatial partitioning in collision detecti
 
 ---
 
-#### Sequence Diagram: Early Sketch
+### Sequence Diagram: Early Sketch
 
 ![Sequence Diagram Sketch](./pictures/sequence_diagram_sketch.png)
 
@@ -172,7 +171,7 @@ We improved performance by introducing spatial partitioning in collision detecti
 
 Overall, the evolving design documentation served as a living reference, keeping team members aligned during agile development sprints.
 
-### Implementation (待修改)
+## Implementation (待修改)
 
 We implemented *Iron Rebellion* in layers, starting with a playable prototype. The **GameObject** base class unified behavior across interactive elements, with subclasses overriding specific logic.
 
@@ -188,7 +187,7 @@ Additional systems like switches and doors were implemented using decoupled trig
 
 These technical choices helped balance performance with gameplay quality, delivering a fluid and satisfying player experience.
 
-## Three Technical Challenges
+### Three Technical Challenges
 
 ### Technical Challenge 1: Cross-Platform Implementation
 
@@ -236,14 +235,14 @@ The final level introduces a single-phase boss fight that acts as the game's cli
 #### Impact  
 With limited player abilities, we relied on thoughtful level layout, increasing enemy density, and a climactic boss battle to create a compelling difficulty progression. The addition of varied scene designs further deepened the player’s sense of progression and immersion. This approach kept the gameplay accessible while ensuring a rewarding and increasingly challenging experience.
 
-### Evaluation
+## Evaluation
 
 Our evaluation used a combination of qualitative and quantitative techniques to ensure usability and fun across difficulty levels.
 
-#### Qualitative: Think-Aloud Usability Testing
+### Qualitative: Think-Aloud Usability Testing
 We conducted think-aloud tests with eight players, revealing UI and collision issues. Fixes included adding pause/reset options and refining platform boundaries. Testers appreciated level clarity and responsive checkpoints.
 
-#### Quantitative: NASA TLX Workload Analysis
+### Quantitative: NASA TLX Workload Analysis
 Ten players rated difficulty variants of Level 1 using NASA TLX. Workload scores increased with difficulty as expected:
 
 - Easy: Lower mental demand and frustration.
@@ -260,7 +259,7 @@ We used both black-box playtesting and a dedicated [**white-box test suite**](./
 
 Visual QA was handled through manual sprite checks and browser compatibility testing. Every major change was tested on GitHub Pages before deployment.
 
-## Think-Aloud Usability Test Report
+### Think-Aloud Usability Test Report
 
 **Game:** *Iron Rebellion*  
 **Participant:** 1 student (adjacent group)
@@ -343,7 +342,7 @@ Visual QA was handled through manual sprite checks and browser compatibility tes
 
 ---
 
-## Heuristic Evaluation Report: Iron Rebellion
+### Heuristic Evaluation Report: Iron Rebellion
 
 Summary
 A heuristic evaluation was conducted by an external observer to identify usability issues in the Iron Rebellion game. Key findings include critical violations of Nielsen’s usability heuristics, particularly in collision detection, navigation controls, and level design consistency. Below is the prioritized list of issues and recommendations.
@@ -358,7 +357,7 @@ Evaluation Table
 | **Enemy AI**       | Predictable drone behavior; no difficulty progression.                | Flexibility and Efficiency of Use           | 3                | 3             | 3                  | 1.00               |
 | **Game Progression**| No game-over state; unlimited respawns reduce challenge.              | User Control and Freedom, Error Prevention  | 3                | 2             | 4                  | 0.33               |
 
-## Key Findings  
+### Key Findings  
 
 ### Critical Issues (Severity ≥ 1.33)  
 - Collision detection failures disrupt core gameplay.  
@@ -373,7 +372,7 @@ Evaluation Table
 
 ---
 
-## Recommendations  
+### Recommendations  
 
 ### Priority Fixes  
 - Fix collision detection to eliminate "invisible walls."  
@@ -389,19 +388,19 @@ Evaluation Table
 
 ---
 
-## Next Steps  
+### Next Steps  
 - Address collision and UI issues first.  
 - Then iterate on level complexity and enemy behavior.
 
 
 # Quantitative Analysis Report: Game Difficulty and Usability Assessment
 
-## Objective  
+### Objective  
 This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing the first two chapters of our game. While the game does not offer traditional difficulty modes (e.g., Easy, Medium, Hard), it consists of four sequential chapters, each with its own level of challenge. For this study, **Chapter 1** and **Chapter 2** were selected to represent different levels of in-game difficulty.
 
 We utilized the **NASA Task Load Index (TLX)** to measure workload dimensions and the **System Usability Scale (SUS)** to assess overall usability. This dual approach offers a holistic view of how the design and challenge of different chapters impact player experience and satisfaction.
 
-## Methodology  
+### Methodology  
 The evaluations were conducted in a controlled environment with **ten users**. To minimize learning bias, we employed a **counterbalanced design**:
 
 - Half of the participants played **Chapter 1 first**, followed by Chapter 2.
@@ -409,7 +408,7 @@ The evaluations were conducted in a controlled environment with **ten users**. T
 
 After completing each chapter, participants filled out both the NASA TLX and SUS questionnaires. This approach allowed us to accurately capture subjective perceptions of workload and usability after each gameplay session.
 
-## Statistical Analysis  
+### Statistical Analysis  
 To evaluate whether the observed differences between Chapter 1 and Chapter 2 were statistically significant, we conducted a **Wilcoxon signed-rank test**, which is suitable for small sample sizes and non-normal distributions.
 
 - **Test Statistic:** Wilcoxon W = 9  
@@ -417,7 +416,7 @@ To evaluate whether the observed differences between Chapter 1 and Chapter 2 wer
 
 Since W > 8, the result is **not statistically significant**.
 
-## NASA TLX Results  
+### NASA TLX Results  
 The following scores represent average user responses on a scale of 0–10:
 
 | Dimension       | Chapter 1 | Chapter 2 |
@@ -429,7 +428,7 @@ The following scores represent average user responses on a scale of 0–10:
 | Effort         | 5.9       | 8.9       |
 | Frustration    | 2.9       | 6.8       |
 
-## SUS Results  
+### SUS Results  
 
 | Chapter    | SUS Score |
 |------------|-----------|
@@ -439,7 +438,7 @@ The following scores represent average user responses on a scale of 0–10:
 - **Chapter 1** achieved generally good usability.
 - **Chapter 2** showed increased usability challenges, particularly related to complexity and confidence.
 
-## Discussion  
+### Discussion  
 The combined results suggest:
 
 - **Chapter 1** offers a balanced gameplay experience, with manageable workload and strong usability.
@@ -447,10 +446,10 @@ The combined results suggest:
 
 The increase in perceived workload in Chapter 2 did not lead to a **statistically significant** difference in usability ratings.
 
-## Statistical Conclusion  
+### Statistical Conclusion  
 As the **Wilcoxon signed-rank test** yielded a **W value of 9** (above the critical threshold of 8), we **cannot reject the null hypothesis**. This indicates **no significant difference** in SUS scores between Chapter 1 and Chapter 2 at the 0.05 significance level.
 
-## Conclusion  
+### Conclusion  
 This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences.
 
 
@@ -477,7 +476,7 @@ Pull requests were reviewed collaboratively. GitHub Discussions were used to log
 
 We learned to refine task estimates using story points and improved planning across sprints. The team regularly supported each other in testing, optimization, and content polishing.
 
-## Our Progress
+### Our Progress
 
 Kanban Board : [![KANBAN](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2013.45.02.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
@@ -505,7 +504,7 @@ We followed ethical game design:
 
 These principles guided responsible development and will be expanded in future updates.
 
-## Sustainability Impact Assessment  
+### Sustainability Impact Assessment  
 **Project Name:** Iron Rebellion  
 **Framework Used:** Sustainability Awareness Framework (SusAF)  
 
@@ -562,7 +561,7 @@ This sustainability impact assessment for *Iron Rebellion* identifies critical a
 
 
 
-## Green Foundation Implementation Patterns Analysis
+### Green Foundation Implementation Patterns Analysis
 
 Our game code integrates several key sustainable coding practices aligned with **Green Foundation Implementation** patterns:
 
@@ -579,7 +578,7 @@ We streamlined our codebase by removing unused CSS rules. This not only simplifi
 
 These implementations not only enhance user experience through improved performance but also contribute to sustainable development by lowering resource consumption and optimizing energy efficiency within our game.
 
-### Conclusion
+## Conclusion
 
 *Iron Rebellion* was both a technical and creative achievement for our team. We overcame challenges in collision detection, difficulty balancing, and AI optimization through structured design, iterative testing, and consistent collaboration.
 
