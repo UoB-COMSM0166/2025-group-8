@@ -1,6 +1,7 @@
 # 2025-group-8
 
-[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/game_banner.png?raw=true)](https://uob-comsm0166.github.io/2025-group-8/)
+![Iron Rebellion](./pictures/game_banner.png)
+
 
 
 # Content
@@ -118,19 +119,21 @@ Iron Rebellion is a 2D platformer that blends classic arcade gameplay with moder
 - **Super Mario:** 
 Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
 
-[![Super Mario](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/cover.png)](https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link)
+![Super Mario](./pictures/cover.png)
+
 
 
 
 - **Merge Big Watermelon:** 
 Merge Big Watermelon is a casual puzzle game known for its simple and engaging mechanics. Players merge similar items on a grid to create larger ones, aiming to form the biggest watermelon. The game features a minimalistic, colorful design and is developed with technologies that ensure it works across multiple platforms. It's easy to play but offers increasing challenges
 
-[![Merge Big Watermelon](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/cover2.png)](https://drive.google.com/file/d/10CyhntnRV76U0o-qCPSqY2Diu1KsxhMl/view?usp=drive_link)
+![Merge Big Watermelon](./pictures/cover2.png)
+
 
 
 
 ### Prototype Video of Final Idea
-[![alt text](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/cover-final.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
+[![alt text](./pictures/cover-final.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
 
 ## Requirements
 
@@ -511,7 +514,7 @@ We learned to refine task estimates using story points and improved planning acr
 
 ### Our Progress
 
-Kanban Board : [![KANBAN](https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2013.45.02.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
+Kanban Board : [![KANBAN](./pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
 ## Sustainability, Ethics, and Accessibility
 
