@@ -516,7 +516,7 @@ Acceptance criteria ensured clarity in implementation. We also created paper pro
 
 Our MVP included handcrafted levels, three difficulty settings, and basic AI—all designed with adaptability in mind.
 
-### Design
+### Design (待修改)
 
 To support modularity and future expansion, *Iron Rebellion* followed a loosely inspired Model-View-Controller (MVC) architecture. The **GameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **Player**, **EnemyDrone**, and **MovingPlatform**.
 
@@ -546,7 +546,7 @@ We improved performance by introducing spatial partitioning in collision detecti
 
 Overall, the evolving design documentation served as a living reference, keeping team members aligned during agile development sprints.
 
-### Implementation
+### Implementation (待修改)
 
 We implemented *Iron Rebellion* in layers, starting with a playable prototype. The **GameObject** base class unified behavior across interactive elements, with subclasses overriding specific logic.
 
