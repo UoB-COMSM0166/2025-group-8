@@ -154,6 +154,16 @@ This architecture made the game easy to iterate and test. Visual aids, including
 
 ---
 
+#### Class Diagram
+
+![Class Diagram](./pictures/class_diagram.png)
+
+---
+
+Class diagram shows the structure of the project, and it is designed with drawio.
+
+---
+
 #### Sequence Diagram: Chapter Level Logic
 
 ![Sequence Diagram Chapter](./pictures/sequence_diagram_chapter.png)
