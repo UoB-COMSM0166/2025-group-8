@@ -110,7 +110,7 @@ Merge Big Watermelon is a casual puzzle game known for its simple and engaging m
 
 
 ## Final  Ideas
-[![alt text](pictures/final_idea_main_characters.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
+[![alt text](https://github.com/UoB-COMSM0166/2025-group-8/blob/main/pictures/cover-final.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
 
 
 
