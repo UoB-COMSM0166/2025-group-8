@@ -61,6 +61,8 @@ CLICK TO PLAY[![Iron Rebellion](https://github.com/UoB-COMSM0166/2025-group-8/bl
 | Winter Dodge              | Skill > One-button                 | Auto-skiing game, change direction, get close to trees for score bonuses.                                                                                                                                                    | [Link](https://www.coolmathgames.com/0-winter-dodge) |
 | Suika Watermelon Game     | Strategy > High Score Games        | Merge fruits for higher scores, limited pushes, avoid box overflow.                                                                                                                                                          | [Link](https://en.wikipedia.org/wiki/Suika_Game) |
 
+---
+
 ### Prototype Video of Two Ideas
 
 - **Super Mario:** 
@@ -123,25 +125,25 @@ Our MVP included handcrafted levels, three difficulty settings, and basic AI—a
 
 During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on **epics**, **user stories**, and **acceptance criteria**.
 
-### Epics  
+#### Epics  
 Epics helped us frame the major goals of our project, dividing our focus between engaging gameplay and robust technical performance. This division ensured a balanced approach to both user experience and system functionality.
 
-### User Stories  
+#### User Stories  
 User stories enabled us to see the game through the players' eyes, driving us to prioritize features that directly enhance user engagement and satisfaction, such as customizable characters and multilingual support. Each story clearly outlined specific user needs, guiding our design and development efforts.
 
-### Acceptance Criteria  
+#### Acceptance Criteria  
 Acceptance criteria were essential in defining the specific conditions for completing user stories, facilitating precise testing and quality control. This specificity helped prevent scope creep, keeping our team aligned on the definition of feature completion.
 
-### Project Impact  
+#### Project Impact  
 The context of creating an accessible and enjoyable game influenced every aspect of our project, from planning to implementation, ensuring we addressed the diverse needs of our player base and optimized the game for various devices.
 
-### Conclusion  
+#### Conclusion  
 This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
 
 
 
 
-### Design
+## Design
 
 To support modularity and future expansion, *Iron Rebellion* followed a loosely inspired Model-View-Controller (MVC) architecture. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
 
@@ -153,7 +155,7 @@ This architecture made the game easy to iterate and test. Visual aids, including
 
 ---
 
-#### Class Diagram
+### Class Diagram
 
 ![Class Diagram](./pictures/class_diagram.png)
 
@@ -163,7 +165,7 @@ Class diagram shows the structure of the project, and it is designed with drawio
 
 ---
 
-#### Sequence Diagram: Chapter Level Logic
+### Sequence Diagram: Chapter Level Logic
 
 ![Sequence Diagram Chapter](./pictures/sequence_diagram_chapter.png)
 
@@ -181,21 +183,11 @@ We improved performance by introducing spatial partitioning in collision detecti
 
 Overall, the evolving design documentation served as a living reference, keeping team members aligned during agile development sprints.
 
-### Implementation
+## Implementation
 
 We implemented *Iron Rebellion* in layers, starting with a playable prototype. The **gameObject** base class unified behavior across interactive elements, with subclasses overriding specific logic.
 
-The **chapterSelector** dynamically generated levels using character-mapped text files, enabling rapid level design changes. Early movement bugs (e.g., infinite jumps, wall clipping) were resolved through refined velocity and jump logic in **robotDogr**.
-
-Three main challenges shaped our process:
-
-1. **Collision Detection**: Originally inefficient and buggy. Solved with bounding box logic and spatial filtering.
-2. **Difficulty Scaling**: Implemented via a flexible map system and symbolic level files.
-3. **Enemy AI**: Evolved from static paths to a state machine (Idle, Patrol, Chase) with offscreen optimization for performance.
-
-Additional systems like switches and doors were implemented using decoupled trigger logic, making level puzzles more modular. We opted for handcrafted levels to maintain design quality.
-
-These technical choices helped balance performance with gameplay quality, delivering a fluid and satisfying player experience.
+The **chapterSelector** dynamically generated levels using character-mapped text files, enabling rapid level design changes. Early movement bugs (e.g., infinite jumps, wall clipping) were resolved through refined velocity and jump logic in **robotDog**.
 
 ### Three Technical Challenges
 
@@ -260,7 +252,7 @@ Ten players rated difficulty variants of Level 1 using NASA TLX. Workload scores
 
 A Wilcoxon Signed-Rank test (p < 0.01) validated significant differences, confirming successful difficulty scaling.
 
-#### Code Testing
+### Code Testing
 We used both black-box playtesting and a dedicated [**white-box test suite**](./tests/whiteboxTests.js). Key systems tested included:
 
 - Object collisions
@@ -274,13 +266,13 @@ Visual QA was handled through manual sprite checks and browser compatibility tes
 **Game:** *Iron Rebellion*  
 **Participant:** 1 student (adjacent group)
 
-### Tasks
+#### Tasks
 - Complete Level 1 from the main menu.
 - Attempt to return to the main menu mid-level.
 
 ---
 
-### Key Observations
+#### Key Observations
 
 - **Collision Detection Issues:**  
   Participant encountered "invisible walls" near platforms, causing confusion and frustration.  
@@ -308,7 +300,7 @@ Visual QA was handled through manual sprite checks and browser compatibility tes
 
 ---
 
-### Critical Issues
+#### Critical Issues
 
 - **Urgent Fixes:**
   - Broken collision detection.
@@ -325,7 +317,7 @@ Visual QA was handled through manual sprite checks and browser compatibility tes
 
 ---
 
-### Recommendations
+#### Recommendations
 
 **Priority Fixes:**
 - Repair collision detection.
@@ -345,7 +337,7 @@ Visual QA was handled through manual sprite checks and browser compatibility tes
 
 ---
 
-### Next Steps
+#### Next Steps
 
 - Address collision and UI issues as the highest priority.
 - Expand level complexity and improve enemy AI behavior based on user feedback.
@@ -367,38 +359,38 @@ Evaluation Table
 | **Enemy AI**       | Predictable drone behavior; no difficulty progression.                | Flexibility and Efficiency of Use           | 3                | 3             | 3                  | 1.00               |
 | **Game Progression**| No game-over state; unlimited respawns reduce challenge.              | User Control and Freedom, Error Prevention  | 3                | 2             | 4                  | 0.33               |
 
-### Key Findings  
+#### Key Findings  
 
-### Critical Issues (Severity ≥ 1.33)  
+#### Critical Issues (Severity ≥ 1.33)  
 - Collision detection failures disrupt core gameplay.  
 - Missing return functionality frustrates navigation.  
 
-### High-Impact Design Flaws (Severity ~1.00)  
+#### High-Impact Design Flaws (Severity ~1.00)  
 - Oversized obstacles and repetitive level design lower engagement.  
 - Simplistic enemy AI lacks challenge.  
 
-### Moderate Issues (Severity ≤ 0.33)  
+#### Moderate Issues (Severity ≤ 0.33)  
 - Unlimited respawns reduce stakes but are less urgent.  
 
 ---
 
-### Recommendations  
+#### Recommendations  
 
-### Priority Fixes  
+#### Priority Fixes  
 - Fix collision detection to eliminate "invisible walls."  
 - Add a pause/return menu for mid-level navigation.  
 
-### Design Improvements  
+#### Design Improvements  
 - Resize obstacles; introduce dynamic elements (e.g., moving platforms).  
 - Differentiate levels with unique mechanics (e.g., traps, boss fights).  
 
-### Long-Term Enhancements  
+#### Long-Term Enhancements  
 - Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).  
 - Add a game-over system with limited lives.  
 
 ---
 
-### Next Steps  
+#### Next Steps  
 - Address collision and UI issues first.  
 - Then iterate on level complexity and enemy behavior.
 
