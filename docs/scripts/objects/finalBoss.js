@@ -10,7 +10,7 @@ class FinalBoss extends Enemy{
       this.moveDirection = -1;
       this.maxSpeed = 0.8;
       this.imageDirection = -1;
-      this.health = 250;
+      this.health = 500;
     }
   
     aiMove() {
