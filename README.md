@@ -95,6 +95,10 @@
 
 Not everyone in our team excels at programming, but each member has their own strengths. This is the guiding principle behind our team's division of tasks—leveraging each person's expertise to work efficiently together.
 
+![McKinsey 7S model](./pictures/McKinsey_7S_model.png)
+
+Our team has talents in planning, art design,programming and other fields. With areasonable combination of these talents, weensure the stable progress of the development. The team possesses the skills for all aspects ofgame development, such as level design,character modeling, to ensure the smoothdevelopment of the game.
+
 ![sep_line](./pictures/sep_line_1.png)
 
 ## 2. Requirements
