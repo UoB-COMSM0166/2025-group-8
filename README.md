@@ -49,32 +49,37 @@
 
 - [Contribution](#contribution)
 
-
-
-
-
-
-
-
+---
 
 # Project Report: Iron Rebellion
 
-## Introduction
+> *"By seeing the dog's posittion, you can know what progress you are 👇"*
 
-Iron Rebellion is a 2D platform jumping game that revives the nostalgic appeal of classic platformers while introducing modern design principles to enhance gameplay experience. Designed as a narrative-driven adventure, the game blends quick reflex-based mechanics with puzzle-solving elements to engage players of all skill levels.
+![sep_line](./pictures/sep_line_0.png)
 
-The visual design adopts a painterly oil painting style, blending classical art aesthetics with modern gameplay. This artistic approach creates a rich and immersive atmosphere, appealing to both seasoned gamers and newcomers. While embracing the elegance of traditional visuals, the game also features modern enhancements like adjustable difficulty and intelligent enemy AI, delivering depth without sacrificing accessibility.
+## 1. Introduction
 
-What sets *Iron Rebellion* apart is its seamless integration of narrative, challenges, and progressive complexity across handcrafted levels. Players are not just jumping platforms—they are unraveling a story. This fusion enriches the game’s depth and makes each level a meaningful experience.
+- *Iron Rebellion* is a 2D platformer that brings back the nostalgic vibe of classic games, but with a modern twist. It mixes fast-paced jumping with puzzle-solving and weaves in a story that keeps things interesting for all kinds of players.
 
-### Our Game
-Iron Rebellion is a 2D platformer that blends classic arcade gameplay with modern design principles. Players control a robot dog protagonist navigating handcrafted levels filled with traps, enemies, and puzzles. With adaptive difficulty settings, responsive controls, and a narrative-driven progression, the game offers an engaging experience for both casual and hardcore players alike.
+- The visuals have a unique oil painting style, like a blend of old-school art and modern gameplay. It’s got that artistic feel without being too heavy, and with features like adjustable difficulty and smart enemy AI, it’s both challenging and accessible.
 
-<a href="https://drive.google.com/file/d/14OzUzU3QxR_EjTLvqBnGxJBfApoTYgf7/view?usp=sharing">
-  <img src="https://github.com/kkkkkaneeeee/kkkkkaneeeee/blob/main/Screenshot%202025-04-22%20at%2008.43.06.png" alt="Watch the video" width="100%" />
-</a>
+- What really makes *Iron Rebellion* stand out is how naturally it ties the story into the gameplay. You’re not just jumping through levels，actually you’re pushing the story forward. Each stage has purpose, not just action for the sake of action.
 
-### Our Group
+---
+
+### Our Game Video
+
+> *"I hope that our video could give you a comprehensive understanding of our game."* 
+
+> *"City of underground, adventure in jungle, war in ruins, destory the pivot - 4 chapters lead you in a world of Iron Rebellion!"*
+
+[![video cover](./pictures/final_video_cover.png)](https://drive.google.com/file/d/14OzUzU3QxR_EjTLvqBnGxJBfApoTYgf7/view?usp=sharing)
+
+---
+
+### Our Team Members
+
+> *"Want to know who made this excellent game? Here we are 👇"* 
 
 ![team pic](./pictures/group_pic_new.png)
 
@@ -86,26 +91,40 @@ Iron Rebellion is a 2D platformer that blends classic arcade gameplay with moder
 | 4 | Zhi Zhao | ug23003@bristol.ac.uk | Developer | ZZ1975 |
 | 5 | Kaijie Xu | hb24857@bristol.ac.uk | Project Manager | kkkkkaneeeee |
 
+> *"Everyone has their own value, and everything has its proper use."*
+
+Not everyone in our team excels at programming, but each member has their own strengths. This is the guiding principle behind our team's division of tasks—leveraging each person's expertise to work efficiently together.
+
+![sep_line](./pictures/sep_line_1.png)
+
+## 2. Requirements
+
+The foundation of Iron Rebellion was built within a clear requirements engineering framework to avoid issues like feature creep and unclear scopes. We used tools like Miro and Google Docs to brainstorm with the team and decide on the features that would matter most to players.
+
+At first, we had two ideas: a fantasy puzzle platformer and an adventure game with mechanical hazards. In the end, the team voted for the latter, which eventually became Iron Rebellion. This direction gave us a lot of creative freedom to craft a fun, modular gameplay experience.
+
+We used user stories and use case diagrams to map out player interactions, from starting the game and navigating menus to triggering switches and completing levels. For example:
+
+> *"As a casual gamer, I want an easy mode so I can enjoy the game without frustration."*
+
+> *"As a player, I want the game to auto-save my progress so I don’t lose my place."*
+
+To ensure clear implementation, we set acceptance criteria. We also created paper prototypes and small technical demos to test feasibility. Level design was tested using tile-based systems, and feedback from lecturers and TAs helped us refine player-centered stories.
+
+Our MVP included handcrafted levels, four difficulty settings, and the core game design.
+
+---
+
 ### Inspiration Mining
+
+First, through a brainstorming session within the team, each member contributed two game ideas, as shown in the table below:
 
 | Game Name                  | Game Type                          | Mechanics                                                                                                                                                                                                                     | Reference |
 |---------------------------|------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
 | Super Mario               | Role-playing, Adventure, 2D        | Jump on platforms/enemies, avoid attacks, move right, single-exit levels, time limit.                                                                                                                                        | [Link](https://en.wikipedia.org/wiki/Super_Mario) |
 | Metal Slug                | Run and gun                        | Movement and cover generate Dodge Points to reduce/cancel damage.                                                                                                                                                            | [Link](https://en.wikipedia.org/wiki/Metal_Slug) |
 | Stardew Valley            | Farming Simulation / RPG           | Manage farm, crops, animals, fishing, mining, crafting, combat, relationships.                                                                                                                                               | [Link](https://en.wikipedia.org/wiki/Stardew_Valley) |
-| This War of Mine          | Survival / Strategy                | Manage survivors, scavenge, craft, make moral choices, deal with hunger/illness/threats.                                                                                                                                     | [Link](https://en.wikipedia.org/wiki/This_War_of_Mine) |
-| Ori and the Will of Wisps| Action-Adventure / Platformer      | 2D exploration, puzzles, combat, emotional story, control Ori.                                                                                                                                                               | [Link](https://en.wikipedia.org/wiki/Ori_and_the_Will_of_the_Wisps) |
-| Gorogoa                  | Puzzle                             | Rearrange and interact with illustrated tiles to solve puzzles.                                                                                                                                                              | [Link](https://en.wikipedia.org/wiki/Gorogoa) |
-| Don't Starve              | Survival / Adventure               | Collect resources, craft, survive monsters/weather/starvation in a sandbox.                                                                                                                                                  | [Link](https://en.wikipedia.org/wiki/Don%27t_Starve) |
-| Dead Cells                | Rogue-like / Metroidvania          | Procedural levels, fast combat, permanent death, upgrades, non-linear exploration.                                                                                                                                           | [Link](https://en.wikipedia.org/wiki/Dead_Cells) |
-| Brotato                   | Roguelite / Top-Down Shooter       | Control potato with up to 6 weapons to defeat enemy waves.                                                                                                                                                                   | [Link](https://en.wikipedia.org/wiki/Brotato) |
-| Terraria                  | Sandbox / Adventure                | 2D world exploration, crafting, combat, biomes, build structures.                                                                                                                                                            | [Link](https://en.wikipedia.org/wiki/Terraria) |
 | Cuphead                   | Run-and-Gun / Platformer           | Hand-drawn art, boss fights, challenging platforming with precise timing.                                                                                                                                                    | [Link](https://en.wikipedia.org/wiki/Cuphead) |
-| Oxygen Not Included       | Colony Management / Simulation     | Manage duplicants, oxygen, and resources in a space colony.                                                                                                                                                                  | [Link](https://en.wikipedia.org/wiki/Oxygen_Not_Included) |
-| Dave the Diver            | Adventure / Management             | Explore underwater, fish, run sushi bar, solve mysteries.                                                                                                                                                                    | [Link](https://en.wikipedia.org/wiki/Dave_the_Diver) |
-| Batman: Arkham Series     | Action / Adventure                 | Control Batman, open-world exploration, stealth, combat, detective skills.                                                                                                                                                   | [Link](https://en.wikipedia.org/wiki/Batman:_Arkham) |
-| Frostpunk                | City-Building / Survival            | Manage a city in a frozen world, tough moral/resource decisions.                                                                                                                                                             | [Link](https://en.wikipedia.org/wiki/Frostpunk) |
-| Celeste                   | Platformer                         | Precision jumping, air-dashing, climbing; narrative on mental health and perseverance.                                                                                                                                       | [Link](https://store.steampowered.com/app/504230/Celeste/) |
 | GRIS                      | Adventure, Platformer              | Exploration and light puzzles with emotional narrative and evolving abilities.                                                                                                                                               | [Link](https://store.steampowered.com/app/683320/GRIS/) |
 | Slay the Spire            | Roguelike, Deck-Building           | Build a card deck to defeat enemies while climbing a spire, high replayability.                                                                                                                                              | [Link](https://store.steampowered.com/app/646570/Slay_the_Spire/) |
 | Factorio                  | Real-time strategy, Simulation     | Build automated factories, manage logistics/defenses, optimize production.                                                                                                                                                   | [Link](https://store.steampowered.com/app/427520/Factorio/) |
@@ -117,41 +136,33 @@ Iron Rebellion is a 2D platformer that blends classic arcade gameplay with moder
 
 ### Prototype Videos of Two Initial Ideas
 
+Next, through a team vote, we selected the two most popular game ideas as our preliminary concepts:
+
 - **Super Mario:** 
-Super Mario is a hallmark in platform game design, featuring meticulously crafted levels that progressively challenge players' skills. The game excels in tight, responsive controls and a physics engine that enhances predictable gameplay. Central to its appeal are the power-up system and varied enemy interactions, which diversify strategies and increase engagement. Super Mario also integrates puzzle elements and cooperative multiplayer, expanding its gameplay beyond traditional platforming to include adventure and teamwork dynamics.
+a landmark platformer with carefully designed levels that challenge players' skills. Known for its responsive controls and physics engine, the game features a power-up system and varied enemies that add depth. It also includes puzzle elements and cooperative multiplayer, expanding gameplay beyond traditional platforming.
 
 ![Super Mario](./pictures/cover.png)
 
-
-
-
 - **Merge Big Watermelon:** 
-Merge Big Watermelon is a casual puzzle game known for its simple and engaging mechanics. Players merge similar items on a grid to create larger ones, aiming to form the biggest watermelon. The game features a minimalistic, colorful design and is developed with technologies that ensure it works across multiple platforms. It's easy to play but offers increasing challenges
+a casual puzzle game where players merge items on a grid to create larger ones, aiming for the biggest watermelon. With its minimalist, colorful design and cross-platform compatibility, the game’s easy to play yet increasingly challenging.
 
 ![Merge Big Watermelon](./pictures/cover2.png)
 
-
-
+---
 
 ### Prototype Video of Final Idea
-[![alt text](./pictures/cover-final.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
 
-## Requirements
+Finally, after a thorough discussion and a technical feasibility analysis, we finalized our concept:
 
-The foundation of *Iron Rebellion* was shaped through structured requirements engineering to prevent issues like feature creep and undefined scopes. We used collaborative tools like Miro and Google Docs to brainstorm and prioritize features that mattered most to players.
+We decided to use *Super Mario* as a model, enhancing the game's fun by adjusting the theme, introducing more characters, and other elements, ultimately shaping our game.
 
-Two early concepts emerged: a fantasy puzzle platformer and a adventure with mechanical hazards. The team voted for the idea, which later became *Iron Rebellion*, offering room for creative design and modular gameplay.
+[![final idea video](./pictures/cover-final.png)](https://drive.google.com/file/d/1-vzK08G26HvWcuNe7zErzPBMIJYnoJdl/view?usp=sharing)
 
-We used user stories and use case diagrams to formalize player interactions from starting the game and navigating menus to triggering switches and completing levels. For instance:
-
-- "As a casual gamer, I want an easy mode so I can enjoy the game without frustration."
-- "As a player, I want the game to auto-save my progress so I don’t lose my place."
-
-Acceptance criteria ensured clarity in implementation. We also created paper prototypes and technical mini demos to validate feasibility. Level design was tested with tile-based systems, and stakeholders, including lecturers and TAhelped refine user-centric stories.
-
-Our MVP included handcrafted levels, three difficulty settings and the basic design.
+---
 
 ### Stakeholder list
+
+In the requirements gathering phase, we identified the stakeholders of our game.
 
 - **Players:** End users who will interact with and enjoy the game.
 - **Game Developers:** Team members responsible for game design, coding, and testing.
@@ -160,8 +171,14 @@ Our MVP included handcrafted levels, three difficulty settings and the basic des
 - **Marketing Team:** Personnel focused on promoting the game to increase visibility and engagement.
 - **Game Reviewers and Bloggers:** Key influencers who will help shape public perception of the game.
 - **Lecturers and TAs:** Academic supervisors and teaching assistants who provide guidance, monitor project progress, and ensure the game development aligns with academic standards and learning outcomes.
+> *"Definitely, Lecturers and TAs are our super first priority! 😝"*
+
+---
 
 ### Epics & User Stories
+
+And we listened to our stakeholders' voice:
+
 | Stakeholder            | Epic                                        | User Story                                  | Acceptance Criteria |
 |------------------------|---------------------------------------------|---------------------------------------------|---------------------|
 | **Players**            | **Player Experience Enhancement**           | As a player, I want the game to offer at least three difficulty settings: Easy, Medium, and Hard, so that I can enjoy the game at a pace suitable for my skill level. | Given the game's settings menu, when I select a difficulty setting, then the game's speed and obstacle density should adjust accordingly. |
@@ -175,31 +192,21 @@ Our MVP included handcrafted levels, three difficulty settings and the basic des
 | **Game Reviewers and Bloggers** | **Enhancing Game Visibility and Credibility** | As a game reviewer or blogger, I want early access to game builds and detailed release notes at least one month before the official launch, so that I can review and provide informed feedback, helping to build anticipation and inform potential players. | Given early access, when I review the game and communicate feedback, then it should be considered for improvements before launch. |
 | **Game Reviewers and Bloggers** | **Enhancing Game Visibility and Credibility** | As a game reviewer or blogger, I want exclusive access to interviews with the development team and behind-the-scenes content, so that I can create engaging content that provides deeper insights into the game development process. | Given access to the development team, when I conduct interviews or receive content, then it should be detailed and suitable for direct embedding in posts. |
 
+---
+
 ### Reflection
 
-During the development of our platform jumping game, our team deepened our understanding of agile development practices, focusing on **epics**, **user stories**, and **acceptance criteria**.
+- During the development of our game, our team deepened our understanding of agile development practices, focusing on **epics**, **user stories**, and **acceptance criteria**.
 
-#### Epics  
-Epics helped us frame the major goals of our project, dividing our focus between engaging gameplay and robust technical performance. This division ensured a balanced approach to both user experience and system functionality.
+- The This was our first time systematically applying software engineering principles to guide the development of a software project. Throughout the process, we learned each step of requirements gathering, which greatly contributes to our future career development.
 
-#### User Stories  
-User stories enabled us to see the game through the players' eyes, driving us to prioritize features that directly enhance user engagement and satisfaction, such as customizable characters and multilingual support. Each story clearly outlined specific user needs, guiding our design and development efforts.
+- This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
 
-#### Acceptance Criteria  
-Acceptance criteria were essential in defining the specific conditions for completing user stories, facilitating precise testing and quality control. This specificity helped prevent scope creep, keeping our team aligned on the definition of feature completion.
+![sep_line](./pictures/sep_line_2.png)
 
-#### Project Impact  
-The context of creating an accessible and enjoyable game influenced every aspect of our project, from planning to implementation, ensuring we addressed the diverse needs of our player base and optimized the game for various devices.
+## 3. Design
 
-#### Conclusion  
-This experience not only improved our product's alignment with user expectations but also refined our project management skills, emphasizing the importance of clear, user-focused, and detailed planning in software development.
-
-
-
-
-## Design
-
-To support modularity and future expansion, *Iron Rebellion* followed a loosely inspired Model-View-Controller (MVC) architecture. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
+To support modularity and future expansion, *Iron Rebellion* follows p5.js original architecture: each visual object has an draw() method, which makes the whole structure consistent. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
 
 - **robotDog** handles input and physics.
 - **chapterSelector** loads levels from text files and manages collision resolution.
@@ -211,64 +218,63 @@ This architecture made the game easy to iterate and test. Visual aids, including
 
 ### Class Diagram
 
+Class diagram shows the structure of the project. 
+
+> *"We designed this diagram with [draw.io](https://app.diagrams.net/)."*
+
 ![Class Diagram](./pictures/class_diagram.png)
-
-
-Class diagram shows the structure of the project, and it is designed with drawio.
 
 ---
 
 ### Sequence Diagram: Chapter Level Logic
 
+We improved performance by introducing spatial partitioning in collision detection. Behavioral diagrams like the Player State Diagram ensured accurate transitions and reduced bugs like double jumps. 
+
+> *"We designed this diagram with [plantuml](https://www.plantuml.com/plantuml/umla)."*
+
 ![Sequence Diagram Chapter](./pictures/sequence_diagram_chapter.png)
-
-
-We improved performance by introducing spatial partitioning in collision detection. Behavioral diagrams like the Player State Diagram ensured accurate transitions and reduced bugs like double jumps.
 
 ---
 
 ### Sequence Diagram: Early Sketch
 
-![Sequence Diagram Sketch](./pictures/sequence_diagram_sketch.png)
-
-
 Overall, the evolving design documentation served as a living reference, keeping team members aligned during agile development sprints.
 
-## Implementation
+> *"We designed this diagram with [plantuml](https://www.plantuml.com/plantuml/umla)."*
+
+![Sequence Diagram Sketch](./pictures/sequence_diagram_sketch.png)
+
+![sep_line](./pictures/sep_line_3.png)
+
+## 4. Implementation
 
 We implemented *Iron Rebellion* in layers, starting with a playable prototype. The **gameObject** base class unified behavior across interactive elements, with subclasses overriding specific logic.
 
 The **chapterSelector** dynamically generated levels using character-mapped text files, enabling rapid level design changes. Early movement bugs (e.g., infinite jumps, wall clipping) were resolved through refined velocity and jump logic in **robotDog**.
 
+---
+
 ### Three Technical Challenges
 
-### Technical Challenge 1: Cross-Platform Implementation
+- #### Technical Challenge 1: Cross-Platform Implementation
 
-| Section                   | Description | Graph |
-|---------------------------|-------------|-------|
+| Section                   | Description |
+|---------------------------|--------------------|
 | **I. Relative Size**       | Game assets scale proportionally to screen size, ensuring consistent visuals and interaction across devices. |       |
 | **II. Access Device Model** | Device detection enables touch gestures on mobile and full keyboard support on desktop for better accessibility. |       |
 | **III. Virtual Keyboard**   | A touch-optimized virtual controller appears on mobile devices to ensure full gameplay without physical keyboards. |       |
 | **Impact**                 | Cross-platform support enhances accessibility, usability, and reach, creating a seamless experience across all devices. |       |
 
+- #### Technical Challenge 2: Collision Mechanism Design
 
-
----
-
-### Technical Challenge 2: Collision Mechanism Design
-
-| Section                     | Description | Graph |
-|-----------------------------|-------------|-------|
+| Section                     | Description |
+|-----------------------------|--------------------|
 | **I. Boundary Determination** | Defined precise hitboxes to prevent visual bugs like floating or clipping into platforms. |       |
 | **II. Collision Detection**   | Replaced brute-force checks with grid-based filtering to improve performance and responsiveness. |       |
 | **III. Different Behaviors**  | Used a behavior handler to define custom responses for different objects like platforms, hazards, and triggers. |       |
 | **Impact**                   | Improved physics accuracy and laid groundwork for adding new interactive elements. |       |
 
-
----
-
-
-### Technical Challenge 3: Progressive Level Design
+- #### Technical Challenge 3: Progressive Level Design
 
 | Section                        | Description | Graph |
 |--------------------------------|-------------|-------|
@@ -277,96 +283,65 @@ The **chapterSelector** dynamically generated levels using character-mapped text
 | **III. Boss Integration**      | Final level features a static-phase boss requiring precise control under pressure. |       |
 | **Impact**                     | Balanced difficulty with accessibility through thoughtful layout, enemy density, and visual progression. |       |
 
+![sep_line](./pictures/sep_line_4.png)
 
-
-## Evaluation
+## 5. Evaluation
 
 Our evaluation used a combination of qualitative and quantitative techniques to ensure usability and fun across difficulty levels.
 
+---
+
 ### Qualitative: Think-Aloud Usability Testing
 We conducted think-aloud tests with eight players, revealing UI and collision issues. Fixes included adding pause/reset options and refining platform boundaries. Testers appreciated level clarity and responsive checkpoints.
-
-### Think-Aloud Usability Test Report
 
 #### Tasks
 - Complete Level 1 from the main menu.
 - Attempt to return to the main menu mid-level.
 
-
 #### Key Observations
 
-- **Collision Detection Issues:**  
-  Participant encountered "invisible walls" near platforms, causing confusion and frustration.  
-  > "Why am I bouncing off nothing here?"
-
-- **Missing Return Functionality:**  
-  No option to exit mid-level; participant tried ESC/UI buttons unsuccessfully.  
-  > "Do I have to close the game?"
-
-- **Oversized Obstacles:**  
-  Large obstacles trapped the player, forcing respawns.  
-  > "This rock is way too big—I'm stuck!"
-
-- **Repetitive Level Design:**  
-  Levels 1 and 2 felt identical except for backgrounds, with no mechanical or enemy variation.  
-  > "Where's the challenge?"
-
-- **Unlimited Respawns:**  
-  Infinite retries reduced stakes; no game-over system observed.  
-  > "No stakes—boring!"
-
-- **Predictable Enemy AI:**  
-  Drones followed simple, easily avoidable paths.  
-  > "Too easy to dodge."
-
+| **Issue**                      | **Description**                                                                 | **Participant Feedback**                  |
+|---------------------------------|---------------------------------------------------------------------------------|-------------------------------------------|
+| **Collision Detection Issues**  | Participant encountered "invisible walls" near platforms, causing confusion.    | "Why am I bouncing off nothing here?"     |
+| **Missing Return Functionality**| No option to exit mid-level; participant tried ESC/UI buttons unsuccessfully.    | "Do I have to close the game?"            |
+| **Oversized Obstacles**         | Large obstacles trapped the player, forcing respawns.                            | "This rock is way too big—I'm stuck!"    |
+| **Repetitive Level Design**     | Levels 1 and 2 felt identical except for backgrounds, with no mechanical variation. | "Where's the challenge?"                |
+| **Unlimited Respawns**          | Infinite retries reduced stakes; no game-over system observed.                  | "No stakes—boring!"                      |
+| **Predictable Enemy AI**        | Drones followed simple, easily avoidable paths.                                  | "Too easy to dodge."                     |
 
 #### Critical Issues
 
-- **Urgent Fixes:**
-  - Broken collision detection.
-  - Lack of pause/return menu disrupts core usability.
-
-- **Design Weaknesses:**
-  - Repetitive levels.
-  - Oversized obstacles.
-  - Trivial enemy behavior lowers engagement.
-
-- **Missing Systems:**
-  - No difficulty scaling.
-  - No fail states, harming replayability.
-
+| **Category**         | **Issue**                                      | 
+|----------------------|------------------------------------------------|
+| **Urgent Fixes**     | Broken collision detection.                    |
+|                      | Lack of pause/return menu disrupts core usability. |
+| **Design Weaknesses**| Repetitive levels.                             |
+|                      | Oversized obstacles.                           |
+|                      | Trivial enemy behavior lowers engagement.      |
+| **Missing Systems**  | No difficulty scaling.                         |
+|                      | No fail states, harming replayability.         |
 
 #### Recommendations
 
-- **Priority Fixes:**
-  - Repair collision detection.
-  - Add a pause/return menu for mid-level navigation.
-
-- **Gameplay Enhancements:**
-  - Resize obstacles to improve movement.
-  - Add dynamic elements (e.g., moving platforms).
-
-- **Enemy and Difficulty Improvements:**
-  - Introduce tiered difficulty settings.
-  - Develop unique enemy behaviors (e.g., ambushes, patrol patterns).
-
-- **Progression Systems:**
-  - Implement a game-over state and limited lives.
-  - Differentiate levels with new mechanics (e.g., environmental hazards, boss fights).
-
-
+| **Category**                | **Fixes/Improvements**                                                       |
+|-----------------------------|------------------------------------------------------------------------------|
+| **Priority Fixes**          | Repair collision detection.                                                  |
+|                             | Add a pause/return menu for mid-level navigation.                            |
+| **Gameplay Enhancements**   | Resize obstacles to improve movement.                                        |
+|                             | Add dynamic elements (e.g., moving platforms).                               |
+| **Enemy and Difficulty Improvements** | Introduce tiered difficulty settings.                                 |
+|                             | Develop unique enemy behaviors (e.g., ambushes, patrol patterns).            |
+| **Progression Systems**     | Implement a game-over state and limited lives.                               |
+|                             | Differentiate levels with new mechanics (e.g., environmental hazards, boss fights). |
 
 #### Next Steps
 
   - Address collision and UI issues as the highest priority.
   - Expand level complexity and improve enemy AI behavior based on user feedback.
 
+---
 
-
-### Qualitative: Heuristic Evaluation Report: Iron Rebellion
-
-#### Summary
-A heuristic evaluation was conducted by an external observer to identify usability issues in the Iron Rebellion game. Key findings include critical violations of Nielsen’s usability heuristics, particularly in collision detection, navigation controls, and level design consistency. Below is the prioritized list of issues and recommendations.
+### Qualitative: Heuristic Evaluation
 
 #### Evaluation Table
 
@@ -393,26 +368,22 @@ A heuristic evaluation was conducted by an external observer to identify usabili
 - Unlimited respawns reduce stakes but are less urgent.  
 
 
-
 #### Recommendations  
 
-**Priority Fixes**  
-- Fix collision detection to eliminate "invisible walls."  
-- Add a pause/return menu for mid-level navigation.  
-
-**Design Improvements**  
-- Resize obstacles; introduce dynamic elements (e.g., moving platforms).  
-- Differentiate levels with unique mechanics (e.g., traps, boss fights).  
-
-**Long-Term Enhancements**  
-- Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).  
-- Add a game-over system with limited lives.  
-
-
+| **Category**             | **Fixes/Improvements**                                                           |
+|--------------------------|----------------------------------------------------------------------------------|
+| **Priority Fixes**       | Fix collision detection to eliminate "invisible walls."                         |
+|                          | Add a pause/return menu for mid-level navigation.                               |
+| **Design Improvements**  | Resize obstacles; introduce dynamic elements (e.g., moving platforms).          |
+|                          | Differentiate levels with unique mechanics (e.g., traps, boss fights).          |
+| **Long-Term Enhancements**| Implement difficulty tiers and smarter enemy AI (e.g., patrol patterns).        |
+|                          | Add a game-over system with limited lives.                                      |
 
 #### Next Steps  
 - Address collision and UI issues first.  
 - Then iterate on level complexity and enemy behavior.
+
+---
 
 ### Quantitative: NASA TLX Workload Analysis
 Ten players rated difficulty variants of Level 1 using NASA TLX. Workload scores increased with difficulty as expected:
@@ -421,6 +392,8 @@ Ten players rated difficulty variants of Level 1 using NASA TLX. Workload scores
 - Hard: Higher effort and time pressure, but manageable performance scores.
 
 A Wilcoxon Signed-Rank test (p < 0.01) validated significant differences, confirming successful difficulty scaling.
+
+---
 
 ### Quantitative: Game Difficulty and Usability Assessment
 
@@ -481,7 +454,9 @@ As the **Wilcoxon signed-rank test** yielded a **W value of 9** (above the criti
 #### Conclusion  
 This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences. 
 
-### Code Testing
+![sep_line](./pictures/sep_line_5.png)
+
+## 6. Code Testing
 We used both [**black-box playtesting**](./tests/blackboxTests.js) and a dedicated [**white-box test suite**](./tests/whiteboxTests.js). Key systems tested included:
 
 - Object collisions
@@ -490,7 +465,9 @@ We used both [**black-box playtesting**](./tests/blackboxTests.js) and a dedicat
 
 Visual QA was handled through manual sprite checks and browser compatibility testing. Every major change was tested on GitHub Pages before deployment.
 
-## Process
+![sep_line](./pictures/sep_line_6.png)
+
+## 7. Process
 
 Agile workflows defined our production cycle. Roles were assigned based on strengths:
 
@@ -513,11 +490,15 @@ Pull requests were reviewed collaboratively. GitHub Discussions were used to log
 
 We learned to refine task estimates using story points and improved planning across sprints. The team regularly supported each other in testing, optimization, and content polishing.
 
+---
+
 ### Our Progress
 
 Kanban Board : [![KANBAN](./pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
-## Sustainability, Ethics, and Accessibility
+![sep_line](./pictures/sep_line_7.png)
+
+## 8. Sustainability, Ethics, and Accessibility
 
 ### Key Design Principles
 
@@ -546,89 +527,69 @@ These principles guided responsible development and will be expanded in future u
 
 ### Sustainability Impact Assessment
 
-#### Project Overview
-Iron Rebellion is a 2D platform-jumping game designed to provide an engaging and straightforward gaming experience...
-
 #### Vision and Known Effects
 
-**Vision:** To offer a classic gaming experience...  
-**Positive:** Minimal resource use...  
-**Negative:** Potential energy consumption...
+- **Vision:** To deliver a nostalgic, classic gaming experience with a focus on simplicity, fun, and sustainability across modern platforms.
+
+- **Positive:** Uses minimal resources through lightweight design, low hardware demands, and broad device compatibility, reducing environmental impact.
+
+- **Negative:** Potential energy consumption in game playing.
 
 #### Detailed Sustainability Effects
-
-##### Individual Dimension
-- Accessibility  
-- User Autonomy  
-
-##### Environmental Dimension
-- Materials and Resources  
-- Energy Consumption  
-
-##### Social Dimension
-- Social Interaction  
-- Health Impacts  
-
-##### Economic Dimension
-- Market Value  
-- Business Operations  
-
-##### Technical Dimension
-- Maintainability and Scalability  
-- Development Efficiency  
+![SAF](./pictures/SAF.png)
 
 #### Synthesis: Threats, Opportunities, and Actions
+![synthesis](./pictures/synthesis.png)
 
-##### Threats
-- Environmental Impact  
-- Health Concerns  
-
-##### Opportunities
-- Sustainable Practices  
-- Health and Well-being  
-
-##### Actions
-- Promoting Energy Efficiency  
-- Encouraging Active Breaks
-
+---
 
 ### Conclusion  
 This sustainability impact assessment for *Iron Rebellion* identifies critical areas of impact with a focus on environmental and individual dimensions. The assessment guides the integration of sustainable practices into both game design and operational procedures. Moving forward, these insights will be used to enhance the game’s design and help mitigate any negative impacts associated with its use. This report will be included in the project documentation to inform stakeholders and guide future development decisions.
 
-
+---
 
 ### Green Foundation Implementation Patterns Analysis
 
 Our game code integrates several key sustainable coding practices aligned with **Green Foundation Implementation** patterns:
 
 #### Lazy Loading of Offscreen Images  
-We have implemented a lazy-loading mechanism to defer the loading of images not immediately visible on the screen. This reduces unnecessary resource usage and improves page load performance, contributing to lower energy consumption.
+- We have implemented a lazy-loading mechanism to defer the loading of images not immediately visible on the screen. This reduces unnecessary resource usage and improves page load performance, contributing to lower energy consumption.
 
 #### Optimized Image Sizes  
-All game images have been resized and optimized to the appropriate dimensions. By compressing images without sacrificing quality, we ensure faster load times and reduced bandwidth usage, which minimizes the overall carbon footprint.
+- All game images have been resized and optimized to the appropriate dimensions. By compressing images without sacrificing quality, we ensure faster load times and reduced bandwidth usage, which minimizes the overall carbon footprint.
 
 #### Removal of Unused CSS Definitions  
-We streamlined our codebase by removing unused CSS rules. This not only simplifies maintenance but also speeds up rendering times, leading to improved performance and reduced processing energy.
+- We streamlined our codebase by removing unused CSS rules. This not only simplifies maintenance but also speeds up rendering times, leading to improved performance and reduced processing energy.
 
 
 These implementations not only enhance user experience through improved performance but also contribute to sustainable development by lowering resource consumption and optimizing energy efficiency within our game.
 
-## Conclusion
+![sep_line](./pictures/sep_line_8.png)
 
-*Iron Rebellion* was both a technical and creative achievement for our team. We overcame challenges in collision detection, difficulty balancing, and AI optimization through structured design, iterative testing, and consistent collaboration.
+## 9. Conclusion
 
-The experience deepened our understanding of game mechanics, teamwork, and player-centric design. Looking ahead, we plan to expand narrative elements, accessibility, and level complexity.
+- *Iron Rebellion* was both a technical and creative achievement for our team. We overcame challenges in collision detection, difficulty balancing, and AI optimization through structured design, iterative testing, and consistent collaboration.
 
-More than just a game, *Iron Rebellion* represents our journey in turning a shared vision into an engaging, user-centered digital product.
+- The experience deepened our understanding of game mechanics, teamwork, and player-centric design. Looking ahead, we plan to expand narrative elements, accessibility, and level complexity.
 
+- More than just a game, *Iron Rebellion* represents our journey in turning a shared vision into an engaging, user-centered digital product.
 
+---
 
 ### Contribution
 
+We are happily announcing that our distribution among all member are even:
+
 | Contributor | Contribution |
 |:------------|:-------------|
-| Zewen Liang | 1.00 |
-| Yunhao Zhou | 1.00 |
-| Yuying Zhang | 1.00 |
-| Zhi Zhao | 1.00 |
-| Kaijie Xu | 1.00 |
+| Zewen Liang | 20% |
+| Yunhao Zhou | 20% |
+| Yuying Zhang | 20% |
+| Zhi Zhao | 20% |
+| Kaijie Xu | 20% |
+
+> *"Again, not all members are good at coding, but we are all doing what we are good at, this is the perfect status for a team."*
+
+![sep_line](./pictures/sep_line_9.png)
+
+> *"Congrats! You have gone through all our journey of game development!"*
