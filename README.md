@@ -625,6 +625,8 @@ We use the dual drill model to manage the entire project: conducting research ->
 
 ### Contribution
 
+Although we have only **5** people, which means we only have about **80%** manpower than other groups, we still successfully fulfilled the task!
+
 We are happily announcing that our distribution among all members are even:
 
 | Contributor | Contribution |
