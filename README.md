@@ -6,36 +6,36 @@
 
 # Table of Contents
 
-- [Introduction](#introduction)
-  - [Our Game](#our-game-video)
-  - [Our Group](#our-team-members)
+- [Introduction](#1-introduction)
+  - [Our Game Video](#our-game-video)
+  - [Our Team Members](#our-team-members)
   - [Inspiration Mining](#inspiration-mining)
-  - [Prototype Videos of Two Ideas](#prototype-videos-of-two-initial-ideas)
+  - [Prototype Videos of Two Initial Ideas](#prototype-videos-of-two-initial-ideas)
   - [Prototype Video of Final Idea](#prototype-video-of-final-idea)
 
-- [Requirements](#requirements)
-  - [Stakeholder list](#stakeholder-list)
+- [Requirements](#2-requirements)
+  - [Stakeholder List](#stakeholder-list)
   - [Epics & User Stories](#epics--user-stories)
   - [Reflection](#reflection)
 
-- [Design](#design)
+- [Design](#3-design)
   - [Class Diagram](#class-diagram)
   - [Sequence Diagram: Chapter Level Logic](#sequence-diagram-chapter-level-logic)
   - [Sequence Diagram: Early Sketch](#sequence-diagram-early-sketch)
 
-- [Implementation](#implementation)
+- [Implementation](#4-implementation)
   - [Technical Challenge 1: Cross-Platform Implementation](#technical-challenge-1-cross-platform-implementation)
   - [Technical Challenge 2: Collision Mechanism Design](#technical-challenge-2-collision-mechanism-design)
   - [Technical Challenge 3: Progressive Level Design](#technical-challenge-3-progressive-level-design)
 
-- [Evaluation](#evaluation)
+- [Evaluation](#5-evaluation)
   - [Qualitative: Think-Aloud Usability Testing](#qualitative-think-aloud-usability-testing)
-  - [Heuristic Evaluation Report: Iron Rebellion](#qualitative-heuristic-evaluation)
+  - [Heuristic Evaluation](#qualitative-heuristic-evaluation)
   - [Quantitative: NASA TLX Workload Analysis](#quantitative-nasa-tlx-workload-analysis)
   - [Quantitative: Game Difficulty and Usability Assessment](#quantitative-game-difficulty-and-usability-assessment)
   - [Code Testing](#6-code-testing)
 
-- [Process](#process)
+- [Process](#7-process)
   - [Our Progress](#our-progress)
 
 - [Sustainability, Ethics, and Accessibility](#8-sustainability-ethics-and-accessibility)
