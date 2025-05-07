@@ -47,6 +47,8 @@
   - [Green Foundation Implementation Patterns Analysis](#green-foundation-implementation-patterns-analysis)
 
 - [9. Conclusion](#9-conclusion)
+  - [Lessons Learned](#lessons-learned)
+  - [In the Future](#in-the-future)
   - [Contribution](#contribution)
 
 ---
