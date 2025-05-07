@@ -6,48 +6,48 @@
 
 # Table of Contents
 
-- [Introduction](#1-introduction)
+- [1. Introduction](#1-introduction)
   - [Our Game Video](#our-game-video)
   - [Our Team Members](#our-team-members)
   - [Inspiration Mining](#inspiration-mining)
   - [Prototype Videos of Two Initial Ideas](#prototype-videos-of-two-initial-ideas)
   - [Prototype Video of Final Idea](#prototype-video-of-final-idea)
 
-- [Requirements](#2-requirements)
+- [2. Requirements](#2-requirements)
   - [Stakeholder List](#stakeholder-list)
   - [Epics & User Stories](#epics--user-stories)
   - [Reflection](#reflection)
 
-- [Design](#3-design)
+- [3. Design](#3-design)
   - [Class Diagram](#class-diagram)
   - [Sequence Diagram: Chapter Level Logic](#sequence-diagram-chapter-level-logic)
   - [Sequence Diagram: Early Sketch](#sequence-diagram-early-sketch)
 
-- [Implementation](#4-implementation)
+- [4. Implementation](#4-implementation)
   - [Technical Challenge 1: Cross-Platform Implementation](#technical-challenge-1-cross-platform-implementation)
   - [Technical Challenge 2: Collision Mechanism Design](#technical-challenge-2-collision-mechanism-design)
   - [Technical Challenge 3: Progressive Level Design](#technical-challenge-3-progressive-level-design)
 
-- [Evaluation](#5-evaluation)
+- [5. Evaluation](#5-evaluation)
   - [Qualitative: Think-Aloud Usability Testing](#qualitative-think-aloud-usability-testing)
   - [Heuristic Evaluation](#qualitative-heuristic-evaluation)
   - [Quantitative: NASA TLX Workload Analysis](#quantitative-nasa-tlx-workload-analysis)
   - [Quantitative: Game Difficulty and Usability Assessment](#quantitative-game-difficulty-and-usability-assessment)
-  - [Code Testing](#6-code-testing)
 
-- [Process](#7-process)
+- [6. Code Testing](#6-code-testing)
+
+- [7. Process](#7-process)
   - [Our Progress](#our-progress)
 
-- [Sustainability, Ethics, and Accessibility](#8-sustainability-ethics-and-accessibility)
+- [8. Sustainability, Ethics, and Accessibility](#8-sustainability-ethics-and-accessibility)
   - [Environmental](#environmental)
   - [Social](#social)
   - [Individual Well-being](#individual-well-being)
   - [Sustainability Impact Assessment](#sustainability-impact-assessment)
   - [Green Foundation Implementation Patterns Analysis](#green-foundation-implementation-patterns-analysis)
 
-- [Conclusion](#9-conclusion)
-
-- [Contribution](#contribution)
+- [9. Conclusion](#9-conclusion)
+  - [Contribution](#contribution)
 
 ---
 
@@ -466,13 +466,15 @@ This evaluation underscores the importance of careful chapter design as in-game 
 ![sep_line](./pictures/sep_line_5.png)
 
 ## 6. Code Testing
-We used both [**black-box playtesting**](./tests/blackboxTests.js) and a dedicated [**white-box test suite**](./tests/whiteboxTests.js). Key systems tested included:
+We used both [**black-box playtesting**](./tests/blackboxTests.js) and a dedicated [**white-box test suite**](./tests/whiteboxTests.js), you may read the detailed testing code from the hyperlinks respectively. Key systems tested included:
 
 - Object collisions
 - Spawn logic
 - Enemy state transitions
 
 Visual QA was handled through manual sprite checks and browser compatibility testing. Every major change was tested on GitHub Pages before deployment.
+
+Here are the blackbox test EP tables:
 
 ![black_box_model_1](./pictures/black_box_model_1.png)
 
@@ -587,15 +589,28 @@ These implementations not only enhance user experience through improved performa
 
 ## 9. Conclusion
 
+![Double Diamond Design Model](./pictures/double_diamond_design_model.png)
+
+We use the dual drill model to manage the entire project: conducting research ->determining themes ->identifying opportunities ->generating game plans ->producing prototypes through coding and other processes. We optimize the project through testing iterations.
+
+---
+
+### Lessons Learned
 - Iron Rebellion was both a technical and creative achievement for our team. We overcame challenges in collision detection, difficulty balancing, and AI optimization through structured design, iterative testing, and consistent collaboration.
 
 - The experience deepened our understanding of game mechanics, teamwork, and player-centric design. Looking ahead, we plan to expand narrative elements, accessibility, and level complexity.
 
 - More than just a game, Iron Rebellion represents our journey in turning a shared vision into an engaging, user-centered digital product.
 
-![Double Diamond Design Model](./pictures/double_diamond_design_model.png)
+---
 
-We use the dual drill model to manage the entire project: conducting research ->determining themes ->identifying opportunities ->generating game plans ->producing prototypes through coding and other processes. We optimize the project through testing iterations.
+### In the Future
+
+- We have learned applied extreme programming practices, and will continue to apply them in future work.
+
+- We will try to transfer the game to Android version and release it to Google Play.
+
+- We will finetune the story of the game, and revoke the sense of environment protect among community.
 
 ---
 
