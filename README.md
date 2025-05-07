@@ -136,6 +136,10 @@ First, through a brainstorming session within the team, each member contributed 
 | Winter Dodge              | Skill > One-button                 | Auto-skiing game, change direction, get close to trees for score bonuses.                                                                                                                                                    | [Link](https://www.coolmathgames.com/0-winter-dodge) |
 | Suika Watermelon Game     | Strategy > High Score Games        | Merge fruits for higher scores, limited pushes, avoid box overflow.                                                                                                                                                          | [Link](https://en.wikipedia.org/wiki/Suika_Game) |
 
+![Boston Matrix](./pictures/boston_matrix.png)
+
+We used the Boston Matrix to categorize all games into four types. Each type has a corresponding implementation method. Finally, we chose the most suitable gray area to implement, resulting in two prototypes.
+
 ---
 
 ### Prototype Videos of Two Initial Ideas
