@@ -148,12 +148,14 @@ Next, through a team vote, we selected the two most popular game ideas as our pr
 - **Super Mario:** 
 a landmark platformer with carefully designed levels that challenge players' skills. Known for its responsive controls and physics engine, the game features a power-up system and varied enemies that add depth. It also includes puzzle elements and cooperative multiplayer, expanding gameplay beyond traditional platforming.
 
-![Super Mario](./pictures/cover.png)
+[![Super Mario](./pictures/cover.png)](https://drive.google.com/file/d/1dilfk9MANqt7ZF4hKirheLW_5RDKaMW-/view?usp=drive_link)
+
 
 - **Merge Big Watermelon:** 
 a casual puzzle game where players merge items on a grid to create larger ones, aiming for the biggest watermelon. With its minimalist, colorful design and cross-platform compatibility, the game’s easy to play yet increasingly challenging.
 
-![Merge Big Watermelon](./pictures/cover2.png)
+[![Merge Big Watermelon](./pictures/cover2.png)](https://drive.google.com/file/d/10CyhntnRV76U0o-qCPSqY2Diu1KsxhMl/view?usp=drive_link)
+
 
 ---
 
