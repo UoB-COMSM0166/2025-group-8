@@ -59,7 +59,7 @@
 
 ## 1. Introduction
 
-- *Iron Rebellion* is a 2D platformer that brings back the nostalgic vibe of classic games, but with a modern twist. It mixes fast-paced jumping with puzzle-solving and weaves in a story that keeps things interesting for all kinds of players.
+- Iron Rebellion is a 2D platformer featuring hand-crafted levels, distinctive oil-painting visuals, and a story that progresses through gameplay. With steadily increasing difficulty and four visually distinct chapters, the game guides players through environments such as underground cities, lush jungles, and war-torn ruins.
 
 - The visuals have a unique oil painting style, like a blend of old-school art and modern gameplay. It’s got that artistic feel without being too heavy, and with features like adjustable difficulty and smart enemy AI, it’s both challenging and accessible.
 
