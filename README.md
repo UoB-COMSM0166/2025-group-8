@@ -520,6 +520,8 @@ We learned to refine task estimates using story points and improved planning acr
 
 Kanban Board : [![KANBAN](./pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
 
+Gantt Chart : ![Gantt Chart](./pictures/gantt_chart.png)
+
 ![sep_line](./pictures/sep_line_7.png)
 
 ## 8. Sustainability, Ethics, and Accessibility
