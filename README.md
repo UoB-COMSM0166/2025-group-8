@@ -569,11 +569,11 @@ These implementations not only enhance user experience through improved performa
 
 ## 9. Conclusion
 
-- *Iron Rebellion* was both a technical and creative achievement for our team. We overcame challenges in collision detection, difficulty balancing, and AI optimization through structured design, iterative testing, and consistent collaboration.
+- Iron Rebellion was both a technical and creative achievement for our team. We overcame challenges in collision detection, difficulty balancing, and AI optimization through structured design, iterative testing, and consistent collaboration.
 
 - The experience deepened our understanding of game mechanics, teamwork, and player-centric design. Looking ahead, we plan to expand narrative elements, accessibility, and level complexity.
 
-- More than just a game, *Iron Rebellion* represents our journey in turning a shared vision into an engaging, user-centered digital product.
+- More than just a game, Iron Rebellion represents our journey in turning a shared vision into an engaging, user-centered digital product.
 
 ---
 
