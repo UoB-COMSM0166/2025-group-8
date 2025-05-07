@@ -520,7 +520,11 @@ We learned to refine task estimates using story points and improved planning acr
 
 ### Our Progress
 
+We used Kanban board to manage our backlogs, and used Gantt Chart to visualise each task and its deadline, so that the whole project can be well organised and no missing happened.
+
 Kanban Board : [![KANBAN](./pictures/KANBAN.png)](https://kanexu99-1738582319219.atlassian.net/jira/software/projects/KAN/boards/1?atlOrigin=eyJpIjoiNjQxNGNhZDU2NmRmNGNjNTk0YWU3ZGY4NDMzYWE4OTgiLCJwIjoiaiJ9)
+
+Gantt Chart : ![Gantt Chart](./pictures/gantt_chart.png)
 
 ![sep_line](./pictures/sep_line_7.png)
 
