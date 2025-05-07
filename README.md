@@ -206,7 +206,7 @@ And we listened to our stakeholders' voice:
 
 ## 3. Design
 
-To support modularity and future expansion, *Iron Rebellion* follows p5.js original architecture: each visual object has an draw() method, which makes the whole structure consistent. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
+To support modularity and future expansion, Iron Rebellion follows p5.js original architecture: each visual object has an draw() method, which makes the whole structure consistent. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
 
 - **robotDog** handles input and physics.
 - **chapterSelector** loads levels from text files and manages collision resolution.
@@ -276,12 +276,13 @@ The **chapterSelector** dynamically generated levels using character-mapped text
 
 - #### Technical Challenge 3: Progressive Level Design
 
-| Section                        | Description | Graph |
-|--------------------------------|-------------|-------|
-| **I. Incremental Difficulty**   | Increased level challenge by adding more enemies and tighter platform arrangements. |       |
-| **II. Scene Variation and Atmosphere** | Each level has unique visuals and themes to maintain engagement and signal progression. |       |
-| **III. Boss Integration**      | Final level features a static-phase boss requiring precise control under pressure. |       |
-| **Impact**                     | Balanced difficulty with accessibility through thoughtful layout, enemy density, and visual progression. |       |
+| Section                                | Description                                                                                              |
+|----------------------------------------|----------------------------------------------------------------------------------------------------------|
+| **I. Incremental Difficulty**          | Increased level challenge by adding more enemies and tighter platform arrangements.                      |
+| **II. Scene Variation and Atmosphere** | Each level has unique visuals and themes to maintain engagement and signal progression.                  |
+| **III. Boss Integration**              | Final level features a static-phase boss requiring precise control under pressure.                       |
+| **Impact**                             | Balanced difficulty with accessibility through thoughtful layout, enemy density, and visual progression. |
+
 
 ![sep_line](./pictures/sep_line_4.png)
 
