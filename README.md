@@ -7,10 +7,10 @@
 # Table of Contents
 
 - [Introduction](#introduction)
-  - [Our Game](#our-game)
-  - [Our Group](#our-group)
+  - [Our Game](#our-game-video)
+  - [Our Group](#our-team-members)
   - [Inspiration Mining](#inspiration-mining)
-  - [Prototype Videos of Two Ideas](#prototype-videos-of-two-ideas)
+  - [Prototype Videos of Two Ideas](#prototype-videos-of-two-initial-ideas)
   - [Prototype Video of Final Idea](#prototype-video-of-final-idea)
 
 - [Requirements](#requirements)
@@ -30,22 +30,22 @@
 
 - [Evaluation](#evaluation)
   - [Qualitative: Think-Aloud Usability Testing](#qualitative-think-aloud-usability-testing)
-  - [Heuristic Evaluation Report: Iron Rebellion](#heuristic-evaluation-report-iron-rebellion)
+  - [Heuristic Evaluation Report: Iron Rebellion](#qualitative-heuristic-evaluation)
   - [Quantitative: NASA TLX Workload Analysis](#quantitative-nasa-tlx-workload-analysis)
   - [Quantitative: Game Difficulty and Usability Assessment](#quantitative-game-difficulty-and-usability-assessment)
-  - [Code Testing](#code-testing)
+  - [Code Testing](#6-code-testing)
 
 - [Process](#process)
   - [Our Progress](#our-progress)
 
-- [Sustainability, Ethics, and Accessibility](#sustainability-ethics-and-accessibility)
+- [Sustainability, Ethics, and Accessibility](#8-sustainability-ethics-and-accessibility)
   - [Environmental](#environmental)
   - [Social](#social)
   - [Individual Well-being](#individual-well-being)
   - [Sustainability Impact Assessment](#sustainability-impact-assessment)
   - [Green Foundation Implementation Patterns Analysis](#green-foundation-implementation-patterns-analysis)
 
-- [Conclusion](#conclusion)
+- [Conclusion](#9-conclusion)
 
 - [Contribution](#contribution)
 
