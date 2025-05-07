@@ -474,6 +474,12 @@ We used both [**black-box playtesting**](./tests/blackboxTests.js) and a dedicat
 
 Visual QA was handled through manual sprite checks and browser compatibility testing. Every major change was tested on GitHub Pages before deployment.
 
+![black_box_model_1](./pictures/black_box_model_1.png)
+
+![black_box_model_2](./pictures/black_box_model_2.png)
+
+![black_box_model_3](./pictures/black_box_model_3.png)
+
 ![sep_line](./pictures/sep_line_6.png)
 
 ## 7. Process
