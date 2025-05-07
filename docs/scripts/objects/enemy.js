@@ -12,7 +12,6 @@ class Enemy extends Character {
     }
 
     aiMove() {
-        
     }
 
     draw() {
@@ -30,7 +29,6 @@ class Enemy extends Character {
     }
 
     destroyEffect() {
-        // to be done
     }
 
 }

@@ -3,19 +3,14 @@ class Chapter {
         this.configReader = new ConfigReader(window.story1Config);
         this.robotDog = new RobotDog();
         this.hud = new Hud(this.configReader.config.roadLength, this.robotDog);
-
         this.roadHeight = windowHeight / 6;
         this.roadY = windowHeight - this.roadHeight;
         this.foregroundHeight = windowHeight / 5;
         this.foregroundY = windowHeight - this.foregroundHeight;
         this.farBgSetter = null;
-        // this.farBgSetter = new BgSetter(window.bgType.CHAPTER1FARBG, 1, 0, 0, 0, windowHeight);
         this.closeBgSetter = null;
         this.roadSetter = null;
-        // this.roadSetter = new BgSetter(window.bgType.CHAPTER1RD, 4, 0, this.roadY, windowWidth, this.roadHeight);
         this.foregroundSetter = null;
-        // this.foregroundSetter = new BgSetter(window.bgType.CHAPTER1FG, 10, 0, this.foregroundY, 0, this.foregroundHeight);
-
         this.elementsGenerate();
         this.winInstruction = new Instruction(windowWidth / 2, windowHeight / 2, 0, windowHeight / 4, window.bgType.WININS);
     }
@@ -77,8 +72,8 @@ class Chapter {
         };
 
         for (let entity of [this.robotDog, ...this.enemyDogs, ...this.batteries, ...this.guns, ...this.finalBosses, ...this.passGates]) {
-            // this.checkCollisionWithPlatforms(entity);
             let is_collided = false;
+            // Only detect and resolve the first collision per frame for each entity
             for (let platform of this.platforms) {
                 if (!platform.isDiscarded && platform.isDisplay && entity.isDisplay && entity.checkCollision(platform)) {
                     entity.resolveCollisionWithPlatform(platform);

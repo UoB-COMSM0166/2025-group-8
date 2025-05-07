@@ -1,9 +1,14 @@
 class ChapterSelector {
+    // Button generation states and storage
     buttonGenerationState = 0;
     escapeButtonGenState = 0;
     chapterSelectionButtonList = [];
     escapeAndKeyboardButtonList = [];
+
+    // Track whether certain keys are pressed
     isKeyPressed = {'A': false, 'D': false, 'J': false, ' ': false};
+
+    // Layout measurements based on screen size
     buttonGap = windowWidth * 0.99 / 100;
     buttonY = windowHeight * 1 / 18;
     buttonHeight = windowHeight * 82.5 / 100;
@@ -12,11 +17,13 @@ class ChapterSelector {
     minorButtonWidth = windowWidth * 7 / 100;
 
     constructor() {
+        // Set background image for chapter selector screen
         this.bgSetter = new BgSetter(window.bgType.CHAPTERSELECTOR, 0, 0, 0, windowWidth, windowHeight);
         this.calculatePositions();
     }
 
     draw() {
+        // Only generate buttons once
         if (this.buttonGenerationState == 0) {
             this.buttonGenerationState = 1;
             this.placeButtons();
@@ -28,9 +35,12 @@ class ChapterSelector {
         image(imageType, xPos, this.pictureY, this.pictureWidth, this.pictureHeight);
     }
 
+    // Place escape and virtual keyboard buttons (for mobile)
     placeEscapeAndKeyboard() {
         this.createEscapeButton();
+
         let userAgentString = navigator.userAgent.toLowerCase();
+        // Show on-screen buttons for mobile devices
         if (userAgentString.includes("android") ||
             userAgentString.includes("iphone") || 
             userAgentString.includes("ipad")) {
@@ -38,12 +48,12 @@ class ChapterSelector {
             this.createKeyboardButton('S', 10, 70, 2, 0);
             this.createKeyboardButton('D', 10, 70, 4, 0);
             this.createKeyboardButton('W', 10, 70, 2, -2);
-
             this.createKeyboardButton('J', 85, 70, 0, -2);
             this.createKeyboardButton(' ', 85, 70, -0.5, 0, 2);
         }
     }
 
+    // Create "Back" button to return to home screen
     createEscapeButton() {
         let escapeButton = createButton("🏠︎ BACK");
         escapeButton.class("escape");
@@ -53,6 +63,7 @@ class ChapterSelector {
     }
 
     escapeToHome() {
+        // Remove all UI buttons before navigating
         for (let button of this.escapeAndKeyboardButtonList) {
             button.remove();
         }
@@ -60,39 +71,38 @@ class ChapterSelector {
         window.mainRoleMove = false;
     }
 
+    // Create virtual keyboard buttons for touch control
     createKeyboardButton(keyChar, posX, posY, offsetX, offsetY, sizeMultiplier = 1) {
-        let keyString;
-        if (keyChar == ' ') {
-            keyString = "Space";
-        } else {
-            keyString = keyChar;
-        }
+        let keyString = (keyChar === ' ') ? "Space" : keyChar;
         let keyboardButtonSize = windowHeight / 10;
         let button = createButton(keyString);
         button.class("keyboard");
-        button.position(windowWidth * posX / 100 + offsetX * keyboardButtonSize, windowHeight * posY / 100 + offsetY * keyboardButtonSize);
+        button.position(
+            windowWidth * posX / 100 + offsetX * keyboardButtonSize,
+            windowHeight * posY / 100 + offsetY * keyboardButtonSize
+        );
         button.size(keyboardButtonSize * sizeMultiplier, keyboardButtonSize);
+
+        // Bind press/release events to simulate actual keyboard input
         button.mousePressed(() => this.simulateKeyPress(keyChar));
         button.mouseReleased(() => this.simulateKeyRelease(keyChar));
         button.touchStarted(() => this.simulateKeyPress(keyChar));
         button.touchEnded(() => this.simulateKeyRelease(keyChar));
+
         this.escapeAndKeyboardButtonList.push(button);
     }
 
     simulateKeyPress(keyChar) {
         let keyCode = this.getKeyCode(keyChar);
-        if (!keyCode) return; // If invalid key, return
-
+        if (!keyCode) return;
         this.triggerKeyEvent('keydown', keyChar, keyCode);
         this.isKeyPressed[keyChar] = true;
     }
 
     simulateKeyRelease(keyChar) {
         if (!this.isKeyPressed[keyChar]) return;
-
         let keyCode = this.getKeyCode(keyChar);
-        if (!keyCode) return; // If invalid key, return
-
+        if (!keyCode) return;
         this.triggerKeyEvent('keyup', keyChar, keyCode);
         this.isKeyPressed[keyChar] = false;
     }
@@ -109,6 +119,7 @@ class ChapterSelector {
         return keyCodes[keyChar];
     }
 
+    // Trigger a fake keyboard event (used by virtual buttons)
     triggerKeyEvent(eventType, keyChar, keyCode) {
         let keyEvent = new KeyboardEvent(eventType, {
             key: keyChar,
@@ -120,14 +131,17 @@ class ChapterSelector {
         document.dispatchEvent(keyEvent);
     }
 
+    // Create chapter and minor buttons
     placeButtons() {
         this.createChapterButton(1, this.firstButtonX);
         this.createChapterButton(2, this.secondButtonX);
         this.createChapterButton(3, this.thirdButtonX);
         this.createChapterButton(4, this.fourthButtonX);
+
         this.createMinorButton("Developers", this.developersButtonX, this.developersButtonY, () => this.showDevelopersInfo());
         this.createMinorButton("Help", this.helpButtonX, this.helpButtonY, () => this.showHelp());
-        this.createMinorButton("Document", this.docsButtonX, this.docsButtonY, () => window.open("https://github.com/UoB-COMSM0166/2025-group-8/blob/main/README.md", "_blank"));
+        this.createMinorButton("Document", this.docsButtonX, this.docsButtonY, () => 
+            window.open("https://github.com/UoB-COMSM0166/2025-group-8/blob/main/documentation/PlayerManual.md", "_blank"));
     }
 
     createChapterButton(chapterNumber, xPos) {
@@ -153,6 +167,7 @@ class ChapterSelector {
 
     showDevelopersInfo() {
         alert(navigator.userAgent);
+        // Uncomment below for custom credits
         // alert("Game Name: Iron Rebellion\n" +
         //     "Development Team: Group 8\n" +
         //     "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu");
@@ -164,24 +179,28 @@ class ChapterSelector {
             "Win the four chapters, and defeat the boss!");
     }
 
+    // Calculate positions of buttons based on screen dimensions
     calculatePositions() {
         this.firstButtonX = windowWidth * 1.5 / 100;
         this.secondButtonX = this.firstButtonX + this.buttonGap + this.buttonWidth;
         this.thirdButtonX = this.secondButtonX + this.buttonGap + this.buttonWidth;
         this.fourthButtonX = this.thirdButtonX + this.buttonGap + this.buttonWidth;
+
         this.developersButtonX = windowWidth * 17 / 100;
         this.developersButtonY = windowHeight * 92.7 / 100;
+
         this.helpButtonX = windowWidth * 78.5 / 100;
         this.helpButtonY = windowHeight * 92.7 / 100;
+
         this.docsButtonX = windowWidth * 90.5 / 100;
         this.docsButtonY = windowHeight * 92.7 / 100;
     }
 
+    // Remove all chapter and minor buttons
     removeButtons() {
         if (this.chapterSelectionButtonList) {
             this.chapterSelectionButtonList.forEach(button => button.remove());
         }
         this.buttonGenerationState = 0;
     }
-    
 }

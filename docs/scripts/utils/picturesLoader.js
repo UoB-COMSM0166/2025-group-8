@@ -16,7 +16,6 @@ class PicturesLoader {
         // chapter 1 pictures
         this.chapter1FarBg = loadImage("./assets/pictures/chapter_1_far_bg.png");
         this.chapter1Rd = loadImage("./assets/pictures/chapter_1_rd.png");
-        // this.chapter1Fg = loadImage("./assets/pictures/chapter_1_fg.png");
         // chapter 2 pictures
         this.chapter2FarBg = loadImage("./assets/pictures/chapter_2_far_bg.jpg");
         this.chapter2CloseBg = loadImage("./assets/pictures/chapter_2_close_bg.png");
@@ -25,7 +24,6 @@ class PicturesLoader {
         // chapter 3 pictures
         this.chapter3FarBg = loadImage("./assets/pictures/chapter_3_far_bg.png");
         this.chapter3CloseBg = loadImage("./assets/pictures/chapter_3_close_bg.png");
-        // this.chapter3Rd = loadImage("./assets/pictures/chapter_3_rd.png");
         this.chapter3Fg = loadImage("./assets/pictures/chapter_3_fg.png");
         // chapter 4 pictures
         this.chapter4FarBg = loadImage("./assets/pictures/chapter_4_far_bg.jpg");
@@ -63,7 +61,6 @@ class PicturesLoader {
             CHAPTER2FG: this.chapter2Fg,
             CHAPTER3FARBG: this.chapter3FarBg,
             CHAPTER3CLOSEBG: this.chapter3CloseBg,
-            // CHAPTER3RD: this.chapter3Rd,
             CHAPTER3FG : this.chapter3Fg,
             CHAPTER4FARBG: this.chapter4FarBg,
             CHAPTER4CLOSEBG: this.chapter4CloseBg,
