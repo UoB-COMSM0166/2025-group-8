@@ -559,6 +559,10 @@ These principles guided responsible development and will be expanded in future u
 ### Conclusion  
 This sustainability impact assessment for *Iron Rebellion* identifies critical areas of impact with a focus on environmental and individual dimensions. The assessment guides the integration of sustainable practices into both game design and operational procedures. Moving forward, these insights will be used to enhance the game’s design and help mitigate any negative impacts associated with its use. This report will be included in the project documentation to inform stakeholders and guide future development decisions.
 
+![Double Diamond Design Model](./pictures/double_diamond_design_model.png)
+
+We use the dual drill model to manage the entire project: conducting research ->determining themes ->identifying opportunities ->generating game plans ->producing prototypes through coding and other processes. We optimize the project through testing iterations.
+
 ---
 
 ### Green Foundation Implementation Patterns Analysis
