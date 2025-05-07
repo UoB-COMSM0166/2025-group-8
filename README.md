@@ -1,6 +1,7 @@
 # 2025-group-8
 
-![Iron Rebellion](./pictures/game_banner.png)
+[![Iron Rebellion](./pictures/game_banner.png)](https://uob-comsm0166.github.io/2025-group-8/)
+
 
 
 
