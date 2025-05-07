@@ -578,7 +578,7 @@ These implementations not only enhance user experience through improved performa
 
 ### Contribution
 
-We are happily announcing that our distribution among all member are even:
+We are happily announcing that our distribution among all members are even:
 
 | Contributor | Contribution |
 |:------------|:-------------|
