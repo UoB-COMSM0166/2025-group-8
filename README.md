@@ -17,6 +17,7 @@
 - [2. Requirements](#2-requirements)
   - [Stakeholder List](#stakeholder-list)
   - [Epics & User Stories](#epics--user-stories)
+  - [Planning Poker for Effort Estimation](#planning-poker-for-effort-estimation)
   - [Reflection](#reflection)
 
 - [3. Design](#3-design)
@@ -31,7 +32,7 @@
 
 - [5. Evaluation](#5-evaluation)
   - [Qualitative: Think-Aloud Usability Testing](#qualitative-think-aloud-usability-testing)
-  - [Heuristic Evaluation](#qualitative-heuristic-evaluation)
+  - [Heuristic Evaluation](#heuristic-evaluation)
   - [Quantitative: NASA TLX Workload Analysis](#quantitative-nasa-tlx-workload-analysis)
   - [Quantitative: Game Difficulty and Usability Assessment](#quantitative-game-difficulty-and-usability-assessment)
 
@@ -51,6 +52,7 @@
   - [Lessons Learned](#lessons-learned)
   - [In the Future](#in-the-future)
   - [Contribution](#contribution)
+
 
 ---
 
@@ -133,7 +135,7 @@ To ensure consistent and transparent effort estimation during our game developme
   [**Planning Poker Agile Tool**](https://planning-poker-agile.web.app/game/01JTQQR7ZGN3AKDA29PKF56600).  
   This tool provided a shared digital space for anonymous voting, automatic average calculation, and real-time reveal and discussion.
 
-  ![Planning Poker Online Tool Screenshot](pictures\playing_poker.jpg)
+  ![Planning Poker Screenshot](./pictures/playing_poker.jpg)
 
 - **Discussion and Justification**  
   If estimates varied significantly, the lowest and highest estimators were invited to explain their reasoning:
