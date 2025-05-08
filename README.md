@@ -118,6 +118,8 @@ To ensure clear implementation, we set acceptance criteria. We also created pape
 
 Our MVP included handcrafted levels, four difficulty settings, and the core game design.
 
+---
+
 ### Planning Poker for Effort Estimation
 
 To ensure consistent and transparent effort estimation during our game development process, we adopted the **Planning Poker** method — a collaborative and structured approach widely used in Agile teams.
