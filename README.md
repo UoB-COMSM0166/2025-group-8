@@ -116,6 +116,52 @@ To ensure clear implementation, we set acceptance criteria. We also created pape
 
 Our MVP included handcrafted levels, four difficulty settings, and the core game design.
 
+### Planning Poker for Effort Estimation
+
+To ensure consistent and transparent effort estimation during our game development process, we adopted the **Planning Poker** method — a collaborative and structured approach widely used in Agile teams.
+
+#### Implementation Details
+
+- **Full Team Participation**  
+  Every team member, regardless of their role, participated in Planning Poker sessions held before each development sprint. This helped ensure a shared understanding of the tasks and encouraged diverse perspectives on complexity and feasibility.
+
+- **Fibonacci-Based Card System**  
+  Each participant was given a set of cards labeled with Fibonacci sequence values (0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ?) representing story points. These values helped reflect the increasing uncertainty of estimating larger tasks.
+
+- **Online Tool for Remote Voting**  
+  To support remote collaboration, we used an online Planning Poker platform:  
+  [**Planning Poker Agile Tool**](https://planning-poker-agile.web.app/game/01JTQQR7ZGN3AKDA29PKF56600).  
+  This tool provided a shared digital space for anonymous voting, automatic average calculation, and real-time reveal and discussion.
+
+  ![Planning Poker Online Tool Screenshot](pictures\playing_poker.jpg)
+
+- **Discussion and Justification**  
+  If estimates varied significantly, the lowest and highest estimators were invited to explain their reasoning:
+  - “I think it’s easy because it reuses our existing animation system.”
+  - “I think it’s difficult due to edge-case behavior and performance concerns.”
+
+  This process revealed overlooked challenges or highlighted reusable components, improving team alignment.
+
+- **Three Iteration Rule**  
+  To avoid analysis paralysis, each estimation session was capped at a maximum of three voting rounds. In most cases, consensus was reached within two.
+
+- **Splitting Large Tasks**  
+  Tasks receiving consistently high estimates (e.g., 21 or 34) were split into smaller, more manageable subtasks, each re-evaluated independently.
+
+#### Outcomes and Examples
+
+This method improved the accuracy of our sprint planning and clarified task scopes. Some specific outcomes include:
+
+| Task                                | Final Estimate |
+|-------------------------------------|----------------|
+| Chapter Transition System           | 8              |
+| Collision Detection Refactoring     | 13             |
+| Enemy AI Pathfinding Logic          | 20             |
+| Menu Animation Optimization         | 3              |
+
+By incorporating Planning Poker into our workflow, we fostered shared ownership of estimates, increased estimation accuracy, and supported better sprint planning across our distributed team.
+
+
 ---
 
 ### Inspiration Mining
