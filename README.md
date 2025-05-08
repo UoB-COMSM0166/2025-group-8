@@ -156,12 +156,12 @@ To ensure consistent and transparent effort estimation during our game developme
 
 This method improved the accuracy of our sprint planning and clarified task scopes. Some specific outcomes include:
 
-| Task                                | Final Estimate |
-|-------------------------------------|----------------|
-| Chapter Transition System           | 8              |
-| Collision Detection Refactoring     | 13             |
-| Enemy AI Pathfinding Logic          | 20             |
-| Menu Animation Optimization         | 3              |
+| Task Description                                                 | Final Estimate |
+|------------------------------------------------------------------|----------------|
+| Implementing Final Boss Fight                                   | 8              |
+| Collision Detection Refactoring                                 | 13             |
+| Enemy AI Pathfinding Logic                                      | 20             |
+| Menu Animation Optimization                                     | 3              |
 
 By incorporating Planning Poker into our workflow, we fostered shared ownership of estimates, increased estimation accuracy, and supported better sprint planning across our distributed team.
 
