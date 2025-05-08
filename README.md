@@ -313,6 +313,12 @@ Overall, the evolving design documentation served as a living reference, keeping
 
 We implemented *Iron Rebellion* in layers, starting with a playable prototype. The **gameObject** base class unified behavior across interactive elements, with subclasses overriding specific logic.
 
+- For detailed development documentation, please refer to the [developer manual](./documentation/DeveloperManual.md).
+
+- For detailed playing instruction, please refer to the [player manual](./documentation/PlayerManual.md).
+
+> *"You may also access to the player manual from the chapter selection page in the game."*
+
 The **chapterSelector** dynamically generated levels using character-mapped text files, enabling rapid level design changes. Early movement bugs (e.g., infinite jumps, wall clipping) were resolved through refined velocity and jump logic in **robotDog**.
 
 ---
