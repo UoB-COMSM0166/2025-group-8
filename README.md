@@ -137,7 +137,7 @@ To ensure consistent and transparent effort estimation during our game developme
   [**Planning Poker Agile Tool**](https://planning-poker-agile.web.app/game/01JTQQR7ZGN3AKDA29PKF56600).  
   This tool provided a shared digital space for anonymous voting, automatic average calculation, and real-time reveal and discussion.
 
-  ![Planning Poker Screenshot](./pictures\playing_poker1.png)
+  ![Planning Poker](./pictures/playing_poker1.png)
 
 - **Discussion and Justification**  
   If estimates varied significantly, the lowest and highest estimators were invited to explain their reasoning:
