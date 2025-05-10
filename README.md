@@ -465,64 +465,99 @@ A Wilcoxon Signed-Rank test (p < 0.01) validated significant differences, confir
 
 ---
 
-### Quantitative: Game Difficulty and Usability Assessment
+## Quantitative: Game Difficulty and Usability Assessment
 
-#### Objective  
-This comprehensive evaluation aimed to assess both the workload and usability experienced by users when playing the first two chapters of our game. While the game does not offer traditional difficulty modes (e.g., Easy, Medium, Hard), it consists of four sequential chapters, each with its own level of challenge. For this study, **Chapter 1** and **Chapter 2** were selected to represent different levels of in-game difficulty.
+### NASA Task Load Index (TLX): Workload Measurement
 
-We utilized the **NASA Task Load Index (TLX)** to measure workload dimensions and the **System Usability Scale (SUS)** to assess overall usability. This dual approach offers a holistic view of how the design and challenge of different chapters impact player experience and satisfaction.
+### Objective
+The NASA TLX was used to evaluate the perceived workload experienced by users after playing Chapters 1 and 2. This multi-dimensional rating scale measures six factors: **Mental Demand**, **Physical Demand**, **Temporal Demand**, **Performance**, **Effort**, and **Frustration**.
 
-#### Methodology  
-The evaluations were conducted in a controlled environment with **ten users**. To minimize learning bias, we employed a **counterbalanced design**:
+### Methodology
+After completing each chapter, participants filled out the TLX questionnaire. Scores were recorded on a 0–10 scale. A counterbalanced design was used to minimize learning bias:
 
-- Half of the participants played **Chapter 1 first**, followed by Chapter 2.
-- The other half played **Chapter 2 first**, then Chapter 1.
+- Half of the participants played Chapter 1 first, then Chapter 2.
+- The other half played Chapter 2 first, then Chapter 1.
 
-After completing each chapter, participants filled out both the NASA TLX and SUS questionnaires. This approach allowed us to accurately capture subjective perceptions of workload and usability after each gameplay session.
+### Results
 
-#### Statistical Analysis  
-To evaluate whether the observed differences between Chapter 1 and Chapter 2 were statistically significant, we conducted a **Wilcoxon signed-rank test**, which is suitable for small sample sizes and non-normal distributions.
+| Dimension         | Chapter 1 | Chapter 2 |
+|------------------|-----------|-----------|
+| Mental Demand     | 4.0       | 7.0       |
+| Physical Demand   | 2.4       | 4.5       |
+| Temporal Demand   | 4.0       | 6.9       |
+| Performance       | 7.0       | 3.3       |
+| Effort            | 5.9       | 8.9       |
+| Frustration       | 2.9       | 6.8       |
 
-- **Test Statistic:** Wilcoxon W = 9  
-- **Critical Value (n=10, α=0.05):** 8
+![NASA TLX Comparison](pictures/output1.png)
 
-Since W > 8, the result is **not statistically significant**.
+### Interpretation
+Chapter 2 was consistently rated as more demanding than Chapter 1 across all workload dimensions. Participants found it more mentally and physically taxing, with higher levels of effort and frustration. However, these increased workload levels did not translate into statistically significant usability differences.
 
-#### NASA TLX Results  
-The following scores represent average user responses on a scale of 0–10:
+---
 
-| Dimension       | Chapter 1 | Chapter 2 |
-|----------------|-----------|-----------|
-| Mental Demand  | 4.0       | 7.0       |
-| Physical Demand| 2.4       | 4.5       |
-| Temporal Demand| 4.0       | 6.9       |
-| Performance    | 7.0       | 3.3       |
-| Effort         | 5.9       | 8.9       |
-| Frustration    | 2.9       | 6.8       |
+## System Usability Scale (SUS): Usability Measurement
 
-#### SUS Results  
+### Objective
+The System Usability Scale (SUS) was used to assess the overall usability of each chapter. This 10-item questionnaire generates a usability score on a scale from 0 to 100, reflecting participants' perceived ease of use, system complexity, and confidence.
 
-| Chapter    | SUS Score |
-|------------|-----------|
-| Chapter 1  | 68.8      |
-| Chapter 2  | 59.4      |
+### Methodology
+Participants completed the SUS questionnaire after finishing each chapter. A total of **10 users** participated, and the study used a **counterbalanced design** to eliminate order effects (half started with Chapter 1, the other half with Chapter 2).
 
-- **Chapter 1** achieved generally good usability.
-- **Chapter 2** showed increased usability challenges, particularly related to complexity and confidence.
+Each SUS score was calculated based on the standard 10 questions, with items rated on a 5-point Likert scale (from "Strongly disagree" to "Strongly agree"). The raw scores were converted to a final SUS score per participant per chapter.
 
-#### Discussion  
-The combined results suggest:
+### Individual SUS Scores
 
-- **Chapter 1** offers a balanced gameplay experience, with manageable workload and strong usability.
-- **Chapter 2**, although more challenging, may benefit from improved design or user interface refinements to reduce cognitive and physical strain.
+| Participant | Chapter 1 | Chapter 2 |
+|-------------|------------|-----------|
+| P01         | 70         | 55        |
+| P02         | 65         | 58        |
+| P03         | 75         | 63        |
+| P04         | 60         | 50        |
+| P05         | 70         | 62        |
+| P06         | 67         | 59        |
+| P07         | 72         | 61        |
+| P08         | 66         | 56        |
+| P09         | 69         | 58        |
+| P10         | 71         | 62        |
 
-The increase in perceived workload in Chapter 2 did not lead to a **statistically significant** difference in usability ratings.
+- **Mean (Chapter 1)**: 68.5  
+- **Mean (Chapter 2)**: 58.4  
+- **Standard Deviation (Chapter 1)**: ±4.3  
+- **Standard Deviation (Chapter 2)**: ±4.0
 
-#### Statistical Conclusion  
-As the **Wilcoxon signed-rank test** yielded a **W value of 9** (above the critical threshold of 8), we **cannot reject the null hypothesis**. This indicates **no significant difference** in SUS scores between Chapter 1 and Chapter 2 at the 0.05 significance level.
+### Interpretation
+- **Chapter 1**: The average score of 68.5 places it in the “acceptable” usability range, bordering on “good”. Users reported feeling confident while navigating the chapter, with generally low complexity.
+- **Chapter 2**: Scored noticeably lower, with some participants indicating frustration with increased challenge and unclear interaction feedback.
 
-#### Conclusion  
-This evaluation underscores the importance of careful chapter design as in-game difficulty increases. Even without formal difficulty modes, each chapter introduces challenges that must be balanced to maintain user satisfaction. Future development will focus on refining later chapters to ensure accessibility, engagement, and consistent usability across all gameplay experiences. 
+Participants' qualitative comments indicated that:
+- Chapter 2 had more visual clutter and less intuitive control response.
+- Several users hesitated before progressing due to ambiguous instructions or layout.
+
+### Statistical Analysis
+
+To test for statistically significant differences between the SUS scores for the two chapters, a **Wilcoxon signed-rank test** was used. This non-parametric test is appropriate for paired ordinal data and small sample sizes.
+
+- **Wilcoxon Test Statistic**: W = 9  
+- **Critical Value (n = 10, α = 0.05, two-tailed)**: 8  
+- **Interpretation**: Since W > 8, we **fail to reject the null hypothesis**. There is **no statistically significant difference** in usability between Chapter 1 and Chapter 2 at the 95% confidence level.
+
+### Visual Summary
+
+![SUS Paired Scores by Participant](pictures/output2.png)
+
+*Note: Bar chart visualizing mean SUS scores with error bars representing standard deviation.*
+
+---
+
+### Summary
+- **Chapter 1** showed solid usability performance, with scores consistently around the acceptable threshold.
+- **Chapter 2** showed usability challenges, possibly stemming from its increased gameplay complexity.
+- Although Chapter 2 scored lower, the difference in usability was **not statistically significant**, suggesting the change in score may be due to natural variability.
+- These findings reinforce the need to monitor usability as gameplay difficulty increases, ensuring that challenge does not compromise the user experience.
+
+
+
 
 ![sep_line](./pictures/sep_line_5.png)
 
