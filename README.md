@@ -224,10 +224,11 @@ We decided to use *Super Mario* as a model, enhancing the game's fun by adjustin
 
 In the requirements gathering phase, we identified the stakeholders of our game.
 
+![onion_model](./pictures/onion_model.jpg)
+
 - **Players:** End users who will interact with and enjoy the game.
 - **Game Developers:** Team members responsible for game design, coding, and testing.
 - **Graphic Designers:** Individuals tasked with creating the visual elements of the game.
-- **Sound Engineers:** Professionals creating and integrating sound effects and music.
 - **Marketing Team:** Personnel focused on promoting the game to increase visibility and engagement.
 - **Game Reviewers and Bloggers:** Key influencers who will help shape public perception of the game.
 - **Lecturers and TAs:** Academic supervisors and teaching assistants who provide guidance, monitor project progress, and ensure the game development aligns with academic standards and learning outcomes.
@@ -272,10 +273,20 @@ This is our user journey map!
 
 To support modularity and future expansion, Iron Rebellion follows p5.js original architecture: each visual object has an draw() method, which makes the whole structure consistent. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
 
+| ![robot_dog_intro](./pictures/robot_dog_intro.png) |  ![red_dog_intro](./pictures/red_dog_intro.png) |
+|------|-----|
+| ![drone_intro](/pictures/drone_intro.png) | ![boss_intro](./pictures/boss_intro.png) |
+
 - **robotDog** handles input and physics.
 - **chapterSelector** loads levels from text files and manages collision resolution.
 - **picturesLoader** coordinates game modes, UI elements, and audio.
 
+We designed four chapters for this game, they are in different difficulties, allowing players to experience the whole story and have various gaming experience in the mean time, they are:
+
+| ![chapter_1_intro](./pictures/chapter_1_intro.png) | ![chapter_2_intro](./pictures/chapter_2_intro.png) |
+|-----|-----|
+| ![chapter_3_intro](./pictures/chapter_3_intro.png) | ![chapter_4_intro](./pictures/chapter_4_intro.png) |
+ 
 This architecture made the game easy to iterate and test. Visual aids, including sequence and state diagrams, helped clarify object interactions. 
 
 ---
@@ -325,8 +336,9 @@ The **chapterSelector** dynamically generated levels using character-mapped text
 ---
 
 ### Three Technical Challenges
-
 - #### Technical Challenge 1: Cross-Platform Implementation
+
+![responsive_web_design](./pictures/responsive_web_design.png)
 
 | Section                   | Description |
 |---------------------------|--------------------|
