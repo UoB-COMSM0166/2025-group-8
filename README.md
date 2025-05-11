@@ -15,7 +15,7 @@
   - [Prototype Video of Final Idea](#prototype-video-of-final-idea)
 
 - [2. Requirements](#2-requirements)
-  - [Stakeholder List](#stakeholder-list)
+  - [Stakeholder list](#stakeholder-list)
   - [Epics & User Stories](#epics--user-stories)
   - [Planning Poker for Effort Estimation](#planning-poker-for-effort-estimation)
   - [Reflection](#reflection)
@@ -32,7 +32,7 @@
 
 - [5. Evaluation](#5-evaluation)
   - [Qualitative: Think-Aloud Usability Testing](#qualitative-think-aloud-usability-testing)
-  - [Heuristic Evaluation](#heuristic-evaluation)
+  - [Qualitative: Heuristic Evaluation](#qualitative-heuristic-evaluation)
   - [Quantitative: NASA TLX Workload Analysis](#quantitative-nasa-tlx-workload-analysis)
   - [Quantitative: Game Difficulty and Usability Assessment](#quantitative-game-difficulty-and-usability-assessment)
 
@@ -52,8 +52,6 @@
   - [Lessons Learned](#lessons-learned)
   - [In the Future](#in-the-future)
   - [Contribution](#contribution)
-
-
 
 ---
 
