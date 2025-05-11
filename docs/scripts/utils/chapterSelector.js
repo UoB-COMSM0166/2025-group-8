@@ -174,6 +174,7 @@ class ChapterSelector {
     showHelp() {
         alert("Move: A(Left) D(Right)\n" +
             "Shoot: W/S/A/D + J\n" +
+            "Jump: Space\n" +
             "Win the four chapters, and defeat the boss!");
     }
 
