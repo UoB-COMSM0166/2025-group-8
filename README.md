@@ -347,6 +347,8 @@ The **chapterSelector** dynamically generated levels using character-mapped text
 
 - #### Technical Challenge 2: Collision Mechanism Design
 
+![collision_mechanism_design](./pictures/collision_mechanism_design.png)
+
 | Section                     | Description |
 |-----------------------------|--------------------|
 | **I. Boundary Determination** | Defined precise hitboxes to prevent visual bugs like floating or clipping into platforms. |       |
@@ -355,6 +357,8 @@ The **chapterSelector** dynamically generated levels using character-mapped text
 | **Impact**                   | Improved physics accuracy and laid groundwork for adding new interactive elements. |       |
 
 - #### Technical Challenge 3: Progressive Level Design
+
+![progressive_level_design](./pictures/progressive_level_design.png)
 
 | Section                                | Description                                                                                              |
 |----------------------------------------|----------------------------------------------------------------------------------------------------------|
