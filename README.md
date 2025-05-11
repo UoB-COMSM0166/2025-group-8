@@ -437,6 +437,8 @@ We conducted think-aloud tests with eight players, revealing UI and collision is
 | **Enemy AI**       | Predictable drone behavior; no difficulty progression.                | Flexibility and Efficiency of Use           | 3                | 3             | 3                  | 1.00               |
 | **Game Progression**| No game-over state; unlimited respawns reduce challenge.              | User Control and Freedom, Error Prevention  | 3                | 2             | 4                  | 0.33               |
 
+![Evaluation Metrics Chart](pictures/output3.png)
+
 #### Key Findings  
 
 #### Critical Issues (Severity ≥ 1.33)  
