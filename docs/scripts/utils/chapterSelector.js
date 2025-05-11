@@ -166,11 +166,9 @@ class ChapterSelector {
     }
 
     showDevelopersInfo() {
-        alert(navigator.userAgent);
-        // Uncomment below for custom credits
-        // alert("Game Name: Iron Rebellion\n" +
-        //     "Development Team: Group 8\n" +
-        //     "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu");
+        alert("Game Name: Iron Rebellion\n" +
+            "Development Team: Group 8\n" +
+            "Members: Zewen Liang, Yunhao Zhou, Yingyu Zhang, Zhi Zhao, Kaijie Xu");
     }
 
     showHelp() {
