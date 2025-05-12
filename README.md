@@ -712,7 +712,7 @@ These implementations not only enhance user experience through improved performa
 
 ![Double Diamond Design Model](./pictures/double_diamond_design_model.png)
 
-We use the dual drill model to manage the entire project: conducting research ->determining themes ->identifying opportunities ->generating game plans ->producing prototypes through coding and other processes. We optimize the project through testing iterations.
+We use the Double Diamond Design Model to manage the entire project: conducting research ->determining themes ->identifying opportunities ->generating game plans ->producing prototypes through coding and other processes. We optimize the project through testing iterations.
 
 ---
 
