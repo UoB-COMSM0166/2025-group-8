@@ -269,6 +269,10 @@ This is our user journey map!
 
 ## 3. Design
 
+> *"All visual elements are originally designed and **hand drawn** by ourselves."*
+
+![intro_to_game_elements](./pictures/intro_to_game_elements.png)
+
 To support modularity and future expansion, Iron Rebellion follows p5.js original architecture: each visual object has an draw() method, which makes the whole structure consistent. The **gameObject** superclass encapsulates common properties like position, velocity, and size, and is extended by interactive objects like **robotDog**, **enemy**, and **platform**.
 
 | ![robot_dog_intro](./pictures/robot_dog_intro.png) |  ![red_dog_intro](./pictures/red_dog_intro.png) |
